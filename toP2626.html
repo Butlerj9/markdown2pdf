@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>tmpj5qj4weg</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <link rel="stylesheet" href="C:\Users\joshd\AppData\Local\Temp\tmpd3cm_oj4.css" />
+  
+                          <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+                          <script>
+                          (function() {
+                              var attempts = 0;
+                              var maxAttempts = 10;
+                              
+                              function initMermaid() {
+                                  attempts++;
+                                  try {
+                                      if (typeof mermaid !== 'undefined') {
+                                          console.log("Mermaid found, initializing...");
+                                          
+                                          mermaid.initialize({
+                                              startOnLoad: true,
+                                              theme: 'default',
+                                              securityLevel: 'loose',
+                                              flowchart: { 
+                                                  useMaxWidth: false,
+                                                  htmlLabels: true,
+                                                  curve: 'basis',
+                                                  padding: 15
+                                              },
+                                              fontFamily: 'Arial, sans-serif',
+                                              fontSize: 14
+                                          });
+                                          
+                                          var diagrams = document.querySelectorAll('.mermaid');
+                                          console.log("Found " + diagrams.length + " Mermaid diagrams");
+                                          
+                                          if (diagrams.length > 0) {
+                                              console.log("Initializing Mermaid diagrams");
+                                              mermaid.init(undefined, diagrams);
+                                              console.log("Mermaid initialization complete");
+                                          }
+                                      } else if (attempts < maxAttempts) {
+                                          console.log("Mermaid not found yet, retrying in 1 second (attempt " + attempts + " of " + maxAttempts + ")");
+                                          setTimeout(initMermaid, 1000);
+                                      } else {
+                                          console.error("Failed to initialize Mermaid after " + maxAttempts + " attempts");
+                                      }
+                                  } catch(e) {
+                                      console.error("Error initializing Mermaid:", e);
+                                      if (attempts < maxAttempts) {
+                                          console.log("Error occurred, retrying in 1 second (attempt " + attempts + " of " + maxAttempts + ")");
+                                          setTimeout(initMermaid, 1000);
+                                      }
+                                  }
+                              }
+                              
+                              // Ensure scripts are fully loaded
+                              window.addEventListener('load', function() {
+                                  setTimeout(initMermaid, 1000);
+                              });
+                              
+                              // Also try immediate initialization
+                              setTimeout(initMermaid, 100);
+                          })();
+                          </script>
+                          <style>
+                          /* Enhanced styling for edge labels in mermaid diagrams */
+                          .edgeLabel {
+                              background-color: #E8E8E8 !important;
+                              color: #333333 !important;
+                              padding: 2px !important;
+                              border-radius: 4px !important;
+                              font-family: Arial, sans-serif !important;
+                          }
+                          .edgeLabel rect {
+                              fill: #E8E8E8 !important;
+                              rx: 4px !important;
+                              ry: 4px !important;
+                          }
+                          </style>
+                          
+</head>
+<body>
+<h1 id="llm-first-development-quickstart-guide">LLM-First Development
+Quickstart Guide</h1>
+<h2 id="overview">Overview</h2>
+<p>This guide provides a systematic approach to building software
+applications using an LLM-first workflow. This method is approximately
+5x faster than traditional LLM-assisted development approaches,
+optimizing the entire development lifecycle.</p>
+<h2 id="prerequisites-and-setup">Prerequisites and Setup</h2>
+<h3 id="project-scope">Project Scope</h3>
+<ul>
+<li>This workflow is optimized for projects up to approximately 30,000
+lines of code</li>
+<li>Team members are expected to manage projects of this size, including
+dozens of features</li>
+<li>Complete documentation production is required (project description,
+implementation plan, readme.md, etc.)</li>
+<li>Basic LLM understanding and previous experience is assumed</li>
+</ul>
+<h3 id="required-accounts-and-tools">Required Accounts and Tools</h3>
+<ul>
+<li>Paid Claude account (Team or Pro)</li>
+<li>Development environment with necessary compilers/interpreters</li>
+<li>Version control system</li>
+</ul>
+<h3 id="browser-setup-three-browser-approach">Browser Setup
+(Three-Browser Approach)</h3>
+<ol type="1">
+<li><strong>Primary Browser</strong>: Claude for code and document
+generation</li>
+<li><strong>Secondary Browser</strong>: Additional LLM (second Claude
+instance or ChatGPT) for concept clarification and filling knowledge
+gaps</li>
+<li><strong>Tertiary Browser</strong>: Mermaid diagram renderer
+(mermaid.live or similar) for visualizing workflows and
+architecture</li>
+</ol>
+<h3 id="project-organization">Project Organization</h3>
+<ol type="1">
+<li><strong>Initial Documentation Phase</strong>:
+<ul>
+<li>Create project documentation in a normal conversation</li>
+<li>Develop project description, technical implementation plan,
+compliance documents, and style guides</li>
+</ul></li>
+<li><strong>Project Setup</strong>:
+<ul>
+<li>Start a formal project with detailed instructions based on initial
+documentation</li>
+<li>Establish directory structure and configuration files</li>
+</ul></li>
+<li><strong>Project Flattening (Script-Driven)</strong>:
+<ul>
+<li>Use Claude to generate a flattening script in your preferred
+language</li>
+<li>The script should copy files to a separate directory with directory
+structure in filenames</li>
+<li>Use double-dash separator format (e.g.,
+<code>src--utils--helper.js</code>)</li>
+<li>Configure script to exclude specific directories or files as
+needed</li>
+<li>Script should clear and re-flatten on subsequent iterations
+automatically</li>
+</ul></li>
+</ol>
+<h2 id="basic-workflow-model">Basic Workflow Model</h2>
+<figure style="text-align: center; margin: 20px auto;">
+<svg aria-roledescription="flowchart-v2" role="graphics-document document" viewBox="0 0 128.578125 278" style="max-width: 128.578px; background-color: transparent;" class="flowchart" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" width="100%" id="my-svg">
+<style>#my-svg{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;fill:#333;}@keyframes edge-animation-frame{from{stroke-dashoffset:0;}}@keyframes dash{to{stroke-dashoffset:0;}}#my-svg .edge-animation-slow{stroke-dasharray:9,5!important;stroke-dashoffset:900;animation:dash 50s linear infinite;stroke-linecap:round;}#my-svg .edge-animation-fast{stroke-dasharray:9,5!important;stroke-dashoffset:900;animation:dash 20s linear infinite;stroke-linecap:round;}#my-svg .error-icon{fill:#552222;}#my-svg .error-text{fill:#552222;stroke:#552222;}#my-svg .edge-thickness-normal{stroke-width:1px;}#my-svg .edge-thickness-thick{stroke-width:3.5px;}#my-svg .edge-pattern-solid{stroke-dasharray:0;}#my-svg .edge-thickness-invisible{stroke-width:0;fill:none;}#my-svg .edge-pattern-dashed{stroke-dasharray:3;}#my-svg .edge-pattern-dotted{stroke-dasharray:2;}#my-svg .marker{fill:#333333;stroke:#333333;}#my-svg .marker.cross{stroke:#333333;}#my-svg svg{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;}#my-svg p{margin:0;}#my-svg .label{font-family:"trebuchet ms",verdana,arial,sans-serif;color:#333;}#my-svg .cluster-label text{fill:#333;}#my-svg .cluster-label span{color:#333;}#my-svg .cluster-label span p{background-color:transparent;}#my-svg .label text,#my-svg span{fill:#333;color:#333;}#my-svg .node rect,#my-svg .node circle,#my-svg .node ellipse,#my-svg .node polygon,#my-svg .node path{fill:#ECECFF;stroke:#9370DB;stroke-width:1px;}#my-svg .rough-node .label text,#my-svg .node .label text,#my-svg .image-shape .label,#my-svg .icon-shape .label{text-anchor:middle;}#my-svg .node .katex path{fill:#000;stroke:#000;stroke-width:1px;}#my-svg .rough-node .label,#my-svg .node .label,#my-svg .image-shape .label,#my-svg .icon-shape .label{text-align:center;}#my-svg .node.clickable{cursor:pointer;}#my-svg .root .anchor path{fill:#333333!important;stroke-width:0;stroke:#333333;}#my-svg .arrowheadPath{fill:#333333;}#my-svg .edgePath .path{stroke:#333333;stroke-width:2.0px;}#my-svg .flowchart-link{stroke:#333333;fill:none;}#my-svg .edgeLabel{background-color:rgba(232,232,232, 0.8);text-align:center;}#my-svg .edgeLabel p{background-color:rgba(232,232,232, 0.8);}#my-svg .edgeLabel rect{opacity:0.5;background-color:rgba(232,232,232, 0.8);fill:rgba(232,232,232, 0.8);}#my-svg .labelBkg{background-color:rgba(232, 232, 232, 0.5);}#my-svg .cluster rect{fill:#ffffde;stroke:#aaaa33;stroke-width:1px;}#my-svg .cluster text{fill:#333;}#my-svg .cluster span{color:#333;}#my-svg div.mermaidTooltip{position:absolute;text-align:center;max-width:200px;padding:2px;font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:12px;background:hsl(80, 100%, 96.2745098039%);border:1px solid #aaaa33;border-radius:2px;pointer-events:none;z-index:100;}#my-svg .flowchartTitleText{text-anchor:middle;font-size:18px;fill:#333;}#my-svg rect.text{fill:none;stroke-width:0;}#my-svg .icon-shape,#my-svg .image-shape{background-color:rgba(232,232,232, 0.8);text-align:center;}#my-svg .icon-shape p,#my-svg .image-shape p{background-color:rgba(232,232,232, 0.8);padding:2px;}#my-svg .icon-shape rect,#my-svg .image-shape rect{opacity:0.5;background-color:rgba(232,232,232, 0.8);fill:rgba(232,232,232, 0.8);}#my-svg :root{--mermaid-font-family:"trebuchet ms",verdana,arial,sans-serif;}</style>
+<g><marker orient="auto" markerHeight="8" markerWidth="8" markerUnits="userSpaceOnUse" refY="5" refX="5" viewBox="0 0 10 10" class="marker flowchart-v2" id="my-svg_flowchart-v2-pointEnd"><path style="stroke-width: 1; stroke-dasharray: 1, 0;" class="arrowMarkerPath" d="M 0 0 L 10 5 L 0 10 z"/></marker><marker orient="auto" markerHeight="8" markerWidth="8" markerUnits="userSpaceOnUse" refY="5" refX="4.5" viewBox="0 0 10 10" class="marker flowchart-v2" id="my-svg_flowchart-v2-pointStart"><path style="stroke-width: 1; stroke-dasharray: 1, 0;" class="arrowMarkerPath" d="M 0 5 L 10 10 L 10 0 z"/></marker><marker orient="auto" markerHeight="11" markerWidth="11" markerUnits="userSpaceOnUse" refY="5" refX="11" viewBox="0 0 10 10" class="marker flowchart-v2" id="my-svg_flowchart-v2-circleEnd"><circle style="stroke-width: 1; stroke-dasharray: 1, 0;" class="arrowMarkerPath" r="5" cy="5" cx="5"/></marker><marker orient="auto" markerHeight="11" markerWidth="11" markerUnits="userSpaceOnUse" refY="5" refX="-1" viewBox="0 0 10 10" class="marker flowchart-v2" id="my-svg_flowchart-v2-circleStart"><circle style="stroke-width: 1; stroke-dasharray: 1, 0;" class="arrowMarkerPath" r="5" cy="5" cx="5"/></marker><marker orient="auto" markerHeight="11" markerWidth="11" markerUnits="userSpaceOnUse" refY="5.2" refX="12" viewBox="0 0 11 11" class="marker cross flowchart-v2" id="my-svg_flowchart-v2-crossEnd"><path style="stroke-width: 2; stroke-dasharray: 1, 0;" class="arrowMarkerPath" d="M 1,1 l 9,9 M 10,1 l -9,9"/></marker><marker orient="auto" markerHeight="11" markerWidth="11" markerUnits="userSpaceOnUse" refY="5.2" refX="-1" viewBox="0 0 11 11" class="marker cross flowchart-v2" id="my-svg_flowchart-v2-crossStart"><path style="stroke-width: 2; stroke-dasharray: 1, 0;" class="arrowMarkerPath" d="M 1,1 l 9,9 M 10,1 l -9,9"/></marker><g class="root"><g class="clusters"/><g class="edgePaths"><path marker-end="url(#my-svg_flowchart-v2-pointEnd)" style="" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" id="L_A_B_0" d="M64.289,62L64.289,66.167C64.289,70.333,64.289,78.667,64.289,86.333C64.289,94,64.289,101,64.289,104.5L64.289,108"/><path marker-end="url(#my-svg_flowchart-v2-pointEnd)" style="" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" id="L_B_C_0" d="M64.289,166L64.289,170.167C64.289,174.333,64.289,182.667,64.289,190.333C64.289,198,64.289,205,64.289,208.5L64.289,212"/></g><g class="edgeLabels"><g class="edgeLabel"><g transform="translate(0, 0)" class="label"><foreignObject height="0" width="0">
+<div class="labelBkg"
+style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"
+data-xmlns="http://www.w3.org/1999/xhtml">
+<span class="edgeLabel"></span>
+</div>
+</foreignObject></g></g><g class="edgeLabel"><g transform="translate(0, 0)" class="label"><foreignObject height="0" width="0">
+<div class="labelBkg"
+style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"
+data-xmlns="http://www.w3.org/1999/xhtml">
+<span class="edgeLabel"></span>
+</div>
+</foreignObject></g></g></g><g class="nodes"><g transform="translate(64.2890625, 35)" id="flowchart-A-0" class="node default"><rect height="54" width="95.015625" y="-27" x="-47.5078125" style="fill:#f5f5f5 !important;stroke:#333 !important;stroke-width:2px !important;rx:5 !important;ry:5 !important" class="basic label-container"/><g transform="translate(-17.5078125, -12)" style="" class="label"><rect/><foreignObject height="24" width="35.015625">
+<div
+style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"
+data-xmlns="http://www.w3.org/1999/xhtml">
+<span class="nodeLabel">
+<p>
+Start
+</p>
+</span>
+</div>
+</foreignObject></g></g><g transform="translate(64.2890625, 139)" id="flowchart-B-1" class="node default"><rect height="54" width="112.578125" y="-27" x="-56.2890625" style="fill:#f5f5f5 !important;stroke:#333 !important;stroke-width:2px !important;rx:5 !important;ry:5 !important" class="basic label-container"/><g transform="translate(-26.2890625, -12)" style="" class="label"><rect/><foreignObject height="24" width="52.578125">
+<div
+style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"
+data-xmlns="http://www.w3.org/1999/xhtml">
+<span class="nodeLabel">
+<p>
+Process
+</p>
+</span>
+</div>
+</foreignObject></g></g><g transform="translate(64.2890625, 243)" id="flowchart-C-3" class="node default"><rect height="54" width="86.234375" y="-27" x="-43.1171875" style="fill:#f5f5f5 !important;stroke:#333 !important;stroke-width:2px !important;rx:5 !important;ry:5 !important" class="basic label-container"/><g transform="translate(-13.1171875, -12)" style="" class="label"><rect/><foreignObject height="24" width="26.234375">
+<div
+style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;"
+data-xmlns="http://www.w3.org/1999/xhtml">
+<span class="nodeLabel">
+<p>
+End
+</p>
+</span>
+</div>
+</foreignObject></g></g></g></g></g> <style> /* Fix for node labels
+<em>/ .nodeLabel { font-family: Arial, sans-serif !important; font-size:
+14px !important; fill: #000000 !important; color: #000000 !important; }
+/</em> Fix for edge labels */ .edgeLabel { background-color: #E8E8E8
+!important; color: #333333 !important; padding: 4px !important;
+border-radius: 4px !important; font-family: Arial, sans-serif
+!important; } .edgeLabel rect { fill: #E8E8E8 !important; } </style>
+</svg>
+</figure>
+<h2 id="detailed-workflow-steps">Detailed Workflow Steps</h2>
+<h3 id="information-gathering-entry-activity">1. Information Gathering
+(Entry Activity)</h3>
+<p><strong>Required Inputs:</strong> - Style guide documentation -
+Regulatory/compliance documents - Project owner special instructions -
+Previous examples of desired coding structure - Comprehensive list of
+features to be implemented - Marketing requirements and user experience
+guidelines - Technical requirements and constraints</p>
+<p><strong>Process:</strong> - Define project requirements and scope -
+Research appropriate technologies and frameworks - Collect all necessary
+reference materials - Establish project boundaries and constraints</p>
+<p><strong>Outputs:</strong> - Comprehensive project description -
+Technical specifications document - Initial architecture design -
+Feature priority list</p>
+<h3 id="instruction-reformulation-loop-start">2. Instruction
+Reformulation (Loop Start)</h3>
+<p><strong>Required Inputs:</strong> - Project description and technical
+specifications - Console output from previous iteration (iteration 2+) -
+Error logs from previous testing phase (iteration 2+) - Feedback from
+team members - Specific issues to address</p>
+<p><strong>Process:</strong> - <strong>For first iteration:</strong> -
+Create clear, detailed instructions for the LLM - Structure prompts to
+generate initial code framework</p>
+<ul>
+<li><strong>For subsequent iterations:</strong>
+<ul>
+<li>Review testing output from previous iteration</li>
+<li>Identify issues and areas for improvement</li>
+<li>Reformulate instructions based on feedback</li>
+<li>Be specific about what needs to be fixed or enhanced</li>
+</ul></li>
+</ul>
+<p><strong>Outputs:</strong> - Structured LLM prompts - Documented code
+requirements - Prioritized task list for current iteration</p>
+<h3 id="code-generation-refactoring">2. Code Generation &amp;
+Refactoring</h3>
+<p><strong>Required Inputs:</strong> - Technical requirements document -
+AI prompts from Step 1 - Code from previous iterations (iteration 2+) -
+Feedback on code structure and organization - Identified bugs or issues
+to address - Feature implementation priorities - Component interface
+specifications</p>
+<p><strong>Process:</strong> - <strong>For first iteration:</strong> -
+Request a project structure from the AI - Generate initial code for core
+components - Establish base functionality</p>
+<ul>
+<li><strong>For subsequent iterations:</strong>
+<ul>
+<li>Request updates to specific components</li>
+<li>Add new features based on revised instructions</li>
+<li>Refactor problematic code sections</li>
+</ul></li>
+</ul>
+<p><strong>Outputs:</strong> - Source code for application components -
+Documentation of code structure - Implementation notes for testing</p>
+<h3 id="testing-debugging">3. Testing &amp; Debugging</h3>
+<p><strong>Required Inputs:</strong> - Generated source code - Test
+requirements and expected behaviors - Test data sets - Previous test
+results (iteration 2+) - Testing platform configuration - Feature
+implementation checklist</p>
+<p><strong>Process:</strong> - <strong>Automated Testing:</strong> -
+Execute the testing platform using CLI commands - Verify functionality
+against requirements - Document any issues or unexpected behavior -
+Generate comprehensive test reports</p>
+<ul>
+<li><strong>Manual Debugging (if required):</strong>
+<ul>
+<li>Identify issues that automated testing couldn’t resolve</li>
+<li>Perform targeted debugging of problematic components</li>
+<li>Implement direct code fixes for critical issues</li>
+<li>Document all manual changes made</li>
+</ul></li>
+</ul>
+<p><strong>Outputs:</strong> - Detailed test results and reports - Bug
+identification and classification - Console and error logs - Manual fix
+documentation - Performance metrics</p>
+<h4 id="automated-testing-platform">Automated Testing Platform</h4>
+<p>Integrate a comprehensive testing platform that can be triggered via
+CLI commands. Your testing framework should: - Progressively test every
+module and function - Execute end-to-end tests that follow
+representative data and control flows - Generate detailed reports
+highlighting successes and failures - Allow for continuous integration
+in your development pipeline</p>
+<p>Example CLI implementation:</p>
+<pre><code># Run all tests
+./test-runner.sh --all
+
+# Test specific modules
+./test-runner.sh --module=api-integration
+
+# Generate comprehensive report
+./test-runner.sh --all --report</code></pre>
+<h3 id="validation-compliance-check-exit-activity">5. Validation &amp;
+Compliance Check (Exit Activity)</h3>
+<p><strong>Required Inputs:</strong> - Complete codebase that passes all
+tests - Style guide documentation - Regulatory compliance requirements -
+Security standards - Accessibility guidelines - Performance benchmarks -
+Code quality metrics</p>
+<p><strong>Process:</strong> - Compare code against organizational style
+guidelines - Verify compliance with regulatory requirements - Check
+adherence to security best practices - Validate accessibility compliance
+- Measure performance against benchmarks - Evaluate overall code quality
+and maintainability - Perform comprehensive final review</p>
+<p><strong>Outputs:</strong> - Compliance validation report - Style
+conformance assessment - Security evaluation results - Final
+documentation package - Production-ready codebase</p>
+<h2 id="tips-for-effective-implementation">Tips for Effective
+Implementation</h2>
+<h3 id="effective-instruction-writing">Effective Instruction
+Writing</h3>
+<ul>
+<li>Be specific about requirements and expected behavior</li>
+<li>Provide context from previous iterations</li>
+<li>Include error messages and console output when applicable</li>
+<li>Specify debugging requirements (console logs, error handling)</li>
+</ul>
+<h3 id="working-with-generated-code">Working with Generated Code</h3>
+<ul>
+<li>Review code before execution</li>
+<li>Understand the main components and their interactions</li>
+<li>Make minor adjustments when necessary</li>
+<li>Request explanations for complex sections</li>
+</ul>
+<h3 id="productive-testing">Productive Testing</h3>
+<ul>
+<li>Test core functionality first</li>
+<li>Create simple test cases for each feature</li>
+<li>Document exact steps to reproduce issues</li>
+<li>Keep track of successful tests as well as failures</li>
+</ul>
+<h2 id="leveraging-project-management-features">Leveraging Project
+Management Features</h2>
+<p>Effectively utilize the project management capabilities available in
+your development environment:</p>
+<ul>
+<li>Maintain conversation context by organizing related prompts and
+responses</li>
+<li>Create dedicated spaces for different components or features</li>
+<li>Use conversation management to track progress across iterations</li>
+<li>Save important context snippets for reference in future
+iterations</li>
+<li>Implement version control for your prompts and generated code</li>
+<li>Create templates for common instruction patterns</li>
+</ul>
+<p>These practices will significantly accelerate your development
+process by reducing redundant explanations and maintaining critical
+context throughout the project lifecycle.</p>
+<h2 id="adapting-the-workflow">Adapting the Workflow</h2>
+<p>This is a structured model - real-world implementation should be
+customized:</p>
+<ul>
+<li><strong>Solo Projects</strong>: You might handle all steps yourself
+across multiple AI sessions</li>
+<li><strong>Team Projects</strong>: Different team members might
+specialize in different phases</li>
+<li><strong>Complex Projects</strong>: Add sub-steps or parallel
+workflows as needed</li>
+<li><strong>Maintenance</strong>: Adapt the workflow for bug fixes and
+feature additions</li>
+</ul>
+<h2 id="key-reminders">Key Reminders</h2>
+<ul>
+<li>The workflow is flexible and should be adapted to your specific
+needs</li>
+<li>Early iterations should focus on core functionality</li>
+<li>Later iterations can address refinements and edge cases</li>
+<li>Document your process to improve future iterations</li>
+<li>Integrate automated testing throughout the development cycle</li>
+<li>Leverage context management to maintain efficiency across
+iterations</li>
+<li>Always validate against compliance and style requirements</li>
+<li>Include manual debugging when automated processes are
+insufficient</li>
+</ul>
+</body>
+</html>

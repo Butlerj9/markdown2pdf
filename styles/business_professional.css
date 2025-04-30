@@ -1,0 +1,223 @@
+/* Business Professional Stylesheet for Markdown to PDF Conversion */
+
+/* Document Body */
+body {
+    font-family: "Calibri", "Segoe UI", sans-serif;
+    font-size: 11pt;
+    line-height: 1.5;
+    color: #333333;
+    background-color: #FFFFFF;
+    margin: 0 auto;
+    padding: 1in;
+    max-width: 100%;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Calibri", "Segoe UI", sans-serif;
+    font-weight: normal;
+    margin-top: 0;
+    color: #2E74B5;
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: 24pt;
+    margin-bottom: 12pt;
+    padding-bottom: 6pt;
+    border-bottom: 1pt solid #DDDDDD;
+}
+
+h2 {
+    font-size: 20pt;
+    margin-bottom: 10pt;
+    margin-top: 18pt;
+}
+
+h3 {
+    font-size: 16pt;
+    margin-bottom: 8pt;
+    margin-top: 14pt;
+}
+
+h4 {
+    font-size: 14pt;
+    margin-bottom: 6pt;
+    margin-top: 12pt;
+}
+
+h5 {
+    font-size: 12pt;
+    margin-bottom: 5pt;
+    margin-top: 10pt;
+    font-style: italic;
+}
+
+h6 {
+    font-size: 11pt;
+    margin-bottom: 5pt;
+    margin-top: 10pt;
+    font-style: italic;
+    color: #555555;
+}
+
+/* Paragraphs */
+p {
+    margin-top: 0;
+    margin-bottom: 10pt;
+    text-align: justify;
+}
+
+/* Lists */
+ul, ol {
+    margin-top: 0;
+    margin-bottom: 10pt;
+    padding-left: 20pt;
+}
+
+li {
+    margin-bottom: 5pt;
+}
+
+li:last-child {
+    margin-bottom: 0;
+}
+
+/* Links */
+a {
+    color: #0563C1;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Tables */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 15pt 0;
+}
+
+th {
+    background-color: #5B9BD5;
+    color: white;
+    font-weight: normal;
+    text-align: left;
+    padding: 8pt;
+    border: 1pt solid #D0D7E5;
+}
+
+td {
+    padding: 8pt;
+    border: 1pt solid #D0D7E5;
+    vertical-align: top;
+}
+
+tr:nth-child(even) {
+    background-color: #F2F9FF;
+}
+
+/* Code blocks */
+pre, code {
+    font-family: "Consolas", "Courier New", monospace;
+    font-size: 10pt;
+}
+
+pre {
+    background-color: #F8F8F8;
+    border: 1pt solid #E0E0E0;
+    padding: 8pt;
+    overflow-x: auto;
+    margin: 10pt 0;
+    white-space: pre-wrap;
+}
+
+code {
+    background-color: #F8F8F8;
+    padding: 2pt 4pt;
+    border-radius: 3pt;
+}
+
+/* Blockquotes */
+blockquote {
+    border-left: 4pt solid #5B9BD5;
+    padding-left: 10pt;
+    margin-left: 0;
+    margin-right: 0;
+    color: #666666;
+    font-style: italic;
+}
+
+/* Horizontal rule */
+hr {
+    border: none;
+    height: 1pt;
+    background-color: #DDDDDD;
+    margin: 15pt 0;
+}
+
+/* Images */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Table of Contents */
+.toc {
+    background-color: #F9F9F9;
+    padding: 15pt;
+    margin-bottom: 20pt;
+    border: 1pt solid #EEEEEE;
+}
+
+.toc-title {
+    font-size: 16pt;
+    font-weight: normal;
+    margin-top: 0;
+    margin-bottom: 10pt;
+    color: #2E74B5;
+}
+
+.toc ul {
+    padding-left: 20pt;
+}
+
+/* Print-specific styles */
+@media print {
+    body {
+        font-size: 11pt;
+        padding: 0;
+    }
+    
+    a {
+        color: #000000;
+        text-decoration: none;
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+        page-break-after: avoid;
+        page-break-inside: avoid;
+    }
+    
+    h1 {
+        font-size: 20pt;
+    }
+    
+    h2 {
+        font-size: 16pt;
+    }
+    
+    h3 {
+        font-size: 14pt;
+    }
+    
+    table, figure {
+        page-break-inside: avoid;
+    }
+    
+    pre {
+        white-space: pre-wrap;
+    }
+}

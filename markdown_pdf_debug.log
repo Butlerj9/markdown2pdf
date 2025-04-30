@@ -1,0 +1,185 @@
+2025-04-05 15:37:09,640 - MarkdownToPDF - INFO - logging_config.py:129 - initialize_logger - Initializing Advanced Markdown to PDF Converter
+2025-04-05 15:37:09,640 - MarkdownToPDF - INFO - logging_config.py:130 - initialize_logger - Python version: 3.11.11 | packaged by Anaconda, Inc. | (main, Dec 11 2024, 16:34:19) [MSC v.1929 64 bit (AMD64)]
+2025-04-05 15:37:09,641 - MarkdownToPDF - INFO - logging_config.py:131 - initialize_logger - Platform: win32
+2025-04-05 15:37:09,641 - MarkdownToPDF - INFO - main.py:125 - main - Starting Advanced Markdown to PDF Converter
+2025-04-05 15:37:09,641 - MarkdownToPDF - INFO - main.py:22 - check_dependencies - Checking application dependencies...
+2025-04-05 15:37:09,684 - MarkdownToPDF - INFO - main.py:36 - check_dependencies - Pandoc found: pandoc 3.6.4
+2025-04-05 15:37:09,773 - MarkdownToPDF - INFO - main.py:52 - check_dependencies - Node.js found: v22.14.0
+2025-04-05 15:37:09,783 - MarkdownToPDF - WARNING - main.py:69 - check_dependencies - Mermaid CLI found at C:\Users\joshd\AppData\Roaming\npm\mmdc.CMD but version check failed: [WinError 2] The system cannot find the file specified
+2025-04-05 15:37:09,783 - MarkdownToPDF - INFO - main.py:77 - setup_mermaid - Setting up Mermaid resources...
+2025-04-05 15:37:09,786 - MarkdownToPDF - INFO - main.py:91 - setup_mermaid - Found existing Mermaid.js in resources: c:\Projects\markdown2pdf\resources\mermaid.min.js
+2025-04-05 15:37:11,206 - MarkdownToPDF - DEBUG - page_preview.py:38 - __init__ - Initializing PagePreview
+2025-04-05 15:37:11,532 - MarkdownToPDF - DEBUG - page_preview.py:65 - __init__ - PagePreview initialized
+2025-04-05 15:37:11,532 - MarkdownToPDF - DEBUG - page_preview.py:473 - setup_zoom_controls - Setting up zoom controls
+2025-04-05 15:37:11,533 - MarkdownToPDF - DEBUG - page_preview.py:513 - setup_zoom_controls - Zoom controls setup completed
+2025-04-05 15:37:11,552 - MarkdownToPDF - DEBUG - render_utils.py:426 - update_preview - Updating preview
+2025-04-05 15:37:11,552 - MarkdownToPDF - DEBUG - logging_config.py:97 - log_function_entry - Entering function: update_preview()
+2025-04-05 15:37:11,552 - MarkdownToPDF - DEBUG - page_preview.py:252 - update_preview - Updating preview
+2025-04-05 15:37:11,552 - MarkdownToPDF - DEBUG - page_preview.py:459 - cleanup_temp_files - Cleaning up 0 temporary files
+2025-04-05 15:37:11,552 - MarkdownToPDF - DEBUG - mermaid_local_fallback.py:24 - find_mermaid_js - Searching for local Mermaid.js installations
+2025-04-05 15:37:11,651 - MarkdownToPDF - INFO - mermaid_local_fallback.py:71 - find_mermaid_js - Found valid local Mermaid.js at: C:\Projects\markdown2pdf\node_modules\mermaid\dist\mermaid.min.js
+2025-04-05 15:37:11,651 - MarkdownToPDF - INFO - mermaid_local_fallback.py:400 - get_mermaid_script_tag - Using local Mermaid.js: file:///C:/Projects/markdown2pdf/node_modules/mermaid/dist/mermaid.min.js
+2025-04-05 15:37:11,669 - MarkdownToPDF - DEBUG - page_preview.py:433 - update_preview - Created temporary HTML file: C:\Users\joshd\AppData\Local\Temp\tmptn798ix5.html
+2025-04-05 15:37:11,671 - MarkdownToPDF - DEBUG - page_preview.py:437 - update_preview - Loading URL: file:///C:/Users/joshd/AppData/Local/Temp/tmptn798ix5.html
+2025-04-05 15:37:11,678 - MarkdownToPDF - DEBUG - render_utils.py:449 - update_preview - Set empty preview message
+2025-04-05 15:37:11,784 - MarkdownToPDF - DEBUG - page_preview.py:69 - on_load_started - Web view: load started
+2025-04-05 15:37:11,803 - MarkdownToPDF - DEBUG - page_preview.py:30 - javaScriptConsoleMessage - JS Console (INFO): Using embedded offline Mermaid renderer [file:///C:/Users/joshd/AppData/Local/Temp/tmptn798ix5.html:7]
+2025-04-05 15:37:11,888 - MarkdownToPDF - DEBUG - page_preview.py:30 - javaScriptConsoleMessage - JS Console (INFO): Found 0 Mermaid diagrams for basic rendering [file:///C:/Users/joshd/AppData/Local/Temp/tmptn798ix5.html:12]
+2025-04-05 15:37:11,894 - MarkdownToPDF - DEBUG - page_preview.py:76 - on_load_finished - Web view: load finished successfully
+2025-04-05 15:37:12,901 - MarkdownToPDF - DEBUG - page_preview.py:30 - javaScriptConsoleMessage - JS Console (INFO): Checking if Mermaid is available... [file:///C:/Users/joshd/AppData/Local/Temp/tmptn798ix5.html:151]
+2025-04-05 15:37:12,901 - MarkdownToPDF - DEBUG - page_preview.py:30 - javaScriptConsoleMessage - JS Console (INFO): Mermaid is available, initializing... [file:///C:/Users/joshd/AppData/Local/Temp/tmptn798ix5.html:153]
+2025-04-05 15:37:12,904 - MarkdownToPDF - DEBUG - page_preview.py:30 - javaScriptConsoleMessage - JS Console (INFO): Found 0 Mermaid diagrams [file:///C:/Users/joshd/AppData/Local/Temp/tmptn798ix5.html:166]
+2025-04-05 15:37:13,396 - MarkdownToPDF - DEBUG - page_preview.py:30 - javaScriptConsoleMessage - JS Console (INFO): Starting Mermaid initialization process [:3]
+2025-04-05 15:37:14,207 - MarkdownToPDF - DEBUG - page_preview.py:30 - javaScriptConsoleMessage - JS Console (INFO): Running mermaid initialization [:7]
+2025-04-05 15:37:14,208 - MarkdownToPDF - DEBUG - page_preview.py:30 - javaScriptConsoleMessage - JS Console (INFO): Mermaid object found! Version: undefined [:11]
+2025-04-05 15:37:14,208 - MarkdownToPDF - DEBUG - page_preview.py:30 - javaScriptConsoleMessage - JS Console (INFO): Found 0 mermaid diagrams [:30]
+2025-04-05 15:37:21,355 - MarkdownToPDF - DEBUG - render_utils.py:426 - update_preview - Updating preview
+2025-04-05 15:37:21,355 - MarkdownToPDF - DEBUG - logging_config.py:97 - log_function_entry - Entering function: update_preview()
+2025-04-05 15:37:21,355 - MarkdownToPDF - DEBUG - render_utils.py:464 - update_preview - Pre-processing Mermaid diagrams
+2025-04-05 15:37:21,355 - MarkdownToPDF - DEBUG - mermaid_processor.py:33 - preprocess_mermaid_diagrams - Preprocessing Mermaid diagrams
+2025-04-05 15:37:21,355 - MarkdownToPDF - DEBUG - logging_config.py:97 - log_function_entry - Entering function: preprocess_mermaid_diagrams(Text length: 9471)
+2025-04-05 15:37:21,356 - MarkdownToPDF - DEBUG - mermaid_processor.py:41 - preprocess_mermaid_diagrams - Found 1 Mermaid blocks
+2025-04-05 15:37:21,356 - MarkdownToPDF - INFO - mermaid_processor.py:49 - preprocess_mermaid_diagrams - Using web-based approach for Mermaid diagrams
+2025-04-05 15:37:21,356 - MarkdownToPDF - DEBUG - mermaid_processor.py:53 - preprocess_mermaid_diagrams - Processing Mermaid block 1
+2025-04-05 15:37:21,356 - MarkdownToPDF - DEBUG - mermaid_processor.py:65 - preprocess_mermaid_diagrams - Replaced Mermaid block 1 with HTML div for client-side rendering
+2025-04-05 15:37:21,356 - MarkdownToPDF - DEBUG - logging_config.py:106 - log_function_exit - Exiting function: preprocess_mermaid_diagrams with result: Completed
+2025-04-05 15:37:21,356 - MarkdownToPDF - DEBUG - render_utils.py:467 - update_preview - Writing processed Markdown to temporary file (length: 9656)
+2025-04-05 15:37:21,358 - MarkdownToPDF - DEBUG - render_utils.py:475 - update_preview - Created temporary HTML file: C:\Users\joshd\AppData\Local\Temp\tmpngqi0xch.html
+2025-04-05 15:37:21,358 - MarkdownToPDF - DEBUG - render_utils.py:24 - generate_css_from_settings - Generating CSS from settings
+2025-04-05 15:37:21,358 - MarkdownToPDF - DEBUG - render_utils.py:265 - generate_css_from_settings - CSS generation completed
+2025-04-05 15:37:21,360 - MarkdownToPDF - DEBUG - render_utils.py:482 - update_preview - Created temporary CSS file: C:\Users\joshd\AppData\Local\Temp\tmp6qr8s95m.css
+2025-04-05 15:37:21,360 - MarkdownToPDF - DEBUG - logging_config.py:121 - log_command - Running command: pandoc C:\Users\joshd\AppData\Local\Temp\tmpuvr8empi.md -o C:\Users\joshd\AppData\Local\Temp\tmpngqi0xch.html --standalone --css=C:\Users\joshd\AppData\Local\Temp\tmp6qr8s95m.css --mathjax -f markdown+fenced_divs+pipe_tables+backtick_code_blocks -t html5 --variable secnumdepth=-2 --variable disable-numbering=true
+2025-04-05 15:37:21,451 - MarkdownToPDF - DEBUG - mermaid_local_fallback.py:24 - find_mermaid_js - Searching for local Mermaid.js installations
+2025-04-05 15:37:21,526 - MarkdownToPDF - INFO - mermaid_local_fallback.py:71 - find_mermaid_js - Found valid local Mermaid.js at: C:\Projects\markdown2pdf\node_modules\mermaid\dist\mermaid.min.js
+2025-04-05 15:37:21,526 - MarkdownToPDF - INFO - mermaid_local_fallback.py:400 - get_mermaid_script_tag - Using local Mermaid.js: file:///C:/Projects/markdown2pdf/node_modules/mermaid/dist/mermaid.min.js
+2025-04-05 15:37:21,526 - MarkdownToPDF - DEBUG - render_utils.py:542 - update_preview - HTML content generated (length: 16852)
+2025-04-05 15:37:21,527 - MarkdownToPDF - DEBUG - page_preview.py:252 - update_preview - Updating preview
+2025-04-05 15:37:21,527 - MarkdownToPDF - DEBUG - page_preview.py:459 - cleanup_temp_files - Cleaning up 1 temporary files
+2025-04-05 15:37:21,527 - MarkdownToPDF - DEBUG - page_preview.py:465 - cleanup_temp_files - Deleted temporary file: C:\Users\joshd\AppData\Local\Temp\tmptn798ix5.html
+2025-04-05 15:37:21,527 - MarkdownToPDF - DEBUG - mermaid_local_fallback.py:24 - find_mermaid_js - Searching for local Mermaid.js installations
+2025-04-05 15:37:21,604 - MarkdownToPDF - INFO - mermaid_local_fallback.py:71 - find_mermaid_js - Found valid local Mermaid.js at: C:\Projects\markdown2pdf\node_modules\mermaid\dist\mermaid.min.js
+2025-04-05 15:37:21,604 - MarkdownToPDF - INFO - mermaid_local_fallback.py:400 - get_mermaid_script_tag - Using local Mermaid.js: file:///C:/Projects/markdown2pdf/node_modules/mermaid/dist/mermaid.min.js
+2025-04-05 15:37:21,619 - MarkdownToPDF - DEBUG - page_preview.py:433 - update_preview - Created temporary HTML file: C:\Users\joshd\AppData\Local\Temp\tmphmm0p_b5.html
+2025-04-05 15:37:21,619 - MarkdownToPDF - DEBUG - page_preview.py:437 - update_preview - Loading URL: file:///C:/Users/joshd/AppData/Local/Temp/tmphmm0p_b5.html
+2025-04-05 15:37:21,620 - MarkdownToPDF - DEBUG - render_utils.py:546 - update_preview - Preview updated successfully
+2025-04-05 15:37:21,620 - MarkdownToPDF - DEBUG - render_utils.py:577 - update_preview - Cleaning up temporary files
+2025-04-05 15:37:21,620 - MarkdownToPDF - DEBUG - render_utils.py:583 - update_preview - Deleted temporary file: C:\Users\joshd\AppData\Local\Temp\tmpuvr8empi.md
+2025-04-05 15:37:21,620 - MarkdownToPDF - DEBUG - render_utils.py:583 - update_preview - Deleted temporary file: C:\Users\joshd\AppData\Local\Temp\tmp6qr8s95m.css
+2025-04-05 15:37:21,620 - MarkdownToPDF - DEBUG - render_utils.py:583 - update_preview - Deleted temporary file: C:\Users\joshd\AppData\Local\Temp\tmpngqi0xch.html
+2025-04-05 15:37:21,620 - MarkdownToPDF - DEBUG - logging_config.py:108 - log_function_exit - Exiting function: update_preview
+2025-04-05 15:37:21,623 - MarkdownToPDF - DEBUG - render_utils.py:426 - update_preview - Updating preview
+2025-04-05 15:37:21,623 - MarkdownToPDF - DEBUG - logging_config.py:97 - log_function_entry - Entering function: update_preview()
+2025-04-05 15:37:21,623 - MarkdownToPDF - DEBUG - render_utils.py:464 - update_preview - Pre-processing Mermaid diagrams
+2025-04-05 15:37:21,623 - MarkdownToPDF - DEBUG - mermaid_processor.py:33 - preprocess_mermaid_diagrams - Preprocessing Mermaid diagrams
+2025-04-05 15:37:21,623 - MarkdownToPDF - DEBUG - logging_config.py:97 - log_function_entry - Entering function: preprocess_mermaid_diagrams(Text length: 9471)
+2025-04-05 15:37:21,623 - MarkdownToPDF - DEBUG - mermaid_processor.py:41 - preprocess_mermaid_diagrams - Found 1 Mermaid blocks
+2025-04-05 15:37:21,623 - MarkdownToPDF - INFO - mermaid_processor.py:49 - preprocess_mermaid_diagrams - Using web-based approach for Mermaid diagrams
+2025-04-05 15:37:21,623 - MarkdownToPDF - DEBUG - mermaid_processor.py:53 - preprocess_mermaid_diagrams - Processing Mermaid block 1
+2025-04-05 15:37:21,623 - MarkdownToPDF - DEBUG - mermaid_processor.py:65 - preprocess_mermaid_diagrams - Replaced Mermaid block 1 with HTML div for client-side rendering
+2025-04-05 15:37:21,623 - MarkdownToPDF - DEBUG - logging_config.py:106 - log_function_exit - Exiting function: preprocess_mermaid_diagrams with result: Completed
+2025-04-05 15:37:21,623 - MarkdownToPDF - DEBUG - render_utils.py:467 - update_preview - Writing processed Markdown to temporary file (length: 9656)
+2025-04-05 15:37:21,626 - MarkdownToPDF - DEBUG - render_utils.py:475 - update_preview - Created temporary HTML file: C:\Users\joshd\AppData\Local\Temp\tmp9am4gea6.html
+2025-04-05 15:37:21,626 - MarkdownToPDF - DEBUG - render_utils.py:24 - generate_css_from_settings - Generating CSS from settings
+2025-04-05 15:37:21,626 - MarkdownToPDF - DEBUG - render_utils.py:265 - generate_css_from_settings - CSS generation completed
+2025-04-05 15:37:21,627 - MarkdownToPDF - DEBUG - render_utils.py:482 - update_preview - Created temporary CSS file: C:\Users\joshd\AppData\Local\Temp\tmpn3_zkko_.css
+2025-04-05 15:37:21,627 - MarkdownToPDF - DEBUG - logging_config.py:121 - log_command - Running command: pandoc C:\Users\joshd\AppData\Local\Temp\tmplkzxbj0k.md -o C:\Users\joshd\AppData\Local\Temp\tmp9am4gea6.html --standalone --css=C:\Users\joshd\AppData\Local\Temp\tmpn3_zkko_.css --mathjax -f markdown+fenced_divs+pipe_tables+backtick_code_blocks -t html5 --variable secnumdepth=-2 --variable disable-numbering=true
+2025-04-05 15:37:21,722 - MarkdownToPDF - DEBUG - mermaid_local_fallback.py:24 - find_mermaid_js - Searching for local Mermaid.js installations
+2025-04-05 15:37:21,794 - MarkdownToPDF - INFO - mermaid_local_fallback.py:71 - find_mermaid_js - Found valid local Mermaid.js at: C:\Projects\markdown2pdf\node_modules\mermaid\dist\mermaid.min.js
+2025-04-05 15:37:21,794 - MarkdownToPDF - INFO - mermaid_local_fallback.py:400 - get_mermaid_script_tag - Using local Mermaid.js: file:///C:/Projects/markdown2pdf/node_modules/mermaid/dist/mermaid.min.js
+2025-04-05 15:37:21,794 - MarkdownToPDF - DEBUG - render_utils.py:542 - update_preview - HTML content generated (length: 16852)
+2025-04-05 15:37:21,794 - MarkdownToPDF - DEBUG - page_preview.py:252 - update_preview - Updating preview
+2025-04-05 15:37:21,794 - MarkdownToPDF - DEBUG - page_preview.py:459 - cleanup_temp_files - Cleaning up 1 temporary files
+2025-04-05 15:37:21,795 - MarkdownToPDF - DEBUG - page_preview.py:465 - cleanup_temp_files - Deleted temporary file: C:\Users\joshd\AppData\Local\Temp\tmphmm0p_b5.html
+2025-04-05 15:37:21,795 - MarkdownToPDF - DEBUG - mermaid_local_fallback.py:24 - find_mermaid_js - Searching for local Mermaid.js installations
+2025-04-05 15:37:21,871 - MarkdownToPDF - INFO - mermaid_local_fallback.py:71 - find_mermaid_js - Found valid local Mermaid.js at: C:\Projects\markdown2pdf\node_modules\mermaid\dist\mermaid.min.js
+2025-04-05 15:37:21,871 - MarkdownToPDF - INFO - mermaid_local_fallback.py:400 - get_mermaid_script_tag - Using local Mermaid.js: file:///C:/Projects/markdown2pdf/node_modules/mermaid/dist/mermaid.min.js
+2025-04-05 15:37:21,886 - MarkdownToPDF - DEBUG - page_preview.py:433 - update_preview - Created temporary HTML file: C:\Users\joshd\AppData\Local\Temp\tmplo1e3_53.html
+2025-04-05 15:37:21,886 - MarkdownToPDF - DEBUG - page_preview.py:437 - update_preview - Loading URL: file:///C:/Users/joshd/AppData/Local/Temp/tmplo1e3_53.html
+2025-04-05 15:37:21,886 - MarkdownToPDF - DEBUG - render_utils.py:546 - update_preview - Preview updated successfully
+2025-04-05 15:37:21,886 - MarkdownToPDF - DEBUG - render_utils.py:577 - update_preview - Cleaning up temporary files
+2025-04-05 15:37:21,887 - MarkdownToPDF - DEBUG - render_utils.py:583 - update_preview - Deleted temporary file: C:\Users\joshd\AppData\Local\Temp\tmplkzxbj0k.md
+2025-04-05 15:37:21,887 - MarkdownToPDF - DEBUG - render_utils.py:583 - update_preview - Deleted temporary file: C:\Users\joshd\AppData\Local\Temp\tmpn3_zkko_.css
+2025-04-05 15:37:21,887 - MarkdownToPDF - DEBUG - render_utils.py:583 - update_preview - Deleted temporary file: C:\Users\joshd\AppData\Local\Temp\tmp9am4gea6.html
+2025-04-05 15:37:21,887 - MarkdownToPDF - DEBUG - logging_config.py:108 - log_function_exit - Exiting function: update_preview
+2025-04-05 15:37:21,899 - MarkdownToPDF - DEBUG - page_preview.py:69 - on_load_started - Web view: load started
+2025-04-05 15:37:21,942 - MarkdownToPDF - DEBUG - page_preview.py:30 - javaScriptConsoleMessage - JS Console (INFO): Using embedded offline Mermaid renderer [file:///C:/Users/joshd/AppData/Local/Temp/tmplo1e3_53.html:110]
+2025-04-05 15:37:21,969 - MarkdownToPDF - DEBUG - page_preview.py:30 - javaScriptConsoleMessage - JS Console (INFO): Found 1 Mermaid diagrams for basic rendering [file:///C:/Users/joshd/AppData/Local/Temp/tmplo1e3_53.html:115]
+2025-04-05 15:37:21,971 - MarkdownToPDF - DEBUG - page_preview.py:30 - javaScriptConsoleMessage - JS Console (INFO): Rendered basic diagram 0 [file:///C:/Users/joshd/AppData/Local/Temp/tmplo1e3_53.html:210]
+2025-04-05 15:37:21,981 - MarkdownToPDF - DEBUG - page_preview.py:76 - on_load_finished - Web view: load finished successfully
+2025-04-05 15:37:21,985 - MarkdownToPDF - DEBUG - page_preview.py:30 - javaScriptConsoleMessage - JS Console (INFO): Starting Mermaid initialization process [:3]
+2025-04-05 15:37:22,797 - MarkdownToPDF - DEBUG - page_preview.py:30 - javaScriptConsoleMessage - JS Console (INFO): Running mermaid initialization [:7]
+2025-04-05 15:37:22,797 - MarkdownToPDF - DEBUG - page_preview.py:30 - javaScriptConsoleMessage - JS Console (INFO): Mermaid object found! Version: undefined [:11]
+2025-04-05 15:37:22,798 - MarkdownToPDF - DEBUG - page_preview.py:30 - javaScriptConsoleMessage - JS Console (INFO): Found 0 mermaid diagrams [:30]
+2025-04-05 15:37:22,984 - MarkdownToPDF - DEBUG - page_preview.py:30 - javaScriptConsoleMessage - JS Console (INFO): Checking if Mermaid is available... [file:///C:/Users/joshd/AppData/Local/Temp/tmplo1e3_53.html:32]
+2025-04-05 15:37:22,984 - MarkdownToPDF - DEBUG - page_preview.py:30 - javaScriptConsoleMessage - JS Console (INFO): Mermaid is available, initializing... [file:///C:/Users/joshd/AppData/Local/Temp/tmplo1e3_53.html:34]
+2025-04-05 15:37:22,987 - MarkdownToPDF - DEBUG - page_preview.py:30 - javaScriptConsoleMessage - JS Console (INFO): Found 0 Mermaid diagrams [file:///C:/Users/joshd/AppData/Local/Temp/tmplo1e3_53.html:47]
+2025-04-05 15:37:22,987 - MarkdownToPDF - DEBUG - page_preview.py:30 - javaScriptConsoleMessage - JS Console (INFO): Checking if Mermaid is available... [file:///C:/Users/joshd/AppData/Local/Temp/tmplo1e3_53.html:254]
+2025-04-05 15:37:22,987 - MarkdownToPDF - DEBUG - page_preview.py:30 - javaScriptConsoleMessage - JS Console (INFO): Mermaid is available, initializing... [file:///C:/Users/joshd/AppData/Local/Temp/tmplo1e3_53.html:256]
+2025-04-05 15:37:22,988 - MarkdownToPDF - DEBUG - page_preview.py:30 - javaScriptConsoleMessage - JS Console (INFO): Found 0 Mermaid diagrams [file:///C:/Users/joshd/AppData/Local/Temp/tmplo1e3_53.html:269]
+2025-04-05 15:37:23,483 - MarkdownToPDF - DEBUG - page_preview.py:30 - javaScriptConsoleMessage - JS Console (INFO): Starting Mermaid initialization process [:3]
+2025-04-05 15:37:24,290 - MarkdownToPDF - DEBUG - page_preview.py:30 - javaScriptConsoleMessage - JS Console (INFO): Running mermaid initialization [:7]
+2025-04-05 15:37:24,290 - MarkdownToPDF - DEBUG - page_preview.py:30 - javaScriptConsoleMessage - JS Console (INFO): Mermaid object found! Version: undefined [:11]
+2025-04-05 15:37:24,291 - MarkdownToPDF - DEBUG - page_preview.py:30 - javaScriptConsoleMessage - JS Console (INFO): Found 0 mermaid diagrams [:30]
+2025-04-05 15:37:33,338 - MarkdownToPDF - INFO - markdown_to_pdf_converter.py:1633 - export_to_pdf - Starting PDF export process with enhanced mermaid support
+2025-04-05 15:37:33,338 - MarkdownToPDF - DEBUG - markdown_to_pdf_converter.py:1647 - export_to_pdf - Export directory path: C:/Projects/markdown2pdf/output
+2025-04-05 15:37:36,448 - MarkdownToPDF - INFO - markdown_to_pdf_converter.py:1656 - export_to_pdf - Selected output file: C:/Projects/markdown2pdf/output/quickstart-guide.pdf
+2025-04-05 15:37:36,479 - MarkdownToPDF - DEBUG - markdown_export_fix.py:17 - arrange_engines_for_export - Arranging engines for export, preferred: xelatex
+2025-04-05 15:37:36,479 - MarkdownToPDF - DEBUG - markdown_export_fix.py:23 - arrange_engines_for_export - Prioritizing weasyprint as most reliable engine
+2025-04-05 15:37:36,479 - MarkdownToPDF - DEBUG - markdown_export_fix.py:28 - arrange_engines_for_export - Adding preferred engine: xelatex
+2025-04-05 15:37:36,479 - MarkdownToPDF - DEBUG - markdown_export_fix.py:34 - arrange_engines_for_export - Adding LaTeX engine: pdflatex
+2025-04-05 15:37:36,479 - MarkdownToPDF - DEBUG - markdown_export_fix.py:34 - arrange_engines_for_export - Adding LaTeX engine: lualatex
+2025-04-05 15:37:36,479 - MarkdownToPDF - DEBUG - markdown_export_fix.py:40 - arrange_engines_for_export - Adding remaining engine: wkhtmltopdf
+2025-04-05 15:37:36,479 - MarkdownToPDF - DEBUG - markdown_export_fix.py:42 - arrange_engines_for_export - Final engine order: weasyprint, xelatex, pdflatex, lualatex, wkhtmltopdf
+2025-04-05 15:37:36,479 - MarkdownToPDF - DEBUG - markdown_to_pdf_converter.py:1679 - export_to_pdf - Will try these engines in order: ['weasyprint', 'xelatex', 'pdflatex', 'lualatex', 'wkhtmltopdf']
+2025-04-05 15:37:36,486 - MarkdownToPDF - INFO - markdown_to_pdf_converter.py:1687 - export_to_pdf - Attempting export with engine: weasyprint
+2025-04-05 15:37:36,486 - MarkdownToPDF - DEBUG - markdown_export_fix.py:98 - preprocess_markdown_for_engine - Preprocessing markdown for engine: weasyprint
+2025-04-05 15:37:36,486 - MarkdownToPDF - DEBUG - mermaid_processor.py:525 - preprocess_workflow_diagram - Found workflow diagram, replacing with fixed version
+2025-04-05 15:37:36,486 - MarkdownToPDF - DEBUG - mermaid_processor.py:541 - preprocess_workflow_diagram - Workflow diagram replaced with fixed version
+2025-04-05 15:37:36,487 - MarkdownToPDF - DEBUG - mermaid_processor.py:547 - preprocess_workflow_diagram - Found basic workflow diagram, replacing with fixed version
+2025-04-05 15:37:36,487 - MarkdownToPDF - DEBUG - mermaid_processor.py:562 - preprocess_workflow_diagram - Basic workflow diagram replaced with fixed version
+2025-04-05 15:37:36,487 - MarkdownToPDF - DEBUG - markdown_export_fix.py:193 - preprocess_markdown_for_engine - Using weasyprint engine - pre-rendering Mermaid diagrams to SVG
+2025-04-05 15:37:36,487 - MarkdownToPDF - DEBUG - mermaid_processor.py:608 - render_mermaid_to_svg - Rendering Mermaid diagram to SVG
+2025-04-05 15:37:37,756 - MarkdownToPDF - DEBUG - markdown_export_fix.py:233 - preprocess_markdown_for_engine - Successfully converted Mermaid diagram 1 to SVG
+2025-04-05 15:37:37,759 - MarkdownToPDF - DEBUG - markdown_to_pdf_converter.py:1709 - export_to_pdf - Created temporary markdown file: C:\Users\joshd\AppData\Local\Temp\tmpxxveeae4.md
+2025-04-05 15:37:37,759 - MarkdownToPDF - DEBUG - render_utils.py:24 - generate_css_from_settings - Generating CSS from settings
+2025-04-05 15:37:37,760 - MarkdownToPDF - DEBUG - render_utils.py:265 - generate_css_from_settings - CSS generation completed
+2025-04-05 15:37:37,762 - MarkdownToPDF - DEBUG - markdown_to_pdf_converter.py:1717 - export_to_pdf - Created temporary CSS file: C:\Users\joshd\AppData\Local\Temp\tmpmfgx_zjy.css
+2025-04-05 15:37:37,762 - MarkdownToPDF - DEBUG - markdown_export_fix.py:280 - update_pandoc_command_for_engine - Updating pandoc command for engine: weasyprint
+2025-04-05 15:37:37,763 - MarkdownToPDF - DEBUG - markdown_export_fix.py:284 - update_pandoc_command_for_engine - No special options needed for WeasyPrint
+2025-04-05 15:37:37,767 - MarkdownToPDF - INFO - markdown_to_pdf_converter.py:1853 - export_to_pdf - Running pandoc command: pandoc C:\Users\joshd\AppData\Local\Temp\tmpxxveeae4.md -o C:/Projects/markdown2pdf/output/quickstart-guide.pdf --standalone --pdf-engine=weasyprint --css=C:\Users\joshd\AppData\Local\Temp\tmpmfgx_zjy.css --include-in-header C:\Users\joshd\AppData\Local\Temp\tmpuyt4_tvv.html --variable secnumdepth=-2 --variable disable-numbering=true -V papersize=letter -V margin-top=20.0mm -V margin-right=20.0mm -V margin-bottom=20.0mm -V margin-left=14.0mm --mathjax
+2025-04-05 15:37:38,574 - MarkdownToPDF - INFO - markdown_to_pdf_converter.py:1867 - export_to_pdf - PDF export successful with engine: weasyprint
+2025-04-05 15:37:39,723 - MarkdownToPDF - DEBUG - markdown_to_pdf_converter.py:1909 - export_to_pdf - Deleted temporary file: C:\Users\joshd\AppData\Local\Temp\tmpxxveeae4.md
+2025-04-05 15:37:39,723 - MarkdownToPDF - DEBUG - markdown_to_pdf_converter.py:1909 - export_to_pdf - Deleted temporary file: C:\Users\joshd\AppData\Local\Temp\tmpmfgx_zjy.css
+2025-04-05 15:37:39,723 - MarkdownToPDF - DEBUG - markdown_to_pdf_converter.py:1909 - export_to_pdf - Deleted temporary file: C:\Users\joshd\AppData\Local\Temp\tmpuyt4_tvv.html
+2025-04-05 15:53:00,653 - MarkdownToPDF - INFO - markdown_to_pdf_converter.py:1633 - export_to_pdf - Starting PDF export process with enhanced mermaid support
+2025-04-05 15:53:00,655 - MarkdownToPDF - DEBUG - markdown_to_pdf_converter.py:1647 - export_to_pdf - Export directory path: C:/Projects/markdown2pdf/output
+2025-04-05 15:53:03,214 - MarkdownToPDF - INFO - markdown_to_pdf_converter.py:1656 - export_to_pdf - Selected output file: C:/Projects/markdown2pdf/output/quickstart-guide.pdf
+2025-04-05 15:53:03,249 - MarkdownToPDF - DEBUG - markdown_export_fix.py:17 - arrange_engines_for_export - Arranging engines for export, preferred: xelatex
+2025-04-05 15:53:03,249 - MarkdownToPDF - DEBUG - markdown_export_fix.py:23 - arrange_engines_for_export - Prioritizing weasyprint as most reliable engine
+2025-04-05 15:53:03,249 - MarkdownToPDF - DEBUG - markdown_export_fix.py:28 - arrange_engines_for_export - Adding preferred engine: xelatex
+2025-04-05 15:53:03,249 - MarkdownToPDF - DEBUG - markdown_export_fix.py:34 - arrange_engines_for_export - Adding LaTeX engine: pdflatex
+2025-04-05 15:53:03,249 - MarkdownToPDF - DEBUG - markdown_export_fix.py:34 - arrange_engines_for_export - Adding LaTeX engine: lualatex
+2025-04-05 15:53:03,249 - MarkdownToPDF - DEBUG - markdown_export_fix.py:40 - arrange_engines_for_export - Adding remaining engine: wkhtmltopdf
+2025-04-05 15:53:03,249 - MarkdownToPDF - DEBUG - markdown_export_fix.py:42 - arrange_engines_for_export - Final engine order: weasyprint, xelatex, pdflatex, lualatex, wkhtmltopdf
+2025-04-05 15:53:03,249 - MarkdownToPDF - DEBUG - markdown_to_pdf_converter.py:1679 - export_to_pdf - Will try these engines in order: ['weasyprint', 'xelatex', 'pdflatex', 'lualatex', 'wkhtmltopdf']
+2025-04-05 15:53:03,254 - MarkdownToPDF - INFO - markdown_to_pdf_converter.py:1687 - export_to_pdf - Attempting export with engine: weasyprint
+2025-04-05 15:53:03,255 - MarkdownToPDF - DEBUG - markdown_export_fix.py:98 - preprocess_markdown_for_engine - Preprocessing markdown for engine: weasyprint
+2025-04-05 15:53:03,255 - MarkdownToPDF - DEBUG - mermaid_processor.py:525 - preprocess_workflow_diagram - Found workflow diagram, replacing with fixed version
+2025-04-05 15:53:03,255 - MarkdownToPDF - DEBUG - mermaid_processor.py:541 - preprocess_workflow_diagram - Workflow diagram replaced with fixed version
+2025-04-05 15:53:03,255 - MarkdownToPDF - DEBUG - mermaid_processor.py:547 - preprocess_workflow_diagram - Found basic workflow diagram, replacing with fixed version
+2025-04-05 15:53:03,255 - MarkdownToPDF - DEBUG - mermaid_processor.py:562 - preprocess_workflow_diagram - Basic workflow diagram replaced with fixed version
+2025-04-05 15:53:03,255 - MarkdownToPDF - DEBUG - markdown_export_fix.py:193 - preprocess_markdown_for_engine - Using weasyprint engine - pre-rendering Mermaid diagrams to SVG
+2025-04-05 15:53:03,255 - MarkdownToPDF - DEBUG - mermaid_processor.py:608 - render_mermaid_to_svg - Rendering Mermaid diagram to SVG
+2025-04-05 15:53:04,514 - MarkdownToPDF - DEBUG - markdown_export_fix.py:233 - preprocess_markdown_for_engine - Successfully converted Mermaid diagram 1 to SVG
+2025-04-05 15:53:04,516 - MarkdownToPDF - DEBUG - markdown_to_pdf_converter.py:1709 - export_to_pdf - Created temporary markdown file: C:\Users\joshd\AppData\Local\Temp\tmpctzz295q.md
+2025-04-05 15:53:04,516 - MarkdownToPDF - DEBUG - render_utils.py:24 - generate_css_from_settings - Generating CSS from settings
+2025-04-05 15:53:04,516 - MarkdownToPDF - DEBUG - render_utils.py:265 - generate_css_from_settings - CSS generation completed
+2025-04-05 15:53:04,519 - MarkdownToPDF - DEBUG - markdown_to_pdf_converter.py:1717 - export_to_pdf - Created temporary CSS file: C:\Users\joshd\AppData\Local\Temp\tmpmofi17t3.css
+2025-04-05 15:53:04,519 - MarkdownToPDF - DEBUG - markdown_export_fix.py:280 - update_pandoc_command_for_engine - Updating pandoc command for engine: weasyprint
+2025-04-05 15:53:04,519 - MarkdownToPDF - DEBUG - markdown_export_fix.py:284 - update_pandoc_command_for_engine - No special options needed for WeasyPrint
+2025-04-05 15:53:04,524 - MarkdownToPDF - INFO - markdown_to_pdf_converter.py:1853 - export_to_pdf - Running pandoc command: pandoc C:\Users\joshd\AppData\Local\Temp\tmpctzz295q.md -o C:/Projects/markdown2pdf/output/quickstart-guide.pdf --standalone --pdf-engine=weasyprint --css=C:\Users\joshd\AppData\Local\Temp\tmpmofi17t3.css --include-in-header C:\Users\joshd\AppData\Local\Temp\tmp7vjizuzd.html --variable secnumdepth=-2 --variable disable-numbering=true -V papersize=letter -V margin-top=20.0mm -V margin-right=20.0mm -V margin-bottom=20.0mm -V margin-left=14.0mm --mathjax
+2025-04-05 15:53:05,325 - MarkdownToPDF - INFO - markdown_to_pdf_converter.py:1867 - export_to_pdf - PDF export successful with engine: weasyprint
+2025-04-05 15:53:19,707 - MarkdownToPDF - DEBUG - markdown_to_pdf_converter.py:1909 - export_to_pdf - Deleted temporary file: C:\Users\joshd\AppData\Local\Temp\tmpctzz295q.md
+2025-04-05 15:53:19,707 - MarkdownToPDF - DEBUG - markdown_to_pdf_converter.py:1909 - export_to_pdf - Deleted temporary file: C:\Users\joshd\AppData\Local\Temp\tmpmofi17t3.css
+2025-04-05 15:53:19,707 - MarkdownToPDF - DEBUG - markdown_to_pdf_converter.py:1909 - export_to_pdf - Deleted temporary file: C:\Users\joshd\AppData\Local\Temp\tmp7vjizuzd.html
+2025-04-05 16:04:20,749 - MarkdownToPDF - INFO - main.py:160 - main - Application exited with code: 0

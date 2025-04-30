@@ -1,0 +1,46 @@
+Running 24 export tests...
+================================================================================
+Test            Format Engine     Settings             Time     Size     Status
+--------------------------------------------------------------------------------
+1/24 (4.2%) pdf   xelatex    tocon_pageA4_portrait 7.75s 39.56 KB OK
+2/24 (8.3%) pdf   weasyprint tocon_pageA4_portrait 0.91s 16.78 KB OK
+3/24 (12.5%) pdf   wkhtmltopdf tocon_pageA4_portrait 7.89s 39.56 KB OK
+4/24 (16.7%) pdf   xelatex    tocon_pageLetter_landscape 7.79s 39.55 KB OK
+5/24 (20.8%) pdf   weasyprint tocon_pageLetter_landscape 0.91s 16.78 KB OK
+6/24 (25.0%) pdf   wkhtmltopdf tocon_pageLetter_landscape 8.00s 39.54 KB OK
+7/24 (29.2%) pdf   xelatex    tocoff_pageA4_portrait 3.92s 39.16 KB OK
+8/24 (33.3%) pdf   weasyprint tocoff_pageA4_portrait 0.92s 16.18 KB OK
+9/24 (37.5%) pdf   wkhtmltopdf tocoff_pageA4_portrait 4.16s 39.15 KB OK
+10/24 (41.7%) pdf   xelatex    tocoff_pageLetter_landscape 3.96s 39.14 KB OK
+11/24 (45.8%) pdf   weasyprint tocoff_pageLetter_landscape 0.91s 16.19 KB OK
+12/24 (50.0%) pdf   wkhtmltopdf tocoff_pageLetter_landscape 4.05s 39.15 KB OK
+13/24 (54.2%) html  N/A        tocon_pageA4_portrait 0.20s 8.70 KB  OK
+14/24 (58.3%) html  N/A        tocon_pageLetter_landscape 0.21s 8.70 KB  OK
+15/24 (62.5%) html  N/A        tocoff_pageA4_portrait 0.20s 8.34 KB  OK
+16/24 (66.7%) html  N/A        tocoff_pageLetter_landscape 0.10s 8.34 KB  OK
+17/24 (70.8%) epub  N/A        tocon_pageA4_portrait 0.10s 6.02 KB  OK
+18/24 (75.0%) epub  N/A        tocon_pageLetter_landscape 0.10s 6.03 KB  OK
+19/24 (79.2%) epub  N/A        tocoff_pageA4_portrait 0.10s 6.07 KB  OK
+20/24 (83.3%) epub  N/A        tocoff_pageLetter_landscape 0.10s 6.08 KB  OK
+21/24 (87.5%) docx  N/A        tocon_pageA4_portrait 0.10s 11.12 KB OK
+22/24 (91.7%) docx  N/A        tocon_pageLetter_landscape 0.10s 11.12 KB OK
+23/24 (95.8%) docx  N/A        tocoff_pageA4_portrait 0.10s 10.98 KB OK
+24/24 (100.0%) docx  N/A        tocoff_pageLetter_landscape 0.10s 10.98 KB OK
+
+
+==================================================
+EXPORT TEST SUMMARY
+==================================================
+Total tests: 24/24
+Successful: 24
+Failed: 0
+
+Results by format:
+PDF: 12 success, 0 failure
+HTML: 4 success, 0 failure
+EPUB: 4 success, 0 failure
+DOCX: 4 success, 0 failure
+
+Test output directory: C:\Users\joshd\AppData\Local\Temp\tmplx3_3qgo
+Settings records directory: C:\Users\joshd\AppData\Local\Temp\tmplx3_3qgo\settings_records
+Overall results file: C:\Users\joshd\AppData\Local\Temp\tmplx3_3qgo\test_results.json

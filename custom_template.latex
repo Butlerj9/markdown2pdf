@@ -1,0 +1,124 @@
+\documentclass[$if(fontsize)$$fontsize$,$endif$$if(papersize)$$papersize$,$endif$]{article}
+
+\usepackage{geometry}
+\geometry{
+$if(margin-top)$top=$margin-top$mm,$endif$
+$if(margin-right)$right=$margin-right$mm,$endif$
+$if(margin-bottom)$bottom=$margin-bottom$mm,$endif$
+$if(margin-left)$left=$margin-left$mm,$endif$
+paperwidth=210mm,
+paperheight=297mm
+}
+
+\usepackage{fontspec}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\usepackage{listings}
+\usepackage{multicol}
+\usepackage{array}
+\usepackage{enumitem}
+
+% Configure bullet list styles
+\setlist[itemize,1]{label=\textbullet}
+\setlist[itemize,2]{label=\textopenbullet}
+\setlist[itemize,3]{label=\textdiamondsuit}
+
+% Set main font
+$if(mainfont)$
+\setmainfont{$mainfont$}
+$endif$
+
+% Set sans font for headings
+$if(sansfont)$
+\setsansfont{$sansfont$}
+$endif$
+
+% Set monospace font for code
+$if(monofont)$
+\setmonofont{$monofont$}
+$endif$
+
+% Setup colors
+$if(text-color)$
+\definecolor{textcolor}{HTML}{$text-color$}
+\color{textcolor}
+$endif$
+
+$if(heading-color)$
+\definecolor{headingcolor}{HTML}{$heading-color$}
+$endif$
+
+$if(link-color)$
+\definecolor{linkcolor}{HTML}{$link-color$}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=linkcolor,
+    urlcolor=linkcolor
+}
+$endif$
+
+% Fix for handling technical numbering correctly
+\setcounter{secnumdepth}{$if(secnumdepth)$$secnumdepth$$else$-2$endif$}
+
+% Style headings
+$if(heading-color)$
+\titleformat{\section}{\Large\bfseries\sffamily\color{headingcolor}}{\thesection}{1em}{}
+\titleformat{\subsection}{\large\bfseries\sffamily\color{headingcolor}}{\thesubsection}{1em}{}
+\titleformat{\subsubsection}{\normalsize\bfseries\sffamily\color{headingcolor}}{\thesubsubsection}{1em}{}
+$endif$
+
+% Setup page numbering if enabled
+$if(page-numbering)$
+\pagestyle{fancy}
+\fancyhf{}
+$if(page-number-format)$
+\fancyfoot[C]{$page-number-format$}
+$else$
+\fancyfoot[C]{\thepage}
+$endif$
+\renewcommand{\headrulewidth}{0pt}
+$else$
+\pagestyle{empty}
+$endif$
+
+% Code block styling
+\definecolor{codebg}{HTML}{F8F8F8}
+\definecolor{codeborder}{HTML}{E0E0E0}
+\lstset{
+    backgroundcolor=\color{codebg},
+    frame=single,
+    rulecolor=\color{codeborder},
+    basicstyle=\ttfamily\small,
+    breaklines=true,
+    postbreak=\mbox{\textcolor{gray}{-->}\space},
+}
+
+% Define a command for horizontal lines
+\newcommand{\horizontalline}{
+  \noindent\rule{\textwidth}{0.5pt}
+}
+
+\begin{document}
+
+$if(title)$
+\title{$title$}
+$if(author)$
+\author{$author$}
+$endif$
+$if(date)$
+\date{$date$}
+$endif$
+\maketitle
+$endif$
+
+$if(toc)$
+\tableofcontents
+\newpage
+$endif$
+
+$body$
+
+\end{document}
