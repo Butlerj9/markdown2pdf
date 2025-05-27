@@ -1,0 +1,12 @@
+author: MDZ Validator
+date: '2025-05-01'
+highlight_style: github
+numbering: true
+tags:
+- markdown
+- yaml
+- front-matter
+- test
+theme: default
+title: YAML Front Matter Test
+toc: true

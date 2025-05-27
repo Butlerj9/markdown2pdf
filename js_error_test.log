@@ -1,0 +1,6 @@
+2025-05-02 13:42:40,885 - DEBUG - Initializing PagePreview
+2025-05-02 13:42:41,276 - DEBUG - PagePreview initialized
+2025-05-02 13:42:41,277 - DEBUG - Updating document settings
+2025-05-02 13:42:41,277 - DEBUG - Page dimensions: A4 portrait, 210mm x 297mm
+2025-05-02 13:42:41,277 - DEBUG - Margins: T:25mm R:25mm B:25mm L:25mm
+2025-05-02 13:42:41,277 - DEBUG - Settings verification complete

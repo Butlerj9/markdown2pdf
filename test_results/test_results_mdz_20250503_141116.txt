@@ -1,0 +1,314 @@
+Test Results for Category: mdz
+Timestamp: 2025-05-03 14:11:16
+Total Tests: 2
+
+Test 1/2: test_mdz_export_integration.py
+Status: FAIL
+Execution Time: 120.00s
+Standard Output:
+
+Standard Error:
+Test timed out after 120 seconds
+--------------------------------------------------------------------------------
+
+Test 2/2: test_mdz_comprehensive.py
+Status: PASS
+Execution Time: 47.96s
+Standard Output:
+2025-05-03 14:13:17,131 - INFO - Logging to file: C:\Users\joshd\.markdown_pdf_logs\markdown_pdf_debug_20250503_141317.log
+2025-05-03 14:13:17,252 - INFO - Running in test mode - dialogs will be suppressed
+Found xelatex in PATH
+Found pdflatex in PATH
+Found lualatex in PATH
+Found wkhtmltopdf at: C:\Program Files\wkhtmltopdf\bin\wkhtmltopdf.exe
+Found weasyprint in PATH
+Pandoc found: pandoc.exe 3.1.12.1
+2025-05-03 14:13:18,719 - INFO - Loaded temporary style
+2025-05-03 14:13:18,720 - INFO - Loaded 3 recent files
+2025-05-03 14:13:18,720 - INFO - Settings loaded successfully
+Settings loaded successfully
+2025-05-03 14:13:19,361 - INFO - Starting MDZ export process
+2025-05-03 14:13:19,564 - ERROR - JavaScript Error: Uncaught SyntaxError: missing ) after argument list
+2025-05-03 14:13:19,564 - ERROR -   Source: file:///C:/Users/joshd/AppData/Local/Temp/tmp4vncepq4.html
+2025-05-03 14:13:19,564 - ERROR -   Line: 348
+2025-05-03 14:13:19,564 - ERROR -   Error Type: Uncaught SyntaxError
+2025-05-03 14:13:19,564 - ERROR -   Error Detail: missing ) after argument list
+2025-05-03 14:13:19,681 - ERROR - JavaScript Error: Uncaught SyntaxError: Invalid or unexpected token
+2025-05-03 14:13:19,681 - ERROR -   Source: file:///C:/Users/joshd/AppData/Local/Temp/tmp4vncepq4.html
+2025-05-03 14:13:19,681 - ERROR -   Line: 46
+2025-05-03 14:13:19,681 - ERROR -   Error Type: Uncaught SyntaxError
+2025-05-03 14:13:19,681 - ERROR -   Error Detail: Invalid or unexpected token
+2025-05-03 14:13:19,778 - ERROR - JavaScript Error: Uncaught SyntaxError: Invalid or unexpected token
+2025-05-03 14:13:19,778 - ERROR -   Source: file:///C:/Users/joshd/AppData/Local/Temp/tmp4vncepq4.html
+2025-05-03 14:13:19,778 - ERROR -   Line: 46
+2025-05-03 14:13:19,778 - ERROR -   Error Type: Uncaught SyntaxError
+2025-05-03 14:13:19,778 - ERROR -   Error Detail: Invalid or unexpected token
+2025-05-03 14:13:19,779 - ERROR - JavaScript Error: Uncaught SyntaxError: Invalid or unexpected token
+2025-05-03 14:13:19,779 - ERROR -   Source: file:///C:/Users/joshd/AppData/Local/Temp/tmp4vncepq4.html
+2025-05-03 14:13:19,779 - ERROR -   Line: 46
+2025-05-03 14:13:19,780 - ERROR -   Error Type: Uncaught SyntaxError
+2025-05-03 14:13:19,780 - ERROR -   Error Detail: Invalid or unexpected token
+2025-05-03 14:13:19,780 - ERROR - JavaScript Error: Uncaught SyntaxError: Invalid or unexpected token
+2025-05-03 14:13:19,780 - ERROR -   Source: file:///C:/Users/joshd/AppData/Local/Temp/tmp4vncepq4.html
+2025-05-03 14:13:19,780 - ERROR -   Line: 46
+2025-05-03 14:13:19,780 - ERROR -   Error Type: Uncaught SyntaxError
+2025-05-03 14:13:19,780 - ERROR -   Error Detail: Invalid or unexpected token
+
+Standard Error:
+2025-05-03 14:13:17,140 - INFO - Running all MDZ tests
+2025-05-03 14:13:17,140 - INFO - Running MDZ integration test: basic
+2025-05-03 14:13:17,141 - INFO - Testing MDZ creation: C:\Users\joshd\AppData\Local\Temp\mdz_test_vrlw7q9c\basic.mdz
+2025-05-03 14:13:17,142 - DEBUG - Created temporary directory: C:\Users\joshd\AppData\Local\Temp\mdz_export_4vjogs7q
+2025-05-03 14:13:17,160 - INFO - Created MDZ bundle: C:\Users\joshd\AppData\Local\Temp\mdz_test_vrlw7q9c\basic.mdz
+2025-05-03 14:13:17,160 - DEBUG - Cleaned up temporary directory: C:\Users\joshd\AppData\Local\Temp\mdz_export_4vjogs7q
+2025-05-03 14:13:17,161 - INFO - MDZ file created: C:\Users\joshd\AppData\Local\Temp\mdz_test_vrlw7q9c\basic.mdz
+2025-05-03 14:13:17,161 - INFO - MDZ file size: 455 bytes
+2025-05-03 14:13:17,161 - INFO - Original content checksum: feb49de41e1535bab326737d585f2f277cbacf4ab958fd414911df033a5cb8c7
+2025-05-03 14:13:17,161 - INFO - Testing MDZ extraction: C:\Users\joshd\AppData\Local\Temp\mdz_test_vrlw7q9c\basic.mdz
+2025-05-03 14:13:17,173 - INFO - MDZ extraction successful
+2025-05-03 14:13:17,173 - INFO - Extracted markdown content length: 57
+2025-05-03 14:13:17,173 - INFO - Extracted metadata: {'created': '2025-05-03T14:13:17.143551', 'format': 'mdz', 'settings': {'author': 'Test Author', 'date': '', 'page': {'margins': {'bottom': 25, 'left': 25, 'right': 25, 'top': 25}, 'orientation': 'portrait', 'size': 'A4'}, 'tags': [], 'title': 'Basic MDZ Test'}, 'version': '1.0'}
+2025-05-03 14:13:17,173 - INFO - Manifest file exists: C:\Users\joshd\AppData\Local\Temp\mdz_test_vrlw7q9c\basic_extracted\manifest.json
+2025-05-03 14:13:17,174 - INFO - Metadata file exists: C:\Users\joshd\AppData\Local\Temp\mdz_test_vrlw7q9c\basic_extracted\metadata.yaml
+2025-05-03 14:13:17,174 - INFO - Main markdown file exists: C:\Users\joshd\AppData\Local\Temp\mdz_test_vrlw7q9c\basic_extracted\main.md
+2025-05-03 14:13:17,174 - INFO - MDZ integration test passed: basic
+2025-05-03 14:13:17,174 - INFO - Running MDZ integration test: with_assets
+2025-05-03 14:13:17,177 - INFO - Testing MDZ creation: C:\Users\joshd\AppData\Local\Temp\mdz_test_vrlw7q9c\with_assets.mdz
+2025-05-03 14:13:17,177 - DEBUG - Created temporary directory: C:\Users\joshd\AppData\Local\Temp\mdz_export_65k1rb1e
+2025-05-03 14:13:17,196 - INFO - Created MDZ bundle: C:\Users\joshd\AppData\Local\Temp\mdz_test_vrlw7q9c\with_assets.mdz
+2025-05-03 14:13:17,197 - DEBUG - Cleaned up temporary directory: C:\Users\joshd\AppData\Local\Temp\mdz_export_65k1rb1e
+2025-05-03 14:13:17,197 - INFO - MDZ file created: C:\Users\joshd\AppData\Local\Temp\mdz_test_vrlw7q9c\with_assets.mdz
+2025-05-03 14:13:17,198 - INFO - MDZ file size: 648 bytes
+2025-05-03 14:13:17,198 - INFO - Original content checksum: 06863cedfa64c35aa0a86f69baa98396885b0e425a3e116a786d75df5cc10383
+2025-05-03 14:13:17,198 - INFO - Testing MDZ extraction: C:\Users\joshd\AppData\Local\Temp\mdz_test_vrlw7q9c\with_assets.mdz
+2025-05-03 14:13:17,213 - INFO - MDZ extraction successful
+2025-05-03 14:13:17,213 - INFO - Extracted markdown content length: 146
+2025-05-03 14:13:17,213 - INFO - Extracted metadata: {'created': '2025-05-03T14:13:17.178580', 'format': 'mdz', 'settings': {'author': 'Test Author', 'date': '', 'page': {'margins': {'bottom': 25, 'left': 25, 'right': 25, 'top': 25}, 'orientation': 'portrait', 'size': 'A4'}, 'tags': [], 'title': 'MDZ Test with Assets'}, 'version': '1.0'}
+2025-05-03 14:13:17,214 - INFO - Manifest file exists: C:\Users\joshd\AppData\Local\Temp\mdz_test_vrlw7q9c\with_assets_extracted\manifest.json
+2025-05-03 14:13:17,214 - INFO - Metadata file exists: C:\Users\joshd\AppData\Local\Temp\mdz_test_vrlw7q9c\with_assets_extracted\metadata.yaml
+2025-05-03 14:13:17,214 - INFO - Main markdown file exists: C:\Users\joshd\AppData\Local\Temp\mdz_test_vrlw7q9c\with_assets_extracted\main.md
+2025-05-03 14:13:17,214 - INFO - Assets directory exists: C:\Users\joshd\AppData\Local\Temp\mdz_test_vrlw7q9c\with_assets_extracted\assets
+2025-05-03 14:13:17,214 - INFO - Assets: ['test_data.json', 'test_image.png']
+2025-05-03 14:13:17,214 - INFO - MDZ integration test passed: with_assets
+2025-05-03 14:13:17,214 - INFO - Running MDZ integration test: complex
+2025-05-03 14:13:17,216 - INFO - Testing MDZ creation: C:\Users\joshd\AppData\Local\Temp\mdz_test_vrlw7q9c\complex.mdz
+2025-05-03 14:13:17,216 - DEBUG - Created temporary directory: C:\Users\joshd\AppData\Local\Temp\mdz_export_6mu10emw
+2025-05-03 14:13:17,226 - INFO - Created MDZ bundle: C:\Users\joshd\AppData\Local\Temp\mdz_test_vrlw7q9c\complex.mdz
+2025-05-03 14:13:17,226 - DEBUG - Cleaned up temporary directory: C:\Users\joshd\AppData\Local\Temp\mdz_export_6mu10emw
+2025-05-03 14:13:17,226 - INFO - MDZ file created: C:\Users\joshd\AppData\Local\Temp\mdz_test_vrlw7q9c\complex.mdz
+2025-05-03 14:13:17,226 - INFO - MDZ file size: 620 bytes
+2025-05-03 14:13:17,226 - INFO - Original content checksum: 169b95c32be6131d5deead438f0bef32f0f3a5368993b51ddafbaf8dee84ccb8
+2025-05-03 14:13:17,226 - INFO - Testing MDZ extraction: C:\Users\joshd\AppData\Local\Temp\mdz_test_vrlw7q9c\complex.mdz
+2025-05-03 14:13:17,237 - INFO - MDZ extraction successful
+2025-05-03 14:13:17,237 - INFO - Extracted markdown content length: 277
+2025-05-03 14:13:17,237 - INFO - Extracted metadata: {'created': '2025-05-03T14:13:17.217699', 'format': 'mdz', 'settings': {'author': 'Test Author', 'date': '', 'page': {'margins': {'bottom': 25, 'left': 25, 'right': 25, 'top': 25}, 'orientation': 'portrait', 'size': 'A4'}, 'tags': ['math', 'code', 'tables'], 'title': 'Complex MDZ Test'}, 'version': '1.0'}
+2025-05-03 14:13:17,237 - INFO - Manifest file exists: C:\Users\joshd\AppData\Local\Temp\mdz_test_vrlw7q9c\complex_extracted\manifest.json
+2025-05-03 14:13:17,237 - INFO - Metadata file exists: C:\Users\joshd\AppData\Local\Temp\mdz_test_vrlw7q9c\complex_extracted\metadata.yaml
+2025-05-03 14:13:17,237 - INFO - Main markdown file exists: C:\Users\joshd\AppData\Local\Temp\mdz_test_vrlw7q9c\complex_extracted\main.md
+2025-05-03 14:13:17,237 - INFO - MDZ integration test passed: complex
+2025-05-03 14:13:17,237 - INFO - Running MDZ app integration test: app_integration
+2025-05-03 14:13:17,252 - DEBUG - Available styles: ['Business Professional', 'Technical Document', 'Academic', 'Minimal', 'Custom']
+2025-05-03 14:13:17,252 - INFO - Running in test mode - dialogs will be suppressed
+2025-05-03 14:13:18,719 - DEBUG - Loaded temporary style
+2025-05-03 14:13:18,719 - INFO - Loaded temporary style
+2025-05-03 14:13:18,720 - INFO - Loaded 3 recent files
+2025-05-03 14:13:18,720 - INFO - Settings loaded successfully
+2025-05-03 14:13:18,769 - DEBUG - Initializing PagePreview
+2025-05-03 14:13:19,123 - DEBUG - PagePreview initialized
+2025-05-03 14:13:19,123 - DEBUG - Setting up zoom controls
+2025-05-03 14:13:19,124 - DEBUG - Zoom controls setup completed
+2025-05-03 14:13:19,144 - DEBUG - Updating preview
+2025-05-03 14:13:19,144 - DEBUG - Updating document settings
+2025-05-03 14:13:19,144 - DEBUG - Page dimensions: A4 landscape, 297mm x 210mm
+2025-05-03 14:13:19,144 - DEBUG - Margins: T:25.0mm R:25.0mm B:25.0mm L:25.0mm
+2025-05-03 14:13:19,144 - DEBUG - Settings verification complete
+2025-05-03 14:13:19,145 - DEBUG - Updating preview
+2025-05-03 14:13:19,145 - DEBUG - Cleaning up 0 temporary files
+2025-05-03 14:13:19,145 - DEBUG - Removing title elements from HTML content
+2025-05-03 14:13:19,145 - DEBUG - Title elements removed from HTML content
+2025-05-03 14:13:19,145 - DEBUG - JavaScript bridge created and registered
+2025-05-03 14:13:19,161 - DEBUG - Created temporary HTML file: C:\Users\joshd\AppData\Local\Temp\tmpd_xwsw6k.html
+2025-05-03 14:13:19,162 - DEBUG - Loading URL: file:///C:/Users/joshd/AppData/Local/Temp/tmpd_xwsw6k.html
+2025-05-03 14:13:19,168 - DEBUG - Set empty preview message
+2025-05-03 14:13:19,168 - DEBUG - Updating preview
+2025-05-03 14:13:19,168 - DEBUG - Updating document settings
+2025-05-03 14:13:19,168 - DEBUG - Page dimensions: A4 landscape, 297mm x 210mm
+2025-05-03 14:13:19,168 - DEBUG - Margins: T:25.0mm R:25.0mm B:25.0mm L:25.0mm
+2025-05-03 14:13:19,168 - DEBUG - Settings verification complete
+2025-05-03 14:13:19,170 - DEBUG - Finding page breaks in markdown
+2025-05-03 14:13:19,170 - DEBUG - Found 0 page breaks at lines: []
+2025-05-03 14:13:19,170 - DEBUG - Found 0 page breaks at lines: []
+2025-05-03 14:13:19,170 - DEBUG - Writing processed Markdown to temporary file (length: 142)
+2025-05-03 14:13:19,172 - DEBUG - Created temporary HTML file: C:\Users\joshd\AppData\Local\Temp\tmpyix1855c.html
+2025-05-03 14:13:19,172 - DEBUG - Generating CSS from settings
+2025-05-03 14:13:19,172 - DEBUG - CSS generation completed
+2025-05-03 14:13:19,172 - DEBUG - Injecting page break styles into CSS
+2025-05-03 14:13:19,174 - DEBUG - Created temporary CSS file: C:\Users\joshd\AppData\Local\Temp\tmplhs1alrw.css
+2025-05-03 14:13:19,174 - DEBUG - Running command: C:\Users\joshd\AppData\Local\Pandoc\pandoc.exe C:\Users\joshd\AppData\Local\Temp\tmpwaozzukb.md -o C:\Users\joshd\AppData\Local\Temp\tmpyix1855c.html --standalone --css=C:\Users\joshd\AppData\Local\Temp\tmplhs1alrw.css --mathjax --metadata title=Document -f markdown+fenced_divs+pipe_tables+backtick_code_blocks -t html5 --toc --toc-depth=3 --number-sections --variable secnumdepth=5
+2025-05-03 14:13:19,245 - DEBUG - Processing page breaks for preview
+2025-05-03 14:13:19,245 - DEBUG - No page breaks found in content
+2025-05-03 14:13:19,245 - DEBUG - HTML content generated (length: 1560)
+2025-05-03 14:13:19,245 - DEBUG - Updating preview
+2025-05-03 14:13:19,245 - DEBUG - Cleaning up 1 temporary files
+2025-05-03 14:13:19,246 - DEBUG - Deleted temporary file: C:\Users\joshd\AppData\Local\Temp\tmpd_xwsw6k.html
+2025-05-03 14:13:19,246 - DEBUG - Removing title elements from HTML content
+2025-05-03 14:13:19,246 - DEBUG - Title elements removed from HTML content
+2025-05-03 14:13:19,246 - DEBUG - JavaScript bridge created and registered
+2025-05-03 14:13:19,264 - DEBUG - Created temporary HTML file: C:\Users\joshd\AppData\Local\Temp\tmpy8zlog7s.html
+2025-05-03 14:13:19,264 - DEBUG - Loading URL: file:///C:/Users/joshd/AppData/Local/Temp/tmpy8zlog7s.html
+2025-05-03 14:13:19,265 - DEBUG - Preview updated successfully
+2025-05-03 14:13:19,265 - DEBUG - Cleaning up temporary files
+2025-05-03 14:13:19,265 - DEBUG - Deleted temporary file: C:\Users\joshd\AppData\Local\Temp\tmpwaozzukb.md
+2025-05-03 14:13:19,265 - DEBUG - Deleted temporary file: C:\Users\joshd\AppData\Local\Temp\tmplhs1alrw.css
+2025-05-03 14:13:19,266 - DEBUG - Deleted temporary file: C:\Users\joshd\AppData\Local\Temp\tmpyix1855c.html
+2025-05-03 14:13:19,266 - DEBUG - Exiting function: update_preview
+2025-05-03 14:13:19,266 - DEBUG - Updating preview
+2025-05-03 14:13:19,266 - DEBUG - Updating document settings
+2025-05-03 14:13:19,266 - DEBUG - Page dimensions: A4 landscape, 297mm x 210mm
+2025-05-03 14:13:19,266 - DEBUG - Margins: T:25.0mm R:25.0mm B:25.0mm L:25.0mm
+2025-05-03 14:13:19,266 - DEBUG - Settings verification complete
+2025-05-03 14:13:19,266 - DEBUG - Finding page breaks in markdown
+2025-05-03 14:13:19,266 - DEBUG - Found 0 page breaks at lines: []
+2025-05-03 14:13:19,266 - DEBUG - Found 0 page breaks at lines: []
+2025-05-03 14:13:19,266 - DEBUG - Writing processed Markdown to temporary file (length: 142)
+2025-05-03 14:13:19,269 - DEBUG - Created temporary HTML file: C:\Users\joshd\AppData\Local\Temp\tmp1ntjoo3r.html
+2025-05-03 14:13:19,269 - DEBUG - Generating CSS from settings
+2025-05-03 14:13:19,269 - DEBUG - CSS generation completed
+2025-05-03 14:13:19,269 - DEBUG - Injecting page break styles into CSS
+2025-05-03 14:13:19,270 - DEBUG - Created temporary CSS file: C:\Users\joshd\AppData\Local\Temp\tmp43opxad6.css
+2025-05-03 14:13:19,270 - DEBUG - Running command: C:\Users\joshd\AppData\Local\Pandoc\pandoc.exe C:\Users\joshd\AppData\Local\Temp\tmp0s9mdmhm.md -o C:\Users\joshd\AppData\Local\Temp\tmp1ntjoo3r.html --standalone --css=C:\Users\joshd\AppData\Local\Temp\tmp43opxad6.css --mathjax --metadata title=Document -f markdown+fenced_divs+pipe_tables+backtick_code_blocks -t html5 --toc --toc-depth=3 --number-sections --variable secnumdepth=5
+2025-05-03 14:13:19,338 - DEBUG - Processing page breaks for preview
+2025-05-03 14:13:19,338 - DEBUG - No page breaks found in content
+2025-05-03 14:13:19,338 - DEBUG - HTML content generated (length: 1560)
+2025-05-03 14:13:19,338 - DEBUG - Updating preview
+2025-05-03 14:13:19,338 - DEBUG - Cleaning up 1 temporary files
+2025-05-03 14:13:19,338 - DEBUG - Deleted temporary file: C:\Users\joshd\AppData\Local\Temp\tmpy8zlog7s.html
+2025-05-03 14:13:19,339 - DEBUG - Removing title elements from HTML content
+2025-05-03 14:13:19,339 - DEBUG - Title elements removed from HTML content
+2025-05-03 14:13:19,339 - DEBUG - JavaScript bridge created and registered
+2025-05-03 14:13:19,358 - DEBUG - Created temporary HTML file: C:\Users\joshd\AppData\Local\Temp\tmp4vncepq4.html
+2025-05-03 14:13:19,358 - DEBUG - Loading URL: file:///C:/Users/joshd/AppData/Local/Temp/tmp4vncepq4.html
+2025-05-03 14:13:19,360 - DEBUG - Preview updated successfully
+2025-05-03 14:13:19,360 - DEBUG - Cleaning up temporary files
+2025-05-03 14:13:19,360 - DEBUG - Deleted temporary file: C:\Users\joshd\AppData\Local\Temp\tmp0s9mdmhm.md
+2025-05-03 14:13:19,361 - DEBUG - Deleted temporary file: C:\Users\joshd\AppData\Local\Temp\tmp43opxad6.css
+2025-05-03 14:13:19,361 - DEBUG - Deleted temporary file: C:\Users\joshd\AppData\Local\Temp\tmp1ntjoo3r.html
+2025-05-03 14:13:19,361 - DEBUG - Exiting function: update_preview
+2025-05-03 14:13:19,361 - INFO - Starting MDZ export process
+2025-05-03 14:13:19,418 - DEBUG - Created temporary directory: C:\Users\joshd\AppData\Local\Temp\mdz_export_mbwghb_6
+2025-05-03 14:13:19,441 - INFO - Created MDZ bundle: C:\Users\joshd\AppData\Local\Temp\mdz_test_vrlw7q9c\app_integration.mdz
+2025-05-03 14:13:19,442 - DEBUG - Cleaned up temporary directory: C:\Users\joshd\AppData\Local\Temp\mdz_export_mbwghb_6
+2025-05-03 14:13:19,541 - DEBUG - Web view: load started
+2025-05-03 14:13:19,564 - ERROR - JavaScript Error: Uncaught SyntaxError: missing ) after argument list
+2025-05-03 14:13:19,564 - ERROR -   Source: file:///C:/Users/joshd/AppData/Local/Temp/tmp4vncepq4.html
+2025-05-03 14:13:19,564 - ERROR -   Line: 348
+2025-05-03 14:13:19,564 - ERROR -   Error Type: Uncaught SyntaxError
+2025-05-03 14:13:19,564 - ERROR -   Error Detail: missing ) after argument list
+js: Uncaught SyntaxError: missing ) after argument list
+2025-05-03 14:13:19,566 - DEBUG - JS Console (INFO): DOM loaded, initializing page navigation... [file:///C:/Users/joshd/AppData/Local/Temp/tmp4vncepq4.html:493]
+2025-05-03 14:13:19,566 - DEBUG - JS Console (INFO): DOM loaded, initializing bridge directly... [file:///C:/Users/joshd/AppData/Local/Temp/tmp4vncepq4.html:613]
+2025-05-03 14:13:19,566 - DEBUG - JS Console (INFO): qt.webChannelTransport is available, connecting bridge... [file:///C:/Users/joshd/AppData/Local/Temp/tmp4vncepq4.html:704]
+2025-05-03 14:13:19,566 - DEBUG - JS Console (INFO): QWebChannel polyfill created [file:///C:/Users/joshd/AppData/Local/Temp/tmp4vncepq4.html:11]
+2025-05-03 14:13:19,576 - DEBUG - Web view: load finished successfully
+2025-05-03 14:13:19,577 - DEBUG - Page loaded, applying document settings
+2025-05-03 14:13:19,577 - DEBUG - Page loaded, applying document settings
+2025-05-03 14:13:19,577 - DEBUG - Page loaded, applying document settings
+2025-05-03 14:13:19,577 - DEBUG - JS Console (INFO): Bridge connected directly: true [file:///C:/Users/joshd/AppData/Local/Temp/tmp4vncepq4.html:708]
+2025-05-03 14:13:19,679 - DEBUG - Applying page layout styling
+2025-05-03 14:13:19,679 - DEBUG - Applied page layout styling
+2025-05-03 14:13:19,679 - DEBUG - Page layout debugging initiated
+2025-05-03 14:13:19,681 - ERROR - JavaScript Error: Uncaught SyntaxError: Invalid or unexpected token
+2025-05-03 14:13:19,681 - ERROR -   Source: file:///C:/Users/joshd/AppData/Local/Temp/tmp4vncepq4.html
+2025-05-03 14:13:19,681 - ERROR -   Line: 46
+2025-05-03 14:13:19,681 - ERROR -   Error Type: Uncaught SyntaxError
+2025-05-03 14:13:19,681 - ERROR -   Error Detail: Invalid or unexpected token
+js: Uncaught SyntaxError: Invalid or unexpected token
+2025-05-03 14:13:19,681 - DEBUG - JS Console (INFO): Debugging page layout... [:3]
+2025-05-03 14:13:19,685 - DEBUG - JS Console (INFO): Document dimensions: 281px x 0px [:14]
+2025-05-03 14:13:19,685 - DEBUG - JS Console (INFO): Body dimensions: 265px x 171px [:19]
+2025-05-03 14:13:19,685 - DEBUG - JS Console (INFO): No pages container found [:30]
+2025-05-03 14:13:19,685 - DEBUG - JS Console (INFO): Found 0 pages [:35]
+2025-05-03 14:13:19,685 - DEBUG - JS Console (INFO): Found 0 page break elements [:80]
+2025-05-03 14:13:19,685 - DEBUG - JS Console (INFO): Current zoom factor (CSS var): 1 [:92]
+2025-05-03 14:13:19,685 - DEBUG - Page layout debug results: {'documentHeight': 0, 'documentWidth': 281, 'originalPageBreaks': 0, 'pageBreaks': 0, 'pageCount': 0, 'zoomFactor': '1'}
+2025-05-03 14:13:19,778 - DEBUG - Applying page layout styling
+2025-05-03 14:13:19,778 - DEBUG - Applied page layout styling
+2025-05-03 14:13:19,778 - DEBUG - Page layout debugging initiated
+2025-05-03 14:13:19,778 - DEBUG - Applying page layout styling
+2025-05-03 14:13:19,778 - DEBUG - Applied page layout styling
+2025-05-03 14:13:19,778 - DEBUG - Page layout debugging initiated
+2025-05-03 14:13:19,778 - DEBUG - Applying page layout styling
+2025-05-03 14:13:19,778 - DEBUG - Applied page layout styling
+2025-05-03 14:13:19,778 - DEBUG - Page layout debugging initiated
+2025-05-03 14:13:19,778 - ERROR - JavaScript Error: Uncaught SyntaxError: Invalid or unexpected token
+2025-05-03 14:13:19,778 - ERROR -   Source: file:///C:/Users/joshd/AppData/Local/Temp/tmp4vncepq4.html
+2025-05-03 14:13:19,778 - ERROR -   Line: 46
+2025-05-03 14:13:19,778 - ERROR -   Error Type: Uncaught SyntaxError
+2025-05-03 14:13:19,778 - ERROR -   Error Detail: Invalid or unexpected token
+js: Uncaught SyntaxError: Invalid or unexpected token
+2025-05-03 14:13:19,779 - DEBUG - JS Console (INFO): Debugging page layout... [:3]
+2025-05-03 14:13:19,779 - DEBUG - JS Console (INFO): Document dimensions: 281px x 0px [:14]
+2025-05-03 14:13:19,779 - DEBUG - JS Console (INFO): Body dimensions: 265px x 171px [:19]
+2025-05-03 14:13:19,779 - DEBUG - JS Console (INFO): No pages container found [:30]
+2025-05-03 14:13:19,779 - DEBUG - JS Console (INFO): Found 0 pages [:35]
+2025-05-03 14:13:19,779 - DEBUG - JS Console (INFO): Found 0 page break elements [:80]
+2025-05-03 14:13:19,779 - DEBUG - JS Console (INFO): Current zoom factor (CSS var): 1 [:92]
+2025-05-03 14:13:19,779 - DEBUG - Page layout debug results: {'documentHeight': 0, 'documentWidth': 281, 'originalPageBreaks': 0, 'pageBreaks': 0, 'pageCount': 0, 'zoomFactor': '1'}
+2025-05-03 14:13:19,779 - ERROR - JavaScript Error: Uncaught SyntaxError: Invalid or unexpected token
+2025-05-03 14:13:19,779 - ERROR -   Source: file:///C:/Users/joshd/AppData/Local/Temp/tmp4vncepq4.html
+2025-05-03 14:13:19,779 - ERROR -   Line: 46
+2025-05-03 14:13:19,780 - ERROR -   Error Type: Uncaught SyntaxError
+2025-05-03 14:13:19,780 - ERROR -   Error Detail: Invalid or unexpected token
+js: Uncaught SyntaxError: Invalid or unexpected token
+2025-05-03 14:13:19,780 - DEBUG - JS Console (INFO): Debugging page layout... [:3]
+2025-05-03 14:13:19,780 - DEBUG - JS Console (INFO): Document dimensions: 281px x 0px [:14]
+2025-05-03 14:13:19,780 - DEBUG - JS Console (INFO): Body dimensions: 265px x 171px [:19]
+2025-05-03 14:13:19,780 - DEBUG - JS Console (INFO): No pages container found [:30]
+2025-05-03 14:13:19,780 - DEBUG - JS Console (INFO): Found 0 pages [:35]
+2025-05-03 14:13:19,780 - DEBUG - JS Console (INFO): Found 0 page break elements [:80]
+2025-05-03 14:13:19,780 - DEBUG - JS Console (INFO): Current zoom factor (CSS var): 1 [:92]
+2025-05-03 14:13:19,780 - DEBUG - Page layout debug results: {'documentHeight': 0, 'documentWidth': 281, 'originalPageBreaks': 0, 'pageBreaks': 0, 'pageCount': 0, 'zoomFactor': '1'}
+2025-05-03 14:13:19,780 - ERROR - JavaScript Error: Uncaught SyntaxError: Invalid or unexpected token
+2025-05-03 14:13:19,780 - ERROR -   Source: file:///C:/Users/joshd/AppData/Local/Temp/tmp4vncepq4.html
+2025-05-03 14:13:19,780 - ERROR -   Line: 46
+2025-05-03 14:13:19,780 - ERROR -   Error Type: Uncaught SyntaxError
+2025-05-03 14:13:19,780 - ERROR -   Error Detail: Invalid or unexpected token
+js: Uncaught SyntaxError: Invalid or unexpected token
+2025-05-03 14:13:19,780 - DEBUG - JS Console (INFO): Debugging page layout... [:3]
+2025-05-03 14:13:19,780 - DEBUG - JS Console (INFO): Document dimensions: 281px x 0px [:14]
+2025-05-03 14:13:19,780 - DEBUG - JS Console (INFO): Body dimensions: 265px x 171px [:19]
+2025-05-03 14:13:19,780 - DEBUG - JS Console (INFO): No pages container found [:30]
+2025-05-03 14:13:19,780 - DEBUG - JS Console (INFO): Found 0 pages [:35]
+2025-05-03 14:13:19,781 - DEBUG - JS Console (INFO): Found 0 page break elements [:80]
+2025-05-03 14:13:19,781 - DEBUG - JS Console (INFO): Current zoom factor (CSS var): 1 [:92]
+2025-05-03 14:13:19,781 - DEBUG - Page layout debug results: {'documentHeight': 0, 'documentWidth': 281, 'originalPageBreaks': 0, 'pageBreaks': 0, 'pageCount': 0, 'zoomFactor': '1'}
+2025-05-03 14:13:20,078 - DEBUG - Executing JavaScript: 
+                            (function() {
+                                // Update page counter to...
+2025-05-03 14:13:20,078 - DEBUG - Updating page count
+2025-05-03 14:13:20,078 - DEBUG - Executing JavaScript: 
+                            (function() {
+                                // Update page counter to...
+2025-05-03 14:13:20,078 - DEBUG - Executing JavaScript: 
+                            (function() {
+                                // Update page counter to...
+2025-05-03 14:13:20,178 - DEBUG - Updating page counter: 1 of 0
+2025-05-03 14:13:20,279 - DEBUG - JavaScript execution result: None
+2025-05-03 14:13:20,380 - DEBUG - JavaScript execution result: None
+2025-05-03 14:13:20,480 - DEBUG - JavaScript execution result: None
+2025-05-03 14:13:20,480 - DEBUG - JS Console (INFO): Initializing QWebChannel connection... [file:///C:/Users/joshd/AppData/Local/Temp/tmp4vncepq4.html:521]
+2025-05-03 14:13:20,480 - DEBUG - JS Console (INFO): QWebChannel polyfill created [file:///C:/Users/joshd/AppData/Local/Temp/tmp4vncepq4.html:11]
+2025-05-03 14:13:20,481 - DEBUG - JS Console (INFO): Bridge connected: true [file:///C:/Users/joshd/AppData/Local/Temp/tmp4vncepq4.html:524]
+2025-05-03 14:14:04,783 - INFO - MDZ export successful: C:\Users\joshd\AppData\Local\Temp\mdz_test_vrlw7q9c\app_integration.mdz
+2025-05-03 14:14:04,783 - INFO - MDZ file size: 1165 bytes
+2025-05-03 14:14:04,803 - INFO - MDZ extraction successful
+2025-05-03 14:14:04,803 - INFO - MDZ app integration test passed: app_integration
+2025-05-03 14:14:04,893 - INFO - Test results written to: C:\Users\joshd\AppData\Local\Temp\mdz_test_vrlw7q9c\mdz_test_results.json
+2025-05-03 14:14:04,893 - INFO - Summary: Passed 4/4 tests (100.00%)
+
+--------------------------------------------------------------------------------
+
+
+Summary:
+Passed: 1/2 (50.00%)
+Failed: 1/2 (50.00%)

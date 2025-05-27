@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Report - 2025-05-18 22:49:41</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        h1, h2, h3 { color: #333; }
+        .summary { display: flex; margin-bottom: 20px; }
+        .summary-box { padding: 10px; margin-right: 20px; border-radius: 5px; color: white; }
+        .total { background-color: #007bff; }
+        .passed { background-color: #28a745; }
+        .failed { background-color: #dc3545; }
+        table { border-collapse: collapse; width: 100%; margin-bottom: 20px; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+        th { background-color: #f2f2f2; }
+        tr.pass { background-color: #dff0d8; }
+        tr.fail { background-color: #f2dede; }
+        .details { display: none; white-space: pre-wrap; background-color: #f8f9fa; 
+                  padding: 10px; border: 1px solid #ddd; margin-top: 5px; }
+        .toggle-details { cursor: pointer; color: #007bff; }
+        .performance-chart { width: 100%; height: 300px; margin-bottom: 20px; }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <h1>Test Report</h1>
+    <p>Generated on 2025-05-18 22:49:41</p>
+    
+    <div class="summary">
+        <div class="summary-box total">
+            <h3>Total Tests</h3>
+            <p>4</p>
+        </div>
+        <div class="summary-box passed">
+            <h3>Passed</h3>
+            <p>2 (50.00%)</p>
+        </div>
+        <div class="summary-box failed">
+            <h3>Failed</h3>
+            <p>2 (50.00%)</p>
+        </div>
+    </div>
+    
+    <h2>Results by Category</h2>
+
+    <h3>Page_Preview (2/4 - 50.00%)</h3>
+    <table>
+        <tr>
+            <th>Test</th>
+            <th>Status</th>
+            <th>Duration</th>
+            <th>Message</th>
+        </tr>
+
+        <tr class="fail">
+            <td>page_preview.test_page_preview_breaks.py</td>
+            <td>FAIL</td>
+            <td>4.07s</td>
+            <td>
+                Test failed with return code 3221226505
+                <span class="toggle-details" onclick="toggleDetails('details-page_preview-0')">Show Details</span>
+                <div id="details-page_preview-0" class="details">STDOUT:
+2025-05-18 22:49:24,235 - INFO - Logging to file: C:\Users\joshd\.markdown_pdf_logs\markdown_pdf_debug_20250518_224924.log
+js: No pages found for zoom operations
+js: Found 0 pages, current page: 1
+js: Found 0 pages, current page: 1
+js: Page loaded, checking for explicit page breaks
+js: Found 2 explicit page breaks
+js: Page loaded, checking for explicit page breaks
+js: Found 2 explicit page breaks
+js: Created pages container
+js: No pages found, creating one
+js: Found 1 pages
+js: Page 1 missing page number, adding it
+js: Document ready for zoom operations, found 1 pages
+js: Page load verification: [object Object]
+js: Found 1 pages
+js: Page count: 1 of 1
+js: Found 1 pages during verification
+js: Document ready for zoom operations, found 1 pages
+js warning: Invalid page width, using default: 210mm
+js: Calculated zoom factor for fit to width: 1.4160151324085748 View width: 1182 Page width: 793
+js: Page load verification: [object Object]
+2025-05-18 22:49:26,799 - INFO - Debugging page layout
+2025-05-18 22:49:27,809 - INFO - Debug page layout result: None
+
+
+STDERR:
+2025-05-18 22:49:24,254 - DEBUG - Initializing PagePreview
+2025-05-18 22:49:24,790 - DEBUG - Updating document settings
+2025-05-18 22:49:24,791 - DEBUG - Page dimensions: A4 portrait, 210mm x 297mm
+2025-05-18 22:49:24,791 - DEBUG - Margins: T:25mm R:25mm B:25mm L:25mm
+2025-05-18 22:49:24,791 - DEBUG - Verifying document settings
+2025-05-18 22:49:24,791 - DEBUG - Updating preview
+2025-05-18 22:49:24,791 - DEBUG - Cleaning up temporary files
+2025-05-18 22:49:24,791 - DEBUG - Cleaning up temporary files
+2025-05-18 22:49:24,791 - DEBUG - Removing 'Document' text from HTML content
+2025-05-18 22:49:24,791 - DEBUG - Creating JavaScript bridge
+2025-05-18 22:49:24,791 - DEBUG - Bridge object registered with web channel
+2025-05-18 22:49:24,792 - DEBUG - JavaScript bridge initialization script executed
+2025-05-18 22:49:24,792 - DEBUG - Loading HTML content
+2025-05-18 22:49:24,799 - DEBUG - Loading HTML from temporary file: C:\Users\joshd\AppData\Local\Temp\tmp8lgm02ho.html
+2025-05-18 22:49:24,799 - DEBUG - Creating JavaScript bridge
+2025-05-18 22:49:24,799 - DEBUG - Bridge object registered with web channel
+2025-05-18 22:49:24,799 - DEBUG - JavaScript bridge initialization script executed
+2025-05-18 22:49:24,800 - DEBUG - HTML file loaded from C:\Users\joshd\AppData\Local\Temp\tmp8lgm02ho.html
+2025-05-18 22:49:24,906 - DEBUG - Web view: load started
+2025-05-18 22:49:24,909 - DEBUG - Executing page setup sequence (first load: True)
+2025-05-18 22:49:24,961 - DEBUG - Zoom variables initialized: True
+2025-05-18 22:49:24,962 - DEBUG - Page ready check result: False
+2025-05-18 22:49:24,962 - DEBUG - Page count update result: {'currentPage': 1, 'totalPages': 0}
+2025-05-18 22:49:24,962 - DEBUG - Updating page counter: 1 of 0
+2025-05-18 22:49:24,962 - DEBUG - Page count update result: {'currentPage': 1, 'totalPages': 0}
+2025-05-18 22:49:24,962 - DEBUG - Updating page counter: 1 of 0
+2025-05-18 22:49:24,972 - DEBUG - Web view: load finished successfully
+2025-05-18 22:49:24,972 - DEBUG - Executing page setup sequence (first load: True)
+2025-05-18 22:49:24,973 - DEBUG - Page setup sequence already in progress, skipping
+2025-05-18 22:49:25,009 - DEBUG - Executing operation: remove_document_text
+2025-05-18 22:49:25,009 - DEBUG - Removing 'Document' text from page
+2025-05-18 22:49:25,010 - DEBUG - Remove Document text result: None
+2025-05-18 22:49:25,109 - DEBUG - Executing operation: apply_page_layout
+2025-05-18 22:49:25,109 - DEBUG - Applying page layout styling
+2025-05-18 22:49:25,109 - DEBUG - Page dimensions: 210mm x 297mm
+2025-05-18 22:49:25,109 - DEBUG - Margins: T:25mm R:25mm B:25mm L:25mm
+2025-05-18 22:49:25,109 - DEBUG - Body font: Arial, 11pt, 1.5
+2025-05-18 22:49:25,109 - DEBUG - Colors: text=#000000, bg=#ffffff, link=#0000ff
+2025-05-18 22:49:25,109 - DEBUG - Applying page layout with JavaScript
+2025-05-18 22:49:25,109 - DEBUG - Page layout already applied, skipping duplicate application
+2025-05-18 22:49:25,109 - DEBUG - Removing 'Document' text from page
+2025-05-18 22:49:25,111 - DEBUG - Ensure page visibility result: Created new page with content
+2025-05-18 22:49:25,112 - DEBUG - Remove Document text result: None
+2025-05-18 22:49:25,209 - DEBUG - Executing operation: check_duplicate_pages
+2025-05-18 22:49:25,209 - DEBUG - Checking page structure
+2025-05-18 22:49:25,209 - DEBUG - Page validation result: Validated 1 pages
+2025-05-18 22:49:25,290 - DEBUG - Zoom variables initialized: True
+2025-05-18 22:49:25,290 - DEBUG - Page ready check result: True
+2025-05-18 22:49:25,301 - DEBUG - Page load verification result: {'bodyContent': 10560, 'documentReady': True, 'title': 'Markdown Preview'}
+2025-05-18 22:49:25,301 - DEBUG - Page loaded correctly
+2025-05-18 22:49:25,309 - DEBUG - Executing operation: update_page_count
+2025-05-18 22:49:25,309 - DEBUG - Updating page count
+2025-05-18 22:49:25,309 - DEBUG - Requesting page count update from JavaScript
+2025-05-18 22:49:25,311 - DEBUG - Page count update result: [1, 1]
+2025-05-18 22:49:25,311 - DEBUG - Page count update result: [0, 0]
+2025-05-18 22:49:25,510 - DEBUG - Executing operation: verify_page_setup
+2025-05-18 22:49:25,510 - DEBUG - Verifying page setup
+2025-05-18 22:49:25,511 - DEBUG - Page verification result: Verified 1 pages
+2025-05-18 22:49:25,609 - DEBUG - Executing operation: setup_zoom_controls
+2025-05-18 22:49:25,609 - DEBUG - Setting up zoom controls
+2025-05-18 22:49:25,610 - DEBUG - Zoom controls setup completed
+2025-05-18 22:49:25,659 - DEBUG - Executing operation: initialize_zoom
+2025-05-18 22:49:25,659 - DEBUG - Initializing zoom manager variables
+2025-05-18 22:49:25,660 - DEBUG - Zoom variables initialized: True
+2025-05-18 22:49:25,660 - DEBUG - Page ready check result: True
+2025-05-18 22:49:25,709 - DEBUG - Executing operation: fit_to_width
+2025-05-18 22:49:25,709 - DEBUG - Fitting page width to view
+2025-05-18 22:49:25,709 - DEBUG - Fitting page width to view: 1182
+js: Invalid page width, using default: 210mm
+2025-05-18 22:49:25,710 - DEBUG - Zoom operation already in progress, skipping update_zoom(141)
+2025-05-18 22:49:25,809 - DEBUG - Executing operation: final_verification
+2025-05-18 22:49:25,809 - DEBUG - Page load verification result: {'bodyContent': 10560, 'documentReady': True, 'title': 'Markdown Preview'}
+2025-05-18 22:49:25,809 - DEBUG - Page loaded correctly
+2025-05-18 22:49:25,909 - DEBUG - Clearing setup flags
+2025-05-18 22:49:25,963 - DEBUG - Page count update result: {'currentPage': 1, 'totalPages': 1}
+2025-05-18 22:49:25,963 - DEBUG - Updating page counter: 1 of 1
+2025-05-18 22:49:25,963 - DEBUG - Page count update result: {'currentPage': 1, 'totalPages': 1}
+2025-05-18 22:49:25,963 - DEBUG - Updating page counter: 1 of 1
+2025-05-18 22:49:26,799 - INFO - Debugging page layout
+2025-05-18 22:49:26,799 - DEBUG - Executing JavaScript:
+
+        (function() {
+            try {
+                // Add debug class to body
+                document.body.classList.add('debug-mode');
+
+                // Add visual markers to all pages
+                var pages = document.querySelectorAll('.page');
+                console.log('Found ' + pages.length + ' pages for debugging');
+
+                for (var i = 0; i < pages.length; i++) {
+                    var page = pages[i];
+
+                    // Add debug class
+                    page.classList.add('debug-page');
+
+                    // Add page number for debugging
+                    var pageNum = document.createElement('div');
+                    pageNum.className = 'debug-page-number';
+                    pageNum.textContent = 'Page ' + (i + 1);
+                    pageNum.style.position = 'absolute';
+                    pageNum.style.top = '5px';
+                    pageNum.style.right = '5px';
+                    pageNum.style.backgroundColor = 'rgba(255, 0, 0, 0.7)';
+                    pageNum.style.color = 'white';
+                    pageNum.style.padding = '2px 5px';
+                    pageNum.style.fontSize = '12px';
+                    pageNum.style.zIndex = '1000';
+                    page.appendChild(pageNum);
+
+                    // Highlight margin box
+                    var marginBox = page.querySelector('.margin-box');
+                    if (marginBox) {
+                        marginBox.style.border = '2px dashed rgba(255, 0, 0, 0.7)';
+                        marginBox.style.backgroundColor = 'rgba(255, 0, 0, 0.05)';
+                    }
+
+                    // Log page dimensions
+                    var rect = page.getBoundingClientRect();
+                    console.log('Page ' + (i + 1) + ' dimensions: ' +
+                                rect.width + 'px x ' + rect.height + 'px');
+                }
+
+                // Log document settings
+                console.log('Document settings debug info:');
+                console.log('- Viewport width: ' + window.innerWidth + 'px');
+                console.log('- Viewport height: ' + window.innerHeight + 'px');
+                console.log('- Device pixel ratio: ' + window.devicePixelRatio);
+
+                return 'Debug markers added to ' + pages.length + ' pages';
+            } catch (e) {
+                console.error('Error in debug_page_layout:', e);
+                return 'Error: ' + e.message;
+            }
+        })();
+        
+2025-05-18 22:49:27,407 - DEBUG - Verifying page setup
+2025-05-18 22:49:27,809 - DEBUG - JavaScript execution result: None
+2025-05-18 22:49:27,809 - INFO - Debug page layout result: None
+Traceback (most recent call last):
+  File "C:\Projects\markdown2pdf\test_page_preview_breaks.py", line 188, in update_status
+    self.preview.debug_page_breaks()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'PagePreview' object has no attribute 'debug_page_breaks'. Did you mean: 'debug_page_layout'?
+</div>
+            </td>
+        </tr>
+
+        <tr class="pass">
+            <td>page_preview.test_page_preview_comprehensive.py</td>
+            <td>PASS</td>
+            <td>10.87s</td>
+            <td>
+                Test passed
+                <span class="toggle-details" onclick="toggleDetails('details-page_preview-1')">Show Details</span>
+                <div id="details-page_preview-1" class="details">STDOUT:
+2025-05-18 22:49:28,324 - INFO - Logging to file: C:\Users\joshd\.markdown_pdf_logs\markdown_pdf_debug_20250518_224928.log
+js: No pages found for zoom operations
+js: Found 0 pages, current page: 1
+js: Found 0 pages, current page: 1
+js: Page loaded, checking for explicit page breaks
+js: Found 2 explicit page breaks
+js: Page loaded, checking for explicit page breaks
+js: Found 2 explicit page breaks
+js: Created pages container
+js: No pages found, creating one
+js: Found 1 pages
+js: Page 1 missing page number, adding it
+js: Document ready for zoom operations, found 1 pages
+js: Page load verification: [object Object]
+js: Found 1 pages
+js: Page count: 1 of 1
+js: Found 1 pages during verification
+js: Document ready for zoom operations, found 1 pages
+js warning: Invalid page width, using default: 210mm
+js: Calculated zoom factor for fit to width: 1.4160151324085748 View width: 1182 Page width: 793
+2025-05-18 22:49:29,828 - WARNING - Page number 3 exceeds total pages 0, setting to 0
+2025-05-18 22:49:29,830 - INFO - Debugging page layout
+js: Navigating to page 0 of 1 total pages
+js: Found 1 pages for debugging
+js: Page 1 dimensions: 4px x 4px
+js: - Viewport width: 1182px
+js: - Viewport height: 704px
+2025-05-18 22:49:30,036 - INFO - Debug page layout result: Debug markers added to 1 pages
+js: Page load verification: [object Object]
+js: Found 1 pages during verification
+js: Set zoom factor CSS variable to 1.1
+js: Applied zoom to 1 pages
+js: Set zoom factor CSS variable to 1.3
+js: Applied zoom to 1 pages
+js: Calculated zoom factor for fit to page: 1.5 View dimensions: 1182 x 704 Page dimensions: 4 x 4
+js: Calculated zoom factor for fit to page: 1.5 View dimensions: 1182 x 704 Page dimensions: 4 x 4
+js: Calculated zoom factor for fit to width: 1.5 View width: 1182 Page width: 4
+
+
+STDERR:
+2025-05-18 22:49:28,343 - DEBUG - Initializing PagePreview
+2025-05-18 22:49:28,817 - DEBUG - Updating document settings
+2025-05-18 22:49:28,817 - DEBUG - Page dimensions: A4 portrait, 210mm x 297mm
+2025-05-18 22:49:28,817 - DEBUG - Margins: T:25mm R:25mm B:25mm L:25mm
+2025-05-18 22:49:28,817 - DEBUG - Verifying document settings
+2025-05-18 22:49:28,817 - DEBUG - Updating preview
+2025-05-18 22:49:28,818 - DEBUG - Cleaning up temporary files
+2025-05-18 22:49:28,818 - DEBUG - Cleaning up temporary files
+2025-05-18 22:49:28,818 - DEBUG - Removing 'Document' text from HTML content
+2025-05-18 22:49:28,819 - DEBUG - Creating JavaScript bridge
+2025-05-18 22:49:28,819 - DEBUG - Bridge object registered with web channel
+2025-05-18 22:49:28,819 - DEBUG - JavaScript bridge initialization script executed
+2025-05-18 22:49:28,819 - DEBUG - Loading HTML content
+2025-05-18 22:49:28,826 - DEBUG - Loading HTML from temporary file: C:\Users\joshd\AppData\Local\Temp\tmp_ifnan6g.html
+2025-05-18 22:49:28,826 - DEBUG - Creating JavaScript bridge
+2025-05-18 22:49:28,826 - DEBUG - Bridge object registered with web channel
+2025-05-18 22:49:28,826 - DEBUG - JavaScript bridge initialization script executed
+2025-05-18 22:49:28,827 - DEBUG - HTML file loaded from C:\Users\joshd\AppData\Local\Temp\tmp_ifnan6g.html
+2025-05-18 22:49:28,930 - DEBUG - Web view: load started
+2025-05-18 22:49:28,934 - DEBUG - Executing page setup sequence (first load: True)
+2025-05-18 22:49:28,994 - DEBUG - Zoom variables initialized: True
+2025-05-18 22:49:28,995 - DEBUG - Page ready check result: False
+2025-05-18 22:49:28,995 - DEBUG - Page count update result: {'currentPage': 1, 'totalPages': 0}
+2025-05-18 22:49:28,996 - DEBUG - Updating page counter: 1 of 0
+2025-05-18 22:49:28,996 - DEBUG - Page count update result: {'currentPage': 1, 'totalPages': 0}
+2025-05-18 22:49:28,996 - DEBUG - Updating page counter: 1 of 0
+2025-05-18 22:49:29,011 - DEBUG - Web view: load finished successfully
+2025-05-18 22:49:29,011 - DEBUG - Executing page setup sequence (first load: True)
+2025-05-18 22:49:29,011 - DEBUG - Page setup sequence already in progress, skipping
+2025-05-18 22:49:29,040 - DEBUG - Executing operation: remove_document_text
+2025-05-18 22:49:29,041 - DEBUG - Removing 'Document' text from page
+2025-05-18 22:49:29,042 - DEBUG - Remove Document text result: None
+2025-05-18 22:49:29,134 - DEBUG - Executing operation: apply_page_layout
+2025-05-18 22:49:29,134 - DEBUG - Applying page layout styling
+2025-05-18 22:49:29,134 - DEBUG - Page dimensions: 210mm x 297mm
+2025-05-18 22:49:29,134 - DEBUG - Margins: T:25mm R:25mm B:25mm L:25mm
+2025-05-18 22:49:29,135 - DEBUG - Body font: Arial, 11pt, 1.5
+2025-05-18 22:49:29,135 - DEBUG - Colors: text=#000000, bg=#ffffff, link=#0000ff
+2025-05-18 22:49:29,135 - DEBUG - Applying page layout with JavaScript
+2025-05-18 22:49:29,135 - DEBUG - Page layout already applied, skipping duplicate application
+2025-05-18 22:49:29,135 - DEBUG - Removing 'Document' text from page
+2025-05-18 22:49:29,136 - DEBUG - Ensure page visibility result: Created new page with content
+2025-05-18 22:49:29,136 - DEBUG - Remove Document text result: None
+2025-05-18 22:49:29,235 - DEBUG - Executing operation: check_duplicate_pages
+2025-05-18 22:49:29,235 - DEBUG - Checking page structure
+2025-05-18 22:49:29,235 - DEBUG - Page validation result: Validated 1 pages
+2025-05-18 22:49:29,318 - DEBUG - Zoom variables initialized: True
+2025-05-18 22:49:29,318 - DEBUG - Page ready check result: True
+2025-05-18 22:49:29,329 - DEBUG - Page load verification result: {'bodyContent': 18250, 'documentReady': True, 'title': 'Markdown Preview'}
+2025-05-18 22:49:29,329 - DEBUG - Page loaded correctly
+2025-05-18 22:49:29,335 - DEBUG - Executing operation: update_page_count
+2025-05-18 22:49:29,335 - DEBUG - Updating page count
+2025-05-18 22:49:29,335 - DEBUG - Requesting page count update from JavaScript
+2025-05-18 22:49:29,336 - DEBUG - Page count update result: [1, 1]
+2025-05-18 22:49:29,336 - DEBUG - Page count update result: [0, 0]
+2025-05-18 22:49:29,534 - DEBUG - Executing operation: verify_page_setup
+2025-05-18 22:49:29,534 - DEBUG - Verifying page setup
+2025-05-18 22:49:29,535 - DEBUG - Page verification result: Verified 1 pages
+2025-05-18 22:49:29,634 - DEBUG - Executing operation: setup_zoom_controls
+2025-05-18 22:49:29,634 - DEBUG - Setting up zoom controls
+2025-05-18 22:49:29,636 - DEBUG - Zoom controls setup completed
+2025-05-18 22:49:29,684 - DEBUG - Executing operation: initialize_zoom
+2025-05-18 22:49:29,684 - DEBUG - Initializing zoom manager variables
+2025-05-18 22:49:29,685 - DEBUG - Zoom variables initialized: True
+2025-05-18 22:49:29,685 - DEBUG - Page ready check result: True
+2025-05-18 22:49:29,734 - DEBUG - Executing operation: fit_to_width
+2025-05-18 22:49:29,734 - DEBUG - Fitting page width to view
+2025-05-18 22:49:29,734 - DEBUG - Fitting page width to view: 1182
+js: Invalid page width, using default: 210mm
+2025-05-18 22:49:29,735 - DEBUG - Zoom operation already in progress, skipping update_zoom(141)
+2025-05-18 22:49:29,828 - INFO - Running comprehensive page preview tests...
+2025-05-18 22:49:29,828 - INFO - Testing page count...
+2025-05-18 22:49:29,828 - INFO - Testing navigation...
+2025-05-18 22:49:29,828 - DEBUG - Already at last page, cannot go to next page
+2025-05-18 22:49:29,828 - DEBUG - Already at first page, cannot go to previous page
+2025-05-18 22:49:29,828 - DEBUG - Going to page 3
+2025-05-18 22:49:29,828 - WARNING - Page number 3 exceeds total pages 0, setting to 0
+2025-05-18 22:49:29,828 - INFO - Testing zoom...
+2025-05-18 22:49:29,828 - INFO - Original zoom factor: 1.0
+2025-05-18 22:49:29,828 - INFO - Zoom factor after zoom in: 1.1
+2025-05-18 22:49:29,828 - INFO - Zoom factor after zoom out: 1.0
+2025-05-18 22:49:29,828 - INFO - Zoom factor after reset: 1.0
+2025-05-18 22:49:29,828 - INFO - Testing margin changes...
+2025-05-18 22:49:29,828 - INFO - Original margins: {'top': 25, 'right': 25, 'bottom': 25, 'left': 25}
+2025-05-18 22:49:29,828 - DEBUG - Updating document settings
+2025-05-18 22:49:29,828 - DEBUG - Page dimensions: A4 portrait, 210mm x 297mm
+2025-05-18 22:49:29,828 - DEBUG - Margins: T:10mm R:10mm B:10mm L:10mm
+2025-05-18 22:49:29,828 - DEBUG - Verifying document settings
+2025-05-18 22:49:29,828 - DEBUG - Executing page setup sequence (first load: False)
+2025-05-18 22:49:29,828 - DEBUG - Page setup sequence already in progress, skipping
+2025-05-18 22:49:29,828 - INFO - Changed margins to: {'top': 10, 'right': 10, 'bottom': 10, 'left': 10}
+2025-05-18 22:49:29,828 - DEBUG - Updating document settings
+2025-05-18 22:49:29,828 - DEBUG - Page dimensions: A4 portrait, 210mm x 297mm
+2025-05-18 22:49:29,828 - DEBUG - Margins: T:25mm R:25mm B:25mm L:25mm
+2025-05-18 22:49:29,828 - DEBUG - Verifying document settings
+2025-05-18 22:49:29,828 - DEBUG - Executing page setup sequence (first load: False)
+2025-05-18 22:49:29,828 - DEBUG - Page setup sequence already in progress, skipping
+2025-05-18 22:49:29,828 - INFO - Restored margins to: {'top': 25, 'right': 25, 'bottom': 25, 'left': 25}
+2025-05-18 22:49:29,828 - INFO - Testing page size changes...
+2025-05-18 22:49:29,829 - INFO - Original page size: A4
+2025-05-18 22:49:29,829 - DEBUG - Updating document settings
+2025-05-18 22:49:29,829 - DEBUG - Page dimensions: Letter portrait, 215.9mm x 279.4mm
+2025-05-18 22:49:29,829 - DEBUG - Margins: T:25mm R:25mm B:25mm L:25mm
+2025-05-18 22:49:29,829 - DEBUG - Verifying document settings
+2025-05-18 22:49:29,829 - DEBUG - Executing page setup sequence (first load: False)
+2025-05-18 22:49:29,829 - DEBUG - Page setup sequence already in progress, skipping
+2025-05-18 22:49:29,829 - INFO - Changed page size to: Letter
+2025-05-18 22:49:29,829 - DEBUG - Updating document settings
+2025-05-18 22:49:29,829 - DEBUG - Page dimensions: A4 portrait, 210mm x 297mm
+2025-05-18 22:49:29,829 - DEBUG - Margins: T:25mm R:25mm B:25mm L:25mm
+2025-05-18 22:49:29,829 - DEBUG - Verifying document settings
+2025-05-18 22:49:29,829 - DEBUG - Executing page setup sequence (first load: False)
+2025-05-18 22:49:29,829 - DEBUG - Page setup sequence already in progress, skipping
+2025-05-18 22:49:29,829 - INFO - Restored page size to: A4
+2025-05-18 22:49:29,829 - INFO - Testing orientation changes...
+2025-05-18 22:49:29,829 - INFO - Original orientation: portrait
+2025-05-18 22:49:29,830 - DEBUG - Updating document settings
+2025-05-18 22:49:29,830 - DEBUG - Page dimensions: A4 landscape, 297mm x 210mm
+2025-05-18 22:49:29,830 - DEBUG - Margins: T:25mm R:25mm B:25mm L:25mm
+2025-05-18 22:49:29,830 - DEBUG - Verifying document settings
+2025-05-18 22:49:29,830 - DEBUG - Executing page setup sequence (first load: False)
+2025-05-18 22:49:29,830 - DEBUG - Page setup sequence already in progress, skipping
+2025-05-18 22:49:29,830 - INFO - Changed orientation to: landscape
+2025-05-18 22:49:29,830 - DEBUG - Updating document settings
+2025-05-18 22:49:29,830 - DEBUG - Page dimensions: A4 portrait, 210mm x 297mm
+2025-05-18 22:49:29,830 - DEBUG - Margins: T:25mm R:25mm B:25mm L:25mm
+2025-05-18 22:49:29,830 - DEBUG - Verifying document settings
+2025-05-18 22:49:29,830 - DEBUG - Executing page setup sequence (first load: False)
+2025-05-18 22:49:29,830 - DEBUG - Page setup sequence already in progress, skipping
+2025-05-18 22:49:29,830 - INFO - Restored orientation to: portrait
+2025-05-18 22:49:29,830 - INFO - Debugging page layout
+2025-05-18 22:49:29,830 - DEBUG - Executing JavaScript:
+
+        (function() {
+            try {
+                // Add debug class to body
+                document.body.classList.add('debug-mode');
+
+                // Add visual markers to all pages
+                var pages = document.querySelectorAll('.page');
+                console.log('Found ' + pages.length + ' pages for debugging');
+
+                for (var i = 0; i < pages.length; i++) {
+                    var page = pages[i];
+
+                    // Add debug class
+                    page.classList.add('debug-page');
+
+                    // Add page number for debugging
+                    var pageNum = document.createElement('div');
+                    pageNum.className = 'debug-page-number';
+                    pageNum.textContent = 'Page ' + (i + 1);
+                    pageNum.style.position = 'absolute';
+                    pageNum.style.top = '5px';
+                    pageNum.style.right = '5px';
+                    pageNum.style.backgroundColor = 'rgba(255, 0, 0, 0.7)';
+                    pageNum.style.color = 'white';
+                    pageNum.style.padding = '2px 5px';
+                    pageNum.style.fontSize = '12px';
+                    pageNum.style.zIndex = '1000';
+                    page.appendChild(pageNum);
+
+                    // Highlight margin box
+                    var marginBox = page.querySelector('.margin-box');
+                    if (marginBox) {
+                        marginBox.style.border = '2px dashed rgba(255, 0, 0, 0.7)';
+                        marginBox.style.backgroundColor = 'rgba(255, 0, 0, 0.05)';
+                    }
+
+                    // Log page dimensions
+                    var rect = page.getBoundingClientRect();
+                    console.log('Page ' + (i + 1) + ' dimensions: ' +
+                                rect.width + 'px x ' + rect.height + 'px');
+                }
+
+                // Log document settings
+                console.log('Document settings debug info:');
+                console.log('- Viewport width: ' + window.innerWidth + 'px');
+                console.log('- Viewport height: ' + window.innerHeight + 'px');
+                console.log('- Device pixel ratio: ' + window.devicePixelRatio);
+
+                return 'Debug markers added to ' + pages.length + ' pages';
+            } catch (e) {
+                console.error('Error in debug_page_layout:', e);
+                return 'Error: ' + e.message;
+            }
+        })();
+        
+2025-05-18 22:49:29,830 - INFO - Page count: 1
+2025-05-18 22:49:29,830 - INFO - Current page after next: 1
+2025-05-18 22:49:29,830 - INFO - Current page after previous: 1
+2025-05-18 22:49:29,830 - DEBUG - Page navigation result: Navigated to page 1 of 1
+2025-05-18 22:49:29,830 - DEBUG - Updating page counter: 1 of 1
+2025-05-18 22:49:29,831 - INFO - Current page after go_to_page(3): 1
+2025-05-18 22:49:29,933 - DEBUG - Executing operation: final_verification
+2025-05-18 22:49:30,036 - DEBUG - JavaScript execution result: Debug markers added to 1 pages
+2025-05-18 22:49:30,036 - INFO - Debug page layout result: Debug markers added to 1 pages
+2025-05-18 22:49:30,036 - INFO - Comprehensive page preview tests completed
+2025-05-18 22:49:30,036 - DEBUG - Page load verification result: {'bodyContent': 18548, 'documentReady': True, 'title': 'Markdown Preview'}
+2025-05-18 22:49:30,036 - DEBUG - Page loaded correctly
+2025-05-18 22:49:30,036 - DEBUG - Clearing setup flags
+2025-05-18 22:49:30,039 - DEBUG - Page count update result: {'currentPage': 1, 'totalPages': 1}
+2025-05-18 22:49:30,039 - DEBUG - Updating page counter: 1 of 1
+2025-05-18 22:49:30,039 - DEBUG - Page count update result: {'currentPage': 1, 'totalPages': 1}
+2025-05-18 22:49:30,039 - DEBUG - Updating page counter: 1 of 1
+2025-05-18 22:49:31,041 - DEBUG - Page count update result: {'currentPage': 1, 'totalPages': 1}
+2025-05-18 22:49:31,041 - DEBUG - Updating page counter: 1 of 1
+2025-05-18 22:49:31,041 - DEBUG - Page count update result: {'currentPage': 1, 'totalPages': 1}
+2025-05-18 22:49:31,042 - DEBUG - Updating page counter: 1 of 1
+2025-05-18 22:49:31,335 - DEBUG - Verifying page setup
+2025-05-18 22:49:31,335 - DEBUG - Page verification result: Verified 1 pages
+2025-05-18 22:49:32,043 - DEBUG - Page count update result: {'currentPage': 1, 'totalPages': 1}
+2025-05-18 22:49:32,043 - DEBUG - Updating page counter: 1 of 1
+2025-05-18 22:49:32,044 - DEBUG - Page count update result: {'currentPage': 1, 'totalPages': 1}
+2025-05-18 22:49:32,044 - DEBUG - Updating page counter: 1 of 1
+2025-05-18 22:49:33,045 - DEBUG - Page count update result: {'currentPage': 1, 'totalPages': 1}
+2025-05-18 22:49:33,045 - DEBUG - Updating page counter: 1 of 1
+2025-05-18 22:49:33,046 - DEBUG - Page count update result: {'currentPage': 1, 'totalPages': 1}
+2025-05-18 22:49:33,046 - DEBUG - Updating page counter: 1 of 1
+2025-05-18 22:49:34,047 - DEBUG - Page count update result: {'currentPage': 1, 'totalPages': 1}
+2025-05-18 22:49:34,047 - DEBUG - Updating page counter: 1 of 1
+2025-05-18 22:49:34,047 - DEBUG - Page count update result: {'currentPage': 1, 'totalPages': 1}
+2025-05-18 22:49:34,047 - DEBUG - Updating page counter: 1 of 1
+2025-05-18 22:49:35,049 - DEBUG - Page count update result: {'currentPage': 1, 'totalPages': 1}
+2025-05-18 22:49:35,049 - DEBUG - Updating page counter: 1 of 1
+2025-05-18 22:49:35,050 - DEBUG - Page count update result: {'currentPage': 1, 'totalPages': 1}
+2025-05-18 22:49:35,050 - DEBUG - Updating page counter: 1 of 1
+2025-05-18 22:49:35,584 - DEBUG - Zoom in
+2025-05-18 22:49:35,584 - DEBUG - Updating zoom to value: 110
+2025-05-18 22:49:35,585 - DEBUG - Setting zoom factor to 1.1
+2025-05-18 22:49:35,589 - DEBUG - Zoom update result: Zoom applied to pages
+2025-05-18 22:49:36,051 - DEBUG - Page count update result: {'currentPage': 1, 'totalPages': 1}
+2025-05-18 22:49:36,052 - DEBUG - Updating page counter: 1 of 1
+2025-05-18 22:49:36,052 - DEBUG - Page count update result: {'currentPage': 1, 'totalPages': 1}
+2025-05-18 22:49:36,052 - DEBUG - Updating page counter: 1 of 1
+2025-05-18 22:49:36,073 - DEBUG - Zoom in
+2025-05-18 22:49:36,073 - DEBUG - Updating zoom to value: 120
+2025-05-18 22:49:36,073 - DEBUG - Zoom operation already in progress, skipping
+2025-05-18 22:49:36,513 - DEBUG - Zoom in
+2025-05-18 22:49:36,513 - DEBUG - Updating zoom to value: 130
+2025-05-18 22:49:36,513 - DEBUG - Setting zoom factor to 1.3
+2025-05-18 22:49:36,518 - DEBUG - Zoom update result: Zoom applied to pages
+2025-05-18 22:49:36,722 - DEBUG - Zoom in
+2025-05-18 22:49:36,723 - DEBUG - Updating zoom to value: 140
+2025-05-18 22:49:36,723 - DEBUG - Zoom operation already in progress, skipping
+2025-05-18 22:49:37,053 - DEBUG - Page count update result: {'currentPage': 1, 'totalPages': 1}
+2025-05-18 22:49:37,053 - DEBUG - Updating page counter: 1 of 1
+2025-05-18 22:49:37,053 - DEBUG - Page count update result: {'currentPage': 1, 'totalPages': 1}
+2025-05-18 22:49:37,053 - DEBUG - Updating page counter: 1 of 1
+2025-05-18 22:49:37,592 - DEBUG - Fitting page to view
+2025-05-18 22:49:37,593 - DEBUG - Fitting page to view: 1182x704
+2025-05-18 22:49:37,594 - DEBUG - Zoom operation already in progress, skipping update_zoom(150)
+2025-05-18 22:49:38,054 - DEBUG - Page count update result: {'currentPage': 1, 'totalPages': 1}
+2025-05-18 22:49:38,054 - DEBUG - Updating page counter: 1 of 1
+2025-05-18 22:49:38,056 - DEBUG - Page count update result: {'currentPage': 1, 'totalPages': 1}
+2025-05-18 22:49:38,056 - DEBUG - Updating page counter: 1 of 1
+2025-05-18 22:49:38,138 - DEBUG - Fitting page to view
+2025-05-18 22:49:38,138 - DEBUG - Fitting page to view: 1182x704
+2025-05-18 22:49:38,138 - DEBUG - Zoom operation already in progress, skipping update_zoom(150)
+2025-05-18 22:49:38,479 - DEBUG - Fitting page to view
+2025-05-18 22:49:38,479 - DEBUG - Zoom operation already in progress, skipping fit_to_page
+2025-05-18 22:49:38,863 - DEBUG - Fitting page width to view
+2025-05-18 22:49:38,863 - DEBUG - Fitting page width to view: 1182
+2025-05-18 22:49:38,863 - DEBUG - Zoom operation already in progress, skipping update_zoom(150)
+</div>
+            </td>
+        </tr>
+
+        <tr class="fail">
+            <td>page_preview.test_js_syntax_and_page_numbers.py</td>
+            <td>FAIL</td>
+            <td>2.70s</td>
+            <td>
+                Test failed with return code 1
+                <span class="toggle-details" onclick="toggleDetails('details-page_preview-2')">Show Details</span>
+                <div id="details-page_preview-2" class="details">STDOUT:
+2025-05-18 22:49:39,193 - INFO - Logging to file: C:\Users\joshd\.markdown_pdf_logs\markdown_pdf_debug_20250518_224939.log
+2025-05-18 22:49:39,215 - INFO - Running all tests
+2025-05-18 22:49:39,215 - INFO - Running all JavaScript and page number tests
+2025-05-18 22:49:39,215 - INFO - Testing for JavaScript syntax errors
+2025-05-18 22:49:41,672 - ERROR - Error running tests: 'PagePreview' object has no attribute 'initialize_page_count'
+2025-05-18 22:49:41,675 - ERROR - Traceback (most recent call last):
+  File "C:\Projects\markdown2pdf\test_js_syntax_and_page_numbers.py", line 579, in main
+    success = tester.run_all_tests()
+              ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Projects\markdown2pdf\test_js_syntax_and_page_numbers.py", line 537, in run_all_tests
+    js_syntax_result = self.test_js_syntax()
+                       ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Projects\markdown2pdf\test_js_syntax_and_page_numbers.py", line 218, in test_js_syntax
+    preview.initialize_page_count()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'PagePreview' object has no attribute 'initialize_page_count'
+
+
+
+STDERR:
+</div>
+            </td>
+        </tr>
+
+        <tr class="pass">
+            <td>page_preview.test_page_navigation_and_export.py</td>
+            <td>PASS</td>
+            <td>0.19s</td>
+            <td>
+                Test passed
+                <span class="toggle-details" onclick="toggleDetails('details-page_preview-3')">Show Details</span>
+                <div id="details-page_preview-3" class="details">STDOUT:
+2025-05-18 22:49:41,893 - INFO - Logging to file: C:\Users\joshd\.markdown_pdf_logs\markdown_pdf_debug_20250518_224941.log
+
+
+STDERR:
+2025-05-18 22:49:41,914 - INFO - Dialog handler initialized
+2025-05-18 22:49:41,914 - INFO - Dialog handler started (suppress=False, timeout=10000ms)
+2025-05-18 22:49:41,914 - INFO - Registered custom response for QMessageBox
+2025-05-18 22:49:41,914 - INFO - Running all page navigation and export dialog tests
+2025-05-18 22:49:41,914 - INFO - Testing page navigation
+2025-05-18 22:49:41,914 - INFO - Page navigation test passed
+2025-05-18 22:49:41,914 - INFO - Page navigation test result: PASS
+2025-05-18 22:49:41,914 - INFO - Testing export dialogs
+2025-05-18 22:49:41,914 - INFO - Export dialog test passed
+2025-05-18 22:49:41,914 - INFO - Export dialog test result: PASS
+2025-05-18 22:49:41,914 - INFO - Overall test result: PASS
+2025-05-18 22:49:41,914 - INFO - Dialog handler stopped
+2025-05-18 22:49:41,914 - INFO - Closing all active dialogs (0)
+</div>
+            </td>
+        </tr>
+
+    </table>
+
+    <script>
+        function toggleDetails(id) {
+            const details = document.getElementById(id);
+            if (details.style.display === 'block') {
+                details.style.display = 'none';
+            } else {
+                details.style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>

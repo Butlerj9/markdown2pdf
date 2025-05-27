@@ -7,13 +7,9 @@ File: src--markdown_to_pdf_export.py
 """
 
 import os
-import tempfile
 import subprocess
-import traceback
-import re
-import time
 from PyQt6.QtWidgets import QMessageBox, QApplication, QFileDialog
-from logging_config import get_logger, EnhancedLogger
+from logging_config import get_logger
 from render_utils import RenderUtils
 
 logger = get_logger()
@@ -82,12 +78,8 @@ class MarkdownToPDFExport:
 
                 logger.info(f"Attempting export with engine: {engine}")
 
-                # Use try-finally to ensure cleanup even if errors occur
-                md_file = None
-                css_file = None
-                template_file = None
-                no_numbers_file = None
-                header_file = None
+                # Track files created for this export
+                export_files = []
 
                 try:
                     # Create temporary markdown file
@@ -97,23 +89,27 @@ class MarkdownToPDFExport:
                     from markdown_export_fix import preprocess_markdown_for_engine
                     markdown_text = preprocess_markdown_for_engine(markdown_text, engine)
 
-                    # Create temporary markdown file
-                    with tempfile.NamedTemporaryFile('w', encoding='utf-8', suffix='.md', delete=False) as md_file:
+                    # Get the output directory from the output file
+                    output_dir = os.path.dirname(output_file)
+                    base_name = os.path.splitext(os.path.basename(output_file))[0]
+
+                    # Create markdown file in the same directory as the output file
+                    md_path = os.path.join(output_dir, f"{base_name}.md")
+                    with open(md_path, 'w', encoding='utf-8') as md_file:
                         md_file.write(markdown_text)
-                        md_path = md_file.name
 
-                    logger.debug(f"Created temporary markdown file: {md_path}")
+                    logger.debug(f"Created markdown file: {md_path}")
 
-                    # Create CSS file from settings
+                    # Create CSS file from settings in the same directory
                     css_content = RenderUtils.generate_css_from_settings(self.document_settings)
-                    css_file = tempfile.NamedTemporaryFile('w', encoding='utf-8', suffix='.css', delete=False)
-                    css_file.write(css_content)
-                    css_file.close()
+                    css_path = os.path.join(output_dir, f"{base_name}.css")
+                    with open(css_path, 'w', encoding='utf-8') as css_file:
+                        css_file.write(css_content)
 
-                    logger.debug(f"Created temporary CSS file: {css_file.name}")
+                    logger.debug(f"Created CSS file: {css_path}")
 
                     # Prepare pandoc command
-                    cmd = ['pandoc', md_path, '-o', output_file, '--standalone']
+                    cmd = [r'C:\Users\joshd\AppData\Local\Pandoc\pandoc.exe', md_path, '-o', output_file, '--standalone']
 
                     # Add PDF engine
                     engine_path = self.found_engines.get(engine, engine)
@@ -124,7 +120,10 @@ class MarkdownToPDFExport:
                     cmd = update_pandoc_command_for_engine(engine, cmd)
 
                     # Add CSS and other common options
-                    cmd.append(f'--css={css_file.name}')
+                    cmd.append(f'--css={css_path}')
+
+                    # Add title metadata to prevent warnings
+                    cmd.extend(['--metadata', f'title={base_name}'])
 
                     # Add template for LaTeX engines
                     use_latex = engine in ["xelatex", "pdflatex", "lualatex"]
@@ -139,10 +138,10 @@ class MarkdownToPDFExport:
                             # Fallback to generating a template if the file doesn't exist
                             logger.info("Using default pandoc template")
                             template_content = RenderUtils.generate_latex_template()
-                            template_file = tempfile.NamedTemporaryFile('w', encoding='utf-8', suffix='.latex', delete=False)
-                            template_file.write(template_content)
-                            template_file.close()
-                            cmd.append(f'--template={template_file.name}')
+                            template_path = os.path.join(output_dir, f"{base_name}.latex")
+                            with open(template_path, 'w', encoding='utf-8') as template_file:
+                                template_file.write(template_content)
+                            cmd.append(f'--template={template_path}')
 
                     # Add enhanced header file for Mermaid support
                     if engine not in ["xelatex", "pdflatex", "lualatex"]:
@@ -230,10 +229,10 @@ class MarkdownToPDFExport:
                         }
                         </style>
                         """
-                        header_file = tempfile.NamedTemporaryFile('w', encoding='utf-8', suffix='.html', delete=False)
-                        header_file.write(header_content)
-                        header_file.close()
-                        cmd.extend(['--include-in-header', header_file.name])
+                        header_path = os.path.join(output_dir, f"{base_name}_header.html")
+                        with open(header_path, 'w', encoding='utf-8') as header_file:
+                            header_file.write(header_content)
+                        cmd.extend(['--include-in-header', header_path])
 
                     # Add TOC if needed
                     if self.document_settings.get("toc", {}).get("include", False):
@@ -318,20 +317,10 @@ class MarkdownToPDFExport:
                     # Otherwise, continue to the next engine
 
                 finally:
-                    # Clean up temporary files
-                    for file_path in [
-                        getattr(md_file, 'name', None),
-                        getattr(css_file, 'name', None),
-                        getattr(template_file, 'name', None),
-                        getattr(no_numbers_file, 'name', None),
-                        getattr(header_file, 'name', None)
-                    ]:
-                        if file_path and os.path.exists(file_path):
-                            try:
-                                os.unlink(file_path)
-                                logger.debug(f"Deleted temporary file: {file_path}")
-                            except Exception as e:
-                                logger.warning(f"Error cleaning up temp file {file_path}: {e}")
+                    # We're now keeping the files in the output directory
+                    # No need to clean them up as they might be useful for debugging
+                    # or for users who want to see the intermediate files
+                    logger.debug(f"Keeping intermediate files in: {output_dir}")
 
             except Exception as e:
                 logger.error(f"Serious error with engine {engine}: {str(e)}")

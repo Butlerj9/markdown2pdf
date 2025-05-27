@@ -1,0 +1,112 @@
+Test Results for Category: core
+Timestamp: 2025-05-26 13:44:26
+Total Tests: 1
+
+Test 1/1: test_core_functionality.py
+Status: PASS
+Execution Time: 2.66s
+Standard Output:
+2025-05-26 13:44:26,870 - INFO - Logging to file: C:\Users\joshd\.markdown_pdf_logs\markdown_pdf_debug_20250526_134426.log
+2025-05-26 13:44:26,891 - INFO - Running in test mode - dialogs will be suppressed
+Found xelatex in PATH
+Found pdflatex in PATH
+Found lualatex in PATH
+Found wkhtmltopdf at: C:\Program Files\wkhtmltopdf\bin\wkhtmltopdf.exe
+Found weasyprint in PATH
+Pandoc found: pandoc.exe 3.1.12.1
+2025-05-26 13:44:28,650 - INFO - Loaded temporary style
+2025-05-26 13:44:28,651 - INFO - Loaded 3 recent files
+2025-05-26 13:44:28,651 - INFO - Settings loaded successfully
+Settings loaded successfully
+
+Standard Error:
+2025-05-26 13:44:26,891 - DEBUG - Available styles: ['Business Professional', 'Technical Document', 'Academic', 'Minimal', 'Custom']
+2025-05-26 13:44:26,891 - INFO - Running in test mode - dialogs will be suppressed
+2025-05-26 13:44:28,650 - DEBUG - Loaded temporary style
+2025-05-26 13:44:28,650 - INFO - Loaded temporary style
+2025-05-26 13:44:28,651 - INFO - Loaded 3 recent files
+2025-05-26 13:44:28,651 - INFO - Settings loaded successfully
+2025-05-26 13:44:29,085 - DEBUG - Setting up zoom controls
+2025-05-26 13:44:29,109 - DEBUG - Main update_preview call #1
+2025-05-26 13:44:29,109 - DEBUG - Updating document settings
+2025-05-26 13:44:29,109 - DEBUG - Setting document settings
+2025-05-26 13:44:29,109 - DEBUG - Updated document settings in page preview
+2025-05-26 13:44:29,109 - DEBUG - RenderUtils.update_preview call #1
+2025-05-26 13:44:29,109 - DEBUG - Got markdown text, length: 510
+2025-05-26 13:44:29,109 - DEBUG - Updating document settings in page_preview
+2025-05-26 13:44:29,109 - DEBUG - Updating document settings
+2025-05-26 13:44:29,110 - DEBUG - Setting document settings
+2025-05-26 13:44:29,110 - DEBUG - Using built-in zoom functionality in page_preview.py
+2025-05-26 13:44:29,110 - DEBUG - Finding page breaks in markdown
+2025-05-26 13:44:29,110 - DEBUG - Found 0 page breaks at lines: []
+2025-05-26 13:44:29,110 - DEBUG - Found 0 page breaks at lines: []
+2025-05-26 13:44:29,110 - DEBUG - Writing processed Markdown to temporary file (length: 510)
+2025-05-26 13:44:29,113 - DEBUG - Created temporary HTML file: C:\Users\joshd\AppData\Local\Temp\tmp55dpcxmc.html
+2025-05-26 13:44:29,113 - DEBUG - Generating CSS from settings
+2025-05-26 13:44:29,113 - DEBUG - CSS generation completed
+2025-05-26 13:44:29,113 - DEBUG - Injecting page break styles into CSS
+2025-05-26 13:44:29,115 - DEBUG - Created temporary CSS file: C:\Users\joshd\AppData\Local\Temp\tmp3db_6ool.css
+2025-05-26 13:44:29,115 - DEBUG - Running command: C:\Users\joshd\AppData\Local\Pandoc\pandoc.exe C:\Users\joshd\AppData\Local\Temp\tmp3rdzhb92.md -o C:\Users\joshd\AppData\Local\Temp\tmp55dpcxmc.html --standalone --css=C:\Users\joshd\AppData\Local\Temp\tmp3db_6ool.css --mathjax -f markdown+fenced_divs+pipe_tables+backtick_code_blocks -t html5 --metadata title=Preview --variable secnumdepth=-2 --variable disable-numbering=true
+2025-05-26 13:44:29,196 - DEBUG - Processing page breaks for preview
+2025-05-26 13:44:29,196 - DEBUG - No page breaks found in content
+2025-05-26 13:44:29,196 - DEBUG - HTML content generated (length: 5659)
+2025-05-26 13:44:29,196 - DEBUG - Updating document settings
+2025-05-26 13:44:29,196 - DEBUG - Setting document settings
+2025-05-26 13:44:29,196 - DEBUG - Updating preview with new content
+2025-05-26 13:44:29,196 - DEBUG - HTML content length: 5659
+2025-05-26 13:44:29,196 - DEBUG - Has page breaks detected: False
+2025-05-26 13:44:29,196 - DEBUG - HTML content preview: <!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=de...30</td>
+<td>Developer</td>
+</tr>
+<tr class="even">
+<td>Jane</td>
+<td>25</td>
+<td>Designer</td>
+</tr>
+<tr class="odd">
+<td>Bob</td>
+<td>40</td>
+<td>Manager</td>
+</tr>
+</tbody>
+</table>
+</body>
+</html>
+
+2025-05-26 13:44:29,197 - DEBUG - Cleaned HTML content to remove title elements and blank lines
+2025-05-26 13:44:29,197 - DEBUG - Splitting content into pages
+2025-05-26 13:44:29,197 - DEBUG - Calculating automatic page breaks
+2025-05-26 13:44:29,197 - DEBUG - Page calculation: 754.0pt usable height, 29.9 theoretical lines, 30 actual lines per page, font: 14pt, line height: 1.8
+2025-05-26 13:44:29,197 - DEBUG - Font size: 14pt, Line height: 1.8, Lines per page: 30
+2025-05-26 13:44:29,197 - DEBUG - Calculated 2 automatic pages
+2025-05-26 13:44:29,197 - DEBUG - Split content into 2 pages
+2025-05-26 13:44:29,206 - DEBUG - Preview updated successfully
+2025-05-26 13:44:29,206 - DEBUG - Cleaning up temporary files
+2025-05-26 13:44:29,206 - DEBUG - Deleted temporary file: C:\Users\joshd\AppData\Local\Temp\tmp3rdzhb92.md
+2025-05-26 13:44:29,206 - DEBUG - Deleted temporary file: C:\Users\joshd\AppData\Local\Temp\tmp3db_6ool.css
+2025-05-26 13:44:29,207 - DEBUG - Deleted temporary file: C:\Users\joshd\AppData\Local\Temp\tmp55dpcxmc.html
+2025-05-26 13:44:29,207 - DEBUG - Exiting function: update_preview
+2025-05-26 13:44:29,207 - DEBUG - Preview updated successfully (call #1)
+2025-05-26 13:44:29,207 - DEBUG - Skipping duplicate preview update (debounce)
+2025-05-26 13:44:29,207 - INFO - Testing markdown rendering...
+2025-05-26 13:44:29,207 - INFO - Preview widget and web view created successfully
+2025-05-26 13:44:29,207 - INFO - All expected HTML elements found in the preview
+2025-05-26 13:44:29,208 - INFO - Testing document settings...
+2025-05-26 13:44:29,208 - INFO - All expected settings sections found
+2025-05-26 13:44:29,208 - INFO - Testing page preview...
+2025-05-26 13:44:29,208 - DEBUG - Skipping duplicate preview update (debounce)
+2025-05-26 13:44:29,208 - INFO - Page preview created successfully
+2025-05-26 13:44:29,209 - DEBUG - Closing in test environment - skipping style and settings save
+2025-05-26 13:44:29,209 - INFO - Core functionality tests completed successfully
+
+--------------------------------------------------------------------------------
+
+
+Summary:
+Passed: 1/1 (100.00%)
+Failed: 0/1 (0.00%)

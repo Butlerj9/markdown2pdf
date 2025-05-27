@@ -1,0 +1,119 @@
+2025-05-02 14:07:39,065 - DEBUG - Initializing PagePreview
+2025-05-02 14:07:39,457 - DEBUG - PagePreview initialized
+2025-05-02 14:07:39,458 - DEBUG - Updating document settings
+2025-05-02 14:07:39,459 - DEBUG - Page dimensions: A4 portrait, 210mm x 297mm
+2025-05-02 14:07:39,459 - DEBUG - Margins: T:0mm R:25mm B:25mm L:25mm
+2025-05-02 14:07:39,459 - DEBUG - Settings verification complete
+2025-05-02 14:07:39,960 - INFO - Testing with minimal HTML
+2025-05-02 14:07:39,960 - DEBUG - Updating preview
+2025-05-02 14:07:39,960 - DEBUG - Cleaning up 0 temporary files
+2025-05-02 14:07:39,960 - DEBUG - Removing title elements from HTML content
+2025-05-02 14:07:39,960 - DEBUG - Title elements removed from HTML content
+2025-05-02 14:07:39,961 - DEBUG - JavaScript bridge created and registered
+2025-05-02 14:07:39,979 - DEBUG - Created temporary HTML file: C:\Users\joshd\AppData\Local\Temp\tmp98htyjp4.html
+2025-05-02 14:07:39,980 - DEBUG - Loading URL: file:///C:/Users/joshd/AppData/Local/Temp/tmp98htyjp4.html
+2025-05-02 14:07:39,984 - DEBUG - Web view: load started
+2025-05-02 14:07:39,989 - ERROR - JavaScript Error: Uncaught SyntaxError: missing ) after argument list
+2025-05-02 14:07:39,989 - ERROR -   Source: file:///C:/Users/joshd/AppData/Local/Temp/tmp98htyjp4.html
+2025-05-02 14:07:39,989 - ERROR -   Line: 348
+2025-05-02 14:07:39,991 - ERROR -   Error Type: Uncaught SyntaxError
+2025-05-02 14:07:39,991 - ERROR -   Error Detail: missing ) after argument list
+2025-05-02 14:07:39,991 - DEBUG - JS Console (INFO): DOM loaded, initializing page navigation... [file:///C:/Users/joshd/AppData/Local/Temp/tmp98htyjp4.html:493]
+2025-05-02 14:07:39,991 - DEBUG - JS Console (INFO): DOM loaded, initializing bridge directly... [file:///C:/Users/joshd/AppData/Local/Temp/tmp98htyjp4.html:600]
+2025-05-02 14:07:39,991 - DEBUG - JS Console (INFO): qt.webChannelTransport is available, connecting bridge... [file:///C:/Users/joshd/AppData/Local/Temp/tmp98htyjp4.html:691]
+2025-05-02 14:07:39,991 - DEBUG - JS Console (INFO): QWebChannel polyfill created [file:///C:/Users/joshd/AppData/Local/Temp/tmp98htyjp4.html:11]
+2025-05-02 14:07:40,000 - DEBUG - JS Console (INFO): Bridge connected directly: true [file:///C:/Users/joshd/AppData/Local/Temp/tmp98htyjp4.html:695]
+2025-05-02 14:07:40,000 - DEBUG - Web view: load finished successfully
+2025-05-02 14:07:40,000 - DEBUG - Page loaded, applying document settings
+2025-05-02 14:07:40,093 - DEBUG - JS Console (INFO): Initializing QWebChannel connection... [file:///C:/Users/joshd/AppData/Local/Temp/tmp98htyjp4.html:521]
+2025-05-02 14:07:40,093 - DEBUG - JS Console (INFO): QWebChannel polyfill created [file:///C:/Users/joshd/AppData/Local/Temp/tmp98htyjp4.html:11]
+2025-05-02 14:07:40,093 - DEBUG - JS Console (INFO): Bridge connected: true [file:///C:/Users/joshd/AppData/Local/Temp/tmp98htyjp4.html:524]
+2025-05-02 14:07:40,101 - DEBUG - Applying page layout styling
+2025-05-02 14:07:40,101 - DEBUG - Applied page layout styling
+2025-05-02 14:07:40,101 - DEBUG - Page layout debugging initiated
+2025-05-02 14:07:40,101 - DEBUG - JS Console (INFO): Applying page layout styling with document settings [:3]
+2025-05-02 14:07:40,101 - DEBUG - JS Console (INFO): Page dimensions (mm): 210x297 [:14]
+2025-05-02 14:07:40,103 - DEBUG - JS Console (INFO): Page dimensions (px): 793.7007874015749x1122.5196850393702 [:15]
+2025-05-02 14:07:40,103 - DEBUG - JS Console (INFO): Margins (mm): T:0 R:25 B:25 L:25 [:16]
+2025-05-02 14:07:40,103 - DEBUG - JS Console (INFO): Margins (px): T:0 R:94.48818897637796 B:94.48818897637796 L:94.48818897637796 [:17]
+2025-05-02 14:07:40,103 - DEBUG - JS Console (INFO): Creating pages container [:306]
+2025-05-02 14:07:40,103 - DEBUG - JS Console (INFO): Page dimensions (px): 793.7007874015749x1122.5196850393702 [:326]
+2025-05-02 14:07:40,103 - DEBUG - JS Console (INFO): Content dimensions (px): 604.724409448819x1028.0314960629921 [:327]
+2025-05-02 14:07:40,103 - DEBUG - JS Console (INFO): Found 0 explicit page breaks [:352]
+2025-05-02 14:07:40,106 - DEBUG - JS Console (INFO): Created 1 pages [:452]
+2025-05-02 14:07:40,106 - DEBUG - JS Console (INFO): Page count changed: 1 of 1 [file:///C:/Users/joshd/AppData/Local/Temp/tmp98htyjp4.html:399]
+2025-05-02 14:07:40,106 - DEBUG - JS Console (INFO): Bridge not yet available for pageCountChanged - will be handled by direct script [file:///C:/Users/joshd/AppData/Local/Temp/tmp98htyjp4.html:407]
+2025-05-02 14:07:40,106 - DEBUG - JS Console (INFO): Page layout styling applied successfully [:616]
+2025-05-02 14:07:40,108 - DEBUG - JS Console (INFO): Found 1 pages, updating counter... [file:///C:/Users/joshd/AppData/Local/Temp/tmp98htyjp4.html:701]
+2025-05-02 14:07:40,108 - DEBUG - JS Console (INFO): Page count changed: 1 of 1 [file:///C:/Users/joshd/AppData/Local/Temp/tmp98htyjp4.html:399]
+2025-05-02 14:07:40,108 - DEBUG - JS Console (INFO): Bridge not yet available for pageCountChanged - will be handled by direct script [file:///C:/Users/joshd/AppData/Local/Temp/tmp98htyjp4.html:407]
+2025-05-02 14:07:40,108 - DEBUG - JS Console (INFO): Debugging page layout... [:3]
+2025-05-02 14:07:40,108 - DEBUG - JS Console (INFO): Document dimensions: 1165px x 1168px [:14]
+2025-05-02 14:07:40,110 - DEBUG - JS Console (INFO): Body dimensions: 1165px x 496px [:19]
+2025-05-02 14:07:40,110 - DEBUG - JS Console (INFO): Pages container found: [:24]
+2025-05-02 14:07:40,110 - DEBUG - JS Console (INFO):   Width: 1165px [:25]
+2025-05-02 14:07:40,110 - DEBUG - JS Console (INFO):   Height: 1163px [:26]
+2025-05-02 14:07:40,110 - DEBUG - JS Console (INFO):   Style transform: matrix(1, 0, 0, 1, 0, 0) [:27]
+2025-05-02 14:07:40,110 - DEBUG - JS Console (INFO):   Style transform-origin: 582.667px 0px [:28]
+2025-05-02 14:07:40,110 - DEBUG - JS Console (INFO): Found 1 pages [:35]
+2025-05-02 14:07:40,110 - DEBUG - JS Console (INFO): Page 1: [:42]
+2025-05-02 14:07:40,111 - DEBUG - JS Console (INFO):   Width: 794px [:43]
+2025-05-02 14:07:40,111 - DEBUG - JS Console (INFO):   Height: 1123px [:44]
+2025-05-02 14:07:40,112 - DEBUG - JS Console (INFO):   Padding: 0px 94.4882px 94.4882px [:45]
+2025-05-02 14:07:40,112 - DEBUG - JS Console (INFO):   Margin: 0px 0px 40px [:46]
+2025-05-02 14:07:40,112 - DEBUG - JS Console (INFO):   Style transform: matrix(1, 0, 0, 1, 0, -2) [:47]
+2025-05-02 14:07:40,112 - DEBUG - JS Console (INFO):   Content elements: 4 [:51]
+2025-05-02 14:07:40,112 - DEBUG - JS Console (INFO):   Content height: 27px [:62]
+2025-05-02 14:07:40,113 - DEBUG - JS Console (INFO):   Available height: 1028.5118px [:69]
+2025-05-02 14:07:40,113 - DEBUG - JS Console (INFO): Current zoom factor (CSS var): 1.0 [:81]
+2025-05-02 14:07:40,113 - DEBUG - Page layout debug results: {'documentHeight': 1168, 'documentWidth': 1165, 'pageCount': 1, 'zoomFactor': '1.0'}
+2025-05-02 14:07:40,201 - DEBUG - Applying page layout styling
+2025-05-02 14:07:40,202 - DEBUG - Applied page layout styling
+2025-05-02 14:07:40,202 - DEBUG - Page layout debugging initiated
+2025-05-02 14:07:40,202 - DEBUG - JS Console (INFO): Applying page layout styling with document settings [:3]
+2025-05-02 14:07:40,202 - DEBUG - JS Console (INFO): Page dimensions (mm): 210x297 [:14]
+2025-05-02 14:07:40,202 - DEBUG - JS Console (INFO): Page dimensions (px): 793.7007874015749x1122.5196850393702 [:15]
+2025-05-02 14:07:40,203 - DEBUG - JS Console (INFO): Margins (mm): T:0 R:25 B:25 L:25 [:16]
+2025-05-02 14:07:40,203 - DEBUG - JS Console (INFO): Margins (px): T:0 R:94.48818897637796 B:94.48818897637796 L:94.48818897637796 [:17]
+2025-05-02 14:07:40,203 - DEBUG - JS Console (INFO): Page count changed: 1 of 1 [file:///C:/Users/joshd/AppData/Local/Temp/tmp98htyjp4.html:399]
+2025-05-02 14:07:40,203 - DEBUG - JS Console (INFO): Bridge not yet available for pageCountChanged - will be handled by direct script [file:///C:/Users/joshd/AppData/Local/Temp/tmp98htyjp4.html:407]
+2025-05-02 14:07:40,203 - DEBUG - JS Console (INFO): Page layout styling applied successfully [:616]
+2025-05-02 14:07:40,203 - DEBUG - JS Console (INFO): Debugging page layout... [:3]
+2025-05-02 14:07:40,203 - DEBUG - JS Console (INFO): Document dimensions: 1165px x 1168px [:14]
+2025-05-02 14:07:40,203 - DEBUG - JS Console (INFO): Body dimensions: 1165px x 496px [:19]
+2025-05-02 14:07:40,203 - DEBUG - JS Console (INFO): Pages container found: [:24]
+2025-05-02 14:07:40,203 - DEBUG - JS Console (INFO):   Width: 1165px [:25]
+2025-05-02 14:07:40,203 - DEBUG - JS Console (INFO):   Height: 1163px [:26]
+2025-05-02 14:07:40,203 - DEBUG - JS Console (INFO):   Style transform: matrix(1, 0, 0, 1, 0, 0) [:27]
+2025-05-02 14:07:40,204 - DEBUG - JS Console (INFO):   Style transform-origin: 582.667px 0px [:28]
+2025-05-02 14:07:40,204 - DEBUG - JS Console (INFO): Found 1 pages [:35]
+2025-05-02 14:07:40,204 - DEBUG - JS Console (INFO): Page 1: [:42]
+2025-05-02 14:07:40,205 - DEBUG - JS Console (INFO):   Width: 794px [:43]
+2025-05-02 14:07:40,205 - DEBUG - JS Console (INFO):   Height: 1123px [:44]
+2025-05-02 14:07:40,205 - DEBUG - JS Console (INFO):   Padding: 0px 94.4882px 94.4882px [:45]
+2025-05-02 14:07:40,205 - DEBUG - JS Console (INFO):   Margin: 0px 0px 40px [:46]
+2025-05-02 14:07:40,205 - DEBUG - JS Console (INFO):   Style transform: matrix(1, 0, 0, 1, 0, -2) [:47]
+2025-05-02 14:07:40,205 - DEBUG - JS Console (INFO):   Content elements: 4 [:51]
+2025-05-02 14:07:40,205 - DEBUG - JS Console (INFO):   Content height: 27px [:62]
+2025-05-02 14:07:40,205 - DEBUG - JS Console (INFO):   Available height: 1028.5118px [:69]
+2025-05-02 14:07:40,206 - DEBUG - JS Console (INFO): Current zoom factor (CSS var): 1.0 [:81]
+2025-05-02 14:07:40,206 - DEBUG - Page layout debug results: {'documentHeight': 1168, 'documentWidth': 1165, 'pageCount': 1, 'zoomFactor': '1.0'}
+2025-05-02 14:07:40,501 - DEBUG - Executing JavaScript: 
+                            (function() {
+                                // Update page counter to...
+2025-05-02 14:07:40,602 - DEBUG - JS Console (INFO): Page count changed: 1 of 1 [file:///C:/Users/joshd/AppData/Local/Temp/tmp98htyjp4.html:399]
+2025-05-02 14:07:40,602 - DEBUG - JS Console (INFO): Bridge not yet available for pageCountChanged - will be handled by direct script [file:///C:/Users/joshd/AppData/Local/Temp/tmp98htyjp4.html:407]
+2025-05-02 14:07:40,703 - DEBUG - JavaScript execution result: None
+2025-05-02 14:07:40,981 - INFO - Inspecting DOM
+2025-05-02 14:07:40,981 - DEBUG - Executing JavaScript: 
+        (function() {
+            // Get all elements in the page
+            var page = document.q...
+2025-05-02 14:07:41,184 - DEBUG - JavaScript execution result: {'children': [{'boundingRect': {'bottom': 10, 'height': 5, 'top': 5}, 'className': 'top-marker', 'id': '', 'index': 0, 'marginBottom': '0px', 'marginTop': '0px', 'offsetHeight': 5, 'offsetTop': 0, 'paddingBottom': '0px', 'paddingTop': '0px', 'tagName': 'DIV'}, {'boundingRect': {'bottom': 32, 'height': 22, 'top': 10}, 'className': '', 'id': '', 'index': 1, 'marginBottom': '13.3333px', 'marginTop': '0px', 'offsetHeight': 22, 'offsetTop': 5, 'paddingBottom': '0px', 'paddingTop': '0px', 'tagName': 'P'}, {'boundingRect': {'bottom': 0, 'height': 0, 'top': 0}, 'className': '', 'id': '', 'index': 2, 'marginBottom': '0px', 'marginTop': '0px', 'offsetHeight': 0, 'offsetTop': 0, 'paddingBottom': '0px', 'paddingTop': '0px', 'tagName': 'SCRIPT'}, {'boundingRect': {'bottom': 1119.84375, 'height': 22, 'top': 1097.84375}, 'className': 'page-number', 'id': '', 'index': 3, 'marginBottom': '0px', 'marginTop': '0px', 'offsetHeight': 22, 'offsetTop': 1093, 'paddingBottom': '2px', 'paddingTop': '2px', 'tagName': 'DIV'}], 'childrenCount': 4, 'pageInfo': {'borderTopWidth': '2px', 'boundingRect': {'height': 1122.510498046875, 'top': 3}, 'marginTop': '0px', 'paddingTop': '0px'}, 'topMarker': {'boundingRect': {'bottom': 10, 'height': 5, 'top': 5}, 'marginBottom': '0px', 'marginTop': '0px', 'offsetHeight': 5, 'offsetTop': 0, 'paddingBottom': '0px', 'paddingTop': '0px'}}
+2025-05-02 14:07:41,184 - INFO - DOM inspection result: {'children': [{'boundingRect': {'bottom': 10, 'height': 5, 'top': 5}, 'className': 'top-marker', 'id': '', 'index': 0, 'marginBottom': '0px', 'marginTop': '0px', 'offsetHeight': 5, 'offsetTop': 0, 'paddingBottom': '0px', 'paddingTop': '0px', 'tagName': 'DIV'}, {'boundingRect': {'bottom': 32, 'height': 22, 'top': 10}, 'className': '', 'id': '', 'index': 1, 'marginBottom': '13.3333px', 'marginTop': '0px', 'offsetHeight': 22, 'offsetTop': 5, 'paddingBottom': '0px', 'paddingTop': '0px', 'tagName': 'P'}, {'boundingRect': {'bottom': 0, 'height': 0, 'top': 0}, 'className': '', 'id': '', 'index': 2, 'marginBottom': '0px', 'marginTop': '0px', 'offsetHeight': 0, 'offsetTop': 0, 'paddingBottom': '0px', 'paddingTop': '0px', 'tagName': 'SCRIPT'}, {'boundingRect': {'bottom': 1119.84375, 'height': 22, 'top': 1097.84375}, 'className': 'page-number', 'id': '', 'index': 3, 'marginBottom': '0px', 'marginTop': '0px', 'offsetHeight': 22, 'offsetTop': 1093, 'paddingBottom': '2px', 'paddingTop': '2px', 'tagName': 'DIV'}], 'childrenCount': 4, 'pageInfo': {'borderTopWidth': '2px', 'boundingRect': {'height': 1122.510498046875, 'top': 3}, 'marginTop': '0px', 'paddingTop': '0px'}, 'topMarker': {'boundingRect': {'bottom': 10, 'height': 5, 'top': 5}, 'marginBottom': '0px', 'marginTop': '0px', 'offsetHeight': 5, 'offsetTop': 0, 'paddingBottom': '0px', 'paddingTop': '0px'}}
+2025-05-02 14:07:41,184 - DEBUG - Executing JavaScript: 
+        (function() {
+            // Find all elements with display:none or visibility:hidden
+     ...
+2025-05-02 14:07:41,393 - DEBUG - JavaScript execution result: [{'className': '', 'display': 'none', 'id': '', 'tagName': 'HEAD', 'visibility': 'visible'}, {'className': '', 'display': 'none', 'id': '', 'tagName': 'META', 'visibility': 'visible'}, {'className': '', 'display': 'none', 'id': '', 'tagName': 'META', 'visibility': 'visible'}, {'className': '', 'display': 'none', 'id': '', 'tagName': 'TITLE', 'visibility': 'visible'}, {'className': '', 'display': 'none', 'id': '', 'tagName': 'SCRIPT', 'visibility': 'visible'}, {'className': '', 'display': 'none', 'id': '', 'tagName': 'SCRIPT', 'visibility': 'visible'}, {'className': '', 'display': 'none', 'id': '', 'tagName': 'SCRIPT', 'visibility': 'visible'}, {'className': '', 'display': 'none', 'id': '', 'tagName': 'STYLE', 'visibility': 'visible'}, {'className': '', 'display': 'none', 'id': '', 'tagName': 'STYLE', 'visibility': 'visible'}, {'className': '', 'display': 'none', 'id': '', 'tagName': 'STYLE', 'visibility': 'visible'}, {'className': '', 'display': 'none', 'id': '', 'tagName': 'STYLE', 'visibility': 'visible'}, {'className': '', 'display': 'none', 'id': '', 'tagName': 'SCRIPT', 'visibility': 'visible'}]
+2025-05-02 14:07:41,393 - INFO - Hidden elements: [{'className': '', 'display': 'none', 'id': '', 'tagName': 'HEAD', 'visibility': 'visible'}, {'className': '', 'display': 'none', 'id': '', 'tagName': 'META', 'visibility': 'visible'}, {'className': '', 'display': 'none', 'id': '', 'tagName': 'META', 'visibility': 'visible'}, {'className': '', 'display': 'none', 'id': '', 'tagName': 'TITLE', 'visibility': 'visible'}, {'className': '', 'display': 'none', 'id': '', 'tagName': 'SCRIPT', 'visibility': 'visible'}, {'className': '', 'display': 'none', 'id': '', 'tagName': 'SCRIPT', 'visibility': 'visible'}, {'className': '', 'display': 'none', 'id': '', 'tagName': 'SCRIPT', 'visibility': 'visible'}, {'className': '', 'display': 'none', 'id': '', 'tagName': 'STYLE', 'visibility': 'visible'}, {'className': '', 'display': 'none', 'id': '', 'tagName': 'STYLE', 'visibility': 'visible'}, {'className': '', 'display': 'none', 'id': '', 'tagName': 'STYLE', 'visibility': 'visible'}, {'className': '', 'display': 'none', 'id': '', 'tagName': 'STYLE', 'visibility': 'visible'}, {'className': '', 'display': 'none', 'id': '', 'tagName': 'SCRIPT', 'visibility': 'visible'}]

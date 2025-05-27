@@ -1,0 +1,29 @@
+# Core dependencies
+zstandard>=0.15.0  # For compression/decompression
+pyyaml>=6.0        # For YAML front matter parsing
+
+# Markdown parsing options (at least one is required)
+markdown-it-py>=2.0.0  # Preferred Markdown parser with GFM support
+mdit-py-plugins>=0.3.0  # Plugins for markdown-it-py
+# OR
+markdown>=3.3.0     # Alternative Markdown parser
+pymdown-extensions>=9.0  # Extensions for Python-Markdown
+# OR
+mistune>=2.0.0      # Another alternative Markdown parser
+
+# Rendering dependencies
+Pillow>=8.0.0       # For image handling
+beautifulsoup4>=4.9.0  # For HTML parsing and manipulation
+lxml>=4.6.0         # XML/HTML processing
+
+# Math rendering
+mathjax-node-cli>=1.0.0  # For server-side math rendering (optional)
+# OR
+katex>=0.13.0       # Alternative math renderer (optional)
+
+# Mermaid diagram rendering
+mermaid-cli>=8.0.0  # For server-side Mermaid rendering (optional)
+
+# Testing
+pytest>=6.0.0       # For unit testing
+pytest-cov>=2.10.0  # For test coverage

@@ -38,6 +38,15 @@ class RenderUtils:
             margin: 0;
         }}
 
+        /* Hide the document title */
+        body > h1:first-of-type, body > header > h1:first-of-type {{
+            display: none !important;
+        }}
+
+        header {{
+            display: none !important;
+        }}
+
         /* Common heading properties */
         h1, h2, h3, h4, h5, h6 {{
             page-break-after: avoid;
@@ -286,48 +295,72 @@ class RenderUtils:
 
         # Add technical numbering styles if enabled - FIXED to avoid double numbering
         if settings["format"]["technical_numbering"]:
+            # Get the heading level at which numbering starts (default to 1 if not specified)
+            numbering_start = settings["format"].get("numbering_start", 1)
+
+            # Base CSS for technical numbering
             css += """
             /* Technical numbering styles - FIXED for proper HTML display */
             body {
                 /* Using custom counter mechanism */
-                counter-reset: h1counter;
+                counter-reset: h1counter h2counter h3counter h4counter h5counter h6counter;
             }
 
-            /* Only apply these counters in HTML when pandoc doesn't add numbering */
+            /* Hide standard pandoc numbering if CSS numbering is active */
+            body:not(.pandoc-numbering) .header-section-number {
+                display: none;
+            }
+
+            /* Reset counter styles for headings with reset-counter class */
+            body:not(.pandoc-numbering) h1.reset-counter {
+                counter-reset: h1counter h2counter h3counter h4counter h5counter h6counter;
+            }
+
+            body:not(.pandoc-numbering) h2.reset-counter {
+                counter-reset: h2counter h3counter h4counter h5counter h6counter;
+            }
+
+            body:not(.pandoc-numbering) h3.reset-counter {
+                counter-reset: h3counter h4counter h5counter h6counter;
+            }
+
+            body:not(.pandoc-numbering) h4.reset-counter {
+                counter-reset: h4counter h5counter h6counter;
+            }
+
+            body:not(.pandoc-numbering) h5.reset-counter {
+                counter-reset: h5counter h6counter;
+            }
+
+            body:not(.pandoc-numbering) h6.reset-counter {
+                counter-reset: h6counter;
+            }
+            """
+
+            # Add CSS for each heading level based on the numbering start level
+            # We need to completely disable the :before content for levels below numbering_start
+
+            # Set up counter-reset for all heading levels
+            css += """
+            /* Counter setup for all heading levels */
             body:not(.pandoc-numbering) h1 {
                 counter-increment: h1counter;
-                counter-reset: h2counter;
-            }
-
-            body:not(.pandoc-numbering) h1:before {
-                content: counter(h1counter) ". ";
+                counter-reset: h2counter h3counter h4counter h5counter h6counter;
             }
 
             body:not(.pandoc-numbering) h2 {
                 counter-increment: h2counter;
-                counter-reset: h3counter;
-            }
-
-            body:not(.pandoc-numbering) h2:before {
-                content: counter(h1counter) "." counter(h2counter) " ";
+                counter-reset: h3counter h4counter h5counter h6counter;
             }
 
             body:not(.pandoc-numbering) h3 {
                 counter-increment: h3counter;
-                counter-reset: h4counter;
-            }
-
-            body:not(.pandoc-numbering) h3:before {
-                content: counter(h1counter) "." counter(h2counter) "." counter(h3counter) " ";
+                counter-reset: h4counter h5counter h6counter;
             }
 
             body:not(.pandoc-numbering) h4 {
                 counter-increment: h4counter;
-                counter-reset: h5counter;
-            }
-
-            body:not(.pandoc-numbering) h4:before {
-                content: counter(h1counter) "." counter(h2counter) "." counter(h3counter) "." counter(h4counter) " ";
+                counter-reset: h5counter h6counter;
             }
 
             body:not(.pandoc-numbering) h5 {
@@ -335,23 +368,59 @@ class RenderUtils:
                 counter-reset: h6counter;
             }
 
-            body:not(.pandoc-numbering) h5:before {
-                content: counter(h1counter) "." counter(h2counter) "." counter(h3counter) "." counter(h4counter) "." counter(h5counter) " ";
-            }
-
             body:not(.pandoc-numbering) h6 {
                 counter-increment: h6counter;
             }
-
-            body:not(.pandoc-numbering) h6:before {
-                content: counter(h1counter) "." counter(h2counter) "." counter(h3counter) "." counter(h4counter) "." counter(h5counter) "." counter(h6counter) " ";
-            }
-
-            /* Hide standard pandoc numbering if CSS numbering is active */
-            body:not(.pandoc-numbering) .header-section-number {
-                display: none;
-            }
             """
+
+            # Now add the :before content only for levels at or above numbering_start
+            if numbering_start <= 1:
+                css += """
+                /* H1 numbering */
+                body:not(.pandoc-numbering) h1:before {
+                    content: counter(h1counter) ". ";
+                }
+                """
+
+            if numbering_start <= 2:
+                css += """
+                /* H2 numbering */
+                body:not(.pandoc-numbering) h2:before {
+                    content: """ + (f"counter(h1counter) \".\" " if numbering_start <= 1 else "") + """counter(h2counter) " ";
+                }
+                """
+
+            if numbering_start <= 3:
+                css += """
+                /* H3 numbering */
+                body:not(.pandoc-numbering) h3:before {
+                    content: """ + (f"counter(h1counter) \".\" counter(h2counter) \".\" " if numbering_start <= 1 else (f"counter(h2counter) \".\" " if numbering_start <= 2 else "")) + """counter(h3counter) " ";
+                }
+                """
+
+            if numbering_start <= 4:
+                css += """
+                /* H4 numbering */
+                body:not(.pandoc-numbering) h4:before {
+                    content: """ + (f"counter(h1counter) \".\" counter(h2counter) \".\" counter(h3counter) \".\" " if numbering_start <= 1 else (f"counter(h2counter) \".\" counter(h3counter) \".\" " if numbering_start <= 2 else (f"counter(h3counter) \".\" " if numbering_start <= 3 else ""))) + """counter(h4counter) " ";
+                }
+                """
+
+            if numbering_start <= 5:
+                css += """
+                /* H5 numbering */
+                body:not(.pandoc-numbering) h5:before {
+                    content: """ + (f"counter(h1counter) \".\" counter(h2counter) \".\" counter(h3counter) \".\" counter(h4counter) \".\" " if numbering_start <= 1 else (f"counter(h2counter) \".\" counter(h3counter) \".\" counter(h4counter) \".\" " if numbering_start <= 2 else (f"counter(h3counter) \".\" counter(h4counter) \".\" " if numbering_start <= 3 else (f"counter(h4counter) \".\" " if numbering_start <= 4 else "")))) + """counter(h5counter) " ";
+                }
+                """
+
+            if numbering_start <= 6:
+                css += """
+                /* H6 numbering */
+                body:not(.pandoc-numbering) h6:before {
+                    content: """ + (f"counter(h1counter) \".\" counter(h2counter) \".\" counter(h3counter) \".\" counter(h4counter) \".\" counter(h5counter) \".\" " if numbering_start <= 1 else (f"counter(h2counter) \".\" counter(h3counter) \".\" counter(h4counter) \".\" counter(h5counter) \".\" " if numbering_start <= 2 else (f"counter(h3counter) \".\" counter(h4counter) \".\" counter(h5counter) \".\" " if numbering_start <= 3 else (f"counter(h4counter) \".\" counter(h5counter) \".\" " if numbering_start <= 4 else (f"counter(h5counter) \".\" " if numbering_start <= 5 else ""))))) + """counter(h6counter) " ";
+                }
+                """
 
         logger.debug("CSS generation completed")
         return css
@@ -513,29 +582,125 @@ $body$
     @staticmethod
     def update_preview(md_editor, page_preview, document_settings):
         """Update the HTML preview with page layout and styling"""
-        logger.debug("Updating preview")
+        # Add a counter to track how many times this method is called
+        if not hasattr(RenderUtils, '_update_preview_count'):
+            RenderUtils._update_preview_count = 0
+        RenderUtils._update_preview_count += 1
+
+        logger.debug(f"RenderUtils.update_preview call #{RenderUtils._update_preview_count}")
+
+        # Add a debounce mechanism to prevent multiple rapid calls
+        current_time = time.time()
+        if hasattr(RenderUtils, '_last_preview_update_time'):
+            # If less than 100ms has passed since the last update, skip this update
+            if current_time - RenderUtils._last_preview_update_time < 0.1:
+                logger.debug("Skipping duplicate RenderUtils.update_preview call (debounce)")
+                return
+
+        # Update the timestamp
+        RenderUtils._last_preview_update_time = current_time
 
         try:
+            # Check if page_preview is valid
+            if not page_preview:
+                logger.error("Page preview is None or invalid")
+                return
 
-            markdown_text = md_editor.toPlainText()
+            # Get markdown text safely
+            try:
+                markdown_text = md_editor.toPlainText()
+                logger.debug(f"Got markdown text, length: {len(markdown_text)}")
+            except Exception as e:
+                logger.error(f"Error getting markdown text: {str(e)}")
+                markdown_text = ""
 
-            # Update page preview settings
-            page_preview.update_document_settings(document_settings)
+            # Update page preview settings safely
+            try:
+                logger.debug("Updating document settings in page_preview")
+                page_preview.update_document_settings(document_settings)
+            except Exception as e:
+                logger.error(f"Error updating document settings: {str(e)}")
+
+            # Using built-in zoom functionality
+            logger.debug("Using built-in zoom functionality in page_preview.py")
 
             if not markdown_text:
-                # Set a default message in the preview
+                # Set a default message in the preview with proper page layout
                 html = """
+                <!DOCTYPE html>
                 <html>
-                <body style="display: flex; justify-content: center; align-items: center; height: 100%; font-family: sans-serif; color: #555;">
-                    <div style="text-align: center;">
-                        <h2>Markdown to PDF Preview</h2>
-                        <p>Your document preview will appear here as you type.</p>
+                <head>
+                    <meta charset="UTF-8">
+                    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    <style>
+                        body {
+                            background-color: #e0e0e0;
+                            margin: 0;
+                            padding: 20px;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            justify-content: center;
+                            min-height: 100vh;
+                        }
+                        .page {
+                            position: relative;
+                            width: 210mm;
+                            min-height: 297mm;
+                            box-sizing: border-box;
+                            margin: 0 auto;
+                            background-color: white;
+                            border: 1px solid #ccc;
+                            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+                        }
+                        .page-content {
+                            position: absolute;
+                            top: 25mm;
+                            right: 25mm;
+                            bottom: 25mm;
+                            left: 25mm;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            justify-content: center;
+                            overflow: hidden;
+                        }
+                        .margin-box {
+                            position: absolute;
+                            top: 25mm;
+                            right: 25mm;
+                            bottom: 25mm;
+                            left: 25mm;
+                            border: 1px dotted rgba(200, 200, 200, 0.5);
+                            pointer-events: none;
+                            z-index: 10;
+                        }
+                        .empty-preview-message {
+                            text-align: center;
+                            font-family: sans-serif;
+                            color: #555;
+                        }
+                    </style>
+                </head>
+                <body>
+                <div class="page current-page">
+                    <div class="margin-box"></div>
+                    <div class="page-content">
+                        <div class="empty-preview-message">
+                            <h2>Markdown to PDF Preview</h2>
+                            <p>Your document preview will appear here as you type.</p>
+                        </div>
                     </div>
+                </div>
                 </body>
                 </html>
                 """
-                page_preview.update_preview(html)
-                logger.debug("Set empty preview message")
+                try:
+                    page_preview.update_preview(html)
+                    logger.debug("Set empty preview message with proper page layout")
+                except Exception as e:
+                    logger.error(f"Error setting empty preview: {str(e)}")
                 return
 
             # Use try-finally to ensure cleanup even if errors occur
@@ -582,7 +747,7 @@ $body$
                 # Run pandoc to convert markdown to HTML
                 try:
                     pandoc_cmd = [
-                        'pandoc',
+                        r'C:\Users\joshd\AppData\Local\Pandoc\pandoc.exe',
                         md_path,
                         '-o', html_file_name,
                         '--standalone',
@@ -591,6 +756,9 @@ $body$
                         '-f', 'markdown+fenced_divs+pipe_tables+backtick_code_blocks',
                         '-t', 'html5'
                     ]
+
+                    # Add title metadata to prevent warnings
+                    pandoc_cmd.extend(['--metadata', 'title=Preview'])
 
                     # Add TOC if needed
                     if document_settings.get("toc", {}).get("include", False):
@@ -643,37 +811,72 @@ $body$
 
                     logger.debug(f"HTML content generated (length: {len(modified_html)})")
 
-                    # Update the preview
-                    page_preview.update_preview(modified_html)
-                    logger.debug("Preview updated successfully")
+                    # Update the preview with a try-except block to prevent blank previews
+                    try:
+                        # Make sure document settings are applied before updating preview
+                        page_preview.update_document_settings(document_settings)
+
+                        # Store the HTML content for later use
+                        page_preview._last_html_content = modified_html
+
+                        # Update the preview
+                        page_preview.update_preview(modified_html)
+                        logger.debug("Preview updated successfully")
+                    except Exception as preview_error:
+                        logger.error(f"Error updating preview: {str(preview_error)}")
+                        EnhancedLogger.log_exception(logger, preview_error)
+                        # Try to show an error message in the preview
+                        try:
+                            error_html = f"""
+                            <html>
+                            <body style="font-family: Arial, sans-serif; padding: 20px;">
+                                <h2 style="color: #d9534f;">Preview Update Error</h2>
+                                <p>Error updating preview: {str(preview_error)}</p>
+                                <pre>{traceback.format_exc()}</pre>
+                            </body>
+                            </html>
+                            """
+                            page_preview.update_preview(error_html)
+                        except Exception as e2:
+                            logger.critical(f"Failed to show error in preview: {str(e2)}")
 
                 except Exception as e:
+                    logger.error(f"Preview error with Pandoc: {str(e)}")
+                    EnhancedLogger.log_exception(logger, e)
+
+                    # Try to show an error message in the preview
+                    try:
+                        error_msg = f"""
+                        <html>
+                        <body style="font-family: Arial, sans-serif; padding: 20px;">
+                            <h2 style="color: #d9534f;">Preview Error</h2>
+                            <p>Error running Pandoc: {str(e)}</p>
+                            <pre>{traceback.format_exc()}</pre>
+                        </body>
+                        </html>
+                        """
+                        page_preview.update_preview(error_msg)
+                    except Exception as e2:
+                        logger.critical(f"Failed to show error in preview: {str(e2)}")
+
+            except Exception as e:
+                logger.error(f"Error preparing preview: {str(e)}")
+                EnhancedLogger.log_exception(logger, e)
+
+                # Try to show an error message in the preview
+                try:
                     error_msg = f"""
                     <html>
                     <body style="font-family: Arial, sans-serif; padding: 20px;">
                         <h2 style="color: #d9534f;">Preview Error</h2>
-                        <p>Error running Pandoc: {str(e)}</p>
+                        <p>Error preparing preview: {str(e)}</p>
                         <pre>{traceback.format_exc()}</pre>
                     </body>
                     </html>
                     """
                     page_preview.update_preview(error_msg)
-                    logger.error(f"Preview error with Pandoc: {str(e)}")
-                    EnhancedLogger.log_exception(logger, e)
-
-            except Exception as e:
-                error_msg = f"""
-                <html>
-                <body style="font-family: Arial, sans-serif; padding: 20px;">
-                    <h2 style="color: #d9534f;">Preview Error</h2>
-                    <p>Error preparing preview: {str(e)}</p>
-                    <pre>{traceback.format_exc()}</pre>
-                </body>
-                </html>
-                """
-                page_preview.update_preview(error_msg)
-                logger.error(f"Error preparing preview: {str(e)}")
-                EnhancedLogger.log_exception(logger, e)
+                except Exception as e2:
+                    logger.critical(f"Failed to show error in preview: {str(e2)}")
 
             finally:
                 logger.debug("Cleaning up temporary files")
@@ -685,9 +888,40 @@ $body$
                             logger.debug(f"Deleted temporary file: {temp_file}")
                         except Exception as cleanup_error:
                             logger.warning(f"Error cleaning up temp file {temp_file}: {str(cleanup_error)}")
+        except KeyboardInterrupt:
+            logger.warning("Preview update interrupted by user")
+            # Try to show a message in the preview
+            try:
+                error_msg = """
+                <html>
+                <body style="font-family: Arial, sans-serif; padding: 20px;">
+                    <h2 style="color: #d9534f;">Preview Interrupted</h2>
+                    <p>The preview update was interrupted. Please try again.</p>
+                </body>
+                </html>
+                """
+                if page_preview:
+                    page_preview.update_preview(error_msg)
+            except Exception:
+                pass
         except Exception as e:
             logger.critical(f"Critical error in update_preview: {str(e)}")
             EnhancedLogger.log_exception(logger, e)
+            # Try to show a critical error message in the preview
+            try:
+                if page_preview:
+                    error_msg = f"""
+                    <html>
+                    <body style="font-family: Arial, sans-serif; padding: 20px;">
+                        <h2 style="color: #d9534f;">Critical Error</h2>
+                        <p>A critical error occurred while updating the preview: {str(e)}</p>
+                        <pre>{traceback.format_exc()}</pre>
+                    </body>
+                    </html>
+                    """
+                    page_preview.update_preview(error_msg)
+            except Exception:
+                pass
 
         EnhancedLogger.log_function_exit(logger, "update_preview")
 

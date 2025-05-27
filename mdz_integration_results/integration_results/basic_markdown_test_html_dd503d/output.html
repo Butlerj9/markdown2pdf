@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Markdown Document</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        pre {
+            background-color: #f6f8fa;
+            border-radius: 3px;
+            padding: 16px;
+            overflow: auto;
+        }
+        code {
+            font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
+            background-color: rgba(27, 31, 35, 0.05);
+            border-radius: 3px;
+            padding: 0.2em 0.4em;
+        }
+        pre code {
+            background-color: transparent;
+            padding: 0;
+        }
+        blockquote {
+            border-left: 4px solid #ddd;
+            padding-left: 16px;
+            color: #666;
+            margin-left: 0;
+        }
+        img {
+            max-width: 100%;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f6f8fa;
+        }
+        .task-list-item {
+            list-style-type: none;
+        }
+        .task-list-item input {
+            margin-right: 0.5em;
+        }
+        .mermaid-diagram {
+            text-align: center;
+            margin: 20px 0;
+        }
+        
+        
+        body {
+            counter-reset: h1;
+        }
+        h1 {
+            counter-reset: h2;
+        }
+        h2 {
+            counter-reset: h3;
+        }
+        h3 {
+            counter-reset: h4;
+        }
+        h4 {
+            counter-reset: h5;
+        }
+        h5 {
+            counter-reset: h6;
+        }
+        h1:before {
+            counter-increment: h1;
+            content: counter(h1) ". ";
+        }
+        h2:before {
+            counter-increment: h2;
+            content: counter(h1) "." counter(h2) " ";
+        }
+        h3:before {
+            counter-increment: h3;
+            content: counter(h1) "." counter(h2) "." counter(h3) " ";
+        }
+        h4:before {
+            counter-increment: h4;
+            content: counter(h1) "." counter(h2) "." counter(h3) "." counter(h4) " ";
+        }
+        h5:before {
+            counter-increment: h5;
+            content: counter(h1) "." counter(h2) "." counter(h3) "." counter(h4) "." counter(h5) " ";
+        }
+        h6:before {
+            counter-increment: h6;
+            content: counter(h1) "." counter(h2) "." counter(h3) "." counter(h4) "." counter(h5) "." counter(h6) " ";
+        }
+        
+        
+        .toc {
+            background-color: #f8f8f8;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+            padding: 1em;
+            margin-bottom: 1em;
+        }
+        .toc ul {
+            list-style-type: none;
+            padding-left: 1em;
+        }
+        .toc li {
+            margin: 0.5em 0;
+        }
+        .toc a {
+            text-decoration: none;
+        }
+        .toc a:hover {
+            text-decoration: underline;
+        }
+        
+    </style>
+    
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+<script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['\\(', '\\)']],
+      displayMath: [['\\[', '\\]']],
+      processEscapes: true
+    }
+  };
+</script>
+
+    
+</head>
+<body>
+    <div class="toc">
+<ul>
+<li><a href="#basic-markdown-test">Basic Markdown Test</a><ul>
+<li><a href="#headings">Headings</a><ul>
+<li><a href="#level-3-heading">Level 3 Heading</a><ul>
+<li><a href="#level-4-heading">Level 4 Heading</a><ul>
+<li><a href="#level-5-heading">Level 5 Heading</a><ul>
+<li><a href="#level-6-heading">Level 6 Heading</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#text-formatting">Text Formatting</a></li>
+<li><a href="#lists">Lists</a><ul>
+<li><a href="#unordered-list">Unordered List</a></li>
+<li><a href="#ordered-list">Ordered List</a></li>
+</ul>
+</li>
+<li><a href="#links">Links</a></li>
+<li><a href="#blockquotes">Blockquotes</a></li>
+<li><a href="#code">Code</a></li>
+<li><a href="#horizontal-rule">Horizontal Rule</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<h1 id="basic-markdown-test">Basic Markdown Test</h1>
+<p>This is a basic Markdown test file.</p>
+<h2 id="headings">Headings</h2>
+<h3 id="level-3-heading">Level 3 Heading</h3>
+<h4 id="level-4-heading">Level 4 Heading</h4>
+<h5 id="level-5-heading">Level 5 Heading</h5>
+<h6 id="level-6-heading">Level 6 Heading</h6>
+<h2 id="text-formatting">Text Formatting</h2>
+<p><em>Italic text</em></p>
+<p><strong>Bold text</strong></p>
+<p><strong><em>Bold and italic text</em></strong></p>
+<p>~~Strikethrough text~~</p>
+<h2 id="lists">Lists</h2>
+<h3 id="unordered-list">Unordered List</h3>
+<ul>
+<li>
+<p>Item 1</p>
+</li>
+<li>
+<p>Item 2</p>
+</li>
+<li>
+<p>Nested item 1</p>
+</li>
+<li>
+<p>Nested item 2</p>
+</li>
+<li>
+<p>Item 3</p>
+</li>
+</ul>
+<h3 id="ordered-list">Ordered List</h3>
+<ol>
+<li>
+<p>First item</p>
+</li>
+<li>
+<p>Second item</p>
+</li>
+<li>
+<p>Nested item 1</p>
+</li>
+<li>
+<p>Nested item 2</p>
+</li>
+<li>
+<p>Third item</p>
+</li>
+</ol>
+<h2 id="links">Links</h2>
+<p><a href="https://www.google.com">Link to Google</a></p>
+<p><a href="#headings">Link to heading</a></p>
+<h2 id="blockquotes">Blockquotes</h2>
+<blockquote>
+<p>This is a blockquote.</p>
+<blockquote>
+<p>This is a nested blockquote.</p>
+</blockquote>
+</blockquote>
+<h2 id="code">Code</h2>
+<p>Inline code: <code>print("Hello, world!")</code></p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">hello_world</span><span class="p">():</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello, world!&quot;</span><span class="p">)</span>
+</code></pre></div>
+<h2 id="horizontal-rule">Horizontal Rule</h2>
+<hr />
+</body>
+</html>

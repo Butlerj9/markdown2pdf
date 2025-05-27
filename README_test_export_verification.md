@@ -68,7 +68,6 @@ The script generates the following files:
 
 - PDF orientation detection is not reliable across different engines
 - TOC detection in EPUB and DOCX formats is not 100% accurate
-- Some JavaScript errors may appear in the console output (these can be ignored)
 
 ## Troubleshooting
 

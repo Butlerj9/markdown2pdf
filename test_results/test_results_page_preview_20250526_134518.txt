@@ -1,0 +1,299 @@
+Test Results for Category: page_preview
+Timestamp: 2025-05-26 13:45:18
+Total Tests: 4
+
+Test 1/4: test_page_preview_breaks.py
+Status: PASS
+Execution Time: 10.74s
+Standard Output:
+
+Standard Error:
+2025-05-26 13:45:19,207 - DEBUG - Updating document settings
+2025-05-26 13:45:19,207 - DEBUG - Setting document settings
+2025-05-26 13:45:19,207 - DEBUG - Updating preview with new content
+2025-05-26 13:45:19,207 - DEBUG - HTML content length: 729
+2025-05-26 13:45:19,207 - DEBUG - Has page breaks detected: False
+2025-05-26 13:45:19,207 - DEBUG - HTML content preview: 
+        <html>
+        <head>
+            <title>Page Break Test</title>
+        </head>
+        <body>
+            <h1>Page 1</h1>
+            <p>This is the content of page 1.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+            <div style="page-break-before: always;"></div>
+
+            <h1>Page 2</h1>
+            <p>This is the content of page 2.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+            <div style="p...
+2025-05-26 13:45:19,208 - DEBUG - Cleaned HTML content to remove title elements and blank lines
+2025-05-26 13:45:19,208 - DEBUG - Splitting content into pages
+2025-05-26 13:45:19,208 - DEBUG - Found 3 explicit page breaks
+2025-05-26 13:45:21,225 - DEBUG - Page layout debug: Current page 1, Total pages 3
+2025-05-26 13:45:21,225 - DEBUG - Zoom factor: 1.0
+2025-05-26 13:45:21,225 - DEBUG - Debugging page breaks...
+2025-05-26 13:45:21,229 - DEBUG - Page structure: {'pageBreaks': 0, 'pages': 3}
+2025-05-26 13:45:21,229 - INFO - Page break check: {'pageBreaks': 0, 'pages': 3}
+
+--------------------------------------------------------------------------------
+
+Test 2/4: test_page_preview_comprehensive.py
+Status: PASS
+Execution Time: 10.75s
+Standard Output:
+
+Standard Error:
+2025-05-26 13:45:29,932 - DEBUG - Updating document settings
+2025-05-26 13:45:29,932 - DEBUG - Setting document settings
+2025-05-26 13:45:29,932 - DEBUG - Updating preview with new content
+2025-05-26 13:45:29,932 - DEBUG - HTML content length: 4562
+2025-05-26 13:45:29,932 - DEBUG - Has page breaks detected: False
+2025-05-26 13:45:29,932 - DEBUG - HTML content preview: 
+        <html>
+        <head>
+            <title>Page Preview Comprehensive Test</title>
+            <style>
+                /* Add styles to help visualize page edges */
+                .edge-marker...           </div>
+
+            <h3>Math Formula</h3>
+            <div style="text-align: center;">
+                <p>E = mc<sup>2</sup></p>
+            </div>
+        </body>
+        </html>
+        
+2025-05-26 13:45:29,933 - DEBUG - Cleaned HTML content to remove title elements and blank lines
+2025-05-26 13:45:29,933 - DEBUG - Splitting content into pages
+2025-05-26 13:45:29,933 - DEBUG - Found 3 explicit page breaks
+2025-05-26 13:45:30,941 - INFO - Running comprehensive page preview tests...
+2025-05-26 13:45:30,941 - INFO - Testing page count...
+2025-05-26 13:45:30,941 - INFO - Testing navigation...
+2025-05-26 13:45:30,941 - DEBUG - Navigating to page 2
+2025-05-26 13:45:30,941 - DEBUG - Navigating to page 1
+2025-05-26 13:45:30,941 - DEBUG - Navigating to page 3
+2025-05-26 13:45:30,942 - INFO - Testing zoom...
+2025-05-26 13:45:30,942 - INFO - Original zoom factor: 1.0
+2025-05-26 13:45:30,942 - INFO - Zoom factor after zoom in: 1.1
+2025-05-26 13:45:30,942 - INFO - Zoom factor after zoom out: 1.0
+2025-05-26 13:45:30,942 - INFO - Zoom factor after reset: 1.0
+2025-05-26 13:45:30,942 - INFO - Testing margin changes...
+2025-05-26 13:45:30,942 - INFO - Original margins: {'top': 25, 'right': 25, 'bottom': 25, 'left': 25}
+2025-05-26 13:45:30,942 - DEBUG - Updating document settings
+2025-05-26 13:45:30,942 - DEBUG - Setting document settings
+2025-05-26 13:45:30,942 - DEBUG - Updating preview with new content
+2025-05-26 13:45:30,942 - DEBUG - HTML content length: 4562
+2025-05-26 13:45:30,942 - DEBUG - Has page breaks detected: False
+2025-05-26 13:45:30,942 - DEBUG - HTML content preview: 
+        <html>
+        <head>
+            <title>Page Preview Comprehensive Test</title>
+            <style>
+                /* Add styles to help visualize page edges */
+                .edge-marker...           </div>
+
+            <h3>Math Formula</h3>
+            <div style="text-align: center;">
+                <p>E = mc<sup>2</sup></p>
+            </div>
+        </body>
+        </html>
+        
+2025-05-26 13:45:30,942 - DEBUG - Cleaned HTML content to remove title elements and blank lines
+2025-05-26 13:45:30,942 - DEBUG - Splitting content into pages
+2025-05-26 13:45:30,942 - DEBUG - Found 3 explicit page breaks
+2025-05-26 13:45:30,943 - INFO - Changed margins to: {'top': 10, 'right': 10, 'bottom': 10, 'left': 10}
+2025-05-26 13:45:30,943 - DEBUG - Updating document settings
+2025-05-26 13:45:30,943 - DEBUG - Setting document settings
+2025-05-26 13:45:30,943 - DEBUG - Updating preview with new content
+2025-05-26 13:45:30,943 - DEBUG - HTML content length: 4562
+2025-05-26 13:45:30,943 - DEBUG - Has page breaks detected: False
+2025-05-26 13:45:30,943 - DEBUG - HTML content preview: 
+        <html>
+        <head>
+            <title>Page Preview Comprehensive Test</title>
+            <style>
+                /* Add styles to help visualize page edges */
+                .edge-marker...           </div>
+
+            <h3>Math Formula</h3>
+            <div style="text-align: center;">
+                <p>E = mc<sup>2</sup></p>
+            </div>
+        </body>
+        </html>
+        
+2025-05-26 13:45:30,943 - DEBUG - Cleaned HTML content to remove title elements and blank lines
+2025-05-26 13:45:30,943 - DEBUG - Splitting content into pages
+2025-05-26 13:45:30,943 - DEBUG - Found 3 explicit page breaks
+2025-05-26 13:45:30,944 - INFO - Restored margins to: {'top': 25, 'right': 25, 'bottom': 25, 'left': 25}
+2025-05-26 13:45:30,944 - INFO - Testing page size changes...
+2025-05-26 13:45:30,944 - INFO - Original page size: A4
+2025-05-26 13:45:30,944 - DEBUG - Updating document settings
+2025-05-26 13:45:30,944 - DEBUG - Setting document settings
+2025-05-26 13:45:30,944 - DEBUG - Updating preview with new content
+2025-05-26 13:45:30,944 - DEBUG - HTML content length: 4562
+2025-05-26 13:45:30,944 - DEBUG - Has page breaks detected: False
+2025-05-26 13:45:30,944 - DEBUG - HTML content preview: 
+        <html>
+        <head>
+            <title>Page Preview Comprehensive Test</title>
+            <style>
+                /* Add styles to help visualize page edges */
+                .edge-marker...           </div>
+
+            <h3>Math Formula</h3>
+            <div style="text-align: center;">
+                <p>E = mc<sup>2</sup></p>
+            </div>
+        </body>
+        </html>
+        
+2025-05-26 13:45:30,944 - DEBUG - Cleaned HTML content to remove title elements and blank lines
+2025-05-26 13:45:30,944 - DEBUG - Splitting content into pages
+2025-05-26 13:45:30,944 - DEBUG - Found 3 explicit page breaks
+2025-05-26 13:45:30,945 - INFO - Changed page size to: Letter
+2025-05-26 13:45:30,945 - DEBUG - Updating document settings
+2025-05-26 13:45:30,945 - DEBUG - Setting document settings
+2025-05-26 13:45:30,945 - DEBUG - Updating preview with new content
+2025-05-26 13:45:30,945 - DEBUG - HTML content length: 4562
+2025-05-26 13:45:30,945 - DEBUG - Has page breaks detected: False
+2025-05-26 13:45:30,945 - DEBUG - HTML content preview: 
+        <html>
+        <head>
+            <title>Page Preview Comprehensive Test</title>
+            <style>
+                /* Add styles to help visualize page edges */
+                .edge-marker...           </div>
+
+            <h3>Math Formula</h3>
+            <div style="text-align: center;">
+                <p>E = mc<sup>2</sup></p>
+            </div>
+        </body>
+        </html>
+        
+2025-05-26 13:45:30,945 - DEBUG - Cleaned HTML content to remove title elements and blank lines
+2025-05-26 13:45:30,945 - DEBUG - Splitting content into pages
+2025-05-26 13:45:30,945 - DEBUG - Found 3 explicit page breaks
+2025-05-26 13:45:30,946 - INFO - Restored page size to: A4
+2025-05-26 13:45:30,946 - INFO - Testing orientation changes...
+2025-05-26 13:45:30,946 - INFO - Original orientation: portrait
+2025-05-26 13:45:30,946 - DEBUG - Updating document settings
+2025-05-26 13:45:30,946 - DEBUG - Setting document settings
+2025-05-26 13:45:30,946 - DEBUG - Updating preview with new content
+2025-05-26 13:45:30,946 - DEBUG - HTML content length: 4562
+2025-05-26 13:45:30,946 - DEBUG - Has page breaks detected: False
+2025-05-26 13:45:30,946 - DEBUG - HTML content preview: 
+        <html>
+        <head>
+            <title>Page Preview Comprehensive Test</title>
+            <style>
+                /* Add styles to help visualize page edges */
+                .edge-marker...           </div>
+
+            <h3>Math Formula</h3>
+            <div style="text-align: center;">
+                <p>E = mc<sup>2</sup></p>
+            </div>
+        </body>
+        </html>
+        
+2025-05-26 13:45:30,946 - DEBUG - Cleaned HTML content to remove title elements and blank lines
+2025-05-26 13:45:30,946 - DEBUG - Splitting content into pages
+2025-05-26 13:45:30,946 - DEBUG - Found 3 explicit page breaks
+2025-05-26 13:45:30,946 - INFO - Changed orientation to: landscape
+2025-05-26 13:45:30,946 - DEBUG - Updating document settings
+2025-05-26 13:45:30,946 - DEBUG - Setting document settings
+2025-05-26 13:45:30,947 - DEBUG - Updating preview with new content
+2025-05-26 13:45:30,947 - DEBUG - HTML content length: 4562
+2025-05-26 13:45:30,947 - DEBUG - Has page breaks detected: False
+2025-05-26 13:45:30,947 - DEBUG - HTML content preview: 
+        <html>
+        <head>
+            <title>Page Preview Comprehensive Test</title>
+            <style>
+                /* Add styles to help visualize page edges */
+                .edge-marker...           </div>
+
+            <h3>Math Formula</h3>
+            <div style="text-align: center;">
+                <p>E = mc<sup>2</sup></p>
+            </div>
+        </body>
+        </html>
+        
+2025-05-26 13:45:30,947 - DEBUG - Cleaned HTML content to remove title elements and blank lines
+2025-05-26 13:45:30,947 - DEBUG - Splitting content into pages
+2025-05-26 13:45:30,947 - DEBUG - Found 3 explicit page breaks
+2025-05-26 13:45:30,947 - INFO - Restored orientation to: portrait
+2025-05-26 13:45:30,947 - DEBUG - Page layout debug: Current page 3, Total pages 3
+2025-05-26 13:45:30,947 - DEBUG - Zoom factor: 1.0
+2025-05-26 13:45:30,947 - INFO - Comprehensive page preview tests completed
+2025-05-26 13:45:30,948 - INFO - Page count: 3
+2025-05-26 13:45:30,948 - DEBUG - Navigation result: True
+2025-05-26 13:45:30,949 - INFO - Current page after next: 2
+2025-05-26 13:45:30,949 - DEBUG - Navigation result: True
+2025-05-26 13:45:30,949 - INFO - Current page after previous: 1
+2025-05-26 13:45:30,949 - DEBUG - Navigation result: True
+2025-05-26 13:45:30,949 - INFO - Current page after go_to_page(3): 3
+
+--------------------------------------------------------------------------------
+
+Test 3/4: test_js_syntax_and_page_numbers.py
+Status: FAIL
+Execution Time: 2.63s
+Standard Output:
+2025-05-26 13:45:40,292 - INFO - Logging to file: C:\Users\joshd\.markdown_pdf_logs\markdown_pdf_debug_20250526_134540.log
+2025-05-26 13:45:40,310 - INFO - Running all tests
+2025-05-26 13:45:40,311 - INFO - Running all JavaScript and page number tests
+2025-05-26 13:45:40,311 - INFO - Testing for JavaScript syntax errors
+2025-05-26 13:45:42,713 - ERROR - Error running tests: 'PagePreview' object has no attribute 'initialize_page_count'
+2025-05-26 13:45:42,716 - ERROR - Traceback (most recent call last):
+  File "C:\Projects\markdown2pdf\test_js_syntax_and_page_numbers.py", line 579, in main
+    success = tester.run_all_tests()
+              ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Projects\markdown2pdf\test_js_syntax_and_page_numbers.py", line 537, in run_all_tests
+    js_syntax_result = self.test_js_syntax()
+                       ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Projects\markdown2pdf\test_js_syntax_and_page_numbers.py", line 218, in test_js_syntax
+    preview.initialize_page_count()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'PagePreview' object has no attribute 'initialize_page_count'
+
+
+Standard Error:
+
+--------------------------------------------------------------------------------
+
+Test 4/4: test_page_navigation_and_export.py
+Status: PASS
+Execution Time: 0.18s
+Standard Output:
+2025-05-26 13:45:42,916 - INFO - Logging to file: C:\Users\joshd\.markdown_pdf_logs\markdown_pdf_debug_20250526_134542.log
+
+Standard Error:
+2025-05-26 13:45:42,935 - INFO - Dialog handler initialized
+2025-05-26 13:45:42,935 - INFO - Dialog handler started (suppress=True, timeout=10000ms)
+2025-05-26 13:45:42,935 - INFO - Registered custom response for QMessageBox
+2025-05-26 13:45:42,935 - INFO - Running all page navigation and export dialog tests
+2025-05-26 13:45:42,935 - INFO - Testing page navigation
+2025-05-26 13:45:42,935 - INFO - Page navigation test passed
+2025-05-26 13:45:42,935 - INFO - Page navigation test result: PASS
+2025-05-26 13:45:42,935 - INFO - Testing export dialogs
+2025-05-26 13:45:42,935 - INFO - Export dialog test passed
+2025-05-26 13:45:42,935 - INFO - Export dialog test result: PASS
+2025-05-26 13:45:42,935 - INFO - Overall test result: PASS
+2025-05-26 13:45:42,935 - INFO - Dialog handler stopped
+2025-05-26 13:45:42,935 - INFO - Closing all active dialogs (0)
+
+--------------------------------------------------------------------------------
+
+
+Summary:
+Passed: 3/4 (75.00%)
+Failed: 1/4 (25.00%)

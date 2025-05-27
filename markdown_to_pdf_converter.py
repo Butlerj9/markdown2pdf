@@ -52,7 +52,6 @@ from PyQt6.QtWidgets import QToolButton
 
 from logging_config import initialize_logger, get_logger, EnhancedLogger
 from markdown_to_pdf_export import MarkdownToPDFExport
-from markdown_export_fix import arrange_engines_for_export, preprocess_markdown_for_engine, update_pandoc_command_for_engine
 
 # Get the properly configured logger
 logger = get_logger()
@@ -141,6 +140,11 @@ class AdvancedMarkdownToPDF(QMainWindow):
 
         # Initialize style manager
         self.style_manager = StyleManager()
+
+        # Test mode flag - used to suppress dialogs during automated testing
+        self._is_test_environment = os.environ.get("MARKDOWN_PDF_TEST_MODE", "0") == "1"
+        if self._is_test_environment:
+            logger.info("Running in test mode - dialogs will be suppressed")
 
         # Set up default document settings
         self.document_settings = {
@@ -271,6 +275,10 @@ class AdvancedMarkdownToPDF(QMainWindow):
             "export": ""
         }
 
+        # Recent files list (max 10 files)
+        self.recent_files = []
+        self.max_recent_files = 10
+
         # Find available PDF engines
         self.found_engines = self.find_pdf_engines()
 
@@ -289,8 +297,7 @@ class AdvancedMarkdownToPDF(QMainWindow):
         # Apply UI improvements
         UIImprovements.apply_all_ui_improvements(self)
 
-        # Initialize preview with default message
-        self.update_preview()
+        # Note: Preview will be initialized when first content is loaded
 
     def find_pdf_engines(self):
         """Find PDF engines with enhanced path detection, prioritizing XeLaTeX"""
@@ -324,13 +331,18 @@ class AdvancedMarkdownToPDF(QMainWindow):
         for engine in engines_to_check:
             # Check if directly callable (in PATH)
             try:
+                # Add timeout to prevent hanging
                 result = subprocess.run([engine, '--version'],
                             stdout=subprocess.PIPE,
-                            stderr=subprocess.PIPE)
+                            stderr=subprocess.PIPE,
+                            timeout=2)  # 2 second timeout
                 found_engines[engine] = engine  # Use just the name as it's in PATH
                 print(f"Found {engine} in PATH")
                 continue
-            except (subprocess.SubprocessError, FileNotFoundError):
+            except (subprocess.SubprocessError, FileNotFoundError, subprocess.TimeoutExpired):
+                # If timeout occurs, log it but continue with the next engine
+                if 'TimeoutExpired' in str(sys.exc_info()[0]):
+                    print(f"Timeout checking for {engine}")
                 pass
 
             # Check in potential installation paths
@@ -352,8 +364,9 @@ class AdvancedMarkdownToPDF(QMainWindow):
     def check_dependencies(self):
         """Check for required external dependencies"""
         # Check for Pandoc
+        pandoc_path = r"C:\Users\joshd\AppData\Local\Pandoc\pandoc.exe"
         try:
-            result = subprocess.run(['pandoc', '--version'],
+            result = subprocess.run([pandoc_path, '--version'],
                         stdout=subprocess.PIPE,
                         stderr=subprocess.PIPE)
             print("Pandoc found:", result.stdout.decode('utf-8').splitlines()[0])
@@ -410,6 +423,14 @@ class AdvancedMarkdownToPDF(QMainWindow):
                     logger.error(f"Error loading dialog paths file: {e}")
                     print(f"Error loading dialog paths file: {e}")
 
+            # Load recent files
+            if self.settings.contains("recent_files"):
+                recent_files = self.settings.value("recent_files")
+                if recent_files and isinstance(recent_files, list):
+                    # Filter out files that no longer exist
+                    self.recent_files = [f for f in recent_files if os.path.exists(f)]
+                    logger.info(f"Loaded {len(self.recent_files)} recent files")
+
             logger.info("Settings loaded successfully")
             print("Settings loaded successfully")
         except Exception as e:
@@ -451,6 +472,12 @@ class AdvancedMarkdownToPDF(QMainWindow):
                     self.settings.setValue("preferred_engine", settings_copy["format"]["preferred_engine"])
                     self.settings.setValue("window_geometry", self.saveGeometry())
                     self.settings.setValue("dialog_paths", paths_copy)
+
+                    # Save recent files
+                    self.settings.setValue("recent_files", self.recent_files)
+
+                    # Force sync to ensure settings are written to disk
+                    self.settings.sync()
 
                     # Save dialog paths to dedicated file for easier access by other instances
                     paths_file = os.path.join(os.path.expanduser("~"), ".mdpdf_paths.json")
@@ -552,19 +579,13 @@ class AdvancedMarkdownToPDF(QMainWindow):
         preview_layout = QVBoxLayout(preview_widget)
         preview_layout.setContentsMargins(5, 5, 5, 5)
 
-        preview_header = QWidget()
-        preview_header_layout = QHBoxLayout(preview_header)
-        preview_header_layout.setContentsMargins(0, 0, 0, 0)
-        preview_label = QLabel("Preview (Print Layout)")
-        preview_label.setStyleSheet("font-weight: bold;")
-        preview_header_layout.addWidget(preview_label)
-        preview_header_layout.addStretch(1)
-
-        # Create page preview widget
+        # Create page preview widget first
         self.page_preview = PagePreview()
+
+        # Set up zoom controls at the top of the preview layout
         self.page_preview.setup_zoom_controls(preview_layout)
 
-        preview_layout.addWidget(preview_header)
+        # Add the page preview widget to fill the rest of the space
         preview_layout.addWidget(self.page_preview)
 
         # Right panel: Settings in a compact frame
@@ -653,6 +674,13 @@ class AdvancedMarkdownToPDF(QMainWindow):
         open_action.triggered.connect(self.open_file)
         file_menu.addAction(open_action)
 
+        # Recent files submenu
+        self.recent_files_menu = QMenu('&Recent Files', self)
+        file_menu.addMenu(self.recent_files_menu)
+        self.update_recent_files_menu()
+
+        file_menu.addSeparator()
+
         save_action = QAction('&Save', self)
         save_action.setShortcut('Ctrl+S')
         save_action.triggered.connect(self.save_file)
@@ -665,22 +693,10 @@ class AdvancedMarkdownToPDF(QMainWindow):
 
         file_menu.addSeparator()
 
-        export_pdf_action = QAction('Export to &PDF...', self)
-        export_pdf_action.setShortcut('Ctrl+E')
-        export_pdf_action.triggered.connect(self.export_to_pdf)
-        file_menu.addAction(export_pdf_action)
-
-        export_docx_action = QAction('Export to &DOCX...', self)
-        export_docx_action.triggered.connect(self.export_to_docx)
-        file_menu.addAction(export_docx_action)
-
-        export_html_action = QAction('Export to &HTML...', self)
-        export_html_action.triggered.connect(self.export_to_html)
-        file_menu.addAction(export_html_action)
-
-        export_epub_action = QAction('Export to E&PUB...', self)
-        export_epub_action.triggered.connect(self.export_to_epub)
-        file_menu.addAction(export_epub_action)
+        export_action = QAction('&Export...', self)
+        export_action.setShortcut('Ctrl+E')
+        export_action.triggered.connect(self.export_document)
+        file_menu.addAction(export_action)
 
         file_menu.addSeparator()
 
@@ -790,26 +806,11 @@ class AdvancedMarkdownToPDF(QMainWindow):
 
         toolbar.addSeparator()
 
-        # Export actions
-        export_pdf_action = QAction("Export to PDF", self)
-        export_pdf_action.setShortcut("Ctrl+E")
-        export_pdf_action.triggered.connect(self.export_to_pdf)
-        toolbar.addAction(export_pdf_action)
-
-        export_html_action = QAction("Export to HTML", self)
-        export_html_action.setShortcut("Ctrl+H")
-        export_html_action.triggered.connect(self.export_to_html)
-        toolbar.addAction(export_html_action)
-
-        export_docx_action = QAction("Export to DOCX", self)
-        export_docx_action.setShortcut("Ctrl+D")
-        export_docx_action.triggered.connect(self.export_to_docx)
-        toolbar.addAction(export_docx_action)
-
-        export_epub_action = QAction("Export to EPUB", self)
-        export_epub_action.setShortcut("Ctrl+B")
-        export_epub_action.triggered.connect(self.export_to_epub)
-        toolbar.addAction(export_epub_action)
+        # Export action
+        export_action = QAction("Export", self)
+        export_action.setShortcut("Ctrl+E")
+        export_action.triggered.connect(self.export_document)
+        toolbar.addAction(export_action)
 
         toolbar.addSeparator()
 
@@ -1007,7 +1008,7 @@ class AdvancedMarkdownToPDF(QMainWindow):
 
         # Page size
         self.page_size_combo = QComboBox()
-        self.page_size_combo.addItems(["A4", "Letter", "Legal", "A3", "A5"])
+        self.page_size_combo.addItems(["A3", "A4", "A5", "Letter", "Legal", "Executive", "Tabloid"])
         self.page_size_combo.setCurrentText(self.document_settings["page"]["size"])
         self.page_size_combo.currentTextChanged.connect(self.update_page_size)
         layout.addRow("Size:", self.page_size_combo)
@@ -1080,7 +1081,9 @@ class AdvancedMarkdownToPDF(QMainWindow):
             )
             font_btn.setFont(current_font)
             font_btn.setText(f"{current_font.family()}, {current_font.pointSize()}pt")
-            font_btn.clicked.connect(lambda checked, h=h_key: self.select_heading_font(h))
+            # Fix lambda to avoid potential KeyboardInterrupt issues
+            font_btn.setProperty("heading_key", h_key)
+            font_btn.clicked.connect(lambda: self.select_heading_font(self.sender().property("heading_key")))
             font_btn.setEnabled(not self.document_settings["format"]["use_master_font"])
             self.__setattr__(f"h{level}_font_btn", font_btn)
             tab_layout.addRow("Font:", font_btn)
@@ -1088,7 +1091,10 @@ class AdvancedMarkdownToPDF(QMainWindow):
             # Color button
             color_btn = QPushButton()
             color_btn.setStyleSheet(f"background-color: {self.document_settings['fonts']['headings'][h_key]['color']}")
-            color_btn.clicked.connect(lambda checked, h=h_key: self.select_heading_color(h))
+            # Fix lambda to avoid potential KeyboardInterrupt issues
+            def create_color_handler(heading_key):
+                return lambda checked=False: self.select_heading_color(heading_key)
+            color_btn.clicked.connect(create_color_handler(h_key))
             self.__setattr__(f"h{level}_color_btn", color_btn)
             tab_layout.addRow("Color:", color_btn)
 
@@ -1857,111 +1863,312 @@ class AdvancedMarkdownToPDF(QMainWindow):
 
     def update_ui_from_settings(self):
         """Update UI controls to reflect current settings"""
-        # Block signals to prevent marking changes during UI update
-        self.blockSignals(True)
+        try:
+            # Block signals to prevent marking changes during UI update
+            self.blockSignals(True)
 
-        # Format settings
-        self.technical_numbering.setChecked(self.document_settings["format"]["technical_numbering"])
-        if "numbering_start" in self.document_settings["format"]:
-            self.numbering_start.setCurrentIndex(self.document_settings["format"]["numbering_start"] - 1)
-        self.page_numbering.setChecked(self.document_settings["format"]["page_numbering"])
-        self.page_number_format.setText(self.document_settings["format"]["page_number_format"])
-        self.use_master_font.setChecked(self.document_settings["format"]["use_master_font"])
+            # Format settings
+            if hasattr(self, 'technical_numbering') and self.technical_numbering is not None:
+                self.technical_numbering.setChecked(self.document_settings["format"]["technical_numbering"])
 
-        # Update the preset combo box
-        if self.preset_combo.currentText() != self.style_manager.current_style_name:
-            self.preset_combo.setCurrentText(self.style_manager.current_style_name)
+            if "numbering_start" in self.document_settings["format"] and hasattr(self, 'numbering_start') and self.numbering_start is not None:
+                self.numbering_start.setCurrentIndex(self.document_settings["format"]["numbering_start"] - 1)
 
-        # Page settings
-        self.page_size_combo.setCurrentText(self.document_settings["page"]["size"])
-        self.orientation_combo.setCurrentText(self.document_settings["page"]["orientation"].capitalize())
-        self.margin_top.setValue(self.document_settings["page"]["margins"]["top"])
-        self.margin_right.setValue(self.document_settings["page"]["margins"]["right"])
-        self.margin_bottom.setValue(self.document_settings["page"]["margins"]["bottom"])
-        self.margin_left.setValue(self.document_settings["page"]["margins"]["left"])
+            if hasattr(self, 'page_numbering') and self.page_numbering is not None:
+                self.page_numbering.setChecked(self.document_settings["format"]["page_numbering"])
 
-        # Text settings
-        body_font = QFont(
-            self.document_settings["fonts"]["body"]["family"],
-            self.document_settings["fonts"]["body"]["size"]
-        )
-        self.body_font_btn.setFont(body_font)
-        self.body_font_btn.setText(f"{body_font.family()}, {body_font.pointSize()}pt")
-        self.line_height.setValue(self.document_settings["fonts"]["body"]["line_height"])
-        self.text_color_btn.setStyleSheet(f"background-color: {self.document_settings['colors']['text']}")
-        self.bg_color_btn.setStyleSheet(f"background-color: {self.document_settings['colors']['background']}")
-        self.link_color_btn.setStyleSheet(f"background-color: {self.document_settings['colors']['links']}")
+            if hasattr(self, 'page_number_format') and self.page_number_format is not None:
+                self.page_number_format.setText(self.document_settings["format"]["page_number_format"])
 
-        # Heading settings
-        for level in range(1, 7):
-            h_key = f"h{level}"
-            if hasattr(self, f"h{level}_font_btn"):
-                font_btn = getattr(self, f"h{level}_font_btn")
-                heading_font = QFont(
-                    self.document_settings["fonts"]["headings"][h_key]["family"],
-                    self.document_settings["fonts"]["headings"][h_key]["size"]
+            if hasattr(self, 'use_master_font') and self.use_master_font is not None:
+                self.use_master_font.setChecked(self.document_settings["format"]["use_master_font"])
+
+            # Update the preset combo box
+            if hasattr(self, 'preset_combo') and self.preset_combo is not None and hasattr(self, 'style_manager') and self.style_manager is not None:
+                if self.preset_combo.currentText() != self.style_manager.current_style_name:
+                    self.preset_combo.setCurrentText(self.style_manager.current_style_name)
+
+            # Page settings
+            if hasattr(self, 'page_size_combo') and self.page_size_combo is not None:
+                self.page_size_combo.setCurrentText(self.document_settings["page"]["size"])
+
+            if hasattr(self, 'orientation_combo') and self.orientation_combo is not None:
+                self.orientation_combo.setCurrentText(self.document_settings["page"]["orientation"].capitalize())
+
+            if hasattr(self, 'margin_top') and self.margin_top is not None:
+                self.margin_top.setValue(self.document_settings["page"]["margins"]["top"])
+
+            if hasattr(self, 'margin_right') and self.margin_right is not None:
+                self.margin_right.setValue(self.document_settings["page"]["margins"]["right"])
+
+            if hasattr(self, 'margin_bottom') and self.margin_bottom is not None:
+                self.margin_bottom.setValue(self.document_settings["page"]["margins"]["bottom"])
+
+            if hasattr(self, 'margin_left') and self.margin_left is not None:
+                self.margin_left.setValue(self.document_settings["page"]["margins"]["left"])
+
+            # Text settings
+            if hasattr(self, 'body_font_btn') and self.body_font_btn is not None:
+                body_font = QFont(
+                    self.document_settings["fonts"]["body"]["family"],
+                    self.document_settings["fonts"]["body"]["size"]
                 )
-                font_btn.setFont(heading_font)
-                font_btn.setText(f"{heading_font.family()}, {heading_font.pointSize()}pt")
+                self.body_font_btn.setFont(body_font)
+                self.body_font_btn.setText(f"{body_font.family()}, {body_font.pointSize()}pt")
 
-            if hasattr(self, f"h{level}_color_btn"):
-                color_btn = getattr(self, f"h{level}_color_btn")
-                color_btn.setStyleSheet(f"background-color: {self.document_settings['fonts']['headings'][h_key]['color']}")
+            if hasattr(self, 'line_height') and self.line_height is not None:
+                self.line_height.setValue(self.document_settings["fonts"]["body"]["line_height"])
 
-            if hasattr(self, f"h{level}_spacing"):
-                spacing = getattr(self, f"h{level}_spacing")
-                spacing.setValue(self.document_settings["fonts"]["headings"][h_key]["spacing"])
+            if hasattr(self, 'text_color_btn') and self.text_color_btn is not None:
+                self.text_color_btn.setStyleSheet(f"background-color: {self.document_settings['colors']['text']}")
 
-            if hasattr(self, f"h{level}_margin_top"):
-                margin_top = getattr(self, f"h{level}_margin_top")
-                margin_top.setValue(self.document_settings["fonts"]["headings"][h_key]["margin_top"])
+            if hasattr(self, 'bg_color_btn') and self.bg_color_btn is not None:
+                self.bg_color_btn.setStyleSheet(f"background-color: {self.document_settings['colors']['background']}")
 
-            if hasattr(self, f"h{level}_margin_bottom"):
-                margin_bottom = getattr(self, f"h{level}_margin_bottom")
-                margin_bottom.setValue(self.document_settings["fonts"]["headings"][h_key]["margin_bottom"])
+            if hasattr(self, 'link_color_btn') and self.link_color_btn is not None:
+                self.link_color_btn.setStyleSheet(f"background-color: {self.document_settings['colors']['links']}")
 
-        # Paragraph settings
-        self.para_spacing.setValue(self.document_settings["paragraphs"]["spacing"])
-        self.para_margin_top.setValue(self.document_settings["paragraphs"]["margin_top"])
-        self.para_margin_bottom.setValue(self.document_settings["paragraphs"]["margin_bottom"])
-        self.first_line_indent.setValue(self.document_settings["paragraphs"]["first_line_indent"])
-        self.alignment_combo.setCurrentText(self.document_settings["paragraphs"]["alignment"].capitalize())
+            # Heading settings
+            for level in range(1, 7):
+                h_key = f"h{level}"
+                if hasattr(self, f"h{level}_font_btn"):
+                    font_btn = getattr(self, f"h{level}_font_btn")
+                    if font_btn is not None:
+                        heading_font = QFont(
+                            self.document_settings["fonts"]["headings"][h_key]["family"],
+                            self.document_settings["fonts"]["headings"][h_key]["size"]
+                        )
+                        font_btn.setFont(heading_font)
+                        font_btn.setText(f"{heading_font.family()}, {heading_font.pointSize()}pt")
 
-        # List settings
-        self.bullet_indent.setValue(self.document_settings["lists"]["bullet_indent"])
-        self.number_indent.setValue(self.document_settings["lists"]["number_indent"])
-        self.list_item_spacing.setValue(self.document_settings["lists"]["item_spacing"])
-        if "nested_indent" in self.document_settings["lists"]:
-            self.nested_list_indent.setValue(self.document_settings["lists"]["nested_indent"])
+                if hasattr(self, f"h{level}_color_btn"):
+                    color_btn = getattr(self, f"h{level}_color_btn")
+                    if color_btn is not None:
+                        color_btn.setStyleSheet(f"background-color: {self.document_settings['fonts']['headings'][h_key]['color']}")
 
-        # Table settings
-        self.table_border_color_btn.setStyleSheet(f"background-color: {self.document_settings['table']['border_color']}")
-        self.table_header_bg_btn.setStyleSheet(f"background-color: {self.document_settings['table']['header_bg']}")
-        self.cell_padding.setValue(self.document_settings["table"]["cell_padding"])
+                if hasattr(self, f"h{level}_spacing"):
+                    spacing = getattr(self, f"h{level}_spacing")
+                    if spacing is not None:
+                        spacing.setValue(self.document_settings["fonts"]["headings"][h_key]["spacing"])
 
-        # Code settings
-        code_font = QFont(
-            self.document_settings["code"]["font_family"],
-            self.document_settings["code"]["font_size"]
-        )
-        self.code_font_btn.setFont(code_font)
-        self.code_font_btn.setText(f"{code_font.family()}, {code_font.pointSize()}pt")
-        self.code_bg_color_btn.setStyleSheet(f"background-color: {self.document_settings['code']['background']}")
-        self.code_border_color_btn.setStyleSheet(f"background-color: {self.document_settings['code']['border_color']}")
+                if hasattr(self, f"h{level}_margin_top"):
+                    margin_top = getattr(self, f"h{level}_margin_top")
+                    if margin_top is not None:
+                        margin_top.setValue(self.document_settings["fonts"]["headings"][h_key]["margin_top"])
 
-        # TOC settings
-        self.include_toc.setChecked(self.document_settings["toc"]["include"])
-        self.toc_depth.setValue(self.document_settings["toc"]["depth"])
-        self.toc_title.setText(self.document_settings["toc"]["title"])
+                if hasattr(self, f"h{level}_margin_bottom"):
+                    margin_bottom = getattr(self, f"h{level}_margin_bottom")
+                    if margin_bottom is not None:
+                        margin_bottom.setValue(self.document_settings["fonts"]["headings"][h_key]["margin_bottom"])
 
-        # Enable/disable controls based on use_master_font
-        self.toggle_master_font(self.document_settings["format"]["use_master_font"])
+            # Paragraph settings
+            if hasattr(self, 'para_spacing') and self.para_spacing is not None:
+                self.para_spacing.setValue(self.document_settings["paragraphs"]["spacing"])
 
-        # Unblock signals
-        self.blockSignals(False)
+            if hasattr(self, 'para_margin_top') and self.para_margin_top is not None:
+                self.para_margin_top.setValue(self.document_settings["paragraphs"]["margin_top"])
+
+            if hasattr(self, 'para_margin_bottom') and self.para_margin_bottom is not None:
+                self.para_margin_bottom.setValue(self.document_settings["paragraphs"]["margin_bottom"])
+
+            if hasattr(self, 'first_line_indent') and self.first_line_indent is not None:
+                self.first_line_indent.setValue(self.document_settings["paragraphs"]["first_line_indent"])
+
+            if hasattr(self, 'alignment_combo') and self.alignment_combo is not None:
+                self.alignment_combo.setCurrentText(self.document_settings["paragraphs"]["alignment"].capitalize())
+
+            # List settings
+            if hasattr(self, 'bullet_indent') and self.bullet_indent is not None:
+                self.bullet_indent.setValue(self.document_settings["lists"]["bullet_indent"])
+
+            if hasattr(self, 'number_indent') and self.number_indent is not None:
+                self.number_indent.setValue(self.document_settings["lists"]["number_indent"])
+
+            if hasattr(self, 'list_item_spacing') and self.list_item_spacing is not None:
+                self.list_item_spacing.setValue(self.document_settings["lists"]["item_spacing"])
+
+            if "nested_indent" in self.document_settings["lists"] and hasattr(self, 'nested_list_indent') and self.nested_list_indent is not None:
+                self.nested_list_indent.setValue(self.document_settings["lists"]["nested_indent"])
+
+            # Table settings
+            if hasattr(self, 'table_border_color_btn') and self.table_border_color_btn is not None:
+                self.table_border_color_btn.setStyleSheet(f"background-color: {self.document_settings['table']['border_color']}")
+
+            if hasattr(self, 'table_header_bg_btn') and self.table_header_bg_btn is not None:
+                self.table_header_bg_btn.setStyleSheet(f"background-color: {self.document_settings['table']['header_bg']}")
+
+            if hasattr(self, 'cell_padding') and self.cell_padding is not None:
+                self.cell_padding.setValue(self.document_settings["table"]["cell_padding"])
+
+            # Code settings
+            if hasattr(self, 'code_font_btn') and self.code_font_btn is not None:
+                code_font = QFont(
+                    self.document_settings["code"]["font_family"],
+                    self.document_settings["code"]["font_size"]
+                )
+                self.code_font_btn.setFont(code_font)
+                self.code_font_btn.setText(f"{code_font.family()}, {code_font.pointSize()}pt")
+
+            if hasattr(self, 'code_bg_color_btn') and self.code_bg_color_btn is not None:
+                self.code_bg_color_btn.setStyleSheet(f"background-color: {self.document_settings['code']['background']}")
+
+            if hasattr(self, 'code_border_color_btn') and self.code_border_color_btn is not None:
+                self.code_border_color_btn.setStyleSheet(f"background-color: {self.document_settings['code']['border_color']}")
+
+            # TOC settings
+            if hasattr(self, 'include_toc') and self.include_toc is not None:
+                self.include_toc.setChecked(self.document_settings["toc"]["include"])
+
+            if hasattr(self, 'toc_depth') and self.toc_depth is not None:
+                self.toc_depth.setValue(self.document_settings["toc"]["depth"])
+
+            if hasattr(self, 'toc_title') and self.toc_title is not None:
+                self.toc_title.setText(self.document_settings["toc"]["title"])
+
+            # Enable/disable controls based on use_master_font
+            self.toggle_master_font(self.document_settings["format"]["use_master_font"])
+
+            # Unblock signals
+            self.blockSignals(False)
+        except Exception as e:
+            logger.error(f"Error in update_ui_from_settings: {str(e)}")
+            # Ensure signals are unblocked even if an error occurs
+            self.blockSignals(False)
 
     def new_file(self):
         """Create a new empty document"""
+        try:
+            if self.markdown_editor.toPlainText() and self.current_file is not None:
+                # Ask to save changes
+                reply = QMessageBox.question(
+                    self, 'Save Changes',
+                    'Do you want to save changes to the current document?',
+                    QMessageBox.StandardButton.Save | QMessageBox.StandardButton.Discard | QMessageBox.StandardButton.Cancel,
+                    QMessageBox.StandardButton.Save
+                )
+
+                if reply == QMessageBox.StandardButton.Save:
+                    self.save_file()
+                elif reply == QMessageBox.StandardButton.Cancel:
+                    return
+
+            # Clear editor and reset current file
+            self.markdown_editor.clear()
+            self.current_file = None
+            self.setWindowTitle('Advanced Markdown to PDF Converter')
+            self.update_preview()
+        except Exception as e:
+            logger.error(f"Error in new_file: {str(e)}")
+            QMessageBox.critical(self, 'Error', f'An error occurred while creating a new file: {str(e)}')
+
+    def update_recent_files_menu(self):
+        """Update the recent files menu with the current list of recent files"""
+        # Clear the menu
+        self.recent_files_menu.clear()
+
+        # Remove any existing recent file actions to prevent memory leaks
+        if hasattr(self, '_recent_file_actions'):
+            for action in self._recent_file_actions:
+                if action:  # Just check if action exists, QAction doesn't have isNull method
+                    try:
+                        action.triggered.disconnect()
+                    except Exception:
+                        pass  # Ignore errors if already disconnected
+            self._recent_file_actions = []
+        else:
+            self._recent_file_actions = []
+
+        if not self.recent_files:
+            # Add a disabled action if there are no recent files
+            no_files_action = QAction('No Recent Files', self)
+            no_files_action.setEnabled(False)
+            self.recent_files_menu.addAction(no_files_action)
+            return
+
+        # Add actions for each recent file
+        for i, file_path in enumerate(self.recent_files):
+            # Create a shorter display name (just the filename)
+            display_name = os.path.basename(file_path)
+
+            # Create the action with the full path as data
+            action = QAction(f'{i+1}. {display_name}', self)
+            action.setStatusTip(file_path)
+
+            # Store the action to prevent garbage collection
+            self._recent_file_actions.append(action)
+
+            # Connect using a direct method call with explicit receiver
+            # This is more reliable than lambda functions
+            action.triggered.connect(self._create_recent_file_handler(file_path))
+
+            self.recent_files_menu.addAction(action)
+
+        # Add separator and clear action
+        self.recent_files_menu.addSeparator()
+        clear_action = QAction('Clear Recent Files', self)
+        clear_action.triggered.connect(self.clear_recent_files)
+        self.recent_files_menu.addAction(clear_action)
+
+    def _create_recent_file_handler(self, file_path):
+        """Create a method to handle opening a specific recent file
+
+        This avoids issues with lambda functions and KeyboardInterrupt errors
+        by creating a proper bound method for each file path.
+        """
+        # Create a copy of the file path to avoid reference issues
+        path_copy = str(file_path)
+
+        def handler(checked=False):
+            try:
+                # Use the copied path, not the original reference
+                self.open_recent_file(path_copy)
+            except Exception as e:
+                logger.error(f"Error opening recent file: {str(e)}")
+                QMessageBox.critical(self, 'Error', f'Could not open the file: {str(e)}')
+        return handler
+
+    def add_to_recent_files(self, file_path):
+        """Add a file to the recent files list"""
+        if not file_path:
+            return
+
+        # Convert to absolute path
+        file_path = os.path.abspath(file_path)
+
+        # Remove the file if it's already in the list
+        if file_path in self.recent_files:
+            self.recent_files.remove(file_path)
+
+        # Add the file to the beginning of the list
+        self.recent_files.insert(0, file_path)
+
+        # Trim the list if it's too long
+        if len(self.recent_files) > self.max_recent_files:
+            self.recent_files = self.recent_files[:self.max_recent_files]
+
+        # Update the menu
+        self.update_recent_files_menu()
+
+        # Save settings
+        self.save_settings()
+
+    def clear_recent_files(self):
+        """Clear the recent files list"""
+        self.recent_files = []
+        self.update_recent_files_menu()
+        self.save_settings()
+
+    def open_recent_file(self, file_path):
+        """Open a file from the recent files list"""
+        if not os.path.exists(file_path):
+            # File no longer exists, remove it from the list
+            QMessageBox.warning(self, 'File Not Found', f'The file {file_path} no longer exists.')
+            self.recent_files.remove(file_path)
+            self.update_recent_files_menu()
+            self.save_settings()
+            return
+
+        # Check for unsaved changes
         if self.markdown_editor.toPlainText() and self.current_file is not None:
             # Ask to save changes
             reply = QMessageBox.question(
@@ -1976,11 +2183,24 @@ class AdvancedMarkdownToPDF(QMainWindow):
             elif reply == QMessageBox.StandardButton.Cancel:
                 return
 
-        # Clear editor and reset current file
-        self.markdown_editor.clear()
-        self.current_file = None
-        self.setWindowTitle('Advanced Markdown to PDF Converter')
-        self.update_preview()
+        # Open the file
+        try:
+            with open(file_path, 'r', encoding='utf-8') as file:
+                self.markdown_editor.setPlainText(file.read())
+
+            self.current_file = file_path
+            self.setWindowTitle(f'Advanced Markdown to PDF Converter - {os.path.basename(file_path)}')
+
+            # Update recent files list (moves this file to the top)
+            self.add_to_recent_files(file_path)
+
+            # Save the directory for next time
+            self.dialog_paths["open"] = os.path.dirname(file_path)
+            self.save_settings()
+
+            self.update_preview()
+        except Exception as e:
+            QMessageBox.critical(self, 'Error', f'Could not open the file: {str(e)}')
 
     def open_file(self):
         """Open an existing Markdown file"""
@@ -2015,6 +2235,9 @@ class AdvancedMarkdownToPDF(QMainWindow):
                 self.current_file = file_path
                 self.setWindowTitle(f'Advanced Markdown to PDF Converter - {os.path.basename(file_path)}')
 
+                # Add to recent files
+                self.add_to_recent_files(file_path)
+
                 # Save the directory for next time
                 self.dialog_paths["open"] = os.path.dirname(file_path)
                 self.save_settings()
@@ -2043,32 +2266,124 @@ class AdvancedMarkdownToPDF(QMainWindow):
         if not start_dir or not os.path.exists(start_dir):
             start_dir = ""
 
-        file_path, _ = QFileDialog.getSaveFileName(
-            self, 'Save Markdown File', start_dir, 'Markdown Files (*.md);;All Files (*)'
+        # Support both .md and .mdz formats
+        file_path, selected_filter = QFileDialog.getSaveFileName(
+            self, 'Save File', start_dir, 'Markdown Files (*.md);;MDZ Files (*.mdz);;All Files (*)'
         )
 
         if file_path:
-            # Add .md extension if not present
-            if not file_path.lower().endswith(('.md', '.markdown')):
-                file_path += '.md'
+            # Determine file type based on selected filter or extension
+            if selected_filter == 'MDZ Files (*.mdz)' or file_path.lower().endswith('.mdz'):
+                # Save as MDZ file
+                if not file_path.lower().endswith('.mdz'):
+                    file_path += '.mdz'
+                return self._save_as_mdz(file_path)
+            else:
+                # Save as regular markdown file
+                if not file_path.lower().endswith(('.md', '.markdown')):
+                    file_path += '.md'
+                return self._save_as_markdown(file_path)
 
-            try:
-                with open(file_path, 'w', encoding='utf-8') as file:
-                    file.write(self.markdown_editor.toPlainText())
+        return False
 
+    def _save_as_markdown(self, file_path):
+        """Save as regular markdown file"""
+        try:
+            with open(file_path, 'w', encoding='utf-8') as file:
+                file.write(self.markdown_editor.toPlainText())
+
+            self.current_file = file_path
+            self.setWindowTitle(f'Advanced Markdown to PDF Converter - {os.path.basename(file_path)}')
+
+            # Add to recent files
+            self.add_to_recent_files(file_path)
+
+            # Save the directory for next time
+            self.dialog_paths["save"] = os.path.dirname(file_path)
+            self.save_settings()
+
+            return True
+        except Exception as e:
+            QMessageBox.critical(self, 'Error', f'Could not save the file: {str(e)}')
+            return False
+
+    def _save_as_mdz(self, file_path):
+        """Save as MDZ file with current document settings"""
+        try:
+            # Import the MDZ exporter
+            from mdz_export import MDZExporter
+
+            # Collect assets (images, etc.) from the document
+            assets = self._collect_document_assets()
+
+            # Create an MDZ exporter
+            exporter = MDZExporter()
+
+            # Export to MDZ
+            result = exporter.export_to_mdz(
+                markdown_text=self.markdown_editor.toPlainText(),
+                output_file=file_path,
+                document_settings=self.document_settings,
+                assets=assets
+            )
+
+            if result:
                 self.current_file = file_path
                 self.setWindowTitle(f'Advanced Markdown to PDF Converter - {os.path.basename(file_path)}')
+
+                # Add to recent files
+                self.add_to_recent_files(file_path)
 
                 # Save the directory for next time
                 self.dialog_paths["save"] = os.path.dirname(file_path)
                 self.save_settings()
 
+                # Show compatibility warning for MDZ format
+                QMessageBox.information(
+                    self, 'MDZ File Saved',
+                    f'Document saved as MDZ file:\n{file_path}\n\n'
+                    'Note: MDZ files include document settings and assets. '
+                    'They can be opened with this application or compatible MDZ viewers.'
+                )
                 return True
-            except Exception as e:
-                QMessageBox.critical(self, 'Error', f'Could not save the file: {str(e)}')
+            else:
+                QMessageBox.critical(self, 'Error', 'Could not save the MDZ file. See log for details.')
                 return False
 
-        return False
+        except Exception as e:
+            QMessageBox.critical(self, 'Error', f'Could not save the MDZ file: {str(e)}')
+            return False
+
+    def _collect_document_assets(self):
+        """Collect assets (images, etc.) referenced in the document"""
+        assets = {}
+
+        # Get the markdown text
+        markdown_text = self.markdown_editor.toPlainText()
+
+        # Simple regex to find image references
+        import re
+
+        # Find markdown image syntax: ![alt](path)
+        image_pattern = r'!\[.*?\]\(([^)]+)\)'
+        matches = re.findall(image_pattern, markdown_text)
+
+        for match in matches:
+            image_path = match.strip()
+            # Skip URLs (http/https)
+            if not image_path.startswith(('http://', 'https://')):
+                # Try to resolve relative paths
+                if self.current_file and not os.path.isabs(image_path):
+                    # Resolve relative to current file directory
+                    base_dir = os.path.dirname(self.current_file)
+                    full_path = os.path.join(base_dir, image_path)
+                    if os.path.exists(full_path):
+                        assets[image_path] = full_path
+                elif os.path.exists(image_path):
+                    # Absolute path that exists
+                    assets[image_path] = image_path
+
+        return assets
 
     def preprocess_for_export(self, markdown_text, engine_type):
         """Preprocess markdown based on export engine"""
@@ -2076,8 +2391,83 @@ class AdvancedMarkdownToPDF(QMainWindow):
         from markdown_export_fix import preprocess_markdown_for_engine
         return preprocess_markdown_for_engine(markdown_text, engine_type)
 
-    def export_to_pdf(self, output_file=None):
-        """Export the current document to PDF or other formats using pandoc
+    def export_document(self):
+        """Export the current document to various formats using a single dialog with format selection"""
+        logger.info("Starting unified export process")
+
+        if not self.markdown_editor.toPlainText():
+            logger.warning("No content to export")
+            QMessageBox.warning(self, 'Warning', 'No content to export.')
+            return False
+
+        # Define available export formats
+        export_formats = {
+            "MDZ File (*.mdz)": {"ext": ".mdz", "title": "Export to MDZ"},
+            "PDF File (*.pdf)": {"ext": ".pdf", "title": "Export to PDF"},
+            "Word Document (*.docx)": {"ext": ".docx", "title": "Export to DOCX"},
+            "HTML File (*.html)": {"ext": ".html", "title": "Export to HTML"},
+            "EPUB File (*.epub)": {"ext": ".epub", "title": "Export to EPUB"}
+        }
+
+        # Get default filename based on current file
+        default_filename = "document.mdz"  # Default to MDZ
+        if self.current_file:
+            default_filename = os.path.splitext(os.path.basename(self.current_file))[0] + ".mdz"
+
+        # Get start directory from saved paths
+        start_dir = self.dialog_paths.get("export", "")
+        logger.debug(f"Export directory path: {start_dir}")
+        if not start_dir or not os.path.exists(start_dir):
+            start_dir = default_filename
+        else:
+            start_dir = os.path.join(start_dir, default_filename)
+
+        # Create filter string for file dialog
+        filter_string = ";;".join(export_formats.keys())
+
+        # Show save dialog with format selection
+        output_file, selected_filter = QFileDialog.getSaveFileName(
+            self, 'Export Document', start_dir, filter_string
+        )
+        logger.info(f"Selected output file: {output_file}")
+        logger.info(f"Selected format: {selected_filter}")
+
+        if not output_file:
+            return False
+
+        # Get the selected format info
+        format_info = export_formats.get(selected_filter)
+        if not format_info:
+            logger.error(f"Unknown format selected: {selected_filter}")
+            QMessageBox.critical(self, 'Export Error', f'Unknown format selected: {selected_filter}')
+            return False
+
+        # Add appropriate extension if not present
+        if not output_file.lower().endswith(format_info["ext"]):
+            output_file += format_info["ext"]
+
+        # Save the directory for next time
+        self.dialog_paths["export"] = os.path.dirname(output_file)
+        self.save_settings()
+
+        # Call the appropriate export function based on the selected format
+        if format_info["ext"] == ".pdf":
+            return self._export_to_pdf(output_file)
+        elif format_info["ext"] == ".docx":
+            return self._export_to_docx(output_file)
+        elif format_info["ext"] == ".html":
+            return self._export_to_html(output_file)
+        elif format_info["ext"] == ".epub":
+            return self._export_to_epub(output_file)
+        elif format_info["ext"] == ".mdz":
+            return self._export_to_mdz(output_file)
+        else:
+            logger.error(f"Unsupported export format: {format_info['ext']}")
+            QMessageBox.critical(self, 'Export Error', f'Unsupported export format: {format_info["ext"]}')
+            return False
+
+    def _export_to_pdf(self, output_file=None):
+        """Export the current document to PDF using pandoc
 
         Args:
             output_file: Optional path to save the output file. If not provided, a file dialog will be shown.
@@ -2122,7 +2512,7 @@ class AdvancedMarkdownToPDF(QMainWindow):
             logger.info(f"Using provided output file: {output_file}")
 
         # Add .pdf extension if not present
-        if not output_file.lower().endswith('.pdf'):
+        if isinstance(output_file, str) and not output_file.lower().endswith('.pdf'):
             output_file += '.pdf'
 
         # Show a progress dialog with cancel button if not in headless mode
@@ -2189,10 +2579,20 @@ class AdvancedMarkdownToPDF(QMainWindow):
                     logger.debug(f"Created temporary CSS file: {css_file.name}")
 
                     # Prepare pandoc command
-                    cmd = ['pandoc', md_path, '-o', output_file, '--standalone']
+                    if not isinstance(output_file, str):
+                        # If output_file is not a string, use a temporary file
+                        temp_output = tempfile.NamedTemporaryFile(suffix='.pdf', delete=False)
+                        temp_output.close()
+                        output_path = temp_output.name
+                    else:
+                        output_path = output_file
+
+                    cmd = ['C:\\Users\\joshd\\AppData\\Local\\Pandoc\\pandoc.exe', md_path, '-o', output_path, '--standalone']
 
                     # Check if we're exporting to a non-PDF format
-                    output_ext = os.path.splitext(output_file)[1].lower()
+                    output_ext = '.pdf'  # Default to PDF
+                    if isinstance(output_path, str):
+                        output_ext = os.path.splitext(output_path)[1].lower()
                     if output_ext in ['.docx', '.html', '.epub', '.odt', '.rtf', '.txt']:
                         logger.info(f"Exporting to non-PDF format: {output_ext}")
                         # For non-PDF formats, we don't need a PDF engine
@@ -2323,6 +2723,9 @@ class AdvancedMarkdownToPDF(QMainWindow):
                         '-V', f'margin-left={self.document_settings["page"]["margins"]["left"]}mm'
                     ])
 
+                    # Add empty title metadata to prevent title from showing in the document
+                    cmd.extend(['--metadata', 'title='])
+
                     # Add mathjax for math support
                     cmd.append('--mathjax')
 
@@ -2337,18 +2740,24 @@ class AdvancedMarkdownToPDF(QMainWindow):
                         process_timeout = 180  # 3 minutes for other engines
                     logger.info(f"Using timeout of {process_timeout} seconds for engine {engine}")
 
-                    result = subprocess.run(
-                        cmd,
-                        stdout=subprocess.PIPE,
-                        stderr=subprocess.PIPE,
-                        text=True,
-                        timeout=process_timeout
-                    )
+                    try:
+                        result = subprocess.run(
+                            cmd,
+                            stdout=subprocess.PIPE,
+                            stderr=subprocess.PIPE,
+                            text=True,
+                            timeout=process_timeout
+                        )
+                    except Exception as e:
+                        logger.error(f"Exception with engine {engine}: {str(e)}")
+                        continue
 
                     # Check if export was successful
                     if result.returncode == 0:
                         # Success!
-                        output_ext = os.path.splitext(output_file)[1].lower()
+                        output_ext = '.pdf'  # Default to PDF
+                        if isinstance(output_path, str):
+                            output_ext = os.path.splitext(output_path)[1].lower()
                         if output_ext in ['.docx', '.html', '.epub', '.odt', '.rtf', '.txt']:
                             logger.info(f"Export to {output_ext} successful")
                         else:
@@ -2357,16 +2766,20 @@ class AdvancedMarkdownToPDF(QMainWindow):
                         if progress:
                             progress.close()
 
-                        # Show success message if not in headless mode
-                        if output_file is None or not self.isHidden():  # Interactive mode
+                        # Show success message if not in headless mode and not in test mode
+                        if (output_file is None or not self.isHidden()) and not self._is_test_environment:  # Interactive mode
                             QMessageBox.information(
                                 self, 'Export Successful',
-                                f'Document exported successfully to:\n{output_file}'
+                                f'Document exported successfully to:\n{output_path}'
                             )
+                        elif self._is_test_environment:
+                            logger.info(f"Test mode: Suppressing success dialog for export to: {output_path}")
                         return True
                     else:
                         # This engine failed, log the error and try the next one
-                        output_ext = os.path.splitext(output_file)[1].lower()
+                        output_ext = '.pdf'  # Default to PDF
+                        if isinstance(output_path, str):
+                            output_ext = os.path.splitext(output_path)[1].lower()
                         if output_ext in ['.docx', '.html', '.epub', '.odt', '.rtf', '.txt']:
                             logger.warning(f"Export to {output_ext} failed: {result.stderr}")
                         else:
@@ -2376,8 +2789,8 @@ class AdvancedMarkdownToPDF(QMainWindow):
                             if progress:
                                 progress.close()
 
-                            # Show error message if not in headless mode
-                            if output_file is None or not self.isHidden():  # Interactive mode
+                            # Show error message if not in headless mode and not in test mode
+                            if (output_file is None or not self.isHidden()) and not self._is_test_environment:  # Interactive mode
                                 if output_ext in ['.docx', '.html', '.epub', '.odt', '.rtf', '.txt']:
                                     QMessageBox.critical(
                                         self, 'Export Error',
@@ -2388,6 +2801,11 @@ class AdvancedMarkdownToPDF(QMainWindow):
                                         self, 'Export Error',
                                         f'Error exporting to PDF:\n{result.stderr}'
                                     )
+                            elif self._is_test_environment:
+                                if output_ext in ['.docx', '.html', '.epub', '.odt', '.rtf', '.txt']:
+                                    logger.error(f"Test mode: Suppressing error dialog for export to {output_ext[1:].upper()}: {result.stderr}")
+                                else:
+                                    logger.error(f"Test mode: Suppressing error dialog for export to PDF: {result.stderr}")
                             return False
 
                 except Exception as e:
@@ -2398,12 +2816,14 @@ class AdvancedMarkdownToPDF(QMainWindow):
                         if progress:
                             progress.close()
 
-                        # Show error message if not in headless mode
-                        if output_file is None or not self.isHidden():  # Interactive mode
+                        # Show error message if not in headless mode and not in test mode
+                        if (output_file is None or not self.isHidden()) and not self._is_test_environment:  # Interactive mode
                             QMessageBox.critical(
                                 self, 'Export Error',
                                 f'Error exporting to PDF:\n{str(e)}'
                             )
+                        elif self._is_test_environment:
+                            logger.error(f"Test mode: Suppressing error dialog for export to PDF: {str(e)}")
                         return False
 
                 finally:
@@ -2440,9 +2860,12 @@ class AdvancedMarkdownToPDF(QMainWindow):
         if progress:
             progress.close()
 
-        # Show error message if not in headless mode
-        if output_file is None or not self.isHidden():  # Interactive mode
-            output_ext = os.path.splitext(output_file)[1].lower() if output_file else '.pdf'
+        # Show error message if not in headless mode and not in test mode
+        if (output_file is None or not self.isHidden()) and not self._is_test_environment:  # Interactive mode
+            output_ext = '.pdf'  # Default to PDF
+            if isinstance(output_file, str):
+                output_ext = os.path.splitext(output_file)[1].lower()
+
             if output_ext in ['.docx', '.html', '.epub', '.odt', '.rtf', '.txt']:
                 QMessageBox.critical(
                     self, 'Export Error',
@@ -2453,11 +2876,54 @@ class AdvancedMarkdownToPDF(QMainWindow):
                     self, 'Export Error',
                     'Failed to export PDF with any available engine.'
                 )
+        elif self._is_test_environment:
+            output_ext = '.pdf'  # Default to PDF
+            if isinstance(output_file, str):
+                output_ext = os.path.splitext(output_file)[1].lower()
+
+            if output_ext in ['.docx', '.html', '.epub', '.odt', '.rtf', '.txt']:
+                logger.error(f"Test mode: Suppressing error dialog for export to {output_ext[1:].upper()}")
+            else:
+                logger.error("Test mode: Suppressing error dialog for export to PDF with any available engine")
         return False
 
     def update_preview(self):
         """Update the HTML preview with current settings and robust error handling"""
-        RenderUtils.update_preview(self.markdown_editor, self.page_preview, self.document_settings)
+        # Add a debounce mechanism to prevent multiple rapid calls
+        current_time = time.time()
+        if hasattr(self, '_last_preview_update_time'):
+            # If less than 100ms has passed since the last update, skip this update
+            if current_time - self._last_preview_update_time < 0.1:
+                logger.debug("Skipping duplicate preview update (debounce)")
+                return
+
+        # Update the timestamp
+        self._last_preview_update_time = current_time
+
+        # Add a counter to track how many times this method is called
+        if not hasattr(self, '_update_preview_count'):
+            self._update_preview_count = 0
+        self._update_preview_count += 1
+        logger.debug(f"Main update_preview call #{self._update_preview_count}")
+
+        try:
+            # Make sure document settings are up to date in the page preview
+            if hasattr(self, 'page_preview') and self.page_preview is not None:
+                # Update document settings first
+                self.page_preview.update_document_settings(self.document_settings)
+                logger.debug("Updated document settings in page preview")
+
+                # We no longer need to clear the content as the page_preview component
+                # now handles this properly with the _last_html_content property
+                # This prevents the flickering when updating the preview
+
+            # Update the preview
+            RenderUtils.update_preview(self.markdown_editor, self.page_preview, self.document_settings)
+            logger.debug(f"Preview updated successfully (call #{self._update_preview_count})")
+        except Exception as e:
+            logger.error(f"Error in update_preview: {str(e)}")
+            # Show error in status bar
+            self.statusBar().showMessage(f"Error updating preview: {str(e)}", 5000)
 
     def test_page_navigation(self):
         """Test page navigation functionality"""
@@ -2506,7 +2972,7 @@ class AdvancedMarkdownToPDF(QMainWindow):
         """Generate an improved LaTeX template with support for styling and diagrams"""
         return RenderUtils.generate_latex_template()
 
-    def export_to_docx(self, output_file=None):
+    def _export_to_docx(self, output_file=None):
         """Export the current document to DOCX format using pandoc
 
         Args:
@@ -2546,7 +3012,7 @@ class AdvancedMarkdownToPDF(QMainWindow):
                 return False
 
             # Add .docx extension if not present
-            if not output_file.lower().endswith('.docx'):
+            if isinstance(output_file, str) and not output_file.lower().endswith('.docx'):
                 output_file += '.docx'
 
             # Save the directory for next time
@@ -2587,10 +3053,24 @@ class AdvancedMarkdownToPDF(QMainWindow):
             logger.debug(f"Created temporary CSS file: {css_file.name}")
 
             # Prepare pandoc command
-            cmd = ['pandoc', md_path, '-o', output_file, '--standalone']
+            if not isinstance(output_file, str):
+                # If output_file is not a string, use a temporary file
+                temp_output = tempfile.NamedTemporaryFile(suffix='.docx', delete=False)
+                temp_output.close()
+                output_path = temp_output.name
+            else:
+                output_path = output_file
+
+            cmd = ['C:\\Users\\joshd\\AppData\\Local\\Pandoc\\pandoc.exe', md_path, '-o', output_path, '--standalone']
 
             # Add CSS and other common options
             cmd.append(f'--css={css_file.name}')
+
+            # Add title metadata to prevent warnings
+            title = "Document"
+            if self.current_file:
+                title = os.path.splitext(os.path.basename(self.current_file))[0]
+            cmd.extend(['--metadata', f'title={title}'])
 
             # Add TOC if needed
             if self.document_settings["toc"]["include"]:
@@ -2627,7 +3107,7 @@ class AdvancedMarkdownToPDF(QMainWindow):
                 if output_file is None or not self.isHidden():  # Interactive mode
                     QMessageBox.information(
                         self, 'Export Successful',
-                        f'Document exported successfully to:\n{output_file}'
+                        f'Document exported successfully to:\n{output_path}'
                     )
                 return True
             else:
@@ -2665,7 +3145,7 @@ class AdvancedMarkdownToPDF(QMainWindow):
                     except Exception as e:
                         logger.warning(f"Error cleaning up temp file {file_path}: {e}")
 
-    def export_to_epub(self, output_file=None):
+    def _export_to_epub(self, output_file=None):
         """Export the current document to EPUB format using pandoc
 
         Args:
@@ -2705,7 +3185,7 @@ class AdvancedMarkdownToPDF(QMainWindow):
                 return False
 
             # Add .epub extension if not present
-            if not output_file.lower().endswith('.epub'):
+            if isinstance(output_file, str) and not output_file.lower().endswith('.epub'):
                 output_file += '.epub'
 
             # Save the directory for next time
@@ -2746,13 +3226,23 @@ class AdvancedMarkdownToPDF(QMainWindow):
             logger.debug(f"Created temporary CSS file: {css_file.name}")
 
             # Prepare pandoc command
-            cmd = ['pandoc', md_path, '-o', output_file, '--standalone']
+            if not isinstance(output_file, str):
+                # If output_file is not a string, use a temporary file
+                temp_output = tempfile.NamedTemporaryFile(suffix='.epub', delete=False)
+                temp_output.close()
+                output_path = temp_output.name
+            else:
+                output_path = output_file
+
+            cmd = ['C:\\Users\\joshd\\AppData\\Local\\Pandoc\\pandoc.exe', md_path, '-o', output_path, '--standalone']
 
             # Add CSS and other common options
             cmd.append(f'--css={css_file.name}')
 
             # Add metadata for EPUB
-            title = os.path.splitext(os.path.basename(output_file))[0]
+            title = "Document"  # Default title
+            if isinstance(output_path, str):
+                title = os.path.splitext(os.path.basename(output_path))[0]
             cmd.extend(['--metadata', f'title={title}'])
 
             # Add TOC if needed
@@ -2790,7 +3280,7 @@ class AdvancedMarkdownToPDF(QMainWindow):
                 if output_file is None or not self.isHidden():  # Interactive mode
                     QMessageBox.information(
                         self, 'Export Successful',
-                        f'Document exported successfully to:\n{output_file}'
+                        f'Document exported successfully to:\n{output_path}'
                     )
                 return True
             else:
@@ -2828,7 +3318,170 @@ class AdvancedMarkdownToPDF(QMainWindow):
                     except Exception as e:
                         logger.warning(f"Error cleaning up temp file {file_path}: {e}")
 
-    def export_to_html(self, output_file=None):
+    def _export_to_mdz(self, output_file):
+        """Export the current document to MDZ format (Markdown with Zstandard compression)
+
+        Args:
+            output_file: Path to save the MDZ file.
+
+        Returns:
+            bool: True if export was successful, False otherwise
+        """
+        logger.info("Starting MDZ export process")
+
+        if not self.markdown_editor.toPlainText():
+            logger.warning("No content to export")
+            QMessageBox.warning(self, 'Warning', 'No content to export.')
+            return False
+
+        try:
+            # Show a progress dialog
+            progress = QMessageBox(QMessageBox.Icon.Information, 'Exporting', 'Exporting to MDZ...')
+            progress.setStandardButtons(QMessageBox.StandardButton.Cancel)
+            progress.show()
+            QApplication.processEvents()
+
+            # Import the MDZ exporter
+            from mdz_export import MDZExporter
+
+            # Collect assets (images, etc.) from the document
+            assets = self._collect_document_assets()
+
+            # Create an MDZ exporter
+            exporter = MDZExporter()
+
+            # Export to MDZ
+            result = exporter.export_to_mdz(
+                markdown_text=self.markdown_editor.toPlainText(),
+                output_file=output_file,
+                document_settings=self.document_settings,
+                assets=assets
+            )
+
+            # Close the progress dialog
+            progress.close()
+
+            if result:
+                # Show success message
+                QMessageBox.information(
+                    self, 'Export Successful',
+                    f'Document exported successfully to:\n{output_file}'
+                )
+                return True
+            else:
+                QMessageBox.critical(
+                    self, 'Export Error',
+                    f'Error exporting to MDZ. See log for details.'
+                )
+                return False
+
+        except Exception as e:
+            logger.error(f"Exception during MDZ export: {str(e)}")
+            if 'progress' in locals():
+                progress.close()
+
+            QMessageBox.critical(
+                self, 'Export Error',
+                f'Error exporting to MDZ:\n{str(e)}'
+            )
+            return False
+
+    def _show_dialog_if_not_test_mode(self, dialog_type, title, message):
+        """
+        Show a dialog box only if not in test mode
+
+        Args:
+            dialog_type: The type of dialog to show (QMessageBox.Information, QMessageBox.Critical, etc.)
+            title: The dialog title
+            message: The dialog message
+
+        Returns:
+            The result of the dialog, or None if in test mode
+        """
+        if self._is_test_environment:
+            # In test mode, just log the message instead of showing a dialog
+            if dialog_type == QMessageBox.Icon.Information:
+                logger.info(f"Test mode: Suppressing dialog '{title}': {message}")
+            elif dialog_type == QMessageBox.Icon.Critical:
+                logger.error(f"Test mode: Suppressing dialog '{title}': {message}")
+            elif dialog_type == QMessageBox.Icon.Warning:
+                logger.warning(f"Test mode: Suppressing dialog '{title}': {message}")
+            else:
+                logger.info(f"Test mode: Suppressing dialog '{title}': {message}")
+            return None
+        else:
+            # Not in test mode, show the dialog
+            return QMessageBox(dialog_type, title, message).exec()
+
+    def _collect_document_assets(self):
+        """
+        Collect assets (images, etc.) from the document
+
+        Returns:
+            List of asset dictionaries with 'path', 'data', and 'type'
+        """
+        assets = []
+
+        try:
+            # Extract image references from markdown
+            import re
+            markdown_text = self.markdown_editor.toPlainText()
+
+            # Find all image references in the markdown
+            image_pattern = r'!\[.*?\]\((.*?)\)'
+            image_refs = re.findall(image_pattern, markdown_text)
+
+            # Process each image reference
+            for img_ref in image_refs:
+                # Skip URLs
+                if img_ref.startswith(('http://', 'https://')):
+                    continue
+
+                # Try to load the image file
+                img_path = img_ref
+                if not os.path.isabs(img_path) and self.current_file:
+                    # Make path relative to the current file
+                    img_path = os.path.join(os.path.dirname(self.current_file), img_ref)
+
+                if os.path.exists(img_path):
+                    with open(img_path, 'rb') as f:
+                        img_data = f.read()
+
+                    assets.append({
+                        'path': img_ref,
+                        'data': img_data,
+                        'type': 'binary'
+                    })
+                    logger.debug(f"Added asset: {img_ref}")
+
+            # Find all other file references (e.g., for code includes)
+            file_pattern = r'```include\s+(.*?)\s*```'
+            file_refs = re.findall(file_pattern, markdown_text)
+
+            # Process each file reference
+            for file_ref in file_refs:
+                file_path = file_ref.strip()
+                if not os.path.isabs(file_path) and self.current_file:
+                    # Make path relative to the current file
+                    file_path = os.path.join(os.path.dirname(self.current_file), file_ref)
+
+                if os.path.exists(file_path):
+                    with open(file_path, 'r', encoding='utf-8') as f:
+                        file_data = f.read()
+
+                    assets.append({
+                        'path': file_ref,
+                        'data': file_data,
+                        'type': 'text'
+                    })
+                    logger.debug(f"Added asset: {file_ref}")
+
+        except Exception as e:
+            logger.error(f"Error collecting document assets: {str(e)}")
+
+        return assets
+
+    def _export_to_html(self, output_file=None):
         """Export the current document to HTML format using pandoc
 
         Args:
@@ -2868,7 +3521,7 @@ class AdvancedMarkdownToPDF(QMainWindow):
                 return False
 
             # Add .html extension if not present
-            if not output_file.lower().endswith('.html'):
+            if isinstance(output_file, str) and not output_file.lower().endswith('.html'):
                 output_file += '.html'
 
             # Save the directory for next time
@@ -2909,10 +3562,24 @@ class AdvancedMarkdownToPDF(QMainWindow):
             logger.debug(f"Created temporary CSS file: {css_file.name}")
 
             # Prepare pandoc command
-            cmd = ['pandoc', md_path, '-o', output_file, '--standalone', '--self-contained']
+            if not isinstance(output_file, str):
+                # If output_file is not a string, use a temporary file
+                temp_output = tempfile.NamedTemporaryFile(suffix='.html', delete=False)
+                temp_output.close()
+                output_path = temp_output.name
+            else:
+                output_path = output_file
+
+            cmd = ['C:\\Users\\joshd\\AppData\\Local\\Pandoc\\pandoc.exe', md_path, '-o', output_path, '--standalone', '--self-contained']
 
             # Add CSS and other common options
             cmd.append(f'--css={css_file.name}')
+
+            # Add title metadata to prevent warnings
+            title = "Document"
+            if self.current_file:
+                title = os.path.splitext(os.path.basename(self.current_file))[0]
+            cmd.extend(['--metadata', f'title={title}'])
 
             # Add TOC if needed
             if self.document_settings["toc"]["include"]:
@@ -2985,7 +3652,7 @@ class AdvancedMarkdownToPDF(QMainWindow):
                 if output_file is None or not self.isHidden():  # Interactive mode
                     QMessageBox.information(
                         self, 'Export Successful',
-                        f'Document exported successfully to:\n{output_file}'
+                        f'Document exported successfully to:\n{output_path}'
                     )
                 return True
             else:
@@ -3104,8 +3771,17 @@ class AdvancedMarkdownToPDF(QMainWindow):
 
     def update_page_numbering(self, state):
         """Update page numbering setting"""
-        self.document_settings["format"]["page_numbering"] = bool(state)
-        self.style_manager.mark_as_changed()
+        try:
+            self.document_settings["format"]["page_numbering"] = bool(state)
+            self.style_manager.mark_as_changed()
+            # Update the preview to reflect the change
+            from PyQt6.QtCore import QTimer
+            QTimer.singleShot(100, self.update_preview)
+            logger.debug(f"Page numbering updated to: {bool(state)}")
+        except Exception as e:
+            logger.error(f"Error updating page numbering: {str(e)}")
+        except KeyboardInterrupt:
+            logger.warning("Page numbering update interrupted by user")
 
     def update_page_number_format(self, format_text):
         """Update page number format"""
@@ -3114,52 +3790,69 @@ class AdvancedMarkdownToPDF(QMainWindow):
 
     def toggle_master_font(self, state):
         """Toggle master font control"""
-        use_master_font = bool(state)
-        self.document_settings["format"]["use_master_font"] = use_master_font
-        self.style_manager.mark_as_changed()
+        try:
+            use_master_font = bool(state)
+            self.document_settings["format"]["use_master_font"] = use_master_font
 
-        # Enable/disable individual font controls
-        self.body_font_btn.setEnabled(not use_master_font)
-        self.code_font_btn.setEnabled(not use_master_font)
-        self.master_font_btn.setEnabled(use_master_font)
+            # Check if style_manager exists before calling mark_as_changed
+            if hasattr(self, 'style_manager') and self.style_manager is not None:
+                self.style_manager.mark_as_changed()
 
-        # Enable/disable heading font buttons
-        for level in range(1, 7):
-            if hasattr(self, f"h{level}_font_btn"):
-                font_btn = getattr(self, f"h{level}_font_btn")
-                font_btn.setEnabled(not use_master_font)
+            # Check if UI elements exist before trying to access them
+            if hasattr(self, 'body_font_btn') and self.body_font_btn is not None:
+                self.body_font_btn.setEnabled(not use_master_font)
 
-        # If master font is enabled, apply the master font to all text elements
-        if use_master_font:
-            master_font = self.document_settings["format"]["master_font"]["family"]
-            # Apply to body
-            self.document_settings["fonts"]["body"]["family"] = master_font
-            # Apply to headings
-            for level in range(1, 7):
-                h_key = f"h{level}"
-                self.document_settings["fonts"]["headings"][h_key]["family"] = master_font
-            # Apply to code
-            self.document_settings["code"]["font_family"] = master_font
+            if hasattr(self, 'code_font_btn') and self.code_font_btn is not None:
+                self.code_font_btn.setEnabled(not use_master_font)
 
-            # Update UI elements directly without calling update_ui_from_settings
-            # to avoid recursive calls
-            self.body_font_btn.setText(f"{master_font}, {self.document_settings['fonts']['body']['size']}pt")
-            self.body_font_btn.setFont(QFont(master_font, self.document_settings['fonts']['body']['size']))
+            if hasattr(self, 'master_font_btn') and self.master_font_btn is not None:
+                self.master_font_btn.setEnabled(use_master_font)
 
-            self.code_font_btn.setText(f"{master_font}, {self.document_settings['code']['font_size']}pt")
-            self.code_font_btn.setFont(QFont(master_font, self.document_settings['code']['font_size']))
-
-            # Update heading font buttons
+            # Enable/disable heading font buttons
             for level in range(1, 7):
                 if hasattr(self, f"h{level}_font_btn"):
-                    h_key = f"h{level}"
                     font_btn = getattr(self, f"h{level}_font_btn")
-                    font_size = self.document_settings["fonts"]["headings"][h_key]["size"]
-                    font_btn.setText(f"{master_font}, {font_size}pt")
-                    font_btn.setFont(QFont(master_font, font_size))
+                    if font_btn is not None:
+                        font_btn.setEnabled(not use_master_font)
 
-            # Update preview
-            self.update_preview()
+            # If master font is enabled, apply the master font family to all text elements
+            # but preserve their individual sizes
+            if use_master_font:
+                master_font = self.document_settings["format"]["master_font"]["family"]
+                # Apply to body
+                self.document_settings["fonts"]["body"]["family"] = master_font
+                # Apply to headings
+                for level in range(1, 7):
+                    h_key = f"h{level}"
+                    self.document_settings["fonts"]["headings"][h_key]["family"] = master_font
+                # Apply to code
+                self.document_settings["code"]["font_family"] = master_font
+
+                # Update UI elements directly without calling update_ui_from_settings
+                # to avoid recursive calls
+                if hasattr(self, 'body_font_btn') and self.body_font_btn is not None:
+                    self.body_font_btn.setText(f"{master_font}, {self.document_settings['fonts']['body']['size']}pt")
+                    self.body_font_btn.setFont(QFont(master_font, self.document_settings['fonts']['body']['size']))
+
+                if hasattr(self, 'code_font_btn') and self.code_font_btn is not None:
+                    self.code_font_btn.setText(f"{master_font}, {self.document_settings['code']['font_size']}pt")
+                    self.code_font_btn.setFont(QFont(master_font, self.document_settings['code']['font_size']))
+
+                # Update heading font buttons
+                for level in range(1, 7):
+                    if hasattr(self, f"h{level}_font_btn"):
+                        h_key = f"h{level}"
+                        font_btn = getattr(self, f"h{level}_font_btn")
+                        if font_btn is not None:
+                            font_size = self.document_settings["fonts"]["headings"][h_key]["size"]
+                            font_btn.setText(f"{master_font}, {font_size}pt")
+                            font_btn.setFont(QFont(master_font, font_size))
+
+                # Update preview
+                self.update_preview()
+        except Exception as e:
+            logger.error(f"Error in toggle_master_font: {str(e)}")
+            # Don't show a message box here as this might be called during initialization
 
     def select_master_font(self):
         """Select master font for the entire document"""
@@ -3236,16 +3929,22 @@ class AdvancedMarkdownToPDF(QMainWindow):
     def update_page_size(self, size):
         """Update page size"""
         self.document_settings["page"]["size"] = size
+        self.style_manager.mark_as_changed()
+        self.save_settings()
         self.update_preview()
 
     def update_orientation(self, orientation):
         """Update page orientation"""
         self.document_settings["page"]["orientation"] = orientation.lower()
+        self.style_manager.mark_as_changed()
+        self.save_settings()
         self.update_preview()
 
     def update_margin(self, side, value):
         """Update page margin"""
         self.document_settings["page"]["margins"][side] = value
+        self.style_manager.mark_as_changed()
+        self.save_settings()
         self.update_preview()
 
     def select_heading_font(self, heading_key):
@@ -3777,7 +4476,19 @@ class AdvancedMarkdownToPDF(QMainWindow):
 
 def main():
     """Main entry point for the application"""
-    app = QApplication(sys.argv)
+    # Parse command-line arguments
+    import argparse
+    parser = argparse.ArgumentParser(description="Advanced Markdown to PDF Converter")
+    parser.add_argument("--test-mode", action="store_true", help="Run in test mode (suppresses dialogs)")
+    args, remaining = parser.parse_known_args()
+
+    # Set environment variable for test mode if specified
+    if args.test_mode:
+        os.environ["MARKDOWN_PDF_TEST_MODE"] = "1"
+        logger.info("Running in test mode - dialogs will be suppressed")
+
+    # Initialize QApplication with remaining arguments
+    app = QApplication(remaining)
     app.setApplicationName("Advanced Markdown to PDF Converter")
     app.setOrganizationName("MarkdownToPDF")
 

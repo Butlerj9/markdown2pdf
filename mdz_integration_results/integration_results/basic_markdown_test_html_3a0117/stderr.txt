@@ -1,0 +1,1 @@
+2025-05-02 00:26:02,823 - __main__ - INFO - Saved HTML output to mdz_integration_results\integration_results\basic_markdown_test_html_3a0117\output.html

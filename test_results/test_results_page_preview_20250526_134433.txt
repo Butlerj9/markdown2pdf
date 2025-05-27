@@ -1,0 +1,138 @@
+Test Results for Category: page_preview
+Timestamp: 2025-05-26 13:44:33
+Total Tests: 4
+
+Test 1/4: test_page_preview_breaks.py
+Status: FAIL
+Execution Time: 6.88s
+Standard Output:
+
+Standard Error:
+2025-05-26 13:44:34,040 - DEBUG - Updating document settings
+2025-05-26 13:44:34,040 - DEBUG - Setting document settings
+2025-05-26 13:44:34,040 - DEBUG - Updating preview with new content
+2025-05-26 13:44:34,040 - DEBUG - HTML content length: 729
+2025-05-26 13:44:34,040 - DEBUG - Has page breaks detected: False
+2025-05-26 13:44:34,040 - DEBUG - HTML content preview: 
+        <html>
+        <head>
+            <title>Page Break Test</title>
+        </head>
+        <body>
+            <h1>Page 1</h1>
+            <p>This is the content of page 1.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+            <div style="page-break-before: always;"></div>
+
+            <h1>Page 2</h1>
+            <p>This is the content of page 2.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+            <div style="p...
+2025-05-26 13:44:34,041 - DEBUG - Cleaned HTML content to remove title elements and blank lines
+2025-05-26 13:44:34,041 - DEBUG - Splitting content into pages
+2025-05-26 13:44:34,041 - DEBUG - Found 3 explicit page breaks
+Traceback (most recent call last):
+  File "C:\Projects\markdown2pdf\test_page_preview_breaks.py", line 185, in update_status
+    self.preview.debug_page_layout()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'PagePreview' object has no attribute 'debug_page_layout'
+
+--------------------------------------------------------------------------------
+
+Test 2/4: test_page_preview_comprehensive.py
+Status: FAIL
+Execution Time: 5.18s
+Standard Output:
+
+Standard Error:
+2025-05-26 13:44:40,918 - DEBUG - Updating document settings
+2025-05-26 13:44:40,918 - DEBUG - Setting document settings
+2025-05-26 13:44:40,918 - DEBUG - Updating preview with new content
+2025-05-26 13:44:40,918 - DEBUG - HTML content length: 4562
+2025-05-26 13:44:40,918 - DEBUG - Has page breaks detected: False
+2025-05-26 13:44:40,918 - DEBUG - HTML content preview: 
+        <html>
+        <head>
+            <title>Page Preview Comprehensive Test</title>
+            <style>
+                /* Add styles to help visualize page edges */
+                .edge-marker...           </div>
+
+            <h3>Math Formula</h3>
+            <div style="text-align: center;">
+                <p>E = mc<sup>2</sup></p>
+            </div>
+        </body>
+        </html>
+        
+2025-05-26 13:44:40,918 - DEBUG - Cleaned HTML content to remove title elements and blank lines
+2025-05-26 13:44:40,918 - DEBUG - Splitting content into pages
+2025-05-26 13:44:40,919 - DEBUG - Found 3 explicit page breaks
+2025-05-26 13:44:41,927 - INFO - Running comprehensive page preview tests...
+2025-05-26 13:44:41,927 - INFO - Testing page count...
+2025-05-26 13:44:41,927 - INFO - Testing navigation...
+Traceback (most recent call last):
+  File "C:\Projects\markdown2pdf\test_page_preview_comprehensive.py", line 282, in run_tests
+    self.test_navigation()
+  File "C:\Projects\markdown2pdf\test_page_preview_comprehensive.py", line 321, in test_navigation
+    self.preview.go_to_next_page()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'PagePreview' object has no attribute 'go_to_next_page'
+
+--------------------------------------------------------------------------------
+
+Test 3/4: test_js_syntax_and_page_numbers.py
+Status: FAIL
+Execution Time: 2.63s
+Standard Output:
+2025-05-26 13:44:45,719 - INFO - Logging to file: C:\Users\joshd\.markdown_pdf_logs\markdown_pdf_debug_20250526_134445.log
+2025-05-26 13:44:45,739 - INFO - Running all tests
+2025-05-26 13:44:45,739 - INFO - Running all JavaScript and page number tests
+2025-05-26 13:44:45,739 - INFO - Testing for JavaScript syntax errors
+2025-05-26 13:44:48,135 - ERROR - Error running tests: 'PagePreview' object has no attribute 'initialize_page_count'
+2025-05-26 13:44:48,138 - ERROR - Traceback (most recent call last):
+  File "C:\Projects\markdown2pdf\test_js_syntax_and_page_numbers.py", line 579, in main
+    success = tester.run_all_tests()
+              ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Projects\markdown2pdf\test_js_syntax_and_page_numbers.py", line 537, in run_all_tests
+    js_syntax_result = self.test_js_syntax()
+                       ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Projects\markdown2pdf\test_js_syntax_and_page_numbers.py", line 218, in test_js_syntax
+    preview.initialize_page_count()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'PagePreview' object has no attribute 'initialize_page_count'
+
+
+Standard Error:
+
+--------------------------------------------------------------------------------
+
+Test 4/4: test_page_navigation_and_export.py
+Status: PASS
+Execution Time: 0.18s
+Standard Output:
+2025-05-26 13:44:48,341 - INFO - Logging to file: C:\Users\joshd\.markdown_pdf_logs\markdown_pdf_debug_20250526_134448.log
+
+Standard Error:
+2025-05-26 13:44:48,360 - INFO - Dialog handler initialized
+2025-05-26 13:44:48,360 - INFO - Dialog handler started (suppress=True, timeout=10000ms)
+2025-05-26 13:44:48,360 - INFO - Registered custom response for QMessageBox
+2025-05-26 13:44:48,360 - INFO - Running all page navigation and export dialog tests
+2025-05-26 13:44:48,360 - INFO - Testing page navigation
+2025-05-26 13:44:48,360 - INFO - Page navigation test passed
+2025-05-26 13:44:48,360 - INFO - Page navigation test result: PASS
+2025-05-26 13:44:48,360 - INFO - Testing export dialogs
+2025-05-26 13:44:48,360 - INFO - Export dialog test passed
+2025-05-26 13:44:48,360 - INFO - Export dialog test result: PASS
+2025-05-26 13:44:48,360 - INFO - Overall test result: PASS
+2025-05-26 13:44:48,360 - INFO - Dialog handler stopped
+2025-05-26 13:44:48,360 - INFO - Closing all active dialogs (0)
+
+--------------------------------------------------------------------------------
+
+
+Summary:
+Passed: 1/4 (25.00%)
+Failed: 3/4 (75.00%)

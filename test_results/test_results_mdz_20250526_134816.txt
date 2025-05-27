@@ -1,0 +1,258 @@
+Test Results for Category: mdz
+Timestamp: 2025-05-26 13:48:16
+Total Tests: 2
+
+Test 1/2: test_mdz_export_integration.py
+Status: PASS
+Execution Time: 51.72s
+Standard Output:
+2025-05-26 13:48:16,947 - INFO - Logging to file: C:\Users\joshd\.markdown_pdf_logs\markdown_pdf_debug_20250526_134816.log
+2025-05-26 13:48:16,969 - INFO - Running in test mode - dialogs will be suppressed
+Found xelatex in PATH
+Found pdflatex in PATH
+Found lualatex in PATH
+Found wkhtmltopdf at: C:\Program Files\wkhtmltopdf\bin\wkhtmltopdf.exe
+Found weasyprint in PATH
+Pandoc found: pandoc.exe 3.1.12.1
+2025-05-26 13:48:18,626 - INFO - Loaded temporary style
+2025-05-26 13:48:18,627 - INFO - Loaded 3 recent files
+2025-05-26 13:48:18,627 - INFO - Settings loaded successfully
+Settings loaded successfully
+2025-05-26 13:48:19,144 - INFO - Starting MDZ export process
+
+Standard Error:
+2025-05-26 13:48:16,968 - DEBUG - Available styles: ['Business Professional', 'Technical Document', 'Academic', 'Minimal', 'Custom']
+2025-05-26 13:48:16,969 - INFO - Running in test mode - dialogs will be suppressed
+2025-05-26 13:48:18,626 - DEBUG - Loaded temporary style
+2025-05-26 13:48:18,626 - INFO - Loaded temporary style
+2025-05-26 13:48:18,627 - INFO - Loaded 3 recent files
+2025-05-26 13:48:18,627 - INFO - Settings loaded successfully
+2025-05-26 13:48:19,036 - DEBUG - Initialized navigation controls for testing
+2025-05-26 13:48:19,036 - DEBUG - Setting up zoom controls
+2025-05-26 13:48:19,056 - DEBUG - Main update_preview call #1
+2025-05-26 13:48:19,056 - DEBUG - Updating document settings
+2025-05-26 13:48:19,056 - DEBUG - Setting document settings
+2025-05-26 13:48:19,056 - DEBUG - Updated document settings in page preview
+2025-05-26 13:48:19,056 - DEBUG - RenderUtils.update_preview call #1
+2025-05-26 13:48:19,056 - DEBUG - Got markdown text, length: 258
+2025-05-26 13:48:19,056 - DEBUG - Updating document settings in page_preview
+2025-05-26 13:48:19,056 - DEBUG - Updating document settings
+2025-05-26 13:48:19,056 - DEBUG - Setting document settings
+2025-05-26 13:48:19,056 - DEBUG - Using built-in zoom functionality in page_preview.py
+2025-05-26 13:48:19,057 - DEBUG - Finding page breaks in markdown
+2025-05-26 13:48:19,058 - DEBUG - Found 0 page breaks at lines: []
+2025-05-26 13:48:19,058 - DEBUG - Found 0 page breaks at lines: []
+2025-05-26 13:48:19,058 - DEBUG - Writing processed Markdown to temporary file (length: 258)
+2025-05-26 13:48:19,059 - DEBUG - Created temporary HTML file: C:\Users\joshd\AppData\Local\Temp\tmp0xl51u0t.html
+2025-05-26 13:48:19,060 - DEBUG - Generating CSS from settings
+2025-05-26 13:48:19,060 - DEBUG - CSS generation completed
+2025-05-26 13:48:19,060 - DEBUG - Injecting page break styles into CSS
+2025-05-26 13:48:19,062 - DEBUG - Created temporary CSS file: C:\Users\joshd\AppData\Local\Temp\tmp3p1abr20.css
+2025-05-26 13:48:19,062 - DEBUG - Running command: C:\Users\joshd\AppData\Local\Pandoc\pandoc.exe C:\Users\joshd\AppData\Local\Temp\tmpho05_y8c.md -o C:\Users\joshd\AppData\Local\Temp\tmp0xl51u0t.html --standalone --css=C:\Users\joshd\AppData\Local\Temp\tmp3p1abr20.css --mathjax -f markdown+fenced_divs+pipe_tables+backtick_code_blocks -t html5 --metadata title=Preview --variable secnumdepth=-2 --variable disable-numbering=true
+2025-05-26 13:48:19,134 - DEBUG - Processing page breaks for preview
+2025-05-26 13:48:19,134 - DEBUG - No page breaks found in content
+2025-05-26 13:48:19,134 - DEBUG - HTML content generated (length: 5342)
+2025-05-26 13:48:19,134 - DEBUG - Updating document settings
+2025-05-26 13:48:19,134 - DEBUG - Setting document settings
+2025-05-26 13:48:19,134 - DEBUG - Updating preview with new content
+2025-05-26 13:48:19,134 - DEBUG - HTML content length: 5342
+2025-05-26 13:48:19,134 - DEBUG - Has page breaks detected: False
+2025-05-26 13:48:19,134 - DEBUG - HTML content preview: <!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=de...>print</span>(<span class="st">&quot;Hello, world!&quot;</span>)</span></code></pre></div>
+<h2 id="math-example">Math Example</h2>
+<p><span class="math inline">\(E = mc^2\)</span></p>
+</body>
+</html>
+
+2025-05-26 13:48:19,135 - DEBUG - Cleaned HTML content to remove title elements and blank lines
+2025-05-26 13:48:19,135 - DEBUG - Splitting content into pages
+2025-05-26 13:48:19,135 - DEBUG - Calculating automatic page breaks
+2025-05-26 13:48:19,135 - DEBUG - Page calculation: 754.0pt usable height, 29.9 theoretical lines, 30 actual lines per page, font: 14pt, line height: 1.8
+2025-05-26 13:48:19,135 - DEBUG - Font size: 14pt, Line height: 1.8, Lines per page: 30
+2025-05-26 13:48:19,136 - DEBUG - Calculated 1 automatic pages
+2025-05-26 13:48:19,136 - DEBUG - Split content into 1 pages
+2025-05-26 13:48:19,142 - DEBUG - Preview updated successfully
+2025-05-26 13:48:19,143 - DEBUG - Cleaning up temporary files
+2025-05-26 13:48:19,143 - DEBUG - Deleted temporary file: C:\Users\joshd\AppData\Local\Temp\tmpho05_y8c.md
+2025-05-26 13:48:19,143 - DEBUG - Deleted temporary file: C:\Users\joshd\AppData\Local\Temp\tmp3p1abr20.css
+2025-05-26 13:48:19,144 - DEBUG - Deleted temporary file: C:\Users\joshd\AppData\Local\Temp\tmp0xl51u0t.html
+2025-05-26 13:48:19,144 - DEBUG - Exiting function: update_preview
+2025-05-26 13:48:19,144 - DEBUG - Preview updated successfully (call #1)
+2025-05-26 13:48:19,144 - DEBUG - Skipping duplicate preview update (debounce)
+2025-05-26 13:48:19,144 - INFO - Testing MDZ export...
+2025-05-26 13:48:19,144 - INFO - Starting MDZ export process
+2025-05-26 13:48:19,242 - DEBUG - Created temporary directory: C:\Users\joshd\AppData\Local\Temp\mdz_export_bz82j651
+2025-05-26 13:48:19,275 - INFO - Created MDZ bundle: C:\Users\joshd\AppData\Local\Temp\mdz_export_test_ltahrxc5\test_output.mdz
+2025-05-26 13:48:19,276 - DEBUG - Cleaned up temporary directory: C:\Users\joshd\AppData\Local\Temp\mdz_export_bz82j651
+2025-05-26 13:49:08,352 - INFO - MDZ export successful: C:\Users\joshd\AppData\Local\Temp\mdz_export_test_ltahrxc5\test_output.mdz
+2025-05-26 13:49:08,353 - INFO - MDZ file exists: C:\Users\joshd\AppData\Local\Temp\mdz_export_test_ltahrxc5\test_output.mdz
+2025-05-26 13:49:08,353 - INFO - MDZ file size: 1288 bytes
+2025-05-26 13:49:08,354 - INFO - Extracting MDZ file to: C:\Users\joshd\AppData\Local\Temp\mdz_export_test_ltahrxc5\extracted
+2025-05-26 13:49:08,386 - INFO - MDZ extraction successful
+2025-05-26 13:49:08,386 - INFO - Extracted markdown content length: 258
+2025-05-26 13:49:08,386 - INFO - Extracted metadata: {'created': '2025-05-26T13:48:19.245238', 'format': 'mdz', 'settings': {'code': {'background': '#F8F8F8', 'border_color': '#EEEEEE', 'font_family': 'Papyrus', 'font_size': 10}, 'colors': {'background': '#f5f5f5', 'links': '#333333', 'text': '#5cff98'}, 'custom_css': '\nbody {\n    background-color: #f0f0f0;\n    color: #333333;\n}\n\nh1 {\n    color: #0066cc;\n    border-bottom: 2px solid #0066cc;\n}\n\ntable {\n    border-collapse: collapse;\n    width: 100%;\n}\n\nth, td {\n    border: 1px solid #dddddd;\n    padding: 8px;\n}\n\nth {\n    background-color: #f2f2f2;\n}\n', 'fonts': {'body': {'family': 'Papyrus', 'line_height': 1.8, 'size': 14}, 'headings': {'h1': {'color': '#333333', 'family': 'Papyrus', 'margin_bottom': 7, 'margin_top': 0, 'size': 16, 'spacing': 1.8000000000000005}, 'h2': {'color': '#333333', 'family': 'Papyrus', 'margin_bottom': 10, 'margin_top': 18, 'size': 14, 'spacing': 1.1}, 'h3': {'color': '#333333', 'family': 'Papyrus', 'margin_bottom': 8, 'margin_top': 14, 'size': 12, 'spacing': 1.1}, 'h4': {'color': '#333333', 'family': 'Papyrus', 'margin_bottom': 6, 'margin_top': 12, 'size': 11, 'spacing': 1.1}, 'h5': {'color': '#333333', 'family': 'Papyrus', 'margin_bottom': 5, 'margin_top': 10, 'size': 11, 'spacing': 1.1}, 'h6': {'color': '#333333', 'family': 'Papyrus', 'margin_bottom': 5, 'margin_top': 10, 'size': 11, 'spacing': 1.1}}}, 'format': {'master_font': {'family': 'Papyrus', 'size': 11}, 'numbering_start': 3, 'page_number_format': '{page}', 'page_numbering': True, 'preferred_engine': 'wkhtmltopdf', 'technical_numbering': False, 'use_master_font': True}, 'lists': {'bullet_indent': 20, 'bullet_style_l1': 'Disc', 'bullet_style_l2': 'Circle', 'bullet_style_l3': 'Square', 'item_spacing': 5, 'nested_indent': 20, 'number_indent': 20, 'number_style_l1': 'Decimal', 'number_style_l2': 'Lower Alpha', 'number_style_l3': 'Lower Roman'}, 'page': {'margins': {'bottom': 16.0, 'left': 16.0, 'right': 18.0, 'top': 15.0}, 'orientation': 'landscape', 'size': 'Executive'}, 'paragraphs': {'alignment': 'left', 'first_line_indent': 0, 'margin_bottom': 10, 'margin_top': 0, 'spacing': 2.1999999999999997}, 'table': {'border_color': '#DDDDDD', 'cell_padding': 5, 'header_bg': '#F5F5F5'}, 'toc': {'depth': 2, 'include': False, 'title': 'Contents'}}, 'version': '1.0'}
+2025-05-26 13:49:08,386 - INFO - Manifest file exists: C:\Users\joshd\AppData\Local\Temp\mdz_export_test_ltahrxc5\extracted\manifest.json
+2025-05-26 13:49:08,386 - INFO - Metadata file exists: C:\Users\joshd\AppData\Local\Temp\mdz_export_test_ltahrxc5\extracted\metadata.yaml
+2025-05-26 13:49:08,386 - INFO - Main markdown file exists: C:\Users\joshd\AppData\Local\Temp\mdz_export_test_ltahrxc5\extracted\main.md
+2025-05-26 13:49:08,387 - DEBUG - Closing in test environment - skipping style and settings save
+2025-05-26 13:49:08,389 - WARNING - Error cleaning up test files: [WinError 145] The directory is not empty: 'C:\\Users\\joshd\\AppData\\Local\\Temp\\mdz_export_test_ltahrxc5'
+2025-05-26 13:49:08,389 - INFO - MDZ export integration test completed
+
+--------------------------------------------------------------------------------
+
+Test 2/2: test_mdz_comprehensive.py
+Status: PASS
+Execution Time: 5.06s
+Standard Output:
+2025-05-26 13:49:08,694 - INFO - Logging to file: C:\Users\joshd\.markdown_pdf_logs\markdown_pdf_debug_20250526_134908.log
+2025-05-26 13:49:08,861 - INFO - Running in test mode - dialogs will be suppressed
+Found xelatex in PATH
+Found pdflatex in PATH
+Found lualatex in PATH
+Found wkhtmltopdf at: C:\Program Files\wkhtmltopdf\bin\wkhtmltopdf.exe
+Found weasyprint in PATH
+Pandoc found: pandoc.exe 3.1.12.1
+2025-05-26 13:49:10,518 - INFO - Loaded temporary style
+2025-05-26 13:49:10,518 - INFO - Loaded 3 recent files
+2025-05-26 13:49:10,518 - INFO - Settings loaded successfully
+Settings loaded successfully
+2025-05-26 13:49:11,027 - INFO - Starting MDZ export process
+
+Standard Error:
+2025-05-26 13:49:08,702 - INFO - Running all MDZ tests
+2025-05-26 13:49:08,702 - INFO - Running MDZ integration test: basic
+2025-05-26 13:49:08,704 - INFO - Testing MDZ creation: C:\Users\joshd\AppData\Local\Temp\mdz_test_z1hyu0nt\basic.mdz
+2025-05-26 13:49:08,705 - DEBUG - Created temporary directory: C:\Users\joshd\AppData\Local\Temp\mdz_export_2gorp8wi
+2025-05-26 13:49:08,728 - INFO - Created MDZ bundle: C:\Users\joshd\AppData\Local\Temp\mdz_test_z1hyu0nt\basic.mdz
+2025-05-26 13:49:08,729 - DEBUG - Cleaned up temporary directory: C:\Users\joshd\AppData\Local\Temp\mdz_export_2gorp8wi
+2025-05-26 13:49:08,729 - INFO - MDZ file created: C:\Users\joshd\AppData\Local\Temp\mdz_test_z1hyu0nt\basic.mdz
+2025-05-26 13:49:08,729 - INFO - MDZ file size: 459 bytes
+2025-05-26 13:49:08,729 - INFO - Original content checksum: feb49de41e1535bab326737d585f2f277cbacf4ab958fd414911df033a5cb8c7
+2025-05-26 13:49:08,729 - INFO - Testing MDZ extraction: C:\Users\joshd\AppData\Local\Temp\mdz_test_z1hyu0nt\basic.mdz
+2025-05-26 13:49:08,746 - INFO - MDZ extraction successful
+2025-05-26 13:49:08,746 - INFO - Extracted markdown content length: 57
+2025-05-26 13:49:08,746 - INFO - Extracted metadata: {'created': '2025-05-26T13:49:08.707198', 'format': 'mdz', 'settings': {'author': 'Test Author', 'date': '', 'page': {'margins': {'bottom': 25, 'left': 25, 'right': 25, 'top': 25}, 'orientation': 'portrait', 'size': 'A4'}, 'tags': [], 'title': 'Basic MDZ Test'}, 'version': '1.0'}
+2025-05-26 13:49:08,746 - INFO - Manifest file exists: C:\Users\joshd\AppData\Local\Temp\mdz_test_z1hyu0nt\basic_extracted\manifest.json
+2025-05-26 13:49:08,746 - INFO - Metadata file exists: C:\Users\joshd\AppData\Local\Temp\mdz_test_z1hyu0nt\basic_extracted\metadata.yaml
+2025-05-26 13:49:08,746 - INFO - Main markdown file exists: C:\Users\joshd\AppData\Local\Temp\mdz_test_z1hyu0nt\basic_extracted\main.md
+2025-05-26 13:49:08,747 - INFO - MDZ integration test passed: basic
+2025-05-26 13:49:08,747 - INFO - Running MDZ integration test: with_assets
+2025-05-26 13:49:08,752 - INFO - Testing MDZ creation: C:\Users\joshd\AppData\Local\Temp\mdz_test_z1hyu0nt\with_assets.mdz
+2025-05-26 13:49:08,753 - DEBUG - Created temporary directory: C:\Users\joshd\AppData\Local\Temp\mdz_export_7abn4tsq
+2025-05-26 13:49:08,778 - INFO - Created MDZ bundle: C:\Users\joshd\AppData\Local\Temp\mdz_test_z1hyu0nt\with_assets.mdz
+2025-05-26 13:49:08,779 - DEBUG - Cleaned up temporary directory: C:\Users\joshd\AppData\Local\Temp\mdz_export_7abn4tsq
+2025-05-26 13:49:08,780 - INFO - MDZ file created: C:\Users\joshd\AppData\Local\Temp\mdz_test_z1hyu0nt\with_assets.mdz
+2025-05-26 13:49:08,780 - INFO - MDZ file size: 649 bytes
+2025-05-26 13:49:08,780 - INFO - Original content checksum: 06863cedfa64c35aa0a86f69baa98396885b0e425a3e116a786d75df5cc10383
+2025-05-26 13:49:08,780 - INFO - Testing MDZ extraction: C:\Users\joshd\AppData\Local\Temp\mdz_test_z1hyu0nt\with_assets.mdz
+2025-05-26 13:49:08,803 - INFO - MDZ extraction successful
+2025-05-26 13:49:08,803 - INFO - Extracted markdown content length: 146
+2025-05-26 13:49:08,803 - INFO - Extracted metadata: {'created': '2025-05-26T13:49:08.755772', 'format': 'mdz', 'settings': {'author': 'Test Author', 'date': '', 'page': {'margins': {'bottom': 25, 'left': 25, 'right': 25, 'top': 25}, 'orientation': 'portrait', 'size': 'A4'}, 'tags': [], 'title': 'MDZ Test with Assets'}, 'version': '1.0'}
+2025-05-26 13:49:08,803 - INFO - Manifest file exists: C:\Users\joshd\AppData\Local\Temp\mdz_test_z1hyu0nt\with_assets_extracted\manifest.json
+2025-05-26 13:49:08,803 - INFO - Metadata file exists: C:\Users\joshd\AppData\Local\Temp\mdz_test_z1hyu0nt\with_assets_extracted\metadata.yaml
+2025-05-26 13:49:08,803 - INFO - Main markdown file exists: C:\Users\joshd\AppData\Local\Temp\mdz_test_z1hyu0nt\with_assets_extracted\main.md
+2025-05-26 13:49:08,803 - INFO - Assets directory exists: C:\Users\joshd\AppData\Local\Temp\mdz_test_z1hyu0nt\with_assets_extracted\assets
+2025-05-26 13:49:08,803 - INFO - Assets: ['test_data.json', 'test_image.png']
+2025-05-26 13:49:08,803 - INFO - MDZ integration test passed: with_assets
+2025-05-26 13:49:08,803 - INFO - Running MDZ integration test: complex
+2025-05-26 13:49:08,805 - INFO - Testing MDZ creation: C:\Users\joshd\AppData\Local\Temp\mdz_test_z1hyu0nt\complex.mdz
+2025-05-26 13:49:08,807 - DEBUG - Created temporary directory: C:\Users\joshd\AppData\Local\Temp\mdz_export_fsr95bfr
+2025-05-26 13:49:08,823 - INFO - Created MDZ bundle: C:\Users\joshd\AppData\Local\Temp\mdz_test_z1hyu0nt\complex.mdz
+2025-05-26 13:49:08,824 - DEBUG - Cleaned up temporary directory: C:\Users\joshd\AppData\Local\Temp\mdz_export_fsr95bfr
+2025-05-26 13:49:08,824 - INFO - MDZ file created: C:\Users\joshd\AppData\Local\Temp\mdz_test_z1hyu0nt\complex.mdz
+2025-05-26 13:49:08,824 - INFO - MDZ file size: 616 bytes
+2025-05-26 13:49:08,824 - INFO - Original content checksum: 169b95c32be6131d5deead438f0bef32f0f3a5368993b51ddafbaf8dee84ccb8
+2025-05-26 13:49:08,824 - INFO - Testing MDZ extraction: C:\Users\joshd\AppData\Local\Temp\mdz_test_z1hyu0nt\complex.mdz
+2025-05-26 13:49:08,841 - INFO - MDZ extraction successful
+2025-05-26 13:49:08,842 - INFO - Extracted markdown content length: 277
+2025-05-26 13:49:08,842 - INFO - Extracted metadata: {'created': '2025-05-26T13:49:08.808818', 'format': 'mdz', 'settings': {'author': 'Test Author', 'date': '', 'page': {'margins': {'bottom': 25, 'left': 25, 'right': 25, 'top': 25}, 'orientation': 'portrait', 'size': 'A4'}, 'tags': ['math', 'code', 'tables'], 'title': 'Complex MDZ Test'}, 'version': '1.0'}
+2025-05-26 13:49:08,842 - INFO - Manifest file exists: C:\Users\joshd\AppData\Local\Temp\mdz_test_z1hyu0nt\complex_extracted\manifest.json
+2025-05-26 13:49:08,842 - INFO - Metadata file exists: C:\Users\joshd\AppData\Local\Temp\mdz_test_z1hyu0nt\complex_extracted\metadata.yaml
+2025-05-26 13:49:08,842 - INFO - Main markdown file exists: C:\Users\joshd\AppData\Local\Temp\mdz_test_z1hyu0nt\complex_extracted\main.md
+2025-05-26 13:49:08,842 - INFO - MDZ integration test passed: complex
+2025-05-26 13:49:08,842 - INFO - Running MDZ app integration test: app_integration
+2025-05-26 13:49:08,861 - DEBUG - Available styles: ['Business Professional', 'Technical Document', 'Academic', 'Minimal', 'Custom']
+2025-05-26 13:49:08,861 - INFO - Running in test mode - dialogs will be suppressed
+2025-05-26 13:49:10,518 - DEBUG - Loaded temporary style
+2025-05-26 13:49:10,518 - INFO - Loaded temporary style
+2025-05-26 13:49:10,518 - INFO - Loaded 3 recent files
+2025-05-26 13:49:10,518 - INFO - Settings loaded successfully
+2025-05-26 13:49:10,920 - DEBUG - Initialized navigation controls for testing
+2025-05-26 13:49:10,920 - DEBUG - Setting up zoom controls
+2025-05-26 13:49:10,940 - DEBUG - Main update_preview call #1
+2025-05-26 13:49:10,940 - DEBUG - Updating document settings
+2025-05-26 13:49:10,940 - DEBUG - Setting document settings
+2025-05-26 13:49:10,940 - DEBUG - Updated document settings in page preview
+2025-05-26 13:49:10,940 - DEBUG - RenderUtils.update_preview call #1
+2025-05-26 13:49:10,941 - DEBUG - Got markdown text, length: 142
+2025-05-26 13:49:10,941 - DEBUG - Updating document settings in page_preview
+2025-05-26 13:49:10,941 - DEBUG - Updating document settings
+2025-05-26 13:49:10,941 - DEBUG - Setting document settings
+2025-05-26 13:49:10,941 - DEBUG - Using built-in zoom functionality in page_preview.py
+2025-05-26 13:49:10,942 - DEBUG - Finding page breaks in markdown
+2025-05-26 13:49:10,942 - DEBUG - Found 0 page breaks at lines: []
+2025-05-26 13:49:10,942 - DEBUG - Found 0 page breaks at lines: []
+2025-05-26 13:49:10,942 - DEBUG - Writing processed Markdown to temporary file (length: 142)
+2025-05-26 13:49:10,944 - DEBUG - Created temporary HTML file: C:\Users\joshd\AppData\Local\Temp\tmpyqqut5c6.html
+2025-05-26 13:49:10,944 - DEBUG - Generating CSS from settings
+2025-05-26 13:49:10,944 - DEBUG - CSS generation completed
+2025-05-26 13:49:10,944 - DEBUG - Injecting page break styles into CSS
+2025-05-26 13:49:10,946 - DEBUG - Created temporary CSS file: C:\Users\joshd\AppData\Local\Temp\tmpxnvyjx94.css
+2025-05-26 13:49:10,946 - DEBUG - Running command: C:\Users\joshd\AppData\Local\Pandoc\pandoc.exe C:\Users\joshd\AppData\Local\Temp\tmp30ui2wgh.md -o C:\Users\joshd\AppData\Local\Temp\tmpyqqut5c6.html --standalone --css=C:\Users\joshd\AppData\Local\Temp\tmpxnvyjx94.css --mathjax -f markdown+fenced_divs+pipe_tables+backtick_code_blocks -t html5 --metadata title=Preview --variable secnumdepth=-2 --variable disable-numbering=true
+2025-05-26 13:49:11,017 - DEBUG - Processing page breaks for preview
+2025-05-26 13:49:11,017 - DEBUG - No page breaks found in content
+2025-05-26 13:49:11,018 - DEBUG - HTML content generated (length: 1299)
+2025-05-26 13:49:11,018 - DEBUG - Updating document settings
+2025-05-26 13:49:11,018 - DEBUG - Setting document settings
+2025-05-26 13:49:11,018 - DEBUG - Updating preview with new content
+2025-05-26 13:49:11,018 - DEBUG - HTML content length: 1299
+2025-05-26 13:49:11,018 - DEBUG - Has page breaks detected: False
+2025-05-26 13:49:11,018 - DEBUG - HTML content preview: <!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=de...">Preview</h1>
+<p class="author">Test Author</p>
+</header>
+<h1 id="mdz-app-integration-test">MDZ App Integration Test</h1>
+<p>This tests the integration with the main application.</p>
+</body>
+</html>
+
+2025-05-26 13:49:11,018 - DEBUG - Cleaned HTML content to remove title elements and blank lines
+2025-05-26 13:49:11,018 - DEBUG - Splitting content into pages
+2025-05-26 13:49:11,018 - DEBUG - Calculating automatic page breaks
+2025-05-26 13:49:11,018 - DEBUG - Page calculation: 754.0pt usable height, 29.9 theoretical lines, 30 actual lines per page, font: 14pt, line height: 1.8
+2025-05-26 13:49:11,018 - DEBUG - Font size: 14pt, Line height: 1.8, Lines per page: 30
+2025-05-26 13:49:11,019 - DEBUG - Calculated 1 automatic pages
+2025-05-26 13:49:11,019 - DEBUG - Split content into 1 pages
+2025-05-26 13:49:11,026 - DEBUG - Preview updated successfully
+2025-05-26 13:49:11,026 - DEBUG - Cleaning up temporary files
+2025-05-26 13:49:11,026 - DEBUG - Deleted temporary file: C:\Users\joshd\AppData\Local\Temp\tmp30ui2wgh.md
+2025-05-26 13:49:11,026 - DEBUG - Deleted temporary file: C:\Users\joshd\AppData\Local\Temp\tmpxnvyjx94.css
+2025-05-26 13:49:11,027 - DEBUG - Deleted temporary file: C:\Users\joshd\AppData\Local\Temp\tmpyqqut5c6.html
+2025-05-26 13:49:11,027 - DEBUG - Exiting function: update_preview
+2025-05-26 13:49:11,027 - DEBUG - Preview updated successfully (call #1)
+2025-05-26 13:49:11,027 - DEBUG - Skipping duplicate preview update (debounce)
+2025-05-26 13:49:11,027 - INFO - Starting MDZ export process
+2025-05-26 13:49:11,090 - DEBUG - Created temporary directory: C:\Users\joshd\AppData\Local\Temp\mdz_export_lgukbn_d
+2025-05-26 13:49:11,115 - INFO - Created MDZ bundle: C:\Users\joshd\AppData\Local\Temp\mdz_test_z1hyu0nt\app_integration.mdz
+2025-05-26 13:49:11,115 - DEBUG - Cleaned up temporary directory: C:\Users\joshd\AppData\Local\Temp\mdz_export_lgukbn_d
+2025-05-26 13:49:13,445 - INFO - MDZ export successful: C:\Users\joshd\AppData\Local\Temp\mdz_test_z1hyu0nt\app_integration.mdz
+2025-05-26 13:49:13,446 - INFO - MDZ file size: 1175 bytes
+2025-05-26 13:49:13,468 - INFO - MDZ extraction successful
+2025-05-26 13:49:13,468 - INFO - MDZ app integration test passed: app_integration
+2025-05-26 13:49:13,520 - INFO - Test results written to: C:\Users\joshd\AppData\Local\Temp\mdz_test_z1hyu0nt\mdz_test_results.json
+2025-05-26 13:49:13,520 - INFO - Summary: Passed 4/4 tests (100.00%)
+
+--------------------------------------------------------------------------------
+
+
+Summary:
+Passed: 2/2 (100.00%)
+Failed: 0/2 (0.00%)

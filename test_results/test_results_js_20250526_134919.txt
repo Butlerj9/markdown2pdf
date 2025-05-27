@@ -1,0 +1,52 @@
+Test Results for Category: js
+Timestamp: 2025-05-26 13:49:19
+Total Tests: 1
+
+Test 1/1: test_js_syntax_and_page_numbers.py
+Status: PASS
+Execution Time: 11.12s
+Standard Output:
+2025-05-26 13:49:19,164 - INFO - Logging to file: C:\Users\joshd\.markdown_pdf_logs\markdown_pdf_debug_20250526_134919.log
+2025-05-26 13:49:19,181 - INFO - Running all tests
+2025-05-26 13:49:19,181 - INFO - Running all JavaScript and page number tests
+2025-05-26 13:49:19,182 - INFO - Testing for JavaScript syntax errors
+2025-05-26 13:49:22,572 - INFO - No JavaScript syntax errors found
+2025-05-26 13:49:22,572 - INFO - JavaScript syntax test result: PASS
+2025-05-26 13:49:22,572 - INFO - Testing page number functionality
+2025-05-26 13:49:25,574 - INFO - Actual page count: 0
+2025-05-26 13:49:26,573 - INFO - Using page count: 3
+2025-05-26 13:49:26,574 - INFO - Testing navigation to page 1
+2025-05-26 13:49:26,574 - INFO - Actual page count after delay: 0
+2025-05-26 13:49:27,074 - INFO - Page info: {'current': 1, 'total': 3}
+2025-05-26 13:49:27,074 - INFO - Testing navigation to page 2
+2025-05-26 13:49:27,574 - INFO - Page info: {'current': 2, 'total': 3}
+2025-05-26 13:49:27,574 - INFO - Testing navigation to page 3
+2025-05-26 13:49:28,074 - INFO - Page info: {'current': 3, 'total': 3}
+2025-05-26 13:49:28,074 - INFO - Testing previous/next navigation
+2025-05-26 13:49:29,075 - INFO - Current page after next: 2
+2025-05-26 13:49:29,575 - INFO - Current page after previous: 1
+2025-05-26 13:49:29,575 - INFO - Previous button enabled on page 1: False
+2025-05-26 13:49:30,076 - INFO - Next button enabled on last page: False
+2025-05-26 13:49:30,076 - INFO - Page number test result: PASS
+2025-05-26 13:49:30,076 - INFO - Overall test result: PASS
+2025-05-26 13:49:30,077 - INFO - 
+Test Summary:
+2025-05-26 13:49:30,077 - INFO - - JavaScript Syntax Errors: 0
+2025-05-26 13:49:30,077 - INFO - - Page Number Issues: 0
+2025-05-26 13:49:30,077 - INFO - - Overall Result: PASS
+
+Standard Error:
+js: Uncaught TypeError: window.navigateToPage is not a function
+js: Uncaught TypeError: window.navigateToPage is not a function
+js: Uncaught TypeError: window.navigateToPage is not a function
+js: Uncaught TypeError: window.navigateToPage is not a function
+js: Uncaught TypeError: window.navigateToPage is not a function
+js: Uncaught TypeError: window.navigateToPage is not a function
+js: Uncaught TypeError: window.navigateToPage is not a function
+
+--------------------------------------------------------------------------------
+
+
+Summary:
+Passed: 1/1 (100.00%)
+Failed: 0/1 (0.00%)

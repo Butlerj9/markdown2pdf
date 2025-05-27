@@ -1,0 +1,3 @@
+2025-05-02 00:26:13,765 - INFO - Logging to file: C:\Users\joshd\.markdown_pdf_logs\markdown_pdf_debug_20250502_002613.log
+2025-05-02 00:26:14,108 - INFO - Mermaid CLI found via PATH: C:\Users\joshd\AppData\Roaming\npm\mmdc.CMD, version: 11.4.2
+2025-05-02 00:26:15,723 - INFO - Mermaid CLI found via PATH: C:\Users\joshd\AppData\Roaming\npm\mmdc.CMD, version: 11.4.2

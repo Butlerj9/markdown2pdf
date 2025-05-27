@@ -1,0 +1,31 @@
+Test Results for Category: export
+Timestamp: 2025-05-26 13:48:00
+Total Tests: 1
+
+Test 1/1: test_page_navigation_and_export.py
+Status: PASS
+Execution Time: 0.19s
+Standard Output:
+2025-05-26 13:48:00,209 - INFO - Logging to file: C:\Users\joshd\.markdown_pdf_logs\markdown_pdf_debug_20250526_134800.log
+
+Standard Error:
+2025-05-26 13:48:00,228 - INFO - Dialog handler initialized
+2025-05-26 13:48:00,228 - INFO - Dialog handler started (suppress=True, timeout=10000ms)
+2025-05-26 13:48:00,228 - INFO - Registered custom response for QMessageBox
+2025-05-26 13:48:00,228 - INFO - Running all page navigation and export dialog tests
+2025-05-26 13:48:00,228 - INFO - Testing page navigation
+2025-05-26 13:48:00,228 - INFO - Page navigation test passed
+2025-05-26 13:48:00,229 - INFO - Page navigation test result: PASS
+2025-05-26 13:48:00,229 - INFO - Testing export dialogs
+2025-05-26 13:48:00,229 - INFO - Export dialog test passed
+2025-05-26 13:48:00,229 - INFO - Export dialog test result: PASS
+2025-05-26 13:48:00,229 - INFO - Overall test result: PASS
+2025-05-26 13:48:00,229 - INFO - Dialog handler stopped
+2025-05-26 13:48:00,229 - INFO - Closing all active dialogs (0)
+
+--------------------------------------------------------------------------------
+
+
+Summary:
+Passed: 1/1 (100.00%)
+Failed: 0/1 (0.00%)

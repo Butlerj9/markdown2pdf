@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Markdown Document</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        pre {
+            background-color: #f6f8fa;
+            border-radius: 3px;
+            padding: 16px;
+            overflow: auto;
+        }
+        code {
+            font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
+            background-color: rgba(27, 31, 35, 0.05);
+            border-radius: 3px;
+            padding: 0.2em 0.4em;
+        }
+        pre code {
+            background-color: transparent;
+            padding: 0;
+        }
+        blockquote {
+            border-left: 4px solid #ddd;
+            padding-left: 16px;
+            color: #666;
+            margin-left: 0;
+        }
+        img {
+            max-width: 100%;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f6f8fa;
+        }
+        .task-list-item {
+            list-style-type: none;
+        }
+        .task-list-item input {
+            margin-right: 0.5em;
+        }
+        .mermaid-diagram {
+            text-align: center;
+            margin: 20px 0;
+        }
+    </style>
+    
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+<script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['\\(', '\\)']],
+      displayMath: [['\\[', '\\]']],
+      processEscapes: true
+    }
+  };
+</script>
+
+    
+</head>
+<body>
+    <h1 id="latex-math-test">LaTeX Math Test<a class="headerlink" href="#latex-math-test" title="Permanent link">&para;</a></h1>
+<p>This file tests LaTeX math rendering.</p>
+<h2 id="inline-math">Inline Math<a class="headerlink" href="#inline-math" title="Permanent link">&para;</a></h2>
+<p>Einstein&rsquo;s famous equation: \(E = mc^2\)</p>
+<p>The Pythagorean theorem: \(a^2 + b^2 = c^2\)</p>
+<p>The quadratic formula: \(x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}\)</p>
+<h2 id="display-math">Display Math<a class="headerlink" href="#display-math" title="Permanent link">&para;</a></h2>
+<p>The Cauchy-Schwarz inequality:</p>
+<p>\[\left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right)\]</p>
+<p>Maxwell&rsquo;s equations:</p>
+<p>$$\begin{aligned}<br />
+\nabla \times \vec{\mathbf{B}} -\, \frac1c\, \frac{\partial\vec{\mathbf{E}}}{\partial t} &amp; = \frac{4\pi}{c}\vec{\mathbf{j}} \<br />
+\nabla \cdot \vec{\mathbf{E}} &amp; = 4 \pi \rho \<br />
+\nabla \times \vec{\mathbf{E}}\, +\, \frac1c\, \frac{\partial\vec{\mathbf{B}}}{\partial t} &amp; = \vec{\mathbf{0}} \<br />
+\nabla \cdot \vec{\mathbf{B}} &amp; = 0<br />
+\end{aligned}$$</p>
+<p>The probability density function for a normal distribution:</p>
+<p>\[f(x) = \frac{1}{\sigma\sqrt{2\pi}} e^{-\frac{1}{2}\left(\frac{x-\mu}{\sigma}\right)^2}\]</p>
+<h2 id="mixed-math-and-text">Mixed Math and Text<a class="headerlink" href="#mixed-math-and-text" title="Permanent link">&para;</a></h2>
+<p>The area of a circle is \(A = \pi r^2\), where \(r\) is the radius.</p>
+<p>The volume of a sphere is \(V = \frac{4}{3} \pi r^3\).</p>
+<h2 id="math-in-lists">Math in Lists<a class="headerlink" href="#math-in-lists" title="Permanent link">&para;</a></h2>
+<ol>
+<li>The first derivative of \(f(x) = x^2\) is \(f&rsquo;(x) = 2x\).</li>
+<li>The second derivative is \(f&rsquo;&lsquo;(x) = 2\).</li>
+<li>The integral of \(f(x) = x^2\) is \(\int x^2 dx = \frac{x^3}{3} + C\).</li>
+</ol>
+<h2 id="math-in-tables">Math in Tables<a class="headerlink" href="#math-in-tables" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Derivative</th>
+<th>Integral</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>\(x^n\)</td>
+<td>\(nx^{n-1}\)</td>
+<td>\(\frac{x^{n+1}}{n+1} + C\)</td>
+</tr>
+<tr>
+<td>\(e^x\)</td>
+<td>\(e^x\)</td>
+<td>\(e^x + C\)</td>
+</tr>
+<tr>
+<td>\(\ln(x)\)</td>
+<td>\(\frac{1}{x}\)</td>
+<td>\(x\ln(x) - x + C\)</td>
+</tr>
+<tr>
+<td>\(\sin(x)\)</td>
+<td>\(\cos(x)\)</td>
+<td>\(-\cos(x) + C\)</td>
+</tr>
+<tr>
+<td>\(\cos(x)\)</td>
+<td>\(-\sin(x)\)</td>
+<td>\(\sin(x) + C\)</td>
+</tr>
+</tbody>
+</table>
+</body>
+</html>

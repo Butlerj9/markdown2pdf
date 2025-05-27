@@ -190,7 +190,7 @@ $$
         result = False
         if export_format == "pdf":
             # For PDF, test with default engine first
-            result = window.export_to_pdf(output_file)
+            result = window._export_to_pdf(output_file)
 
             # Record result
             if result:
@@ -221,7 +221,7 @@ $$
                 window.document_settings["format"]["preferred_engine"] = engine
 
                 # Export with this engine
-                engine_result = window.export_to_pdf(engine_output_file)
+                engine_result = window._export_to_pdf(engine_output_file)
 
                 # Reset the engine
                 window.document_settings["format"]["preferred_engine"] = old_engine
@@ -237,7 +237,7 @@ $$
                     print(f"  ERROR: {issue}")
 
         elif export_format == "html":
-            result = window.export_to_html(output_file)
+            result = window._export_to_html(output_file)
             if result:
                 results["html"]["success"] += 1
                 print(f"  HTML export successful: {os.path.basename(output_file)}")
@@ -248,7 +248,7 @@ $$
                 print(f"  ERROR: {issue}")
 
         elif export_format == "epub":
-            result = window.export_to_epub(output_file)
+            result = window._export_to_epub(output_file)
             if result:
                 results["epub"]["success"] += 1
                 print(f"  EPUB export successful: {os.path.basename(output_file)}")
@@ -259,7 +259,7 @@ $$
                 print(f"  ERROR: {issue}")
 
         elif export_format == "docx":
-            result = window.export_to_docx(output_file)
+            result = window._export_to_docx(output_file)
             if result:
                 results["docx"]["success"] += 1
                 print(f"  DOCX export successful: {os.path.basename(output_file)}")

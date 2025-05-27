@@ -31,12 +31,22 @@ for logger_name in logging.root.manager.loggerDict:
 logger = logging.getLogger('test_export_verification')
 logger.setLevel(logging.CRITICAL)
 
+# Suppress specific warnings
+import warnings
+warnings.filterwarnings("ignore", category=UserWarning, module="ebooklib")
+warnings.filterwarnings("ignore", category=FutureWarning, module="ebooklib")
+
 # Create a file for test results
 results_file = open('test_results.txt', 'w')
 
+# Global variable to track quiet mode
+quiet_mode = False
+
 # Function to log a test result to both console and file
-def log_test_result(message):
-    print(message)
+def log_test_result(message, force_print=False):
+    # Only print to console if not in quiet mode or if force_print is True
+    if not quiet_mode or force_print:
+        print(message)
     results_file.write(message + '\n')
     results_file.flush()  # Ensure it's written immediately
 
@@ -341,6 +351,11 @@ def verify_settings(settings, analysis_result, format_type):
 
 def main():
     """Main function"""
+    # Redirect stderr to suppress errors
+    if sys.stderr.isatty():
+        # Only redirect if we're in a terminal
+        sys.stderr = open(os.devnull, 'w')
+
     # Parse command line arguments
     parser = argparse.ArgumentParser(description="Test export settings verification")
     parser.add_argument("--format", choices=["pdf", "html", "epub", "docx"], help="Test only a specific format")
@@ -349,11 +364,20 @@ def main():
     parser.add_argument("--page-size", choices=["A4", "Letter"], help="Test only with specific page size")
     parser.add_argument("--orientation", choices=["portrait", "landscape"], help="Test only with specific orientation")
     parser.add_argument("--debug", action="store_true", help="Enable debug output for troubleshooting")
+    parser.add_argument("--quiet", action="store_true", help="Minimize output to only show test results")
     parser.add_argument("--timeout", type=int, default=TOTAL_TIMEOUT, help=f"Total timeout in seconds (default: {TOTAL_TIMEOUT})")
     args = parser.parse_args()
 
+    # Set global quiet mode
+    global quiet_mode
+    quiet_mode = args.quiet
+
     # Enable debug output if requested
     if args.debug:
+        # Restore stderr for debug output
+        if not sys.stderr.isatty():
+            sys.stderr = sys.__stderr__
+
         logging.basicConfig(level=logging.DEBUG)
         for logger_name in logging.root.manager.loggerDict:
             logging.getLogger(logger_name).setLevel(logging.DEBUG)
@@ -364,8 +388,24 @@ def main():
     logger.debug(f"Setting up watchdog timer ({args.timeout} seconds)")
     watchdog = setup_watchdog(args.timeout)
 
-    # Create QApplication
-    app = QApplication(sys.argv)
+    # Set environment variables to suppress Qt warnings and JavaScript errors
+    os.environ["QT_LOGGING_RULES"] = "*.debug=false;qt.qpa.*=false;js=false;qt.js=false;qt.webengine=false"
+    os.environ["QT_FORCE_STDERR_LOGGING"] = "0"
+    os.environ["QT_ASSUME_STDERR_HAS_CONSOLE"] = "0"
+
+    # Create QApplication with arguments to suppress warnings
+    app = QApplication([sys.argv[0], "-platform", "minimal"])
+
+    # Disable JavaScript errors globally
+    from PyQt6.QtWebEngineCore import QWebEngineSettings
+    if hasattr(QWebEngineSettings, 'globalSettings'):
+        settings = QWebEngineSettings.globalSettings()
+        if hasattr(settings, 'setAttribute'):
+            # Disable JavaScript errors and warnings
+            for attr in dir(QWebEngineSettings):
+                if attr.startswith('JavaScriptEnabled') or attr.startswith('ErrorPageEnabled'):
+                    if hasattr(QWebEngineSettings, attr):
+                        settings.setAttribute(getattr(QWebEngineSettings, attr), False)
 
     # Set up cleanup for QApplication
     def cleanup_app():
@@ -478,10 +518,10 @@ This content should appear on the second page.
 
     # Print header to console and results file
     header = f"Running {total_tests} export tests..."
-    log_test_result(header)
-    log_test_result("=" * 80)
-    log_test_result(f"{'Test':<15} {'Format':<5} {'Engine':<10} {'Settings':<20} {'Time':<8} {'Size':<8} {'Status'}")
-    log_test_result("-" * 80)
+    log_test_result(header, force_print=True)
+    log_test_result("=" * 80, force_print=True)
+    log_test_result(f"{'Test':<15} {'Format':<5} {'Engine':<10} {'Settings':<20} {'Time':<8} {'Size':<8} {'Status'}", force_print=True)
+    log_test_result("-" * 80, force_print=True)
 
     # Test counter
     test_count = 0
@@ -506,18 +546,25 @@ This content should appear on the second page.
                         # Redirect stdout/stderr temporarily
                         old_stdout = sys.stdout
                         old_stderr = sys.stderr
-                        sys.stdout = open(os.devnull, 'w')
-                        sys.stderr = open(os.devnull, 'w')
+                        null_out = open(os.devnull, 'w')
+                        sys.stdout = null_out
+                        sys.stderr = null_out
 
                         try:
+                            # Disable JavaScript console output
+                            os.environ["QT_LOGGING_RULES"] = "*.debug=false;qt.qpa.*=false;js=false"
+
                             window = AdvancedMarkdownToPDF()
                             window._is_test_environment = True
+
+                            # Disable JavaScript error reporting in the WebView
+                            if hasattr(window, 'preview_view') and hasattr(window.preview_view, 'page'):
+                                window.preview_view.page().javaScriptConsoleMessage = lambda *_: None
                         finally:
                             # Restore stdout/stderr
-                            sys.stdout.close()
-                            sys.stderr.close()
                             sys.stdout = old_stdout
                             sys.stderr = old_stderr
+                            null_out.close()
                         window.markdown_editor.setPlainText(sample_markdown)
 
                         # Apply settings
@@ -613,7 +660,7 @@ This content should appear on the second page.
                         percent_complete = (test_count / total_tests) * 100
 
                         # Log the result in a concise format
-                        log_test_result(f"{test_count}/{total_tests} ({percent_complete:.1f}%) {export_format:<5} {engine:<10} {settings_desc:<20} {elapsed_time:.2f}s {file_size:<8} {status}")
+                        log_test_result(f"{test_count}/{total_tests} ({percent_complete:.1f}%) {export_format:<5} {engine:<10} {settings_desc:<20} {elapsed_time:.2f}s {file_size:<8} {status}", force_print=True)
 
                         # Save settings record
                         settings_record_file = os.path.join(records_dir, f"settings_record_{test_count:03d}.json")
@@ -642,18 +689,25 @@ This content should appear on the second page.
                     # Redirect stdout/stderr temporarily
                     old_stdout = sys.stdout
                     old_stderr = sys.stderr
-                    sys.stdout = open(os.devnull, 'w')
-                    sys.stderr = open(os.devnull, 'w')
+                    null_out = open(os.devnull, 'w')
+                    sys.stdout = null_out
+                    sys.stderr = null_out
 
                     try:
+                        # Disable JavaScript console output
+                        os.environ["QT_LOGGING_RULES"] = "*.debug=false;qt.qpa.*=false;js=false"
+
                         window = AdvancedMarkdownToPDF()
                         window._is_test_environment = True
+
+                        # Disable JavaScript error reporting in the WebView
+                        if hasattr(window, 'preview_view') and hasattr(window.preview_view, 'page'):
+                            window.preview_view.page().javaScriptConsoleMessage = lambda *_: None
                     finally:
                         # Restore stdout/stderr
-                        sys.stdout.close()
-                        sys.stderr.close()
                         sys.stdout = old_stdout
                         sys.stderr = old_stderr
+                        null_out.close()
                     window.markdown_editor.setPlainText(sample_markdown)
 
                     # Apply settings
@@ -751,7 +805,7 @@ This content should appear on the second page.
                     percent_complete = (test_count / total_tests) * 100
 
                     # Log the result in a concise format
-                    log_test_result(f"{test_count}/{total_tests} ({percent_complete:.1f}%) {export_format:<5} {'N/A':<10} {settings_desc:<20} {elapsed_time:.2f}s {file_size:<8} {status}")
+                    log_test_result(f"{test_count}/{total_tests} ({percent_complete:.1f}%) {export_format:<5} {'N/A':<10} {settings_desc:<20} {elapsed_time:.2f}s {file_size:<8} {status}", force_print=True)
 
                     # Save settings record
                     settings_record_file = os.path.join(records_dir, f"settings_record_{test_count:03d}.json")
@@ -808,7 +862,7 @@ This content should appear on the second page.
     summary += f"\nOverall results file: {overall_results_file}"
 
     # Print to console and log file
-    log_test_result("\n" + summary)
+    log_test_result("\n" + summary, force_print=True)
 
     # Perform cleanup
     logger.debug("Performing cleanup...")
@@ -826,6 +880,14 @@ This content should appear on the second page.
         logger.debug("Results file closed")
     except Exception as e:
         logger.debug(f"Error closing results file: {e}")
+
+    # Close stderr if it was redirected
+    try:
+        if not sys.stderr.isatty() and sys.stderr != sys.__stderr__:
+            sys.stderr.close()
+            logger.debug("Stderr closed")
+    except Exception as e:
+        logger.debug(f"Error closing stderr: {e}")
 
     # Force garbage collection to release resources
     try:

@@ -1,0 +1,157 @@
+Test Results for Category: core
+Timestamp: 2025-05-03 14:14:16
+Total Tests: 1
+
+Test 1/1: test_core_functionality.py
+Status: PASS
+Execution Time: 2.56s
+Standard Output:
+2025-05-03 14:14:16,561 - INFO - Logging to file: C:\Users\joshd\.markdown_pdf_logs\markdown_pdf_debug_20250503_141416.log
+2025-05-03 14:14:16,583 - INFO - Running in test mode - dialogs will be suppressed
+Found xelatex in PATH
+Found pdflatex in PATH
+Found lualatex in PATH
+Found wkhtmltopdf at: C:\Program Files\wkhtmltopdf\bin\wkhtmltopdf.exe
+Found weasyprint in PATH
+Pandoc found: pandoc.exe 3.1.12.1
+2025-05-03 14:14:18,187 - INFO - Loaded temporary style
+2025-05-03 14:14:18,188 - INFO - Loaded 3 recent files
+2025-05-03 14:14:18,188 - INFO - Settings loaded successfully
+Settings loaded successfully
+
+Standard Error:
+2025-05-03 14:14:16,583 - DEBUG - Available styles: ['Business Professional', 'Technical Document', 'Academic', 'Minimal', 'Custom']
+2025-05-03 14:14:16,583 - INFO - Running in test mode - dialogs will be suppressed
+2025-05-03 14:14:18,187 - DEBUG - Loaded temporary style
+2025-05-03 14:14:18,187 - INFO - Loaded temporary style
+2025-05-03 14:14:18,188 - INFO - Loaded 3 recent files
+2025-05-03 14:14:18,188 - INFO - Settings loaded successfully
+2025-05-03 14:14:18,221 - DEBUG - Initializing PagePreview
+2025-05-03 14:14:18,587 - DEBUG - PagePreview initialized
+2025-05-03 14:14:18,587 - DEBUG - Setting up zoom controls
+2025-05-03 14:14:18,588 - DEBUG - Zoom controls setup completed
+2025-05-03 14:14:18,606 - DEBUG - Updating preview
+2025-05-03 14:14:18,606 - DEBUG - Updating document settings
+2025-05-03 14:14:18,606 - DEBUG - Page dimensions: A4 landscape, 297mm x 210mm
+2025-05-03 14:14:18,607 - DEBUG - Margins: T:25.0mm R:25.0mm B:25.0mm L:25.0mm
+2025-05-03 14:14:18,607 - DEBUG - Settings verification complete
+2025-05-03 14:14:18,607 - DEBUG - Updating preview
+2025-05-03 14:14:18,607 - DEBUG - Cleaning up 0 temporary files
+2025-05-03 14:14:18,607 - DEBUG - Removing title elements from HTML content
+2025-05-03 14:14:18,608 - DEBUG - Title elements removed from HTML content
+2025-05-03 14:14:18,608 - DEBUG - JavaScript bridge created and registered
+2025-05-03 14:14:18,625 - DEBUG - Created temporary HTML file: C:\Users\joshd\AppData\Local\Temp\tmpohp3od4p.html
+2025-05-03 14:14:18,625 - DEBUG - Loading URL: file:///C:/Users/joshd/AppData/Local/Temp/tmpohp3od4p.html
+2025-05-03 14:14:18,632 - DEBUG - Set empty preview message
+2025-05-03 14:14:18,633 - DEBUG - Updating preview
+2025-05-03 14:14:18,633 - DEBUG - Updating document settings
+2025-05-03 14:14:18,633 - DEBUG - Page dimensions: A4 landscape, 297mm x 210mm
+2025-05-03 14:14:18,633 - DEBUG - Margins: T:25.0mm R:25.0mm B:25.0mm L:25.0mm
+2025-05-03 14:14:18,633 - DEBUG - Settings verification complete
+2025-05-03 14:14:18,633 - DEBUG - Finding page breaks in markdown
+2025-05-03 14:14:18,633 - DEBUG - Found 0 page breaks at lines: []
+2025-05-03 14:14:18,633 - DEBUG - Found 0 page breaks at lines: []
+2025-05-03 14:14:18,633 - DEBUG - Writing processed Markdown to temporary file (length: 510)
+2025-05-03 14:14:18,636 - DEBUG - Created temporary HTML file: C:\Users\joshd\AppData\Local\Temp\tmp9f0cey32.html
+2025-05-03 14:14:18,636 - DEBUG - Generating CSS from settings
+2025-05-03 14:14:18,636 - DEBUG - CSS generation completed
+2025-05-03 14:14:18,636 - DEBUG - Injecting page break styles into CSS
+2025-05-03 14:14:18,638 - DEBUG - Created temporary CSS file: C:\Users\joshd\AppData\Local\Temp\tmptw_w9hsg.css
+2025-05-03 14:14:18,639 - DEBUG - Running command: C:\Users\joshd\AppData\Local\Pandoc\pandoc.exe C:\Users\joshd\AppData\Local\Temp\tmpfny17tn9.md -o C:\Users\joshd\AppData\Local\Temp\tmp9f0cey32.html --standalone --css=C:\Users\joshd\AppData\Local\Temp\tmptw_w9hsg.css --mathjax --metadata title=Document -f markdown+fenced_divs+pipe_tables+backtick_code_blocks -t html5 --toc --toc-depth=3 --number-sections --variable secnumdepth=5
+2025-05-03 14:14:18,717 - DEBUG - Processing page breaks for preview
+2025-05-03 14:14:18,717 - DEBUG - No page breaks found in content
+2025-05-03 14:14:18,717 - DEBUG - HTML content generated (length: 6604)
+2025-05-03 14:14:18,717 - DEBUG - Updating preview
+2025-05-03 14:14:18,717 - DEBUG - Cleaning up 1 temporary files
+2025-05-03 14:14:18,717 - DEBUG - Deleted temporary file: C:\Users\joshd\AppData\Local\Temp\tmpohp3od4p.html
+2025-05-03 14:14:18,718 - DEBUG - Removing title elements from HTML content
+2025-05-03 14:14:18,718 - DEBUG - Title elements removed from HTML content
+2025-05-03 14:14:18,718 - DEBUG - JavaScript bridge created and registered
+2025-05-03 14:14:18,736 - DEBUG - Created temporary HTML file: C:\Users\joshd\AppData\Local\Temp\tmpnfoo8qwl.html
+2025-05-03 14:14:18,736 - DEBUG - Loading URL: file:///C:/Users/joshd/AppData/Local/Temp/tmpnfoo8qwl.html
+2025-05-03 14:14:18,736 - DEBUG - Preview updated successfully
+2025-05-03 14:14:18,737 - DEBUG - Cleaning up temporary files
+2025-05-03 14:14:18,737 - DEBUG - Deleted temporary file: C:\Users\joshd\AppData\Local\Temp\tmpfny17tn9.md
+2025-05-03 14:14:18,737 - DEBUG - Deleted temporary file: C:\Users\joshd\AppData\Local\Temp\tmptw_w9hsg.css
+2025-05-03 14:14:18,737 - DEBUG - Deleted temporary file: C:\Users\joshd\AppData\Local\Temp\tmp9f0cey32.html
+2025-05-03 14:14:18,738 - DEBUG - Exiting function: update_preview
+2025-05-03 14:14:18,738 - DEBUG - Updating preview
+2025-05-03 14:14:18,738 - DEBUG - Updating document settings
+2025-05-03 14:14:18,738 - DEBUG - Page dimensions: A4 landscape, 297mm x 210mm
+2025-05-03 14:14:18,738 - DEBUG - Margins: T:25.0mm R:25.0mm B:25.0mm L:25.0mm
+2025-05-03 14:14:18,738 - DEBUG - Settings verification complete
+2025-05-03 14:14:18,738 - DEBUG - Finding page breaks in markdown
+2025-05-03 14:14:18,738 - DEBUG - Found 0 page breaks at lines: []
+2025-05-03 14:14:18,738 - DEBUG - Found 0 page breaks at lines: []
+2025-05-03 14:14:18,738 - DEBUG - Writing processed Markdown to temporary file (length: 510)
+2025-05-03 14:14:18,740 - DEBUG - Created temporary HTML file: C:\Users\joshd\AppData\Local\Temp\tmp3iy4011e.html
+2025-05-03 14:14:18,740 - DEBUG - Generating CSS from settings
+2025-05-03 14:14:18,740 - DEBUG - CSS generation completed
+2025-05-03 14:14:18,740 - DEBUG - Injecting page break styles into CSS
+2025-05-03 14:14:18,743 - DEBUG - Created temporary CSS file: C:\Users\joshd\AppData\Local\Temp\tmpjzwmlouo.css
+2025-05-03 14:14:18,743 - DEBUG - Running command: C:\Users\joshd\AppData\Local\Pandoc\pandoc.exe C:\Users\joshd\AppData\Local\Temp\tmpasi6iwba.md -o C:\Users\joshd\AppData\Local\Temp\tmp3iy4011e.html --standalone --css=C:\Users\joshd\AppData\Local\Temp\tmpjzwmlouo.css --mathjax --metadata title=Document -f markdown+fenced_divs+pipe_tables+backtick_code_blocks -t html5 --toc --toc-depth=3 --number-sections --variable secnumdepth=5
+2025-05-03 14:14:18,817 - DEBUG - Processing page breaks for preview
+2025-05-03 14:14:18,817 - DEBUG - No page breaks found in content
+2025-05-03 14:14:18,817 - DEBUG - HTML content generated (length: 6604)
+2025-05-03 14:14:18,817 - DEBUG - Updating preview
+2025-05-03 14:14:18,817 - DEBUG - Cleaning up 1 temporary files
+2025-05-03 14:14:18,818 - DEBUG - Deleted temporary file: C:\Users\joshd\AppData\Local\Temp\tmpnfoo8qwl.html
+2025-05-03 14:14:18,818 - DEBUG - Removing title elements from HTML content
+2025-05-03 14:14:18,818 - DEBUG - Title elements removed from HTML content
+2025-05-03 14:14:18,818 - DEBUG - JavaScript bridge created and registered
+2025-05-03 14:14:18,836 - DEBUG - Created temporary HTML file: C:\Users\joshd\AppData\Local\Temp\tmp26hq_tpw.html
+2025-05-03 14:14:18,836 - DEBUG - Loading URL: file:///C:/Users/joshd/AppData/Local/Temp/tmp26hq_tpw.html
+2025-05-03 14:14:18,836 - DEBUG - Preview updated successfully
+2025-05-03 14:14:18,836 - DEBUG - Cleaning up temporary files
+2025-05-03 14:14:18,837 - DEBUG - Deleted temporary file: C:\Users\joshd\AppData\Local\Temp\tmpasi6iwba.md
+2025-05-03 14:14:18,837 - DEBUG - Deleted temporary file: C:\Users\joshd\AppData\Local\Temp\tmpjzwmlouo.css
+2025-05-03 14:14:18,837 - DEBUG - Deleted temporary file: C:\Users\joshd\AppData\Local\Temp\tmp3iy4011e.html
+2025-05-03 14:14:18,837 - DEBUG - Exiting function: update_preview
+2025-05-03 14:14:18,837 - INFO - Testing markdown rendering...
+2025-05-03 14:14:18,837 - INFO - Preview widget and web view created successfully
+2025-05-03 14:14:18,838 - INFO - All expected HTML elements found in the preview
+2025-05-03 14:14:18,838 - INFO - Testing document settings...
+2025-05-03 14:14:18,838 - INFO - All expected settings sections found
+2025-05-03 14:14:18,838 - INFO - Testing page preview...
+2025-05-03 14:14:18,838 - DEBUG - Updating preview
+2025-05-03 14:14:18,838 - DEBUG - Updating document settings
+2025-05-03 14:14:18,838 - DEBUG - Page dimensions: A4 landscape, 297mm x 210mm
+2025-05-03 14:14:18,838 - DEBUG - Margins: T:25.0mm R:25.0mm B:25.0mm L:25.0mm
+2025-05-03 14:14:18,838 - DEBUG - Settings verification complete
+2025-05-03 14:14:18,838 - DEBUG - Finding page breaks in markdown
+2025-05-03 14:14:18,838 - DEBUG - Found 0 page breaks at lines: []
+2025-05-03 14:14:18,838 - DEBUG - Found 0 page breaks at lines: []
+2025-05-03 14:14:18,838 - DEBUG - Writing processed Markdown to temporary file (length: 510)
+2025-05-03 14:14:18,840 - DEBUG - Created temporary HTML file: C:\Users\joshd\AppData\Local\Temp\tmp4fayrunv.html
+2025-05-03 14:14:18,840 - DEBUG - Generating CSS from settings
+2025-05-03 14:14:18,840 - DEBUG - CSS generation completed
+2025-05-03 14:14:18,840 - DEBUG - Injecting page break styles into CSS
+2025-05-03 14:14:18,843 - DEBUG - Created temporary CSS file: C:\Users\joshd\AppData\Local\Temp\tmpmxkp6eq2.css
+2025-05-03 14:14:18,843 - DEBUG - Running command: C:\Users\joshd\AppData\Local\Pandoc\pandoc.exe C:\Users\joshd\AppData\Local\Temp\tmp4a1uw1dw.md -o C:\Users\joshd\AppData\Local\Temp\tmp4fayrunv.html --standalone --css=C:\Users\joshd\AppData\Local\Temp\tmpmxkp6eq2.css --mathjax --metadata title=Document -f markdown+fenced_divs+pipe_tables+backtick_code_blocks -t html5 --toc --toc-depth=3 --number-sections --variable secnumdepth=5
+2025-05-03 14:14:18,917 - DEBUG - Processing page breaks for preview
+2025-05-03 14:14:18,917 - DEBUG - No page breaks found in content
+2025-05-03 14:14:18,917 - DEBUG - HTML content generated (length: 6604)
+2025-05-03 14:14:18,917 - DEBUG - Updating preview
+2025-05-03 14:14:18,917 - DEBUG - Cleaning up 1 temporary files
+2025-05-03 14:14:18,918 - DEBUG - Deleted temporary file: C:\Users\joshd\AppData\Local\Temp\tmp26hq_tpw.html
+2025-05-03 14:14:18,918 - DEBUG - Removing title elements from HTML content
+2025-05-03 14:14:18,918 - DEBUG - Title elements removed from HTML content
+2025-05-03 14:14:18,918 - DEBUG - JavaScript bridge created and registered
+2025-05-03 14:14:18,934 - DEBUG - Created temporary HTML file: C:\Users\joshd\AppData\Local\Temp\tmpmgj8funm.html
+2025-05-03 14:14:18,934 - DEBUG - Loading URL: file:///C:/Users/joshd/AppData/Local/Temp/tmpmgj8funm.html
+2025-05-03 14:14:18,935 - DEBUG - Preview updated successfully
+2025-05-03 14:14:18,935 - DEBUG - Cleaning up temporary files
+2025-05-03 14:14:18,935 - DEBUG - Deleted temporary file: C:\Users\joshd\AppData\Local\Temp\tmp4a1uw1dw.md
+2025-05-03 14:14:18,936 - DEBUG - Deleted temporary file: C:\Users\joshd\AppData\Local\Temp\tmpmxkp6eq2.css
+2025-05-03 14:14:18,936 - DEBUG - Deleted temporary file: C:\Users\joshd\AppData\Local\Temp\tmp4fayrunv.html
+2025-05-03 14:14:18,936 - DEBUG - Exiting function: update_preview
+2025-05-03 14:14:18,936 - INFO - Page preview created successfully
+2025-05-03 14:14:18,937 - DEBUG - Closing in test environment - skipping style and settings save
+2025-05-03 14:14:18,937 - INFO - Core functionality tests completed successfully
+
+--------------------------------------------------------------------------------
+
+
+Summary:
+Passed: 1/1 (100.00%)
+Failed: 0/1 (0.00%)

@@ -1,0 +1,96 @@
+Test Results for Category: test_mode
+Timestamp: 2025-05-03 01:14:42
+Total Tests: 1
+
+Test 1/1: test_test_mode.py
+Status: PASS
+Execution Time: 2.26s
+Standard Output:
+2025-05-03 01:14:42,573 - INFO - Logging to file: C:\Users\joshd\.markdown_pdf_logs\markdown_pdf_debug_20250503_011442.log
+2025-05-03 01:14:42,596 - INFO - Running in test mode - dialogs will be suppressed
+Found xelatex in PATH
+Found pdflatex in PATH
+Found lualatex in PATH
+Found wkhtmltopdf at: C:\Program Files\wkhtmltopdf\bin\wkhtmltopdf.exe
+Found weasyprint in PATH
+Pandoc found: pandoc.exe 3.1.12.1
+2025-05-03 01:14:44,098 - INFO - Loaded temporary style
+2025-05-03 01:14:44,099 - INFO - Loaded 3 recent files
+2025-05-03 01:14:44,099 - INFO - Settings loaded successfully
+Settings loaded successfully
+
+Standard Error:
+2025-05-03 01:14:42,593 - INFO - Dialog handler initialized
+2025-05-03 01:14:42,593 - INFO - Dialog handler started (suppress=True, timeout=10000ms)
+2025-05-03 01:14:42,593 - INFO - Registered custom response for QMessageBox
+2025-05-03 01:14:42,593 - INFO - Test mode: True
+2025-05-03 01:14:42,593 - INFO - Dialog timeout: 10 seconds
+2025-05-03 01:14:42,593 - INFO - Running all test mode tests
+2025-05-03 01:14:42,593 - INFO - Testing export dialogs with test mode
+2025-05-03 01:14:42,596 - DEBUG - Available styles: ['Business Professional', 'Technical Document', 'Academic', 'Minimal', 'Custom']
+2025-05-03 01:14:42,596 - INFO - Running in test mode - dialogs will be suppressed
+2025-05-03 01:14:44,098 - DEBUG - Loaded temporary style
+2025-05-03 01:14:44,098 - INFO - Loaded temporary style
+2025-05-03 01:14:44,099 - INFO - Loaded 3 recent files
+2025-05-03 01:14:44,099 - INFO - Settings loaded successfully
+2025-05-03 01:14:44,135 - DEBUG - Initializing PagePreview
+2025-05-03 01:14:44,487 - DEBUG - PagePreview initialized
+2025-05-03 01:14:44,487 - DEBUG - Setting up zoom controls
+2025-05-03 01:14:44,488 - DEBUG - Zoom controls setup completed
+2025-05-03 01:14:44,519 - DEBUG - Updating preview
+2025-05-03 01:14:44,520 - DEBUG - Updating document settings
+2025-05-03 01:14:44,520 - DEBUG - Page dimensions: A4 landscape, 297mm x 210mm
+2025-05-03 01:14:44,520 - DEBUG - Margins: T:25.0mm R:25.0mm B:25.0mm L:25.0mm
+2025-05-03 01:14:44,520 - DEBUG - Settings verification complete
+2025-05-03 01:14:44,520 - DEBUG - Updating preview
+2025-05-03 01:14:44,520 - DEBUG - Cleaning up 0 temporary files
+2025-05-03 01:14:44,520 - DEBUG - Removing title elements from HTML content
+2025-05-03 01:14:44,521 - DEBUG - Title elements removed from HTML content
+2025-05-03 01:14:44,521 - DEBUG - JavaScript bridge created and registered
+2025-05-03 01:14:44,537 - DEBUG - Created temporary HTML file: C:\Users\joshd\AppData\Local\Temp\tmpq3opk8hl.html
+2025-05-03 01:14:44,537 - DEBUG - Loading URL: file:///C:/Users/joshd/AppData/Local/Temp/tmpq3opk8hl.html
+2025-05-03 01:14:44,544 - DEBUG - Set empty preview message
+2025-05-03 01:14:44,544 - DEBUG - Updating preview
+2025-05-03 01:14:44,544 - DEBUG - Updating document settings
+2025-05-03 01:14:44,544 - DEBUG - Page dimensions: A4 landscape, 297mm x 210mm
+2025-05-03 01:14:44,544 - DEBUG - Margins: T:25.0mm R:25.0mm B:25.0mm L:25.0mm
+2025-05-03 01:14:44,545 - DEBUG - Settings verification complete
+2025-05-03 01:14:44,545 - DEBUG - Finding page breaks in markdown
+2025-05-03 01:14:44,545 - DEBUG - Found 0 page breaks at lines: []
+2025-05-03 01:14:44,545 - DEBUG - Found 0 page breaks at lines: []
+2025-05-03 01:14:44,545 - DEBUG - Writing processed Markdown to temporary file (length: 62)
+2025-05-03 01:14:44,548 - DEBUG - Created temporary HTML file: C:\Users\joshd\AppData\Local\Temp\tmpdhdx3chn.html
+2025-05-03 01:14:44,548 - DEBUG - Generating CSS from settings
+2025-05-03 01:14:44,548 - DEBUG - CSS generation completed
+2025-05-03 01:14:44,548 - DEBUG - Injecting page break styles into CSS
+2025-05-03 01:14:44,551 - DEBUG - Created temporary CSS file: C:\Users\joshd\AppData\Local\Temp\tmp37hfj36e.css
+2025-05-03 01:14:44,551 - DEBUG - Running command: C:\Users\joshd\AppData\Local\Pandoc\pandoc.exe C:\Users\joshd\AppData\Local\Temp\tmpq94ado2x.md -o C:\Users\joshd\AppData\Local\Temp\tmpdhdx3chn.html --standalone --css=C:\Users\joshd\AppData\Local\Temp\tmp37hfj36e.css --mathjax --metadata title=Document -f markdown+fenced_divs+pipe_tables+backtick_code_blocks -t html5 --toc --toc-depth=3 --number-sections --variable secnumdepth=5
+2025-05-03 01:14:44,627 - DEBUG - Processing page breaks for preview
+2025-05-03 01:14:44,627 - DEBUG - No page breaks found in content
+2025-05-03 01:14:44,627 - DEBUG - HTML content generated (length: 1419)
+2025-05-03 01:14:44,627 - DEBUG - Updating preview
+2025-05-03 01:14:44,627 - DEBUG - Cleaning up 1 temporary files
+2025-05-03 01:14:44,627 - DEBUG - Deleted temporary file: C:\Users\joshd\AppData\Local\Temp\tmpq3opk8hl.html
+2025-05-03 01:14:44,627 - DEBUG - Removing title elements from HTML content
+2025-05-03 01:14:44,627 - DEBUG - Title elements removed from HTML content
+2025-05-03 01:14:44,627 - DEBUG - JavaScript bridge created and registered
+2025-05-03 01:14:44,644 - DEBUG - Created temporary HTML file: C:\Users\joshd\AppData\Local\Temp\tmpt5e_5jf_.html
+2025-05-03 01:14:44,645 - DEBUG - Loading URL: file:///C:/Users/joshd/AppData/Local/Temp/tmpt5e_5jf_.html
+2025-05-03 01:14:44,645 - DEBUG - Preview updated successfully
+2025-05-03 01:14:44,645 - DEBUG - Cleaning up temporary files
+2025-05-03 01:14:44,645 - DEBUG - Deleted temporary file: C:\Users\joshd\AppData\Local\Temp\tmpq94ado2x.md
+2025-05-03 01:14:44,646 - DEBUG - Deleted temporary file: C:\Users\joshd\AppData\Local\Temp\tmp37hfj36e.css
+2025-05-03 01:14:44,646 - DEBUG - Deleted temporary file: C:\Users\joshd\AppData\Local\Temp\tmpdhdx3chn.html
+2025-05-03 01:14:44,646 - DEBUG - Exiting function: update_preview
+2025-05-03 01:14:44,646 - INFO - Test mode enabled: True
+2025-05-03 01:14:44,646 - INFO - Test mode verification completed successfully
+2025-05-03 01:14:44,646 - INFO - Export dialog test result: PASS
+2025-05-03 01:14:44,646 - INFO - Dialog handler stopped
+2025-05-03 01:14:44,646 - INFO - Closing all active dialogs (0)
+
+--------------------------------------------------------------------------------
+
+
+Summary:
+Passed: 1/1 (100.00%)
+Failed: 0/1 (0.00%)

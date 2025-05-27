@@ -1,0 +1,17 @@
+2025-05-02 09:16:02,340 - INFO - Logging to file: C:\Users\joshd\.markdown_pdf_logs\markdown_pdf_debug_20250502_091602.log
+Found xelatex in PATH
+Found pdflatex in PATH
+Found lualatex in PATH
+Found wkhtmltopdf at: C:\Program Files\wkhtmltopdf\bin\wkhtmltopdf.exe
+Found weasyprint in PATH
+Pandoc found: pandoc.exe 3.1.12.1
+2025-05-02 09:16:03,839 - INFO - Loaded temporary style
+2025-05-02 09:16:03,840 - INFO - Loaded 1 recent files
+2025-05-02 09:16:03,840 - INFO - Settings loaded successfully
+Settings loaded successfully
+2025-05-02 09:16:04,437 - ERROR - JavaScript Error: Uncaught SyntaxError: Unexpected token '.'
+2025-05-02 09:16:04,438 - ERROR -   Source: file:///C:/Users/joshd/AppData/Local/Temp/tmpavxw8qma.html
+2025-05-02 09:16:04,438 - ERROR -   Line: 153
+2025-05-02 09:16:04,438 - ERROR -   Error Type: Uncaught SyntaxError
+2025-05-02 09:16:04,438 - ERROR -   Error Detail: Unexpected token '.'
+js: Uncaught SyntaxError: Unexpected token '.'

@@ -1,0 +1,35 @@
+Test Results for Category: js
+Timestamp: 2025-05-02 17:48:31
+Total Tests: 1
+
+Test 1/1: test_js_syntax_and_page_numbers.py
+Status: FAIL
+Execution Time: 1.14s
+Standard Output:
+2025-05-02 17:48:31,797 - INFO - Logging to file: C:\Users\joshd\.markdown_pdf_logs\markdown_pdf_debug_20250502_174831.log
+
+Standard Error:
+2025-05-02 17:48:31,817 - INFO - Dialog handler initialized
+2025-05-02 17:48:31,817 - INFO - Dialog handler started (suppress=True, timeout=10000ms)
+2025-05-02 17:48:31,817 - INFO - Registered custom response for QMessageBox
+2025-05-02 17:48:31,817 - INFO - Running all JavaScript and page number tests
+2025-05-02 17:48:31,817 - INFO - Testing for JavaScript syntax errors
+2025-05-02 17:48:31,827 - DEBUG - Initializing PagePreview
+2025-05-02 17:48:32,274 - DEBUG - PagePreview initialized
+2025-05-02 17:48:32,287 - DEBUG - Web view: load started
+2025-05-02 17:48:32,456 - DEBUG - Web view: load finished successfully
+2025-05-02 17:48:32,556 - DEBUG - Applying page layout styling
+2025-05-02 17:48:32,557 - DEBUG - Applied page layout styling
+2025-05-02 17:48:32,557 - DEBUG - Page layout debugging initiated
+Traceback (most recent call last):
+  File "C:\Projects\markdown2pdf\test_js_syntax_and_page_numbers.py", line 479, in handle_js_console_message
+    is_error = (level >= 2) or ("error" in message.lower()) or ("uncaught" in message.lower())
+                ^^^^^^^^^^
+TypeError: '>=' not supported between instances of 'JavaScriptConsoleMessageLevel' and 'int'
+
+--------------------------------------------------------------------------------
+
+
+Summary:
+Passed: 0/1 (0.00%)
+Failed: 1/1 (100.00%)

@@ -1,0 +1,15 @@
+{
+  "title": "Comprehensive MDZ Test",
+  "author": "MDZ Validator",
+  "date": "2025-05-01",
+  "tags": [
+    "markdown",
+    "mdz",
+    "test",
+    "comprehensive"
+  ],
+  "toc": true,
+  "numbering": true,
+  "theme": "default",
+  "highlight_style": "github"
+}

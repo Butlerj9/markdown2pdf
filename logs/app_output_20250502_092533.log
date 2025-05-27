@@ -1,0 +1,13 @@
+2025-05-02 09:25:34,093 - INFO - Logging to file: C:\Users\joshd\.markdown_pdf_logs\markdown_pdf_debug_20250502_092534.log
+Found xelatex in PATH
+Found pdflatex in PATH
+Found lualatex in PATH
+Found wkhtmltopdf at: C:\Program Files\wkhtmltopdf\bin\wkhtmltopdf.exe
+Found weasyprint in PATH
+Pandoc found: pandoc.exe 3.1.12.1
+2025-05-02 09:25:35,679 - INFO - Loaded temporary style
+2025-05-02 09:25:35,680 - INFO - Loaded 1 recent files
+2025-05-02 09:25:35,680 - INFO - Settings loaded successfully
+Settings loaded successfully
+2025-05-02 09:26:30,200 - INFO - Settings saved successfully
+2025-05-02 09:26:30,315 - INFO - Settings saved successfully

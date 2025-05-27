@@ -1,0 +1,206 @@
+{
+  "total_tests": 10,
+  "passed_tests": 10,
+  "failed_tests": 0,
+  "pass_rate": 1.0,
+  "stats_by_format": {
+    "html": {
+      "total": 10,
+      "passed": 10,
+      "failed": 0,
+      "pass_rate": 1.0
+    }
+  },
+  "results": [
+    {
+      "test_id": "basic_markdown_test_html_dd503d",
+      "input_file": "mdz_integration_results\\integration_results\\basic_markdown_test_html_dd503d\\temp\\basic_markdown_test.md",
+      "output_format": "html",
+      "options": {
+        "toc": true,
+        "numbering": true,
+        "theme": "default"
+      },
+      "success": true,
+      "elapsed_time": 0.25682854652404785,
+      "output_exists": true,
+      "output_size": 6467,
+      "validation_result": {
+        "success": true,
+        "errors": []
+      },
+      "error": null
+    },
+    {
+      "test_id": "basic_markdown_test_html_40b4d1",
+      "input_file": "mdz_integration_results\\integration_results\\basic_markdown_test_html_40b4d1\\temp\\basic_markdown_test.md",
+      "output_format": "html",
+      "options": {
+        "toc": false,
+        "numbering": false,
+        "theme": "default"
+      },
+      "success": true,
+      "elapsed_time": 0.2507929801940918,
+      "output_exists": true,
+      "output_size": 4956,
+      "validation_result": {
+        "success": true,
+        "errors": []
+      },
+      "error": null
+    },
+    {
+      "test_id": "basic_markdown_test_html_3a0117",
+      "input_file": "mdz_integration_results\\integration_results\\basic_markdown_test_html_3a0117\\temp\\basic_markdown_test.md",
+      "output_format": "html",
+      "options": {
+        "toc": true,
+        "numbering": false,
+        "theme": "dark"
+      },
+      "success": true,
+      "elapsed_time": 0.2402639389038086,
+      "output_exists": true,
+      "output_size": 5836,
+      "validation_result": {
+        "success": true,
+        "errors": []
+      },
+      "error": null
+    },
+    {
+      "test_id": "basic_markdown_test_html_c457bd",
+      "input_file": "mdz_integration_results\\integration_results\\basic_markdown_test_html_c457bd\\temp\\basic_markdown_test.md",
+      "output_format": "html",
+      "options": {
+        "toc": false,
+        "numbering": true,
+        "theme": "light"
+      },
+      "success": true,
+      "elapsed_time": 0.24037671089172363,
+      "output_exists": true,
+      "output_size": 6794,
+      "validation_result": {
+        "success": true,
+        "errors": []
+      },
+      "error": null
+    },
+    {
+      "test_id": "comprehensive_test_html_dd503d",
+      "input_file": "mdz_integration_results\\integration_results\\comprehensive_test_html_dd503d\\temp\\comprehensive_test.md",
+      "output_format": "html",
+      "options": {
+        "toc": true,
+        "numbering": true,
+        "theme": "default"
+      },
+      "success": true,
+      "elapsed_time": 3.461587429046631,
+      "output_exists": true,
+      "output_size": 48295,
+      "validation_result": {
+        "success": true,
+        "errors": []
+      },
+      "error": null
+    },
+    {
+      "test_id": "comprehensive_test_html_40b4d1",
+      "input_file": "mdz_integration_results\\integration_results\\comprehensive_test_html_40b4d1\\temp\\comprehensive_test.md",
+      "output_format": "html",
+      "options": {
+        "toc": false,
+        "numbering": false,
+        "theme": "default"
+      },
+      "success": true,
+      "elapsed_time": 3.5153050422668457,
+      "output_exists": true,
+      "output_size": 47205,
+      "validation_result": {
+        "success": true,
+        "errors": []
+      },
+      "error": null
+    },
+    {
+      "test_id": "comprehensive_test_html_3a0117",
+      "input_file": "mdz_integration_results\\integration_results\\comprehensive_test_html_3a0117\\temp\\comprehensive_test.md",
+      "output_format": "html",
+      "options": {
+        "toc": true,
+        "numbering": false,
+        "theme": "dark"
+      },
+      "success": true,
+      "elapsed_time": 3.5078327655792236,
+      "output_exists": true,
+      "output_size": 47664,
+      "validation_result": {
+        "success": true,
+        "errors": []
+      },
+      "error": null
+    },
+    {
+      "test_id": "comprehensive_test_html_c457bd",
+      "input_file": "mdz_integration_results\\integration_results\\comprehensive_test_html_c457bd\\temp\\comprehensive_test.md",
+      "output_format": "html",
+      "options": {
+        "toc": false,
+        "numbering": true,
+        "theme": "light"
+      },
+      "success": true,
+      "elapsed_time": 3.4975852966308594,
+      "output_exists": true,
+      "output_size": 49043,
+      "validation_result": {
+        "success": true,
+        "errors": []
+      },
+      "error": null
+    },
+    {
+      "test_id": "gfm_test_html_dd503d",
+      "input_file": "mdz_integration_results\\integration_results\\gfm_test_html_dd503d\\temp\\gfm_test.md",
+      "output_format": "html",
+      "options": {
+        "toc": true,
+        "numbering": true,
+        "theme": "default"
+      },
+      "success": true,
+      "elapsed_time": 0.273547887802124,
+      "output_exists": true,
+      "output_size": 7203,
+      "validation_result": {
+        "success": true,
+        "errors": []
+      },
+      "error": null
+    },
+    {
+      "test_id": "gfm_test_html_40b4d1",
+      "input_file": "mdz_integration_results\\integration_results\\gfm_test_html_40b4d1\\temp\\gfm_test.md",
+      "output_format": "html",
+      "options": {
+        "toc": false,
+        "numbering": false,
+        "theme": "default"
+      },
+      "success": true,
+      "elapsed_time": 0.27170825004577637,
+      "output_exists": true,
+      "output_size": 5603,
+      "validation_result": {
+        "success": true,
+        "errors": []
+      },
+      "error": null
+    }
+  ]
+}

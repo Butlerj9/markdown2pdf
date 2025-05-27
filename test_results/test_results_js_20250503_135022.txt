@@ -1,0 +1,230 @@
+Test Results for Category: js
+Timestamp: 2025-05-03 13:50:22
+Total Tests: 1
+
+Test 1/1: test_js_syntax_and_page_numbers.py
+Status: PASS
+Execution Time: 15.16s
+Standard Output:
+2025-05-03 13:50:22,614 - INFO - Logging to file: C:\Users\joshd\.markdown_pdf_logs\markdown_pdf_debug_20250503_135022.log
+2025-05-03 13:50:26,305 - ERROR - JavaScript Error: Uncaught SyntaxError: Invalid or unexpected token
+2025-05-03 13:50:26,307 - ERROR -   Source: file:///C:/Users/joshd/AppData/Local/Temp/tmp8hlcxiit.html
+2025-05-03 13:50:26,307 - ERROR -   Line: 46
+2025-05-03 13:50:26,307 - ERROR -   Error Type: Uncaught SyntaxError
+2025-05-03 13:50:26,307 - ERROR -   Error Detail: Invalid or unexpected token
+2025-05-03 13:50:35,870 - ERROR - JavaScript Error: Uncaught ReferenceError: prev is not defined
+2025-05-03 13:50:35,870 - ERROR -   Source: file:///C:/Users/joshd/AppData/Local/Temp/tmp8hlcxiit.html
+2025-05-03 13:50:35,870 - ERROR -   Line: 4
+
+Standard Error:
+2025-05-03 13:50:22,635 - INFO - Dialog handler initialized
+2025-05-03 13:50:22,635 - INFO - Dialog handler started (suppress=True, timeout=10000ms)
+2025-05-03 13:50:22,635 - INFO - Registered custom response for QMessageBox
+2025-05-03 13:50:22,635 - INFO - Running all JavaScript and page number tests
+2025-05-03 13:50:22,635 - INFO - Testing for JavaScript syntax errors
+2025-05-03 13:50:22,640 - DEBUG - Initializing PagePreview
+2025-05-03 13:50:23,024 - DEBUG - PagePreview initialized
+2025-05-03 13:50:23,036 - DEBUG - Web view: load started
+2025-05-03 13:50:23,216 - DEBUG - Web view: load finished successfully
+2025-05-03 13:50:23,318 - DEBUG - Applying page layout styling
+2025-05-03 13:50:23,318 - DEBUG - Applied page layout styling
+2025-05-03 13:50:23,318 - DEBUG - Page layout debugging initiated
+2025-05-03 13:50:23,320 - ERROR - JavaScript error: Uncaught SyntaxError: Invalid or unexpected token (Line: 46, Source: file:///C:/Users/joshd/AppData/Local/Temp/tmpo7g85ga6.html)
+2025-05-03 13:50:23,322 - DEBUG - Page layout debug results: {'documentHeight': 199, 'documentWidth': 253, 'originalPageBreaks': 0, 'pageBreaks': 0, 'pageCount': 3, 'zoomFactor': '1'}
+2025-05-03 13:50:23,719 - DEBUG - Updating page count
+2025-05-03 13:50:23,721 - DEBUG - Updating page counter: 1 of 3
+2025-05-03 13:50:25,033 - DEBUG - Initializing page count
+2025-05-03 13:50:25,034 - DEBUG - Page count result: 3
+2025-05-03 13:50:25,034 - DEBUG - Updating page counter: 1 of 3
+2025-05-03 13:50:26,034 - INFO - No JavaScript syntax errors found
+2025-05-03 13:50:26,037 - INFO - JavaScript syntax test result: PASS
+2025-05-03 13:50:26,037 - INFO - Testing page number functionality
+2025-05-03 13:50:26,040 - DEBUG - Initializing PagePreview
+2025-05-03 13:50:26,041 - DEBUG - PagePreview initialized
+2025-05-03 13:50:26,046 - DEBUG - Web view: load started
+2025-05-03 13:50:26,195 - DEBUG - Web view: load finished successfully
+2025-05-03 13:50:26,297 - DEBUG - Applying page layout styling
+2025-05-03 13:50:26,297 - DEBUG - Applied page layout styling
+2025-05-03 13:50:26,297 - DEBUG - Page layout debugging initiated
+2025-05-03 13:50:26,305 - ERROR - JavaScript Error: Uncaught SyntaxError: Invalid or unexpected token
+2025-05-03 13:50:26,307 - ERROR -   Source: file:///C:/Users/joshd/AppData/Local/Temp/tmp8hlcxiit.html
+2025-05-03 13:50:26,307 - ERROR -   Line: 46
+2025-05-03 13:50:26,307 - ERROR -   Error Type: Uncaught SyntaxError
+2025-05-03 13:50:26,307 - ERROR -   Error Detail: Invalid or unexpected token
+js: Uncaught SyntaxError: Invalid or unexpected token
+2025-05-03 13:50:26,308 - DEBUG - JS Console (INFO): Debugging page layout... [:3]
+2025-05-03 13:50:26,308 - DEBUG - JS Console (INFO): Document dimensions: 253px x 88px [:14]
+2025-05-03 13:50:26,308 - DEBUG - JS Console (INFO): Body dimensions: 253px x 0px [:19]
+2025-05-03 13:50:26,308 - DEBUG - JS Console (INFO): No pages container found [:30]
+2025-05-03 13:50:26,308 - DEBUG - JS Console (INFO): Found 0 pages [:35]
+2025-05-03 13:50:26,308 - DEBUG - JS Console (INFO): Found 2 page break elements [:80]
+2025-05-03 13:50:26,308 - DEBUG - JS Console (INFO): Current zoom factor (CSS var): 1 [:92]
+2025-05-03 13:50:26,308 - DEBUG - Page layout debug results: {'documentHeight': 88, 'documentWidth': 253, 'originalPageBreaks': 0, 'pageBreaks': 2, 'pageCount': 0, 'zoomFactor': '1'}
+2025-05-03 13:50:26,697 - DEBUG - Updating page count
+2025-05-03 13:50:26,698 - DEBUG - Updating page counter: 1 of 0
+2025-05-03 13:50:28,048 - DEBUG - Initializing page count
+2025-05-03 13:50:28,048 - DEBUG - JS Console (INFO): No pages found, attempting to create pages container [:8]
+2025-05-03 13:50:28,050 - DEBUG - Page count result: 1
+2025-05-03 13:50:28,050 - DEBUG - Updating page counter: 1 of 1
+2025-05-03 13:50:29,049 - INFO - Actual page count: 1
+2025-05-03 13:50:30,048 - INFO - Using page count: 3
+2025-05-03 13:50:30,048 - INFO - Testing navigation to page 1
+2025-05-03 13:50:30,048 - DEBUG - Executing JavaScript: 
+        (function() {
+            var status = {
+                navigateToPageExists: typeof windo...
+2025-05-03 13:50:30,149 - INFO - Actual page count after delay: 1
+2025-05-03 13:50:30,149 - DEBUG - JS Console (INFO): Navigation functions not found, creating them... [:11]
+2025-05-03 13:50:30,250 - DEBUG - JavaScript execution result: {'fastNavigateToPageExists': True, 'navigateToPageExists': True, 'pageCount': 1}
+2025-05-03 13:50:30,250 - DEBUG - Navigation function status: {'fastNavigateToPageExists': True, 'navigateToPageExists': True, 'pageCount': 1}
+2025-05-03 13:50:30,250 - DEBUG - Executing JavaScript: 
+        (function() {
+            if (typeof window.fastNavigateToPage === 'function') {
+          ...
+2025-05-03 13:50:30,350 - DEBUG - JS Console (INFO): Using fallback navigation to page: 1 [:15]
+2025-05-03 13:50:30,350 - DEBUG - JS Console (INFO): Successfully navigated to page 1 [:86]
+2025-05-03 13:50:30,451 - DEBUG - JavaScript execution result: 1
+2025-05-03 13:50:30,451 - DEBUG - Navigation to page 1 result: 1
+2025-05-03 13:50:30,451 - DEBUG - Executing JavaScript: 
+            (function() {
+                return document.querySelectorAll('.page').length;
+       ...
+2025-05-03 13:50:30,652 - DEBUG - JavaScript execution result: 1
+2025-05-03 13:50:30,652 - DEBUG - Updating page counter: 1 of 1
+2025-05-03 13:50:31,153 - INFO - Page info: {'current': 1, 'total': 3}
+2025-05-03 13:50:31,153 - INFO - Testing navigation to page 2
+2025-05-03 13:50:31,153 - DEBUG - Executing JavaScript: 
+        (function() {
+            var status = {
+                navigateToPageExists: typeof windo...
+2025-05-03 13:50:31,354 - DEBUG - JavaScript execution result: {'fastNavigateToPageExists': True, 'navigateToPageExists': True, 'pageCount': 1}
+2025-05-03 13:50:31,354 - DEBUG - Navigation function status: {'fastNavigateToPageExists': True, 'navigateToPageExists': True, 'pageCount': 1}
+2025-05-03 13:50:31,354 - DEBUG - Executing JavaScript: 
+        (function() {
+            if (typeof window.fastNavigateToPage === 'function') {
+          ...
+2025-05-03 13:50:31,455 - DEBUG - JS Console (INFO): Using fallback navigation to page: 2 [:15]
+2025-05-03 13:50:31,455 - DEBUG - JS Console (INFO): Successfully navigated to page 1 [:86]
+2025-05-03 13:50:31,555 - DEBUG - JavaScript execution result: 1
+2025-05-03 13:50:31,555 - DEBUG - Navigation to page 2 result: 1
+2025-05-03 13:50:31,555 - DEBUG - Executing JavaScript: 
+            (function() {
+                return document.querySelectorAll('.page').length;
+       ...
+2025-05-03 13:50:31,756 - DEBUG - JavaScript execution result: 1
+2025-05-03 13:50:31,756 - DEBUG - Updating page counter: 1 of 1
+2025-05-03 13:50:32,256 - INFO - Page info: {'current': 2, 'total': 3}
+2025-05-03 13:50:32,256 - INFO - Testing navigation to page 3
+2025-05-03 13:50:32,256 - DEBUG - Executing JavaScript: 
+        (function() {
+            var status = {
+                navigateToPageExists: typeof windo...
+2025-05-03 13:50:32,458 - DEBUG - JavaScript execution result: {'fastNavigateToPageExists': True, 'navigateToPageExists': True, 'pageCount': 1}
+2025-05-03 13:50:32,458 - DEBUG - Navigation function status: {'fastNavigateToPageExists': True, 'navigateToPageExists': True, 'pageCount': 1}
+2025-05-03 13:50:32,458 - DEBUG - Executing JavaScript: 
+        (function() {
+            if (typeof window.fastNavigateToPage === 'function') {
+          ...
+2025-05-03 13:50:32,558 - DEBUG - JS Console (INFO): Using fallback navigation to page: 3 [:15]
+2025-05-03 13:50:32,558 - DEBUG - JS Console (INFO): Successfully navigated to page 1 [:86]
+2025-05-03 13:50:32,659 - DEBUG - JavaScript execution result: 1
+2025-05-03 13:50:32,659 - DEBUG - Navigation to page 3 result: 1
+2025-05-03 13:50:32,659 - DEBUG - Executing JavaScript: 
+            (function() {
+                return document.querySelectorAll('.page').length;
+       ...
+2025-05-03 13:50:32,860 - DEBUG - JavaScript execution result: 1
+2025-05-03 13:50:32,860 - DEBUG - Updating page counter: 1 of 1
+2025-05-03 13:50:33,360 - INFO - Page info: {'current': 3, 'total': 3}
+2025-05-03 13:50:33,360 - INFO - Testing previous/next navigation
+2025-05-03 13:50:33,360 - DEBUG - Executing JavaScript: 
+        (function() {
+            var status = {
+                navigateToPageExists: typeof windo...
+2025-05-03 13:50:33,561 - DEBUG - JavaScript execution result: {'fastNavigateToPageExists': True, 'navigateToPageExists': True, 'pageCount': 1}
+2025-05-03 13:50:33,561 - DEBUG - Navigation function status: {'fastNavigateToPageExists': True, 'navigateToPageExists': True, 'pageCount': 1}
+2025-05-03 13:50:33,561 - DEBUG - Executing JavaScript: 
+        (function() {
+            if (typeof window.fastNavigateToPage === 'function') {
+          ...
+2025-05-03 13:50:33,662 - DEBUG - JS Console (INFO): Using fallback navigation to page: 1 [:15]
+2025-05-03 13:50:33,662 - DEBUG - JS Console (INFO): Successfully navigated to page 1 [:86]
+2025-05-03 13:50:33,763 - DEBUG - JavaScript execution result: 1
+2025-05-03 13:50:33,763 - DEBUG - Navigation to page 1 result: 1
+2025-05-03 13:50:33,763 - DEBUG - Executing JavaScript: 
+            (function() {
+                return document.querySelectorAll('.page').length;
+       ...
+2025-05-03 13:50:33,964 - DEBUG - JavaScript execution result: 1
+2025-05-03 13:50:33,964 - DEBUG - Updating page counter: 1 of 1
+2025-05-03 13:50:34,464 - DEBUG - Executing JavaScript: 
+        (function() {
+            var status = {
+                navigateToPageExists: typeof windo...
+2025-05-03 13:50:34,665 - DEBUG - JavaScript execution result: {'fastNavigateToPageExists': True, 'navigateToPageExists': True, 'pageCount': 1}
+2025-05-03 13:50:34,665 - DEBUG - Navigation function status: {'fastNavigateToPageExists': True, 'navigateToPageExists': True, 'pageCount': 1}
+2025-05-03 13:50:34,665 - DEBUG - Executing JavaScript: 
+        (function() {
+            if (typeof window.fastNavigateToPage === 'function') {
+          ...
+2025-05-03 13:50:34,766 - DEBUG - JS Console (INFO): Using fallback navigation to page: 2 [:15]
+2025-05-03 13:50:34,766 - DEBUG - JS Console (INFO): Successfully navigated to page 1 [:86]
+2025-05-03 13:50:34,867 - DEBUG - JavaScript execution result: 1
+2025-05-03 13:50:34,867 - DEBUG - Navigation to page 2 result: 1
+2025-05-03 13:50:34,867 - DEBUG - Executing JavaScript: 
+            (function() {
+                return document.querySelectorAll('.page').length;
+       ...
+2025-05-03 13:50:35,068 - DEBUG - JavaScript execution result: 1
+2025-05-03 13:50:35,068 - DEBUG - Updating page counter: 1 of 1
+2025-05-03 13:50:35,568 - INFO - Current page after next: 2
+2025-05-03 13:50:35,568 - DEBUG - Executing JavaScript: 
+        (function() {
+            var status = {
+                navigateToPageExists: typeof windo...
+2025-05-03 13:50:35,770 - DEBUG - JavaScript execution result: {'fastNavigateToPageExists': True, 'navigateToPageExists': True, 'pageCount': 1}
+2025-05-03 13:50:35,770 - DEBUG - Navigation function status: {'fastNavigateToPageExists': True, 'navigateToPageExists': True, 'pageCount': 1}
+2025-05-03 13:50:35,770 - DEBUG - Executing JavaScript: 
+        (function() {
+            if (typeof window.fastNavigateToPage === 'function') {
+          ...
+2025-05-03 13:50:35,870 - ERROR - JavaScript Error: Uncaught ReferenceError: prev is not defined
+2025-05-03 13:50:35,870 - ERROR -   Source: file:///C:/Users/joshd/AppData/Local/Temp/tmp8hlcxiit.html
+2025-05-03 13:50:35,870 - ERROR -   Line: 4
+js: Uncaught ReferenceError: prev is not defined
+2025-05-03 13:50:35,971 - DEBUG - JavaScript execution result: None
+2025-05-03 13:50:35,971 - DEBUG - Navigation to page prev result: None
+2025-05-03 13:50:36,471 - INFO - Current page after previous: 1
+2025-05-03 13:50:36,471 - INFO - Previous button enabled on page 1: False
+2025-05-03 13:50:36,471 - DEBUG - Executing JavaScript: 
+        (function() {
+            var status = {
+                navigateToPageExists: typeof windo...
+2025-05-03 13:50:36,673 - DEBUG - JavaScript execution result: {'fastNavigateToPageExists': True, 'navigateToPageExists': True, 'pageCount': 1}
+2025-05-03 13:50:36,673 - DEBUG - Navigation function status: {'fastNavigateToPageExists': True, 'navigateToPageExists': True, 'pageCount': 1}
+2025-05-03 13:50:36,673 - DEBUG - Executing JavaScript: 
+        (function() {
+            if (typeof window.fastNavigateToPage === 'function') {
+          ...
+2025-05-03 13:50:36,774 - DEBUG - JS Console (INFO): Using fallback navigation to page: 3 [:15]
+2025-05-03 13:50:36,774 - DEBUG - JS Console (INFO): Successfully navigated to page 1 [:86]
+2025-05-03 13:50:36,875 - DEBUG - JavaScript execution result: 1
+2025-05-03 13:50:36,875 - DEBUG - Navigation to page 3 result: 1
+2025-05-03 13:50:36,875 - DEBUG - Executing JavaScript: 
+            (function() {
+                return document.querySelectorAll('.page').length;
+       ...
+2025-05-03 13:50:37,076 - DEBUG - JavaScript execution result: 1
+2025-05-03 13:50:37,076 - DEBUG - Updating page counter: 1 of 1
+2025-05-03 13:50:37,576 - INFO - Next button enabled on last page: False
+2025-05-03 13:50:37,577 - INFO - Page number test result: PASS
+2025-05-03 13:50:37,578 - INFO - Overall test result: PASS
+2025-05-03 13:50:37,578 - INFO - Dialog handler stopped
+2025-05-03 13:50:37,578 - INFO - Closing all active dialogs (0)
+
+--------------------------------------------------------------------------------
+
+
+Summary:
+Passed: 1/1 (100.00%)
+Failed: 0/1 (0.00%)

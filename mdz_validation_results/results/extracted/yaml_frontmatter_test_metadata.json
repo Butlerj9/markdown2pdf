@@ -1,0 +1,15 @@
+{
+  "title": "YAML Front Matter Test",
+  "author": "MDZ Validator",
+  "date": "2025-05-01",
+  "tags": [
+    "markdown",
+    "yaml",
+    "front-matter",
+    "test"
+  ],
+  "toc": true,
+  "numbering": true,
+  "theme": "default",
+  "highlight_style": "github"
+}

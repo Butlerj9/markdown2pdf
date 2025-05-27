@@ -1,0 +1,15 @@
+2025-05-18 22:49:24,104 - __main__ - INFO - Running test: page_preview.test_page_preview_breaks.py
+2025-05-18 22:49:24,105 - __main__ - INFO - Running command: ['python', 'test_page_preview_breaks.py']
+2025-05-18 22:49:28,174 - __main__ - INFO - Test page_preview.test_page_preview_breaks.py completed in 4.07 seconds: FAIL
+2025-05-18 22:49:28,174 - __main__ - INFO - Running test: page_preview.test_page_preview_comprehensive.py
+2025-05-18 22:49:28,175 - __main__ - INFO - Running command: ['python', 'test_page_preview_comprehensive.py']
+2025-05-18 22:49:39,043 - __main__ - INFO - Test page_preview.test_page_preview_comprehensive.py completed in 10.87 seconds: PASS
+2025-05-18 22:49:39,043 - __main__ - INFO - Running test: page_preview.test_js_syntax_and_page_numbers.py
+2025-05-18 22:49:39,043 - __main__ - INFO - Running command: ['python', 'test_js_syntax_and_page_numbers.py']
+2025-05-18 22:49:41,742 - __main__ - INFO - Test page_preview.test_js_syntax_and_page_numbers.py completed in 2.70 seconds: FAIL
+2025-05-18 22:49:41,742 - __main__ - INFO - Running test: page_preview.test_page_navigation_and_export.py
+2025-05-18 22:49:41,743 - __main__ - INFO - Running command: ['python', 'test_page_navigation_and_export.py']
+2025-05-18 22:49:41,934 - __main__ - INFO - Test page_preview.test_page_navigation_and_export.py completed in 0.19 seconds: PASS
+2025-05-18 22:49:41,992 - __main__ - INFO - Tests completed: 2/4 passed (50.00%)
+2025-05-18 22:49:41,993 - __main__ - INFO - Results saved to test_results\test_results_page_preview_20250518_224941.json
+2025-05-18 22:49:41,993 - __main__ - INFO - HTML report saved to test_results\test_report_page_preview_20250518_224941.html

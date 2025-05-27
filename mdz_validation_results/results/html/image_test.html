@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Markdown Document</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        pre {
+            background-color: #f6f8fa;
+            border-radius: 3px;
+            padding: 16px;
+            overflow: auto;
+        }
+        code {
+            font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
+            background-color: rgba(27, 31, 35, 0.05);
+            border-radius: 3px;
+            padding: 0.2em 0.4em;
+        }
+        pre code {
+            background-color: transparent;
+            padding: 0;
+        }
+        blockquote {
+            border-left: 4px solid #ddd;
+            padding-left: 16px;
+            color: #666;
+            margin-left: 0;
+        }
+        img {
+            max-width: 100%;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f6f8fa;
+        }
+        .task-list-item {
+            list-style-type: none;
+        }
+        .task-list-item input {
+            margin-right: 0.5em;
+        }
+        .mermaid-diagram {
+            text-align: center;
+            margin: 20px 0;
+        }
+    </style>
+    
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+<script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['\\(', '\\)']],
+      displayMath: [['\\[', '\\]']],
+      processEscapes: true
+    }
+  };
+</script>
+
+    
+</head>
+<body>
+    <h1 id="image-test">Image Test<a class="headerlink" href="#image-test" title="Permanent link">&para;</a></h1>
+<p>This file tests image rendering.</p>
+<h2 id="png-image">PNG Image<a class="headerlink" href="#png-image" title="Permanent link">&para;</a></h2>
+<p><img alt="PNG Test Image" src="C:\Users\joshd\AppData\Local\Temp\mdz_bundle_t7hep7bz\images/test_image.png" /></p>
+<h2 id="jpg-image">JPG Image<a class="headerlink" href="#jpg-image" title="Permanent link">&para;</a></h2>
+<p><img alt="JPG Test Image" src="C:\Users\joshd\AppData\Local\Temp\mdz_bundle_t7hep7bz\images/test_image.jpg" /></p>
+<h2 id="svg-image">SVG Image<a class="headerlink" href="#svg-image" title="Permanent link">&para;</a></h2>
+<p><img alt="SVG Test Image" src="C:\Users\joshd\AppData\Local\Temp\mdz_bundle_t7hep7bz\images/test_image.svg" /></p>
+<h2 id="image-with-size-attributes">Image with Size Attributes<a class="headerlink" href="#image-with-size-attributes" title="Permanent link">&para;</a></h2>
+<p><img alt="PNG Test Image with Size" src="C:\Users\joshd\AppData\Local\Temp\mdz_bundle_t7hep7bz\images/test_image.png" width="50%" /></p>
+<h2 id="image-with-caption">Image with Caption<a class="headerlink" href="#image-with-caption" title="Permanent link">&para;</a></h2>
+<p><img alt="This is a caption for the image" src="C:\Users\joshd\AppData\Local\Temp\mdz_bundle_t7hep7bz\images/test_image.png" /></p>
+<h2 id="image-in-a-table">Image in a Table<a class="headerlink" href="#image-in-a-table" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Image</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img alt="Small Image" src="C:\Users\joshd\AppData\Local\Temp\mdz_bundle_t7hep7bz\images/test_image_small.png" /></td>
+<td>A small test image</td>
+</tr>
+<tr>
+<td><img alt="Another Small Image" src="C:\Users\joshd\AppData\Local\Temp\mdz_bundle_t7hep7bz\images/test_image_small.jpg" /></td>
+<td>Another small test image</td>
+</tr>
+</tbody>
+</table>
+<h2 id="image-with-link">Image with Link<a class="headerlink" href="#image-with-link" title="Permanent link">&para;</a></h2>
+<p><a href="https://example.com"><img alt="Linked Image" src="C:\Users\joshd\AppData\Local\Temp\mdz_bundle_t7hep7bz\images/test_image_small.png" /></a></p>
+<h2 id="multiple-images">Multiple Images<a class="headerlink" href="#multiple-images" title="Permanent link">&para;</a></h2>
+<p><img alt="Image 1" src="C:\Users\joshd\AppData\Local\Temp\mdz_bundle_t7hep7bz\images/test_image.png" /> <img alt="Image 2" src="C:\Users\joshd\AppData\Local\Temp\mdz_bundle_t7hep7bz\images/test_image.jpg" /></p>
+<h2 id="image-in-a-list">Image in a List<a class="headerlink" href="#image-in-a-list" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Item with image: <img alt="Small Image" src="C:\Users\joshd\AppData\Local\Temp\mdz_bundle_t7hep7bz\images/test_image_small.png" /></li>
+<li>Another item with image: <img alt="Small Image" src="C:\Users\joshd\AppData\Local\Temp\mdz_bundle_t7hep7bz\images/test_image_small.jpg" /></li>
+</ul>
+</body>
+</html>

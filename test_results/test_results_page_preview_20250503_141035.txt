@@ -1,0 +1,858 @@
+Test Results for Category: page_preview
+Timestamp: 2025-05-03 14:10:35
+Total Tests: 4
+
+Test 1/4: test_page_preview_breaks.py
+Status: PASS
+Execution Time: 10.74s
+Standard Output:
+2025-05-03 14:10:35,638 - INFO - Logging to file: C:\Users\joshd\.markdown_pdf_logs\markdown_pdf_debug_20250503_141035.log
+2025-05-03 14:10:36,198 - ERROR - JavaScript Error: Uncaught SyntaxError: missing ) after argument list
+2025-05-03 14:10:36,198 - ERROR -   Source: file:///C:/Users/joshd/AppData/Local/Temp/tmpr64q6xzc.html
+2025-05-03 14:10:36,198 - ERROR -   Line: 348
+2025-05-03 14:10:36,198 - ERROR -   Error Type: Uncaught SyntaxError
+2025-05-03 14:10:36,198 - ERROR -   Error Detail: missing ) after argument list
+2025-05-03 14:10:36,306 - ERROR - JavaScript Error: Uncaught SyntaxError: Invalid or unexpected token
+2025-05-03 14:10:36,306 - ERROR -   Source: file:///C:/Users/joshd/AppData/Local/Temp/tmpr64q6xzc.html
+2025-05-03 14:10:36,306 - ERROR -   Line: 46
+2025-05-03 14:10:36,306 - ERROR -   Error Type: Uncaught SyntaxError
+2025-05-03 14:10:36,306 - ERROR -   Error Detail: Invalid or unexpected token
+2025-05-03 14:10:36,407 - ERROR - JavaScript Error: Uncaught SyntaxError: Invalid or unexpected token
+2025-05-03 14:10:36,407 - ERROR -   Source: file:///C:/Users/joshd/AppData/Local/Temp/tmpr64q6xzc.html
+2025-05-03 14:10:36,407 - ERROR -   Line: 46
+2025-05-03 14:10:36,407 - ERROR -   Error Type: Uncaught SyntaxError
+2025-05-03 14:10:36,407 - ERROR -   Error Detail: Invalid or unexpected token
+
+Standard Error:
+2025-05-03 14:10:35,652 - DEBUG - Initializing PagePreview
+2025-05-03 14:10:36,033 - DEBUG - PagePreview initialized
+2025-05-03 14:10:36,034 - DEBUG - Updating document settings
+2025-05-03 14:10:36,034 - DEBUG - Page dimensions: A4 portrait, 210mm x 297mm
+2025-05-03 14:10:36,034 - DEBUG - Margins: T:25mm R:25mm B:25mm L:25mm
+2025-05-03 14:10:36,034 - DEBUG - Settings verification complete
+2025-05-03 14:10:36,035 - DEBUG - Updating preview
+2025-05-03 14:10:36,035 - DEBUG - Cleaning up 0 temporary files
+2025-05-03 14:10:36,035 - DEBUG - Removing title elements from HTML content
+2025-05-03 14:10:36,036 - DEBUG - Title elements removed from HTML content
+2025-05-03 14:10:36,036 - DEBUG - JavaScript bridge created and registered
+2025-05-03 14:10:36,055 - DEBUG - Created temporary HTML file: C:\Users\joshd\AppData\Local\Temp\tmpr64q6xzc.html
+2025-05-03 14:10:36,055 - DEBUG - Loading URL: file:///C:/Users/joshd/AppData/Local/Temp/tmpr64q6xzc.html
+2025-05-03 14:10:36,160 - DEBUG - Web view: load started
+2025-05-03 14:10:36,198 - ERROR - JavaScript Error: Uncaught SyntaxError: missing ) after argument list
+2025-05-03 14:10:36,198 - ERROR -   Source: file:///C:/Users/joshd/AppData/Local/Temp/tmpr64q6xzc.html
+2025-05-03 14:10:36,198 - ERROR -   Line: 348
+2025-05-03 14:10:36,198 - ERROR -   Error Type: Uncaught SyntaxError
+2025-05-03 14:10:36,198 - ERROR -   Error Detail: missing ) after argument list
+js: Uncaught SyntaxError: missing ) after argument list
+2025-05-03 14:10:36,199 - DEBUG - JS Console (INFO): DOM loaded, initializing page navigation... [file:///C:/Users/joshd/AppData/Local/Temp/tmpr64q6xzc.html:493]
+2025-05-03 14:10:36,200 - DEBUG - JS Console (INFO): DOM loaded, initializing bridge directly... [file:///C:/Users/joshd/AppData/Local/Temp/tmpr64q6xzc.html:595]
+2025-05-03 14:10:36,200 - DEBUG - JS Console (INFO): qt.webChannelTransport is available, connecting bridge... [file:///C:/Users/joshd/AppData/Local/Temp/tmpr64q6xzc.html:686]
+2025-05-03 14:10:36,200 - DEBUG - JS Console (INFO): QWebChannel polyfill created [file:///C:/Users/joshd/AppData/Local/Temp/tmpr64q6xzc.html:11]
+2025-05-03 14:10:36,204 - DEBUG - Web view: load finished successfully
+2025-05-03 14:10:36,205 - DEBUG - Page loaded, applying document settings
+2025-05-03 14:10:36,211 - DEBUG - JS Console (INFO): Bridge connected directly: true [file:///C:/Users/joshd/AppData/Local/Temp/tmpr64q6xzc.html:690]
+2025-05-03 14:10:36,305 - DEBUG - Applying page layout styling
+2025-05-03 14:10:36,305 - DEBUG - Applied page layout styling
+2025-05-03 14:10:36,305 - DEBUG - Page layout debugging initiated
+2025-05-03 14:10:36,306 - ERROR - JavaScript Error: Uncaught SyntaxError: Invalid or unexpected token
+2025-05-03 14:10:36,306 - ERROR -   Source: file:///C:/Users/joshd/AppData/Local/Temp/tmpr64q6xzc.html
+2025-05-03 14:10:36,306 - ERROR -   Line: 46
+2025-05-03 14:10:36,306 - ERROR -   Error Type: Uncaught SyntaxError
+2025-05-03 14:10:36,306 - ERROR -   Error Detail: Invalid or unexpected token
+js: Uncaught SyntaxError: Invalid or unexpected token
+2025-05-03 14:10:36,306 - DEBUG - JS Console (INFO): Initializing QWebChannel connection... [file:///C:/Users/joshd/AppData/Local/Temp/tmpr64q6xzc.html:521]
+2025-05-03 14:10:36,306 - DEBUG - JS Console (INFO): QWebChannel polyfill created [file:///C:/Users/joshd/AppData/Local/Temp/tmpr64q6xzc.html:11]
+2025-05-03 14:10:36,306 - DEBUG - JS Console (INFO): Debugging page layout... [:3]
+2025-05-03 14:10:36,307 - DEBUG - JS Console (INFO): Document dimensions: 1313px x 773px [:14]
+2025-05-03 14:10:36,307 - DEBUG - JS Console (INFO): Body dimensions: 1313px x 773px [:19]
+2025-05-03 14:10:36,307 - DEBUG - JS Console (INFO): No pages container found [:30]
+2025-05-03 14:10:36,307 - DEBUG - JS Console (INFO): Found 0 pages [:35]
+2025-05-03 14:10:36,307 - DEBUG - JS Console (INFO): Found 2 page break elements [:80]
+2025-05-03 14:10:36,307 - DEBUG - JS Console (INFO): Current zoom factor (CSS var): 1 [:92]
+2025-05-03 14:10:36,307 - DEBUG - Page layout debug results: {'documentHeight': 773, 'documentWidth': 1313, 'originalPageBreaks': 0, 'pageBreaks': 2, 'pageCount': 0, 'zoomFactor': '1'}
+2025-05-03 14:10:36,307 - DEBUG - JS Console (INFO): Bridge connected: true [file:///C:/Users/joshd/AppData/Local/Temp/tmpr64q6xzc.html:524]
+2025-05-03 14:10:36,406 - DEBUG - Applying page layout styling
+2025-05-03 14:10:36,406 - DEBUG - Applied page layout styling
+2025-05-03 14:10:36,406 - DEBUG - Page layout debugging initiated
+2025-05-03 14:10:36,407 - ERROR - JavaScript Error: Uncaught SyntaxError: Invalid or unexpected token
+2025-05-03 14:10:36,407 - ERROR -   Source: file:///C:/Users/joshd/AppData/Local/Temp/tmpr64q6xzc.html
+2025-05-03 14:10:36,407 - ERROR -   Line: 46
+2025-05-03 14:10:36,407 - ERROR -   Error Type: Uncaught SyntaxError
+2025-05-03 14:10:36,407 - ERROR -   Error Detail: Invalid or unexpected token
+js: Uncaught SyntaxError: Invalid or unexpected token
+2025-05-03 14:10:36,407 - DEBUG - JS Console (INFO): Debugging page layout... [:3]
+2025-05-03 14:10:36,407 - DEBUG - JS Console (INFO): Document dimensions: 1313px x 773px [:14]
+2025-05-03 14:10:36,407 - DEBUG - JS Console (INFO): Body dimensions: 1313px x 773px [:19]
+2025-05-03 14:10:36,407 - DEBUG - JS Console (INFO): No pages container found [:30]
+2025-05-03 14:10:36,407 - DEBUG - JS Console (INFO): Found 0 pages [:35]
+2025-05-03 14:10:36,407 - DEBUG - JS Console (INFO): Found 2 page break elements [:80]
+2025-05-03 14:10:36,407 - DEBUG - JS Console (INFO): Current zoom factor (CSS var): 1 [:92]
+2025-05-03 14:10:36,407 - DEBUG - Page layout debug results: {'documentHeight': 773, 'documentWidth': 1313, 'originalPageBreaks': 0, 'pageBreaks': 2, 'pageCount': 0, 'zoomFactor': '1'}
+2025-05-03 14:10:36,706 - DEBUG - Executing JavaScript: 
+                            (function() {
+                                // Update page counter to...
+2025-05-03 14:10:36,706 - DEBUG - Updating page count
+2025-05-03 14:10:36,807 - DEBUG - Updating page counter: 1 of 0
+2025-05-03 14:10:36,907 - DEBUG - JavaScript execution result: None
+2025-05-03 14:10:38,065 - DEBUG - Page layout debugging initiated
+2025-05-03 14:10:38,066 - DEBUG - Page break debugging initiated
+2025-05-03 14:10:38,066 - DEBUG - JS Console (INFO): Debugging page layout... [:3]
+2025-05-03 14:10:38,066 - DEBUG - JS Console (INFO): Document dimensions: 1313px x 773px [:14]
+2025-05-03 14:10:38,066 - DEBUG - JS Console (INFO): Body dimensions: 1313px x 773px [:19]
+2025-05-03 14:10:38,066 - DEBUG - JS Console (INFO): No pages container found [:30]
+2025-05-03 14:10:38,066 - DEBUG - JS Console (INFO): Found 0 pages [:35]
+2025-05-03 14:10:38,066 - DEBUG - JS Console (INFO): Found 2 page break elements [:80]
+2025-05-03 14:10:38,066 - DEBUG - JS Console (INFO): Current zoom factor (CSS var): 1 [:92]
+2025-05-03 14:10:38,066 - DEBUG - Page layout debug results: {'documentHeight': 773, 'documentWidth': 1313, 'originalPageBreaks': 0, 'pageBreaks': 2, 'pageCount': 0, 'zoomFactor': '1'}
+2025-05-03 14:10:38,066 - DEBUG - JS Console (INFO): Debugging page breaks... [:3]
+2025-05-03 14:10:38,066 - DEBUG - JS Console (INFO): Found 2 page break elements in document [:7]
+2025-05-03 14:10:38,066 - DEBUG - JS Console (INFO): Found 0 pages [:11]
+2025-05-03 14:10:38,066 - DEBUG - JS Console (INFO): No temporary container found [:30]
+2025-05-03 14:10:38,066 - DEBUG - Page break debug results: {'originalPageBreaks': 0, 'pageBreaks': 2, 'pageCount': 0}
+2025-05-03 14:10:38,066 - DEBUG - JS Console (INFO): Found 2 page break elements [:5]
+2025-05-03 14:10:38,066 - DEBUG - JS Console (INFO): Found 0 pages [:9]
+2025-05-03 14:10:38,067 - INFO - Page break check: {'pageBreaks': 2, 'pages': 0}
+
+--------------------------------------------------------------------------------
+
+Test 2/4: test_page_preview_comprehensive.py
+Status: PASS
+Execution Time: 10.72s
+Standard Output:
+2025-05-03 14:10:46,378 - INFO - Logging to file: C:\Users\joshd\.markdown_pdf_logs\markdown_pdf_debug_20250503_141046.log
+2025-05-03 14:10:46,933 - ERROR - JavaScript Error: Uncaught SyntaxError: missing ) after argument list
+2025-05-03 14:10:46,933 - ERROR -   Source: file:///C:/Users/joshd/AppData/Local/Temp/tmpg8r_g3rm.html
+2025-05-03 14:10:46,933 - ERROR -   Line: 348
+2025-05-03 14:10:46,933 - ERROR -   Error Type: Uncaught SyntaxError
+2025-05-03 14:10:46,933 - ERROR -   Error Detail: missing ) after argument list
+2025-05-03 14:10:47,049 - ERROR - JavaScript Error: Uncaught SyntaxError: Invalid or unexpected token
+2025-05-03 14:10:47,050 - ERROR -   Source: file:///C:/Users/joshd/AppData/Local/Temp/tmpg8r_g3rm.html
+2025-05-03 14:10:47,050 - ERROR -   Line: 46
+2025-05-03 14:10:47,050 - ERROR -   Error Type: Uncaught SyntaxError
+2025-05-03 14:10:47,050 - ERROR -   Error Detail: Invalid or unexpected token
+2025-05-03 14:10:47,148 - ERROR - JavaScript Error: Uncaught SyntaxError: Invalid or unexpected token
+2025-05-03 14:10:47,149 - ERROR -   Source: file:///C:/Users/joshd/AppData/Local/Temp/tmpg8r_g3rm.html
+2025-05-03 14:10:47,149 - ERROR -   Line: 46
+2025-05-03 14:10:47,149 - ERROR -   Error Type: Uncaught SyntaxError
+2025-05-03 14:10:47,149 - ERROR -   Error Detail: Invalid or unexpected token
+2025-05-03 14:10:48,101 - ERROR - JavaScript Error: Uncaught ReferenceError: next is not defined
+2025-05-03 14:10:48,101 - ERROR -   Source: file:///C:/Users/joshd/AppData/Local/Temp/tmpg8r_g3rm.html
+2025-05-03 14:10:48,101 - ERROR -   Line: 4
+2025-05-03 14:10:48,503 - ERROR - JavaScript Error: Uncaught ReferenceError: prev is not defined
+2025-05-03 14:10:48,503 - ERROR -   Source: file:///C:/Users/joshd/AppData/Local/Temp/tmpg8r_g3rm.html
+2025-05-03 14:10:48,503 - ERROR -   Line: 4
+
+Standard Error:
+2025-05-03 14:10:46,393 - DEBUG - Initializing PagePreview
+2025-05-03 14:10:46,771 - DEBUG - PagePreview initialized
+2025-05-03 14:10:46,771 - DEBUG - Updating document settings
+2025-05-03 14:10:46,771 - DEBUG - Page dimensions: A4 portrait, 210mm x 297mm
+2025-05-03 14:10:46,771 - DEBUG - Margins: T:25mm R:25mm B:25mm L:25mm
+2025-05-03 14:10:46,771 - DEBUG - Settings verification complete
+2025-05-03 14:10:46,772 - DEBUG - Updating preview
+2025-05-03 14:10:46,772 - DEBUG - Cleaning up 0 temporary files
+2025-05-03 14:10:46,772 - DEBUG - Removing title elements from HTML content
+2025-05-03 14:10:46,773 - DEBUG - Title elements removed from HTML content
+2025-05-03 14:10:46,773 - DEBUG - JavaScript bridge created and registered
+2025-05-03 14:10:46,791 - DEBUG - Created temporary HTML file: C:\Users\joshd\AppData\Local\Temp\tmpg8r_g3rm.html
+2025-05-03 14:10:46,791 - DEBUG - Loading URL: file:///C:/Users/joshd/AppData/Local/Temp/tmpg8r_g3rm.html
+2025-05-03 14:10:46,892 - DEBUG - Web view: load started
+2025-05-03 14:10:46,933 - ERROR - JavaScript Error: Uncaught SyntaxError: missing ) after argument list
+2025-05-03 14:10:46,933 - ERROR -   Source: file:///C:/Users/joshd/AppData/Local/Temp/tmpg8r_g3rm.html
+2025-05-03 14:10:46,933 - ERROR -   Line: 348
+2025-05-03 14:10:46,933 - ERROR -   Error Type: Uncaught SyntaxError
+2025-05-03 14:10:46,933 - ERROR -   Error Detail: missing ) after argument list
+js: Uncaught SyntaxError: missing ) after argument list
+2025-05-03 14:10:46,934 - DEBUG - JS Console (INFO): DOM loaded, initializing page navigation... [file:///C:/Users/joshd/AppData/Local/Temp/tmpg8r_g3rm.html:493]
+2025-05-03 14:10:46,934 - DEBUG - JS Console (INFO): DOM loaded, initializing bridge directly... [file:///C:/Users/joshd/AppData/Local/Temp/tmpg8r_g3rm.html:712]
+2025-05-03 14:10:46,934 - DEBUG - JS Console (INFO): qt.webChannelTransport is available, connecting bridge... [file:///C:/Users/joshd/AppData/Local/Temp/tmpg8r_g3rm.html:803]
+2025-05-03 14:10:46,934 - DEBUG - JS Console (INFO): QWebChannel polyfill created [file:///C:/Users/joshd/AppData/Local/Temp/tmpg8r_g3rm.html:11]
+2025-05-03 14:10:46,947 - DEBUG - JS Console (INFO): Bridge connected directly: true [file:///C:/Users/joshd/AppData/Local/Temp/tmpg8r_g3rm.html:807]
+2025-05-03 14:10:46,948 - DEBUG - Web view: load finished successfully
+2025-05-03 14:10:46,948 - DEBUG - Page loaded, applying document settings
+2025-05-03 14:10:47,049 - DEBUG - Applying page layout styling
+2025-05-03 14:10:47,049 - DEBUG - Applied page layout styling
+2025-05-03 14:10:47,049 - DEBUG - Page layout debugging initiated
+2025-05-03 14:10:47,049 - DEBUG - JS Console (INFO): Initializing QWebChannel connection... [file:///C:/Users/joshd/AppData/Local/Temp/tmpg8r_g3rm.html:521]
+2025-05-03 14:10:47,049 - DEBUG - JS Console (INFO): QWebChannel polyfill created [file:///C:/Users/joshd/AppData/Local/Temp/tmpg8r_g3rm.html:11]
+2025-05-03 14:10:47,049 - DEBUG - JS Console (INFO): Bridge connected: true [file:///C:/Users/joshd/AppData/Local/Temp/tmpg8r_g3rm.html:524]
+2025-05-03 14:10:47,049 - ERROR - JavaScript Error: Uncaught SyntaxError: Invalid or unexpected token
+2025-05-03 14:10:47,050 - ERROR -   Source: file:///C:/Users/joshd/AppData/Local/Temp/tmpg8r_g3rm.html
+2025-05-03 14:10:47,050 - ERROR -   Line: 46
+2025-05-03 14:10:47,050 - ERROR -   Error Type: Uncaught SyntaxError
+2025-05-03 14:10:47,050 - ERROR -   Error Detail: Invalid or unexpected token
+js: Uncaught SyntaxError: Invalid or unexpected token
+2025-05-03 14:10:47,050 - DEBUG - JS Console (INFO): Debugging page layout... [:3]
+2025-05-03 14:10:47,050 - DEBUG - JS Console (INFO): Document dimensions: 1295px x 1248px [:14]
+2025-05-03 14:10:47,050 - DEBUG - JS Console (INFO): Body dimensions: 1295px x 798px [:19]
+2025-05-03 14:10:47,050 - DEBUG - JS Console (INFO): No pages container found [:30]
+2025-05-03 14:10:47,050 - DEBUG - JS Console (INFO): Found 0 pages [:35]
+2025-05-03 14:10:47,050 - DEBUG - JS Console (INFO): Found 2 page break elements [:80]
+2025-05-03 14:10:47,051 - DEBUG - JS Console (INFO): Current zoom factor (CSS var): 1 [:92]
+2025-05-03 14:10:47,051 - DEBUG - Page layout debug results: {'documentHeight': 1248, 'documentWidth': 1295, 'originalPageBreaks': 0, 'pageBreaks': 2, 'pageCount': 0, 'zoomFactor': '1'}
+2025-05-03 14:10:47,148 - DEBUG - Applying page layout styling
+2025-05-03 14:10:47,148 - DEBUG - Applied page layout styling
+2025-05-03 14:10:47,148 - DEBUG - Page layout debugging initiated
+2025-05-03 14:10:47,148 - ERROR - JavaScript Error: Uncaught SyntaxError: Invalid or unexpected token
+2025-05-03 14:10:47,149 - ERROR -   Source: file:///C:/Users/joshd/AppData/Local/Temp/tmpg8r_g3rm.html
+2025-05-03 14:10:47,149 - ERROR -   Line: 46
+2025-05-03 14:10:47,149 - ERROR -   Error Type: Uncaught SyntaxError
+2025-05-03 14:10:47,149 - ERROR -   Error Detail: Invalid or unexpected token
+js: Uncaught SyntaxError: Invalid or unexpected token
+2025-05-03 14:10:47,149 - DEBUG - JS Console (INFO): Debugging page layout... [:3]
+2025-05-03 14:10:47,149 - DEBUG - JS Console (INFO): Document dimensions: 1295px x 1248px [:14]
+2025-05-03 14:10:47,149 - DEBUG - JS Console (INFO): Body dimensions: 1295px x 798px [:19]
+2025-05-03 14:10:47,150 - DEBUG - JS Console (INFO): No pages container found [:30]
+2025-05-03 14:10:47,150 - DEBUG - JS Console (INFO): Found 0 pages [:35]
+2025-05-03 14:10:47,150 - DEBUG - JS Console (INFO): Found 2 page break elements [:80]
+2025-05-03 14:10:47,150 - DEBUG - JS Console (INFO): Current zoom factor (CSS var): 1 [:92]
+2025-05-03 14:10:47,150 - DEBUG - Page layout debug results: {'documentHeight': 1248, 'documentWidth': 1295, 'originalPageBreaks': 0, 'pageBreaks': 2, 'pageCount': 0, 'zoomFactor': '1'}
+2025-05-03 14:10:47,449 - DEBUG - Executing JavaScript: 
+                            (function() {
+                                // Update page counter to...
+2025-05-03 14:10:47,449 - DEBUG - Updating page count
+2025-05-03 14:10:47,549 - DEBUG - Updating page counter: 1 of 0
+2025-05-03 14:10:47,650 - DEBUG - JavaScript execution result: None
+2025-05-03 14:10:47,799 - INFO - Running comprehensive page preview tests...
+2025-05-03 14:10:47,799 - INFO - Testing page count...
+2025-05-03 14:10:47,799 - INFO - Testing navigation...
+2025-05-03 14:10:47,799 - DEBUG - Executing JavaScript: 
+        (function() {
+            var status = {
+                navigateToPageExists: typeof windo...
+2025-05-03 14:10:47,899 - INFO - Page count: 0
+2025-05-03 14:10:48,000 - DEBUG - JavaScript execution result: {'fastNavigateToPageExists': True, 'navigateToPageExists': True, 'pageCount': 0}
+2025-05-03 14:10:48,000 - DEBUG - Navigation function status: {'fastNavigateToPageExists': True, 'navigateToPageExists': True, 'pageCount': 0}
+2025-05-03 14:10:48,000 - DEBUG - Executing JavaScript: 
+        (function() {
+            if (typeof window.fastNavigateToPage === 'function') {
+          ...
+2025-05-03 14:10:48,101 - ERROR - JavaScript Error: Uncaught ReferenceError: next is not defined
+2025-05-03 14:10:48,101 - ERROR -   Source: file:///C:/Users/joshd/AppData/Local/Temp/tmpg8r_g3rm.html
+2025-05-03 14:10:48,101 - ERROR -   Line: 4
+js: Uncaught ReferenceError: next is not defined
+2025-05-03 14:10:48,201 - DEBUG - JavaScript execution result: None
+2025-05-03 14:10:48,201 - DEBUG - Navigation to page next result: None
+2025-05-03 14:10:48,201 - DEBUG - Executing JavaScript: 
+        (function() {
+            var status = {
+                navigateToPageExists: typeof windo...
+2025-05-03 14:10:48,302 - INFO - Current page after next: 0
+2025-05-03 14:10:48,402 - DEBUG - JavaScript execution result: {'fastNavigateToPageExists': True, 'navigateToPageExists': True, 'pageCount': 0}
+2025-05-03 14:10:48,402 - DEBUG - Navigation function status: {'fastNavigateToPageExists': True, 'navigateToPageExists': True, 'pageCount': 0}
+2025-05-03 14:10:48,402 - DEBUG - Executing JavaScript: 
+        (function() {
+            if (typeof window.fastNavigateToPage === 'function') {
+          ...
+2025-05-03 14:10:48,503 - ERROR - JavaScript Error: Uncaught ReferenceError: prev is not defined
+2025-05-03 14:10:48,503 - ERROR -   Source: file:///C:/Users/joshd/AppData/Local/Temp/tmpg8r_g3rm.html
+2025-05-03 14:10:48,503 - ERROR -   Line: 4
+js: Uncaught ReferenceError: prev is not defined
+2025-05-03 14:10:48,604 - DEBUG - JavaScript execution result: None
+2025-05-03 14:10:48,604 - DEBUG - Navigation to page prev result: None
+2025-05-03 14:10:48,604 - DEBUG - Executing JavaScript: 
+        (function() {
+            var status = {
+                navigateToPageExists: typeof windo...
+2025-05-03 14:10:48,704 - INFO - Current page after previous: 0
+2025-05-03 14:10:48,805 - DEBUG - JavaScript execution result: {'fastNavigateToPageExists': True, 'navigateToPageExists': True, 'pageCount': 0}
+2025-05-03 14:10:48,805 - DEBUG - Navigation function status: {'fastNavigateToPageExists': True, 'navigateToPageExists': True, 'pageCount': 0}
+2025-05-03 14:10:48,805 - DEBUG - Executing JavaScript: 
+        (function() {
+            if (typeof window.fastNavigateToPage === 'function') {
+          ...
+2025-05-03 14:10:48,906 - DEBUG - JS Console (INFO): Navigate to page: 3 [file:///C:/Users/joshd/AppData/Local/Temp/tmpg8r_g3rm.html:716]
+2025-05-03 14:10:49,006 - DEBUG - JavaScript execution result: False
+2025-05-03 14:10:49,006 - DEBUG - Navigation to page 3 result: False
+2025-05-03 14:10:49,006 - INFO - Testing zoom...
+2025-05-03 14:10:49,006 - INFO - Original zoom factor: 0.9
+2025-05-03 14:10:49,006 - INFO - Zoom factor after zoom in: 1.0
+2025-05-03 14:10:49,006 - INFO - Zoom factor after zoom out: 0.9
+2025-05-03 14:10:49,006 - INFO - Zoom factor after reset: 1.0
+2025-05-03 14:10:49,006 - INFO - Testing margin changes...
+2025-05-03 14:10:49,006 - INFO - Original margins: {'top': 25, 'right': 25, 'bottom': 25, 'left': 25}
+2025-05-03 14:10:49,006 - DEBUG - Updating document settings
+2025-05-03 14:10:49,006 - DEBUG - Page dimensions: A4 portrait, 210mm x 297mm
+2025-05-03 14:10:49,006 - DEBUG - Margins: T:10mm R:10mm B:10mm L:10mm
+2025-05-03 14:10:49,006 - DEBUG - Settings verification complete
+2025-05-03 14:10:49,006 - DEBUG - Applying page layout with settings in a single operation
+2025-05-03 14:10:49,006 - INFO - Changed margins to: {'top': 10, 'right': 10, 'bottom': 10, 'left': 10}
+2025-05-03 14:10:49,006 - DEBUG - Updating document settings
+2025-05-03 14:10:49,007 - DEBUG - Page dimensions: A4 portrait, 210mm x 297mm
+2025-05-03 14:10:49,007 - DEBUG - Margins: T:25mm R:25mm B:25mm L:25mm
+2025-05-03 14:10:49,007 - DEBUG - Settings verification complete
+2025-05-03 14:10:49,007 - DEBUG - Applying page layout with settings in a single operation
+2025-05-03 14:10:49,007 - INFO - Restored margins to: {'top': 25, 'right': 25, 'bottom': 25, 'left': 25}
+2025-05-03 14:10:49,007 - INFO - Testing page size changes...
+2025-05-03 14:10:49,007 - INFO - Original page size: A4
+2025-05-03 14:10:49,007 - DEBUG - Updating document settings
+2025-05-03 14:10:49,007 - DEBUG - Page dimensions: Letter portrait, 215.9mm x 279.4mm
+2025-05-03 14:10:49,007 - DEBUG - Margins: T:25mm R:25mm B:25mm L:25mm
+2025-05-03 14:10:49,007 - DEBUG - Settings verification complete
+2025-05-03 14:10:49,007 - DEBUG - Applying page layout with settings in a single operation
+2025-05-03 14:10:49,007 - INFO - Changed page size to: Letter
+2025-05-03 14:10:49,007 - DEBUG - Updating document settings
+2025-05-03 14:10:49,007 - DEBUG - Page dimensions: A4 portrait, 210mm x 297mm
+2025-05-03 14:10:49,007 - DEBUG - Margins: T:25mm R:25mm B:25mm L:25mm
+2025-05-03 14:10:49,007 - DEBUG - Settings verification complete
+2025-05-03 14:10:49,007 - DEBUG - Applying page layout with settings in a single operation
+2025-05-03 14:10:49,007 - INFO - Restored page size to: A4
+2025-05-03 14:10:49,007 - INFO - Testing orientation changes...
+2025-05-03 14:10:49,007 - INFO - Original orientation: portrait
+2025-05-03 14:10:49,007 - DEBUG - Updating document settings
+2025-05-03 14:10:49,007 - DEBUG - Page dimensions: A4 landscape, 297mm x 210mm
+2025-05-03 14:10:49,007 - DEBUG - Margins: T:25mm R:25mm B:25mm L:25mm
+2025-05-03 14:10:49,007 - DEBUG - Settings verification complete
+2025-05-03 14:10:49,007 - DEBUG - Applying page layout with settings in a single operation
+2025-05-03 14:10:49,008 - INFO - Changed orientation to: landscape
+2025-05-03 14:10:49,008 - DEBUG - Updating document settings
+2025-05-03 14:10:49,008 - DEBUG - Page dimensions: A4 portrait, 210mm x 297mm
+2025-05-03 14:10:49,008 - DEBUG - Margins: T:25mm R:25mm B:25mm L:25mm
+2025-05-03 14:10:49,008 - DEBUG - Settings verification complete
+2025-05-03 14:10:49,008 - DEBUG - Applying page layout with settings in a single operation
+2025-05-03 14:10:49,008 - INFO - Restored orientation to: portrait
+2025-05-03 14:10:49,008 - DEBUG - Page layout debugging initiated
+2025-05-03 14:10:49,008 - INFO - Comprehensive page preview tests completed
+2025-05-03 14:10:49,008 - INFO - Current page after go_to_page(3): 0
+2025-05-03 14:10:49,010 - DEBUG - JS Console (INFO): Applying all settings in a single operation [:3]
+2025-05-03 14:10:49,011 - DEBUG - JS Console (INFO): Reapplying page layout [:65]
+2025-05-03 14:10:49,019 - DEBUG - JS Console (INFO): Found page break element (style property): [object HTMLDivElement] [:137]
+2025-05-03 14:10:49,019 - DEBUG - JS Console (INFO): Found page break element (style attribute): [object HTMLDivElement] [:146]
+2025-05-03 14:10:49,024 - DEBUG - JS Console (INFO): Found page break element (style property): [object HTMLDivElement] [:137]
+2025-05-03 14:10:49,024 - DEBUG - JS Console (INFO): Found page break element (style attribute): [object HTMLDivElement] [:146]
+2025-05-03 14:10:49,026 - DEBUG - JS Console (INFO): Created 26 pages [:218]
+2025-05-03 14:10:49,026 - DEBUG - JS Console (INFO): Found 2 page break elements [:222]
+2025-05-03 14:10:49,028 - DEBUG - Settings application result: Settings applied successfully
+2025-05-03 14:10:49,028 - DEBUG - JS Console (INFO): Applying all settings in a single operation [:3]
+2025-05-03 14:10:49,028 - DEBUG - JS Console (INFO): Reapplying page layout [:65]
+2025-05-03 14:10:49,030 - DEBUG - Settings application result: Settings applied successfully
+2025-05-03 14:10:49,030 - DEBUG - JS Console (INFO): Applying all settings in a single operation [:3]
+2025-05-03 14:10:49,030 - DEBUG - JS Console (INFO): Reapplying page layout [:65]
+2025-05-03 14:10:49,030 - DEBUG - Settings application result: Settings applied successfully
+2025-05-03 14:10:49,030 - DEBUG - JS Console (INFO): Applying all settings in a single operation [:3]
+2025-05-03 14:10:49,030 - DEBUG - JS Console (INFO): Reapplying page layout [:65]
+2025-05-03 14:10:49,031 - DEBUG - Settings application result: Settings applied successfully
+2025-05-03 14:10:49,031 - DEBUG - JS Console (INFO): Applying all settings in a single operation [:3]
+2025-05-03 14:10:49,031 - DEBUG - JS Console (INFO): Reapplying page layout [:65]
+2025-05-03 14:10:49,031 - DEBUG - Settings application result: Settings applied successfully
+2025-05-03 14:10:49,031 - DEBUG - JS Console (INFO): Applying all settings in a single operation [:3]
+2025-05-03 14:10:49,031 - DEBUG - JS Console (INFO): Reapplying page layout [:65]
+2025-05-03 14:10:49,031 - DEBUG - Settings application result: Settings applied successfully
+2025-05-03 14:10:49,031 - DEBUG - JS Console (INFO): Debugging page layout... [:3]
+2025-05-03 14:10:49,031 - DEBUG - JS Console (INFO): Document dimensions: 1165px x 1698px [:14]
+2025-05-03 14:10:49,032 - DEBUG - JS Console (INFO): Body dimensions: 1165px x 718px [:19]
+2025-05-03 14:10:49,032 - DEBUG - JS Console (INFO): Pages container found: [:24]
+2025-05-03 14:10:49,032 - DEBUG - JS Console (INFO):   Width: 1089px [:25]
+2025-05-03 14:10:49,032 - DEBUG - JS Console (INFO):   Height: 1682px [:26]
+2025-05-03 14:10:49,032 - DEBUG - JS Console (INFO):   Style transform: matrix(1, 0, 0, 1, 0, 0) [:27]
+2025-05-03 14:10:49,032 - DEBUG - JS Console (INFO):   Style transform-origin: 544.667px 0px [:28]
+2025-05-03 14:10:49,032 - DEBUG - JS Console (INFO): Found 26 pages [:35]
+2025-05-03 14:10:49,032 - DEBUG - JS Console (INFO): Page 1: [:42]
+2025-05-03 14:10:49,032 - DEBUG - JS Console (INFO):   Width: 1089px [:43]
+2025-05-03 14:10:49,032 - DEBUG - JS Console (INFO):   Height: 22px [:44]
+2025-05-03 14:10:49,032 - DEBUG - JS Console (INFO):   Padding: 0px [:45]
+2025-05-03 14:10:49,032 - DEBUG - JS Console (INFO):   Margin: 0px [:46]
+2025-05-03 14:10:49,032 - DEBUG - JS Console (INFO):   Style transform: none [:47]
+2025-05-03 14:10:49,032 - DEBUG - JS Console (INFO):   Content elements: 2 [:51]
+2025-05-03 14:10:49,032 - DEBUG - JS Console (INFO):   Content height: 5px [:62]
+2025-05-03 14:10:49,032 - DEBUG - JS Console (INFO):   Available height: 22px [:69]
+2025-05-03 14:10:49,032 - DEBUG - JS Console (INFO): Page 2: [:42]
+2025-05-03 14:10:49,032 - DEBUG - JS Console (INFO):   Width: 1089px [:43]
+2025-05-03 14:10:49,032 - DEBUG - JS Console (INFO):   Height: 22px [:44]
+2025-05-03 14:10:49,033 - DEBUG - JS Console (INFO):   Padding: 0px [:45]
+2025-05-03 14:10:49,033 - DEBUG - JS Console (INFO):   Margin: 0px [:46]
+2025-05-03 14:10:49,033 - DEBUG - JS Console (INFO):   Style transform: none [:47]
+2025-05-03 14:10:49,033 - DEBUG - JS Console (INFO):   Content elements: 2 [:51]
+2025-05-03 14:10:49,033 - DEBUG - JS Console (INFO):   Content height: 1682px [:62]
+2025-05-03 14:10:49,033 - DEBUG - JS Console (INFO):   Available height: 22px [:69]
+2025-05-03 14:10:49,033 - DEBUG - JS Console (INFO):   WARNING: Content overflows available height by 1660px [:72]
+2025-05-03 14:10:49,033 - DEBUG - JS Console (INFO): Page 3: [:42]
+2025-05-03 14:10:49,033 - DEBUG - JS Console (INFO):   Width: 1089px [:43]
+2025-05-03 14:10:49,033 - DEBUG - JS Console (INFO):   Height: 22px [:44]
+2025-05-03 14:10:49,033 - DEBUG - JS Console (INFO):   Padding: 0px [:45]
+2025-05-03 14:10:49,033 - DEBUG - JS Console (INFO):   Margin: 0px [:46]
+2025-05-03 14:10:49,033 - DEBUG - JS Console (INFO):   Style transform: none [:47]
+2025-05-03 14:10:49,033 - DEBUG - JS Console (INFO):   Content elements: 2 [:51]
+2025-05-03 14:10:49,033 - DEBUG - JS Console (INFO):   Content height: 1682px [:62]
+2025-05-03 14:10:49,033 - DEBUG - JS Console (INFO):   Available height: 22px [:69]
+2025-05-03 14:10:49,033 - DEBUG - JS Console (INFO):   WARNING: Content overflows available height by 1660px [:72]
+2025-05-03 14:10:49,033 - DEBUG - JS Console (INFO): Page 4: [:42]
+2025-05-03 14:10:49,033 - DEBUG - JS Console (INFO):   Width: 1089px [:43]
+2025-05-03 14:10:49,034 - DEBUG - JS Console (INFO):   Height: 22px [:44]
+2025-05-03 14:10:49,034 - DEBUG - JS Console (INFO):   Padding: 0px [:45]
+2025-05-03 14:10:49,034 - DEBUG - JS Console (INFO):   Margin: 0px [:46]
+2025-05-03 14:10:49,034 - DEBUG - JS Console (INFO):   Style transform: none [:47]
+2025-05-03 14:10:49,034 - DEBUG - JS Console (INFO):   Content elements: 2 [:51]
+2025-05-03 14:10:49,034 - DEBUG - JS Console (INFO):   Content height: 20px [:62]
+2025-05-03 14:10:49,034 - DEBUG - JS Console (INFO):   Available height: 22px [:69]
+2025-05-03 14:10:49,034 - DEBUG - JS Console (INFO): Page 5: [:42]
+2025-05-03 14:10:49,034 - DEBUG - JS Console (INFO):   Width: 1089px [:43]
+2025-05-03 14:10:49,034 - DEBUG - JS Console (INFO):   Height: 22px [:44]
+2025-05-03 14:10:49,034 - DEBUG - JS Console (INFO):   Padding: 0px [:45]
+2025-05-03 14:10:49,034 - DEBUG - JS Console (INFO):   Margin: 0px [:46]
+2025-05-03 14:10:49,034 - DEBUG - JS Console (INFO):   Style transform: none [:47]
+2025-05-03 14:10:49,034 - DEBUG - JS Console (INFO):   Content elements: 2 [:51]
+2025-05-03 14:10:49,034 - DEBUG - JS Console (INFO):   Content height: 20px [:62]
+2025-05-03 14:10:49,034 - DEBUG - JS Console (INFO):   Available height: 22px [:69]
+2025-05-03 14:10:49,034 - DEBUG - JS Console (INFO): Page 6: [:42]
+2025-05-03 14:10:49,034 - DEBUG - JS Console (INFO):   Width: 1089px [:43]
+2025-05-03 14:10:49,034 - DEBUG - JS Console (INFO):   Height: 57px [:44]
+2025-05-03 14:10:49,034 - DEBUG - JS Console (INFO):   Padding: 0px [:45]
+2025-05-03 14:10:49,034 - DEBUG - JS Console (INFO):   Margin: 0px [:46]
+2025-05-03 14:10:49,034 - DEBUG - JS Console (INFO):   Style transform: none [:47]
+2025-05-03 14:10:49,034 - DEBUG - JS Console (INFO):   Content elements: 2 [:51]
+2025-05-03 14:10:49,034 - DEBUG - JS Console (INFO):   Content height: 29px [:62]
+2025-05-03 14:10:49,034 - DEBUG - JS Console (INFO):   Available height: 57px [:69]
+2025-05-03 14:10:49,034 - DEBUG - JS Console (INFO): Page 7: [:42]
+2025-05-03 14:10:49,034 - DEBUG - JS Console (INFO):   Width: 1089px [:43]
+2025-05-03 14:10:49,034 - DEBUG - JS Console (INFO):   Height: 59px [:44]
+2025-05-03 14:10:49,034 - DEBUG - JS Console (INFO):   Padding: 0px [:45]
+2025-05-03 14:10:49,035 - DEBUG - JS Console (INFO):   Margin: 0px [:46]
+2025-05-03 14:10:49,035 - DEBUG - JS Console (INFO):   Style transform: none [:47]
+2025-05-03 14:10:49,035 - DEBUG - JS Console (INFO):   Content elements: 2 [:51]
+2025-05-03 14:10:49,035 - DEBUG - JS Console (INFO):   Content height: 22px [:62]
+2025-05-03 14:10:49,035 - DEBUG - JS Console (INFO):   Available height: 59px [:69]
+2025-05-03 14:10:49,035 - DEBUG - JS Console (INFO): Page 8: [:42]
+2025-05-03 14:10:49,035 - DEBUG - JS Console (INFO):   Width: 1089px [:43]
+2025-05-03 14:10:49,035 - DEBUG - JS Console (INFO):   Height: 53px [:44]
+2025-05-03 14:10:49,035 - DEBUG - JS Console (INFO):   Padding: 0px [:45]
+2025-05-03 14:10:49,035 - DEBUG - JS Console (INFO):   Margin: 0px [:46]
+2025-05-03 14:10:49,035 - DEBUG - JS Console (INFO):   Style transform: none [:47]
+2025-05-03 14:10:49,035 - DEBUG - JS Console (INFO):   Content elements: 2 [:51]
+2025-05-03 14:10:49,035 - DEBUG - JS Console (INFO):   Content height: 26px [:62]
+2025-05-03 14:10:49,035 - DEBUG - JS Console (INFO):   Available height: 53px [:69]
+2025-05-03 14:10:49,035 - DEBUG - JS Console (INFO): Page 9: [:42]
+2025-05-03 14:10:49,035 - DEBUG - JS Console (INFO):   Width: 1089px [:43]
+2025-05-03 14:10:49,035 - DEBUG - JS Console (INFO):   Height: 59px [:44]
+2025-05-03 14:10:49,035 - DEBUG - JS Console (INFO):   Padding: 0px [:45]
+2025-05-03 14:10:49,035 - DEBUG - JS Console (INFO):   Margin: 0px [:46]
+2025-05-03 14:10:49,035 - DEBUG - JS Console (INFO):   Style transform: none [:47]
+2025-05-03 14:10:49,035 - DEBUG - JS Console (INFO):   Content elements: 2 [:51]
+2025-05-03 14:10:49,035 - DEBUG - JS Console (INFO):   Content height: 22px [:62]
+2025-05-03 14:10:49,036 - DEBUG - JS Console (INFO):   Available height: 59px [:69]
+2025-05-03 14:10:49,036 - DEBUG - JS Console (INFO): Page 10: [:42]
+2025-05-03 14:10:49,036 - DEBUG - JS Console (INFO):   Width: 1089px [:43]
+2025-05-03 14:10:49,036 - DEBUG - JS Console (INFO):   Height: 81px [:44]
+2025-05-03 14:10:49,036 - DEBUG - JS Console (INFO):   Padding: 0px [:45]
+2025-05-03 14:10:49,036 - DEBUG - JS Console (INFO):   Margin: 0px [:46]
+2025-05-03 14:10:49,036 - DEBUG - JS Console (INFO):   Style transform: none [:47]
+2025-05-03 14:10:49,036 - DEBUG - JS Console (INFO):   Content elements: 2 [:51]
+2025-05-03 14:10:49,036 - DEBUG - JS Console (INFO):   Content height: 44px [:62]
+2025-05-03 14:10:49,036 - DEBUG - JS Console (INFO):   Available height: 81px [:69]
+2025-05-03 14:10:49,036 - DEBUG - JS Console (INFO): Page 11: [:42]
+2025-05-03 14:10:49,036 - DEBUG - JS Console (INFO):   Width: 1089px [:43]
+2025-05-03 14:10:49,036 - DEBUG - JS Console (INFO):   Height: 48px [:44]
+2025-05-03 14:10:49,036 - DEBUG - JS Console (INFO):   Padding: 0px [:45]
+2025-05-03 14:10:49,036 - DEBUG - JS Console (INFO):   Margin: 0px [:46]
+2025-05-03 14:10:49,036 - DEBUG - JS Console (INFO):   Style transform: none [:47]
+2025-05-03 14:10:49,036 - DEBUG - JS Console (INFO):   Content elements: 2 [:51]
+2025-05-03 14:10:49,036 - DEBUG - JS Console (INFO):   Content height: 22px [:62]
+2025-05-03 14:10:49,036 - DEBUG - JS Console (INFO):   Available height: 48px [:69]
+2025-05-03 14:10:49,036 - DEBUG - JS Console (INFO): Page 12: [:42]
+2025-05-03 14:10:49,036 - DEBUG - JS Console (INFO):   Width: 1089px [:43]
+2025-05-03 14:10:49,037 - DEBUG - JS Console (INFO):   Height: 147px [:44]
+2025-05-03 14:10:49,037 - DEBUG - JS Console (INFO):   Padding: 0px [:45]
+2025-05-03 14:10:49,037 - DEBUG - JS Console (INFO):   Margin: 0px [:46]
+2025-05-03 14:10:49,037 - DEBUG - JS Console (INFO):   Style transform: none [:47]
+2025-05-03 14:10:49,037 - DEBUG - JS Console (INFO):   Content elements: 2 [:51]
+2025-05-03 14:10:49,037 - DEBUG - JS Console (INFO):   Content height: 110px [:62]
+2025-05-03 14:10:49,037 - DEBUG - JS Console (INFO):   Available height: 147px [:69]
+2025-05-03 14:10:49,037 - DEBUG - JS Console (INFO): Page 13: [:42]
+2025-05-03 14:10:49,037 - DEBUG - JS Console (INFO):   Width: 1089px [:43]
+2025-05-03 14:10:49,037 - DEBUG - JS Console (INFO):   Height: 103px [:44]
+2025-05-03 14:10:49,037 - DEBUG - JS Console (INFO):   Padding: 0px [:45]
+2025-05-03 14:10:49,037 - DEBUG - JS Console (INFO):   Margin: 0px [:46]
+2025-05-03 14:10:49,037 - DEBUG - JS Console (INFO):   Style transform: none [:47]
+2025-05-03 14:10:49,037 - DEBUG - JS Console (INFO):   Content elements: 2 [:51]
+2025-05-03 14:10:49,037 - DEBUG - JS Console (INFO):   Content height: 66px [:62]
+2025-05-03 14:10:49,037 - DEBUG - JS Console (INFO):   Available height: 103px [:69]
+2025-05-03 14:10:49,037 - DEBUG - JS Console (INFO): Page 14: [:42]
+2025-05-03 14:10:49,037 - DEBUG - JS Console (INFO):   Width: 1089px [:43]
+2025-05-03 14:10:49,037 - DEBUG - JS Console (INFO):   Height: 53px [:44]
+2025-05-03 14:10:49,038 - DEBUG - JS Console (INFO):   Padding: 0px [:45]
+2025-05-03 14:10:49,038 - DEBUG - JS Console (INFO):   Margin: 0px [:46]
+2025-05-03 14:10:49,038 - DEBUG - JS Console (INFO):   Style transform: none [:47]
+2025-05-03 14:10:49,038 - DEBUG - JS Console (INFO):   Content elements: 2 [:51]
+2025-05-03 14:10:49,038 - DEBUG - JS Console (INFO):   Content height: 26px [:62]
+2025-05-03 14:10:49,038 - DEBUG - JS Console (INFO):   Available height: 53px [:69]
+2025-05-03 14:10:49,038 - DEBUG - JS Console (INFO): Page 15: [:42]
+2025-05-03 14:10:49,038 - DEBUG - JS Console (INFO):   Width: 1089px [:43]
+2025-05-03 14:10:49,038 - DEBUG - JS Console (INFO):   Height: 59px [:44]
+2025-05-03 14:10:49,038 - DEBUG - JS Console (INFO):   Padding: 0px [:45]
+2025-05-03 14:10:49,038 - DEBUG - JS Console (INFO):   Margin: 0px [:46]
+2025-05-03 14:10:49,038 - DEBUG - JS Console (INFO):   Style transform: none [:47]
+2025-05-03 14:10:49,038 - DEBUG - JS Console (INFO):   Content elements: 2 [:51]
+2025-05-03 14:10:49,038 - DEBUG - JS Console (INFO):   Content height: 22px [:62]
+2025-05-03 14:10:49,038 - DEBUG - JS Console (INFO):   Available height: 59px [:69]
+2025-05-03 14:10:49,038 - DEBUG - JS Console (INFO): Page 16: [:42]
+2025-05-03 14:10:49,038 - DEBUG - JS Console (INFO):   Width: 1089px [:43]
+2025-05-03 14:10:49,038 - DEBUG - JS Console (INFO):   Height: 48px [:44]
+2025-05-03 14:10:49,038 - DEBUG - JS Console (INFO):   Padding: 0px [:45]
+2025-05-03 14:10:49,038 - DEBUG - JS Console (INFO):   Margin: 0px [:46]
+2025-05-03 14:10:49,038 - DEBUG - JS Console (INFO):   Style transform: none [:47]
+2025-05-03 14:10:49,038 - DEBUG - JS Console (INFO):   Content elements: 2 [:51]
+2025-05-03 14:10:49,038 - DEBUG - JS Console (INFO):   Content height: 22px [:62]
+2025-05-03 14:10:49,038 - DEBUG - JS Console (INFO):   Available height: 48px [:69]
+2025-05-03 14:10:49,038 - DEBUG - JS Console (INFO): Page 17: [:42]
+2025-05-03 14:10:49,038 - DEBUG - JS Console (INFO):   Width: 1089px [:43]
+2025-05-03 14:10:49,038 - DEBUG - JS Console (INFO):   Height: 121px [:44]
+2025-05-03 14:10:49,038 - DEBUG - JS Console (INFO):   Padding: 0px [:45]
+2025-05-03 14:10:49,038 - DEBUG - JS Console (INFO):   Margin: 0px [:46]
+2025-05-03 14:10:49,040 - DEBUG - JS Console (INFO):   Style transform: none [:47]
+2025-05-03 14:10:49,040 - DEBUG - JS Console (INFO):   Content elements: 2 [:51]
+2025-05-03 14:10:49,040 - DEBUG - JS Console (INFO):   Content height: 99px [:62]
+2025-05-03 14:10:49,040 - DEBUG - JS Console (INFO):   Available height: 121px [:69]
+2025-05-03 14:10:49,040 - DEBUG - JS Console (INFO): Page 18: [:42]
+2025-05-03 14:10:49,040 - DEBUG - JS Console (INFO):   Width: 1089px [:43]
+2025-05-03 14:10:49,040 - DEBUG - JS Console (INFO):   Height: 48px [:44]
+2025-05-03 14:10:49,040 - DEBUG - JS Console (INFO):   Padding: 0px [:45]
+2025-05-03 14:10:49,040 - DEBUG - JS Console (INFO):   Margin: 0px [:46]
+2025-05-03 14:10:49,040 - DEBUG - JS Console (INFO):   Style transform: none [:47]
+2025-05-03 14:10:49,040 - DEBUG - JS Console (INFO):   Content elements: 2 [:51]
+2025-05-03 14:10:49,040 - DEBUG - JS Console (INFO):   Content height: 22px [:62]
+2025-05-03 14:10:49,040 - DEBUG - JS Console (INFO):   Available height: 48px [:69]
+2025-05-03 14:10:49,040 - DEBUG - JS Console (INFO): Page 19: [:42]
+2025-05-03 14:10:49,040 - DEBUG - JS Console (INFO):   Width: 1089px [:43]
+2025-05-03 14:10:49,040 - DEBUG - JS Console (INFO):   Height: 125px [:44]
+2025-05-03 14:10:49,040 - DEBUG - JS Console (INFO):   Padding: 0px [:45]
+2025-05-03 14:10:49,040 - DEBUG - JS Console (INFO):   Margin: 0px [:46]
+2025-05-03 14:10:49,040 - DEBUG - JS Console (INFO):   Style transform: none [:47]
+2025-05-03 14:10:49,040 - DEBUG - JS Console (INFO):   Content elements: 2 [:51]
+2025-05-03 14:10:49,040 - DEBUG - JS Console (INFO):   Content height: 88px [:62]
+2025-05-03 14:10:49,040 - DEBUG - JS Console (INFO):   Available height: 125px [:69]
+2025-05-03 14:10:49,040 - DEBUG - JS Console (INFO): Page 20: [:42]
+2025-05-03 14:10:49,040 - DEBUG - JS Console (INFO):   Width: 1089px [:43]
+2025-05-03 14:10:49,040 - DEBUG - JS Console (INFO):   Height: 53px [:44]
+2025-05-03 14:10:49,040 - DEBUG - JS Console (INFO):   Padding: 0px [:45]
+2025-05-03 14:10:49,040 - DEBUG - JS Console (INFO):   Margin: 0px [:46]
+2025-05-03 14:10:49,040 - DEBUG - JS Console (INFO):   Style transform: none [:47]
+2025-05-03 14:10:49,040 - DEBUG - JS Console (INFO):   Content elements: 2 [:51]
+2025-05-03 14:10:49,040 - DEBUG - JS Console (INFO):   Content height: 26px [:62]
+2025-05-03 14:10:49,040 - DEBUG - JS Console (INFO):   Available height: 53px [:69]
+2025-05-03 14:10:49,040 - DEBUG - JS Console (INFO): Page 21: [:42]
+2025-05-03 14:10:49,040 - DEBUG - JS Console (INFO):   Width: 1089px [:43]
+2025-05-03 14:10:49,040 - DEBUG - JS Console (INFO):   Height: 59px [:44]
+2025-05-03 14:10:49,041 - DEBUG - JS Console (INFO):   Padding: 0px [:45]
+2025-05-03 14:10:49,041 - DEBUG - JS Console (INFO):   Margin: 0px [:46]
+2025-05-03 14:10:49,041 - DEBUG - JS Console (INFO):   Style transform: none [:47]
+2025-05-03 14:10:49,041 - DEBUG - JS Console (INFO):   Content elements: 2 [:51]
+2025-05-03 14:10:49,041 - DEBUG - JS Console (INFO):   Content height: 22px [:62]
+2025-05-03 14:10:49,041 - DEBUG - JS Console (INFO):   Available height: 59px [:69]
+2025-05-03 14:10:49,041 - DEBUG - JS Console (INFO): Page 22: [:42]
+2025-05-03 14:10:49,041 - DEBUG - JS Console (INFO):   Width: 1089px [:43]
+2025-05-03 14:10:49,041 - DEBUG - JS Console (INFO):   Height: 48px [:44]
+2025-05-03 14:10:49,041 - DEBUG - JS Console (INFO):   Padding: 0px [:45]
+2025-05-03 14:10:49,041 - DEBUG - JS Console (INFO):   Margin: 0px [:46]
+2025-05-03 14:10:49,041 - DEBUG - JS Console (INFO):   Style transform: none [:47]
+2025-05-03 14:10:49,041 - DEBUG - JS Console (INFO):   Content elements: 2 [:51]
+2025-05-03 14:10:49,041 - DEBUG - JS Console (INFO):   Content height: 22px [:62]
+2025-05-03 14:10:49,041 - DEBUG - JS Console (INFO):   Available height: 48px [:69]
+2025-05-03 14:10:49,041 - DEBUG - JS Console (INFO): Page 23: [:42]
+2025-05-03 14:10:49,041 - DEBUG - JS Console (INFO):   Width: 1089px [:43]
+2025-05-03 14:10:49,041 - DEBUG - JS Console (INFO):   Height: 222px [:44]
+2025-05-03 14:10:49,041 - DEBUG - JS Console (INFO):   Padding: 0px [:45]
+2025-05-03 14:10:49,042 - DEBUG - JS Console (INFO):   Margin: 0px [:46]
+2025-05-03 14:10:49,042 - DEBUG - JS Console (INFO):   Style transform: none [:47]
+2025-05-03 14:10:49,042 - DEBUG - JS Console (INFO):   Content elements: 2 [:51]
+2025-05-03 14:10:49,042 - DEBUG - JS Console (INFO):   Content height: 200px [:62]
+2025-05-03 14:10:49,042 - DEBUG - JS Console (INFO):   Available height: 222px [:69]
+2025-05-03 14:10:49,042 - DEBUG - JS Console (INFO): Page 24: [:42]
+2025-05-03 14:10:49,042 - DEBUG - JS Console (INFO):   Width: 1089px [:43]
+2025-05-03 14:10:49,042 - DEBUG - JS Console (INFO):   Height: 48px [:44]
+2025-05-03 14:10:49,042 - DEBUG - JS Console (INFO):   Padding: 0px [:45]
+2025-05-03 14:10:49,042 - DEBUG - JS Console (INFO):   Margin: 0px [:46]
+2025-05-03 14:10:49,042 - DEBUG - JS Console (INFO):   Style transform: none [:47]
+2025-05-03 14:10:49,042 - DEBUG - JS Console (INFO):   Content elements: 2 [:51]
+2025-05-03 14:10:49,042 - DEBUG - JS Console (INFO):   Content height: 22px [:62]
+2025-05-03 14:10:49,042 - DEBUG - JS Console (INFO):   Available height: 48px [:69]
+2025-05-03 14:10:49,042 - DEBUG - JS Console (INFO): Page 25: [:42]
+2025-05-03 14:10:49,042 - DEBUG - JS Console (INFO):   Width: 1089px [:43]
+2025-05-03 14:10:49,042 - DEBUG - JS Console (INFO):   Height: 62px [:44]
+2025-05-03 14:10:49,042 - DEBUG - JS Console (INFO):   Padding: 0px [:45]
+2025-05-03 14:10:49,042 - DEBUG - JS Console (INFO):   Margin: 0px [:46]
+2025-05-03 14:10:49,042 - DEBUG - JS Console (INFO):   Style transform: none [:47]
+2025-05-03 14:10:49,042 - DEBUG - JS Console (INFO):   Content elements: 2 [:51]
+2025-05-03 14:10:49,042 - DEBUG - JS Console (INFO):   Content height: 25px [:62]
+2025-05-03 14:10:49,042 - DEBUG - JS Console (INFO):   Available height: 62px [:69]
+2025-05-03 14:10:49,042 - DEBUG - JS Console (INFO): Page 26: [:42]
+2025-05-03 14:10:49,043 - DEBUG - JS Console (INFO):   Width: 1089px [:43]
+2025-05-03 14:10:49,043 - DEBUG - JS Console (INFO):   Height: 22px [:44]
+2025-05-03 14:10:49,043 - DEBUG - JS Console (INFO):   Padding: 0px [:45]
+2025-05-03 14:10:49,043 - DEBUG - JS Console (INFO):   Margin: 0px [:46]
+2025-05-03 14:10:49,043 - DEBUG - JS Console (INFO):   Style transform: none [:47]
+2025-05-03 14:10:49,043 - DEBUG - JS Console (INFO):   Content elements: 3 [:51]
+2025-05-03 14:10:49,043 - DEBUG - JS Console (INFO):   Content height: 0px [:62]
+2025-05-03 14:10:49,043 - DEBUG - JS Console (INFO):   Available height: 22px [:69]
+2025-05-03 14:10:49,043 - DEBUG - JS Console (INFO): Found 0 page break elements [:80]
+2025-05-03 14:10:49,043 - DEBUG - JS Console (INFO): Current zoom factor (CSS var): 1 [:92]
+2025-05-03 14:10:49,043 - DEBUG - Page layout debug results: {'documentHeight': 1698, 'documentWidth': 1165, 'originalPageBreaks': 0, 'pageBreaks': 0, 'pageCount': 26, 'zoomFactor': '1'}
+2025-05-03 14:10:49,307 - DEBUG - Auto-fitting zoom to page width
+2025-05-03 14:10:49,307 - DEBUG - Updating zoom to 103%
+2025-05-03 14:10:49,307 - DEBUG - Applying zoom factor 1.03 to CSS
+2025-05-03 14:10:49,308 - DEBUG - Auto-fitting zoom to page width
+2025-05-03 14:10:49,308 - DEBUG - Auto-fitting zoom to page width
+2025-05-03 14:10:49,308 - DEBUG - Auto-fitting zoom to page width
+2025-05-03 14:10:49,310 - DEBUG - Auto-fitting zoom to page width
+2025-05-03 14:10:49,310 - DEBUG - Auto-fitting zoom to page width
+2025-05-03 14:10:49,316 - DEBUG - Updating zoom to 106%
+2025-05-03 14:10:49,316 - DEBUG - Applying zoom factor 1.06 to CSS
+2025-05-03 14:10:49,317 - DEBUG - Updating zoom to 106%
+2025-05-03 14:10:49,317 - DEBUG - Applying zoom factor 1.06 to CSS
+2025-05-03 14:10:49,318 - DEBUG - Updating zoom to 106%
+2025-05-03 14:10:49,318 - DEBUG - Applying zoom factor 1.06 to CSS
+2025-05-03 14:10:49,318 - DEBUG - Updating zoom to 106%
+2025-05-03 14:10:49,318 - DEBUG - Applying zoom factor 1.06 to CSS
+2025-05-03 14:10:49,318 - DEBUG - Updating zoom to 106%
+2025-05-03 14:10:49,318 - DEBUG - Applying zoom factor 1.06 to CSS
+
+--------------------------------------------------------------------------------
+
+Test 3/4: test_js_syntax_and_page_numbers.py
+Status: PASS
+Execution Time: 15.13s
+Standard Output:
+2025-05-03 14:10:57,117 - INFO - Logging to file: C:\Users\joshd\.markdown_pdf_logs\markdown_pdf_debug_20250503_141057.log
+2025-05-03 14:11:00,800 - ERROR - JavaScript Error: Uncaught SyntaxError: Invalid or unexpected token
+2025-05-03 14:11:00,800 - ERROR -   Source: file:///C:/Users/joshd/AppData/Local/Temp/tmpr04b0ec9.html
+2025-05-03 14:11:00,801 - ERROR -   Line: 46
+2025-05-03 14:11:00,801 - ERROR -   Error Type: Uncaught SyntaxError
+2025-05-03 14:11:00,801 - ERROR -   Error Detail: Invalid or unexpected token
+2025-05-03 14:11:10,349 - ERROR - JavaScript Error: Uncaught ReferenceError: prev is not defined
+2025-05-03 14:11:10,349 - ERROR -   Source: file:///C:/Users/joshd/AppData/Local/Temp/tmpr04b0ec9.html
+2025-05-03 14:11:10,349 - ERROR -   Line: 4
+
+Standard Error:
+2025-05-03 14:10:57,136 - INFO - Dialog handler initialized
+2025-05-03 14:10:57,136 - INFO - Dialog handler started (suppress=True, timeout=10000ms)
+2025-05-03 14:10:57,136 - INFO - Registered custom response for QMessageBox
+2025-05-03 14:10:57,137 - INFO - Running all JavaScript and page number tests
+2025-05-03 14:10:57,137 - INFO - Testing for JavaScript syntax errors
+2025-05-03 14:10:57,141 - DEBUG - Initializing PagePreview
+2025-05-03 14:10:57,524 - DEBUG - PagePreview initialized
+2025-05-03 14:10:57,539 - DEBUG - Web view: load started
+2025-05-03 14:10:57,706 - DEBUG - Web view: load finished successfully
+2025-05-03 14:10:57,807 - DEBUG - Applying page layout styling
+2025-05-03 14:10:57,807 - DEBUG - Applied page layout styling
+2025-05-03 14:10:57,807 - DEBUG - Page layout debugging initiated
+2025-05-03 14:10:57,821 - ERROR - JavaScript error: Uncaught SyntaxError: Invalid or unexpected token (Line: 46, Source: file:///C:/Users/joshd/AppData/Local/Temp/tmpytl20_jp.html)
+2025-05-03 14:10:57,822 - DEBUG - Page layout debug results: {'documentHeight': 199, 'documentWidth': 253, 'originalPageBreaks': 0, 'pageBreaks': 0, 'pageCount': 3, 'zoomFactor': '1'}
+2025-05-03 14:10:58,206 - DEBUG - Updating page count
+2025-05-03 14:10:58,207 - DEBUG - Updating page counter: 1 of 3
+2025-05-03 14:10:59,524 - DEBUG - Initializing page count
+2025-05-03 14:10:59,525 - DEBUG - Page count result: 3
+2025-05-03 14:10:59,525 - DEBUG - Updating page counter: 1 of 3
+2025-05-03 14:11:00,524 - INFO - No JavaScript syntax errors found
+2025-05-03 14:11:00,527 - INFO - JavaScript syntax test result: PASS
+2025-05-03 14:11:00,527 - INFO - Testing page number functionality
+2025-05-03 14:11:00,528 - DEBUG - Initializing PagePreview
+2025-05-03 14:11:00,531 - DEBUG - PagePreview initialized
+2025-05-03 14:11:00,535 - DEBUG - Web view: load started
+2025-05-03 14:11:00,697 - DEBUG - Web view: load finished successfully
+2025-05-03 14:11:00,798 - DEBUG - Applying page layout styling
+2025-05-03 14:11:00,798 - DEBUG - Applied page layout styling
+2025-05-03 14:11:00,798 - DEBUG - Page layout debugging initiated
+2025-05-03 14:11:00,800 - ERROR - JavaScript Error: Uncaught SyntaxError: Invalid or unexpected token
+2025-05-03 14:11:00,800 - ERROR -   Source: file:///C:/Users/joshd/AppData/Local/Temp/tmpr04b0ec9.html
+2025-05-03 14:11:00,801 - ERROR -   Line: 46
+2025-05-03 14:11:00,801 - ERROR -   Error Type: Uncaught SyntaxError
+2025-05-03 14:11:00,801 - ERROR -   Error Detail: Invalid or unexpected token
+js: Uncaught SyntaxError: Invalid or unexpected token
+2025-05-03 14:11:00,801 - DEBUG - JS Console (INFO): Debugging page layout... [:3]
+2025-05-03 14:11:00,801 - DEBUG - JS Console (INFO): Document dimensions: 253px x 88px [:14]
+2025-05-03 14:11:00,801 - DEBUG - JS Console (INFO): Body dimensions: 253px x 0px [:19]
+2025-05-03 14:11:00,801 - DEBUG - JS Console (INFO): No pages container found [:30]
+2025-05-03 14:11:00,801 - DEBUG - JS Console (INFO): Found 0 pages [:35]
+2025-05-03 14:11:00,801 - DEBUG - JS Console (INFO): Found 2 page break elements [:80]
+2025-05-03 14:11:00,801 - DEBUG - JS Console (INFO): Current zoom factor (CSS var): 1 [:92]
+2025-05-03 14:11:00,801 - DEBUG - Page layout debug results: {'documentHeight': 88, 'documentWidth': 253, 'originalPageBreaks': 0, 'pageBreaks': 2, 'pageCount': 0, 'zoomFactor': '1'}
+2025-05-03 14:11:01,198 - DEBUG - Updating page count
+2025-05-03 14:11:01,199 - DEBUG - Updating page counter: 1 of 0
+2025-05-03 14:11:02,524 - DEBUG - Initializing page count
+2025-05-03 14:11:02,525 - DEBUG - JS Console (INFO): No pages found, attempting to create pages container [:8]
+2025-05-03 14:11:02,526 - DEBUG - Page count result: 1
+2025-05-03 14:11:02,526 - DEBUG - Updating page counter: 1 of 1
+2025-05-03 14:11:03,526 - INFO - Actual page count: 1
+2025-05-03 14:11:04,526 - INFO - Using page count: 3
+2025-05-03 14:11:04,526 - INFO - Testing navigation to page 1
+2025-05-03 14:11:04,526 - DEBUG - Executing JavaScript: 
+        (function() {
+            var status = {
+                navigateToPageExists: typeof windo...
+2025-05-03 14:11:04,627 - INFO - Actual page count after delay: 1
+2025-05-03 14:11:04,627 - DEBUG - JS Console (INFO): Navigation functions not found, creating them... [:11]
+2025-05-03 14:11:04,727 - DEBUG - JavaScript execution result: {'fastNavigateToPageExists': True, 'navigateToPageExists': True, 'pageCount': 1}
+2025-05-03 14:11:04,727 - DEBUG - Navigation function status: {'fastNavigateToPageExists': True, 'navigateToPageExists': True, 'pageCount': 1}
+2025-05-03 14:11:04,727 - DEBUG - Executing JavaScript: 
+        (function() {
+            if (typeof window.fastNavigateToPage === 'function') {
+          ...
+2025-05-03 14:11:04,828 - DEBUG - JS Console (INFO): Using fallback navigation to page: 1 [:15]
+2025-05-03 14:11:04,828 - DEBUG - JS Console (INFO): Successfully navigated to page 1 [:86]
+2025-05-03 14:11:04,929 - DEBUG - JavaScript execution result: 1
+2025-05-03 14:11:04,929 - DEBUG - Navigation to page 1 result: 1
+2025-05-03 14:11:04,929 - DEBUG - Executing JavaScript: 
+            (function() {
+                return document.querySelectorAll('.page').length;
+       ...
+2025-05-03 14:11:05,130 - DEBUG - JavaScript execution result: 1
+2025-05-03 14:11:05,130 - DEBUG - Updating page counter: 1 of 1
+2025-05-03 14:11:05,631 - INFO - Page info: {'current': 1, 'total': 3}
+2025-05-03 14:11:05,631 - INFO - Testing navigation to page 2
+2025-05-03 14:11:05,631 - DEBUG - Executing JavaScript: 
+        (function() {
+            var status = {
+                navigateToPageExists: typeof windo...
+2025-05-03 14:11:05,832 - DEBUG - JavaScript execution result: {'fastNavigateToPageExists': True, 'navigateToPageExists': True, 'pageCount': 1}
+2025-05-03 14:11:05,832 - DEBUG - Navigation function status: {'fastNavigateToPageExists': True, 'navigateToPageExists': True, 'pageCount': 1}
+2025-05-03 14:11:05,832 - DEBUG - Executing JavaScript: 
+        (function() {
+            if (typeof window.fastNavigateToPage === 'function') {
+          ...
+2025-05-03 14:11:05,932 - DEBUG - JS Console (INFO): Using fallback navigation to page: 2 [:15]
+2025-05-03 14:11:05,932 - DEBUG - JS Console (INFO): Successfully navigated to page 1 [:86]
+2025-05-03 14:11:06,033 - DEBUG - JavaScript execution result: 1
+2025-05-03 14:11:06,033 - DEBUG - Navigation to page 2 result: 1
+2025-05-03 14:11:06,033 - DEBUG - Executing JavaScript: 
+            (function() {
+                return document.querySelectorAll('.page').length;
+       ...
+2025-05-03 14:11:06,235 - DEBUG - JavaScript execution result: 1
+2025-05-03 14:11:06,235 - DEBUG - Updating page counter: 1 of 1
+2025-05-03 14:11:06,735 - INFO - Page info: {'current': 2, 'total': 3}
+2025-05-03 14:11:06,735 - INFO - Testing navigation to page 3
+2025-05-03 14:11:06,735 - DEBUG - Executing JavaScript: 
+        (function() {
+            var status = {
+                navigateToPageExists: typeof windo...
+2025-05-03 14:11:06,936 - DEBUG - JavaScript execution result: {'fastNavigateToPageExists': True, 'navigateToPageExists': True, 'pageCount': 1}
+2025-05-03 14:11:06,936 - DEBUG - Navigation function status: {'fastNavigateToPageExists': True, 'navigateToPageExists': True, 'pageCount': 1}
+2025-05-03 14:11:06,936 - DEBUG - Executing JavaScript: 
+        (function() {
+            if (typeof window.fastNavigateToPage === 'function') {
+          ...
+2025-05-03 14:11:07,037 - DEBUG - JS Console (INFO): Using fallback navigation to page: 3 [:15]
+2025-05-03 14:11:07,037 - DEBUG - JS Console (INFO): Successfully navigated to page 1 [:86]
+2025-05-03 14:11:07,138 - DEBUG - JavaScript execution result: 1
+2025-05-03 14:11:07,138 - DEBUG - Navigation to page 3 result: 1
+2025-05-03 14:11:07,138 - DEBUG - Executing JavaScript: 
+            (function() {
+                return document.querySelectorAll('.page').length;
+       ...
+2025-05-03 14:11:07,339 - DEBUG - JavaScript execution result: 1
+2025-05-03 14:11:07,339 - DEBUG - Updating page counter: 1 of 1
+2025-05-03 14:11:07,839 - INFO - Page info: {'current': 3, 'total': 3}
+2025-05-03 14:11:07,839 - INFO - Testing previous/next navigation
+2025-05-03 14:11:07,839 - DEBUG - Executing JavaScript: 
+        (function() {
+            var status = {
+                navigateToPageExists: typeof windo...
+2025-05-03 14:11:08,040 - DEBUG - JavaScript execution result: {'fastNavigateToPageExists': True, 'navigateToPageExists': True, 'pageCount': 1}
+2025-05-03 14:11:08,040 - DEBUG - Navigation function status: {'fastNavigateToPageExists': True, 'navigateToPageExists': True, 'pageCount': 1}
+2025-05-03 14:11:08,040 - DEBUG - Executing JavaScript: 
+        (function() {
+            if (typeof window.fastNavigateToPage === 'function') {
+          ...
+2025-05-03 14:11:08,141 - DEBUG - JS Console (INFO): Using fallback navigation to page: 1 [:15]
+2025-05-03 14:11:08,141 - DEBUG - JS Console (INFO): Successfully navigated to page 1 [:86]
+2025-05-03 14:11:08,242 - DEBUG - JavaScript execution result: 1
+2025-05-03 14:11:08,242 - DEBUG - Navigation to page 1 result: 1
+2025-05-03 14:11:08,242 - DEBUG - Executing JavaScript: 
+            (function() {
+                return document.querySelectorAll('.page').length;
+       ...
+2025-05-03 14:11:08,443 - DEBUG - JavaScript execution result: 1
+2025-05-03 14:11:08,443 - DEBUG - Updating page counter: 1 of 1
+2025-05-03 14:11:08,943 - DEBUG - Executing JavaScript: 
+        (function() {
+            var status = {
+                navigateToPageExists: typeof windo...
+2025-05-03 14:11:09,144 - DEBUG - JavaScript execution result: {'fastNavigateToPageExists': True, 'navigateToPageExists': True, 'pageCount': 1}
+2025-05-03 14:11:09,144 - DEBUG - Navigation function status: {'fastNavigateToPageExists': True, 'navigateToPageExists': True, 'pageCount': 1}
+2025-05-03 14:11:09,144 - DEBUG - Executing JavaScript: 
+        (function() {
+            if (typeof window.fastNavigateToPage === 'function') {
+          ...
+2025-05-03 14:11:09,244 - DEBUG - JS Console (INFO): Using fallback navigation to page: 2 [:15]
+2025-05-03 14:11:09,244 - DEBUG - JS Console (INFO): Successfully navigated to page 1 [:86]
+2025-05-03 14:11:09,345 - DEBUG - JavaScript execution result: 1
+2025-05-03 14:11:09,345 - DEBUG - Navigation to page 2 result: 1
+2025-05-03 14:11:09,345 - DEBUG - Executing JavaScript: 
+            (function() {
+                return document.querySelectorAll('.page').length;
+       ...
+2025-05-03 14:11:09,547 - DEBUG - JavaScript execution result: 1
+2025-05-03 14:11:09,547 - DEBUG - Updating page counter: 1 of 1
+2025-05-03 14:11:10,048 - INFO - Current page after next: 2
+2025-05-03 14:11:10,048 - DEBUG - Executing JavaScript: 
+        (function() {
+            var status = {
+                navigateToPageExists: typeof windo...
+2025-05-03 14:11:10,249 - DEBUG - JavaScript execution result: {'fastNavigateToPageExists': True, 'navigateToPageExists': True, 'pageCount': 1}
+2025-05-03 14:11:10,249 - DEBUG - Navigation function status: {'fastNavigateToPageExists': True, 'navigateToPageExists': True, 'pageCount': 1}
+2025-05-03 14:11:10,249 - DEBUG - Executing JavaScript: 
+        (function() {
+            if (typeof window.fastNavigateToPage === 'function') {
+          ...
+2025-05-03 14:11:10,349 - ERROR - JavaScript Error: Uncaught ReferenceError: prev is not defined
+2025-05-03 14:11:10,349 - ERROR -   Source: file:///C:/Users/joshd/AppData/Local/Temp/tmpr04b0ec9.html
+2025-05-03 14:11:10,349 - ERROR -   Line: 4
+js: Uncaught ReferenceError: prev is not defined
+2025-05-03 14:11:10,451 - DEBUG - JavaScript execution result: None
+2025-05-03 14:11:10,451 - DEBUG - Navigation to page prev result: None
+2025-05-03 14:11:10,951 - INFO - Current page after previous: 1
+2025-05-03 14:11:10,951 - INFO - Previous button enabled on page 1: False
+2025-05-03 14:11:10,951 - DEBUG - Executing JavaScript: 
+        (function() {
+            var status = {
+                navigateToPageExists: typeof windo...
+2025-05-03 14:11:11,152 - DEBUG - JavaScript execution result: {'fastNavigateToPageExists': True, 'navigateToPageExists': True, 'pageCount': 1}
+2025-05-03 14:11:11,152 - DEBUG - Navigation function status: {'fastNavigateToPageExists': True, 'navigateToPageExists': True, 'pageCount': 1}
+2025-05-03 14:11:11,152 - DEBUG - Executing JavaScript: 
+        (function() {
+            if (typeof window.fastNavigateToPage === 'function') {
+          ...
+2025-05-03 14:11:11,253 - DEBUG - JS Console (INFO): Using fallback navigation to page: 3 [:15]
+2025-05-03 14:11:11,253 - DEBUG - JS Console (INFO): Successfully navigated to page 1 [:86]
+2025-05-03 14:11:11,354 - DEBUG - JavaScript execution result: 1
+2025-05-03 14:11:11,354 - DEBUG - Navigation to page 3 result: 1
+2025-05-03 14:11:11,354 - DEBUG - Executing JavaScript: 
+            (function() {
+                return document.querySelectorAll('.page').length;
+       ...
+2025-05-03 14:11:11,555 - DEBUG - JavaScript execution result: 1
+2025-05-03 14:11:11,555 - DEBUG - Updating page counter: 1 of 1
+2025-05-03 14:11:12,055 - INFO - Next button enabled on last page: False
+2025-05-03 14:11:12,056 - INFO - Page number test result: PASS
+2025-05-03 14:11:12,056 - INFO - Overall test result: PASS
+2025-05-03 14:11:12,056 - INFO - Dialog handler stopped
+2025-05-03 14:11:12,056 - INFO - Closing all active dialogs (0)
+
+--------------------------------------------------------------------------------
+
+Test 4/4: test_page_navigation_and_export.py
+Status: PASS
+Execution Time: 0.16s
+Standard Output:
+2025-05-03 14:11:12,238 - INFO - Logging to file: C:\Users\joshd\.markdown_pdf_logs\markdown_pdf_debug_20250503_141112.log
+
+Standard Error:
+2025-05-03 14:11:12,257 - INFO - Dialog handler initialized
+2025-05-03 14:11:12,257 - INFO - Dialog handler started (suppress=True, timeout=10000ms)
+2025-05-03 14:11:12,257 - INFO - Registered custom response for QMessageBox
+2025-05-03 14:11:12,257 - INFO - Running all page navigation and export dialog tests
+2025-05-03 14:11:12,257 - INFO - Testing page navigation
+2025-05-03 14:11:12,257 - INFO - Page navigation test passed
+2025-05-03 14:11:12,257 - INFO - Page navigation test result: PASS
+2025-05-03 14:11:12,257 - INFO - Testing export dialogs
+2025-05-03 14:11:12,257 - INFO - Export dialog test passed
+2025-05-03 14:11:12,257 - INFO - Export dialog test result: PASS
+2025-05-03 14:11:12,257 - INFO - Overall test result: PASS
+2025-05-03 14:11:12,257 - INFO - Dialog handler stopped
+2025-05-03 14:11:12,257 - INFO - Closing all active dialogs (0)
+
+--------------------------------------------------------------------------------
+
+
+Summary:
+Passed: 4/4 (100.00%)
+Failed: 0/4 (0.00%)

@@ -1,0 +1,5 @@
+2025-05-18 22:49:47,251 - __main__ - INFO - Running test: PagePreview.basic
+2025-05-18 22:49:47,251 - __main__ - INFO - Running command: ['python', 'test_page_preview.py', '--debug']
+2025-05-18 22:49:58,909 - __main__ - INFO - Test PagePreview.basic completed in 11.66 seconds: PASS
+2025-05-18 22:49:58,919 - __main__ - INFO - PagePreview.basic: PASS (11.66s) - Test passed
+2025-05-18 22:49:58,919 - __main__ - INFO - Result saved to test_results\test_result_PagePreview.basic_20250518_224958.json

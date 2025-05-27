@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Page Break Test</title>
+    <style>
+        body {
+            background-color: #e0e0e0;
+            padding: 40px;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .pages-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+            padding: 20px;
+            width: 100%;
+            max-width: 100%;
+            transform-origin: top center;
+        }
+
+        .page {
+            background-color: white;
+            width: 210mm;
+            min-height: 297mm;
+            margin: 0 0 40px 0;
+            padding: 25mm 25mm 25mm 25mm;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            border: 1px solid #ccc;
+            position: relative;
+            box-sizing: border-box;
+        }
+
+        .page-number {
+            position: absolute;
+            bottom: 5px;
+            right: 5px;
+            background-color: rgba(0,0,0,0.1);
+            color: #666;
+            padding: 2px 8px;
+            border-radius: 10px;
+            font-size: 12px;
+        }
+
+        .current-page {
+            box-shadow: 0 6px 16px rgba(0,0,0,0.3);
+            transform: translateY(-2px);
+            z-index: 10;
+        }
+    </style>
+</head>
+<body>
+    <div class="pages-container" id="pages-container">
+        <div class="page" id="page-1">
+            <h1>Page 1</h1>
+            <p>This is the content of page 1.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl eget ultricies tincidunt,
+            nisl nisl aliquam nisl, eget aliquam nisl nisl eget nisl. Nullam auctor, nisl eget ultricies tincidunt,
+            nisl nisl aliquam nisl, eget aliquam nisl nisl eget nisl.</p>
+            <div class="page-number">Page 1 of 3</div>
+        </div>
+
+        <div class="page" id="page-2">
+            <h1>Page 2</h1>
+            <p>This is the content of page 2.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl eget ultricies tincidunt,
+            nisl nisl aliquam nisl, eget aliquam nisl nisl eget nisl. Nullam auctor, nisl eget ultricies tincidunt,
+            nisl nisl aliquam nisl, eget aliquam nisl nisl eget nisl.</p>
+            <div class="page-number">Page 2 of 3</div>
+        </div>
+
+        <div class="page" id="page-3">
+            <h1>Page 3</h1>
+            <p>This is the content of page 3.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl eget ultricies tincidunt,
+            nisl nisl aliquam nisl, eget aliquam nisl nisl eget nisl. Nullam auctor, nisl eget ultricies tincidunt,
+            nisl nisl aliquam nisl, eget aliquam nisl nisl eget nisl.</p>
+            <div class="page-number">Page 3 of 3</div>
+        </div>
+    </div>
+
+    <script>
+        // Navigation function
+        window.navigateToPage = function(pageNum) {
+            console.log('Navigating to page: ' + pageNum);
+            var pages = document.querySelectorAll('.page');
+            var totalPages = pages.length;
+            var targetPage;
+            var targetIndex = 0;
+
+            // Remove current-page class from all pages
+            for (var i = 0; i < pages.length; i++) {
+                pages[i].classList.remove('current-page');
+            }
+
+            if (pageNum === 'next') {
+                // Find current page
+                var currentPage = document.querySelector('.page.current-page');
+                var currentIndex = 0;
+
+                if (currentPage) {
+                    // Get current page index
+                    for (var i = 0; i < pages.length; i++) {
+                        if (pages[i] === currentPage) {
+                            currentIndex = i;
+                            break;
+                        }
+                    }
+
+                    // Calculate next page index
+                    targetIndex = Math.min(currentIndex + 1, totalPages - 1);
+                } else {
+                    // No current page, select first page
+                    targetIndex = 0;
+                }
+            } else if (pageNum === 'prev') {
+                // Find current page
+                var currentPage = document.querySelector('.page.current-page');
+                var currentIndex = 0;
+
+                if (currentPage) {
+                    // Get current page index
+                    for (var i = 0; i < pages.length; i++) {
+                        if (pages[i] === currentPage) {
+                            currentIndex = i;
+                            break;
+                        }
+                    }
+
+                    // Calculate previous page index
+                    targetIndex = Math.max(currentIndex - 1, 0);
+                } else {
+                    // No current page, select first page
+                    targetIndex = 0;
+                }
+            } else {
+                // Navigate to specific page
+                targetIndex = Math.max(0, Math.min(pageNum - 1, totalPages - 1));
+            }
+
+            // Set target page
+            targetPage = pages[targetIndex];
+
+            // Add current-page class to target page
+            if (targetPage) {
+                targetPage.classList.add('current-page');
+
+                // Scroll to the target page
+                targetPage.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+                console.log('Successfully navigated to page ' + (targetIndex + 1));
+                return targetIndex + 1;
+            }
+
+            return false;
+        };
+
+        // Initialize with first page as current
+        document.addEventListener('DOMContentLoaded', function() {
+            var firstPage = document.querySelector('.page');
+            if (firstPage) {
+                firstPage.classList.add('current-page');
+            }
+        });
+    </script>
+</body>
+</html>

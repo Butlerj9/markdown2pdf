@@ -1,0 +1,119 @@
+2025-05-02 13:41:43,224 - DEBUG - Initializing PagePreview
+2025-05-02 13:41:43,618 - DEBUG - PagePreview initialized
+2025-05-18 23:11:29,283 - DEBUG - Web channel set up successfully
+2025-05-18 23:11:29,784 - INFO - Loading simple document
+2025-05-18 23:11:29,784 - DEBUG - Updating preview
+2025-05-18 23:11:29,785 - DEBUG - Cleaning up temporary files
+2025-05-18 23:11:29,785 - DEBUG - Loading HTML content
+2025-05-18 23:11:29,790 - DEBUG - Loading HTML from temporary file: C:\Users\joshd\AppData\Local\Temp\tmpqffhdxz7.html
+2025-05-18 23:11:29,800 - DEBUG - js: Document loaded, setting up page count detection
+2025-05-18 23:11:29,800 - DEBUG - js: Page 1 missing page number, adding it
+2025-05-18 23:11:29,801 - DEBUG - js: Found 1 pages, current page: 1
+2025-05-18 23:14:21,135 - DEBUG - Web channel set up successfully
+2025-05-18 23:14:21,135 - DEBUG - Setting up zoom controls
+2025-05-18 23:14:21,146 - DEBUG - Zoom controls setup completed
+2025-05-18 23:14:21,647 - INFO - Loading simple document
+2025-05-18 23:14:21,647 - DEBUG - Updating preview
+2025-05-18 23:14:21,648 - DEBUG - Cleaning up temporary files
+2025-05-18 23:14:21,648 - DEBUG - Loading HTML content
+2025-05-18 23:14:21,662 - DEBUG - Loading HTML from temporary file: C:\Users\joshd\AppData\Local\Temp\tmp4i1ke6ww.html
+2025-05-18 23:14:21,672 - DEBUG - js: Document loaded, setting up page count detection
+2025-05-18 23:14:21,672 - DEBUG - js: Page 1 missing page number, adding it
+2025-05-18 23:14:21,672 - DEBUG - js: Found 1 pages, current page: 1
+2025-05-18 23:15:39,776 - DEBUG - Web channel set up successfully
+2025-05-18 23:15:39,777 - DEBUG - Setting up zoom controls
+2025-05-18 23:15:39,789 - DEBUG - Zoom controls setup completed
+2025-05-18 23:15:40,290 - INFO - Loading simple document
+2025-05-18 23:15:40,290 - DEBUG - Updating preview
+2025-05-18 23:15:40,290 - DEBUG - Cleaning up temporary files
+2025-05-18 23:15:40,290 - DEBUG - Loading HTML content
+2025-05-18 23:15:40,296 - DEBUG - Loading HTML from temporary file: C:\Users\joshd\AppData\Local\Temp\tmphtawka9e.html
+2025-05-18 23:15:40,297 - DEBUG - Connected load finished signal
+2025-05-18 23:15:40,304 - DEBUG - js: Document loaded, setting up page count detection
+2025-05-18 23:15:40,305 - DEBUG - js: Page 1 missing page number, adding it
+2025-05-18 23:15:40,305 - DEBUG - js: Found 1 pages, current page: 1
+2025-05-18 23:15:40,314 - DEBUG - Load finished: True
+2025-05-18 23:15:40,614 - DEBUG - Fitting page to view
+2025-05-18 23:15:40,614 - DEBUG - js: Page dimensions for zoom calculation: 794x1123
+2025-05-18 23:15:40,615 - DEBUG - Updating zoom to value: 50
+2025-05-18 23:16:02,973 - DEBUG - Web channel set up successfully
+2025-05-18 23:16:02,973 - DEBUG - Setting up zoom controls
+2025-05-18 23:16:02,984 - DEBUG - Zoom controls setup completed
+2025-05-18 23:16:03,028 - INFO - Loading multi-page document
+2025-05-18 23:16:03,029 - DEBUG - Updating preview
+2025-05-18 23:16:03,029 - DEBUG - Cleaning up temporary files
+2025-05-18 23:16:03,029 - DEBUG - Loading HTML content
+2025-05-18 23:16:03,035 - DEBUG - Loading HTML from temporary file: C:\Users\joshd\AppData\Local\Temp\tmplkhzxv1r.html
+2025-05-18 23:16:03,088 - DEBUG - Connected load finished signal
+2025-05-18 23:16:03,208 - DEBUG - js: Document loaded, setting up page count detection
+2025-05-18 23:16:03,208 - DEBUG - js: Page 1 missing page number, adding it
+2025-05-18 23:16:03,208 - DEBUG - js: Page 2 missing page number, adding it
+2025-05-18 23:16:03,208 - DEBUG - js: Page 3 missing page number, adding it
+2025-05-18 23:16:03,208 - DEBUG - js: Page 4 missing page number, adding it
+2025-05-18 23:16:03,208 - DEBUG - js: Found 4 pages, current page: 1
+2025-05-18 23:16:03,216 - DEBUG - Load finished: True
+2025-05-18 23:16:03,485 - INFO - Loading simple document
+2025-05-18 23:16:03,485 - DEBUG - Updating preview
+2025-05-18 23:16:03,485 - DEBUG - Cleaning up temporary files
+2025-05-18 23:16:03,485 - DEBUG - Removed temporary file: C:\Users\joshd\AppData\Local\Temp\tmplkhzxv1r.html
+2025-05-18 23:16:03,485 - DEBUG - Loading HTML content
+2025-05-18 23:16:03,491 - DEBUG - Loading HTML from temporary file: C:\Users\joshd\AppData\Local\Temp\tmpy9zdms7x.html
+2025-05-18 23:16:03,496 - DEBUG - js: Document loaded, setting up page count detection
+2025-05-18 23:16:03,497 - DEBUG - js: Page 1 missing page number, adding it
+2025-05-18 23:16:03,497 - DEBUG - js: Found 1 pages, current page: 1
+2025-05-18 23:16:03,498 - DEBUG - Load finished: True
+2025-05-18 23:16:03,517 - DEBUG - Fitting page to view
+2025-05-18 23:16:03,517 - DEBUG - js: Page dimensions for zoom calculation: 794x1123
+2025-05-18 23:16:03,517 - DEBUG - Updating zoom to value: 50
+2025-05-18 23:16:03,799 - DEBUG - Fitting page to view
+2025-05-18 23:16:03,799 - DEBUG - js: Page dimensions for zoom calculation: 794x1123
+2025-05-18 23:16:24,088 - DEBUG - Web channel set up successfully
+2025-05-18 23:16:24,088 - DEBUG - Setting up zoom controls
+2025-05-18 23:16:24,100 - DEBUG - Zoom controls setup completed
+2025-05-18 23:16:24,160 - INFO - Loading multi-page document
+2025-05-18 23:16:24,160 - DEBUG - Updating preview
+2025-05-18 23:16:24,161 - DEBUG - Cleaning up temporary files
+2025-05-18 23:16:24,161 - DEBUG - Loading HTML content
+2025-05-18 23:16:24,167 - DEBUG - Loading HTML from temporary file: C:\Users\joshd\AppData\Local\Temp\tmpxgjm_a52.html
+2025-05-18 23:16:24,251 - DEBUG - Connected load finished signal
+2025-05-18 23:16:24,342 - DEBUG - js: Document loaded, setting up page count detection
+2025-05-18 23:16:24,342 - DEBUG - js: Page 1 missing page number, adding it
+2025-05-18 23:16:24,342 - DEBUG - js: Page 2 missing page number, adding it
+2025-05-18 23:16:24,342 - DEBUG - js: Page 3 missing page number, adding it
+2025-05-18 23:16:24,342 - DEBUG - js: Page 4 missing page number, adding it
+2025-05-18 23:16:24,342 - DEBUG - js: Found 4 pages, current page: 1
+2025-05-18 23:16:24,348 - DEBUG - Load finished: True
+2025-05-18 23:16:24,601 - INFO - Loading simple document
+2025-05-18 23:16:24,601 - DEBUG - Updating preview
+2025-05-18 23:16:24,601 - DEBUG - Cleaning up temporary files
+2025-05-18 23:16:24,602 - DEBUG - Removed temporary file: C:\Users\joshd\AppData\Local\Temp\tmpxgjm_a52.html
+2025-05-18 23:16:24,602 - DEBUG - Loading HTML content
+2025-05-18 23:16:24,607 - DEBUG - Loading HTML from temporary file: C:\Users\joshd\AppData\Local\Temp\tmp287qqr6w.html
+2025-05-18 23:16:24,612 - DEBUG - js: Document loaded, setting up page count detection
+2025-05-18 23:16:24,612 - DEBUG - js: Page 1 missing page number, adding it
+2025-05-18 23:16:24,613 - DEBUG - js: Found 1 pages, current page: 1
+2025-05-18 23:16:24,615 - DEBUG - Load finished: True
+2025-05-18 23:16:24,648 - DEBUG - Fitting page to view
+2025-05-18 23:16:24,649 - DEBUG - js: Page dimensions for zoom calculation: 794x1123
+2025-05-18 23:16:24,649 - DEBUG - Updating zoom to value: 50
+2025-05-18 23:16:24,915 - DEBUG - Fitting page to view
+2025-05-18 23:16:24,916 - DEBUG - js: Page dimensions for zoom calculation: 794x1123
+2025-05-18 23:17:36,577 - DEBUG - Web channel set up successfully
+2025-05-18 23:17:36,577 - DEBUG - Setting up zoom controls
+2025-05-18 23:17:36,588 - DEBUG - Zoom controls setup completed
+2025-05-18 23:17:36,631 - INFO - Loading multi-page document
+2025-05-18 23:17:36,631 - DEBUG - Updating preview
+2025-05-18 23:17:36,631 - DEBUG - Cleaning up temporary files
+2025-05-18 23:17:36,631 - DEBUG - Loading HTML content
+2025-05-18 23:17:36,636 - DEBUG - Loading HTML from temporary file: C:\Users\joshd\AppData\Local\Temp\tmpr9maprch.html
+2025-05-18 23:17:36,687 - DEBUG - Connected load finished signal
+2025-05-18 23:17:36,828 - DEBUG - js: Document loaded, setting up page count detection
+2025-05-18 23:17:36,828 - DEBUG - js: Page 1 missing page number, adding it
+2025-05-18 23:17:36,828 - DEBUG - js: Page 2 missing page number, adding it
+2025-05-18 23:17:36,828 - DEBUG - js: Page 3 missing page number, adding it
+2025-05-18 23:17:36,828 - DEBUG - js: Page 4 missing page number, adding it
+2025-05-18 23:17:36,828 - DEBUG - js: Found 4 pages, current page: 1
+2025-05-18 23:17:36,835 - DEBUG - Load finished: True
+2025-05-18 23:17:37,136 - DEBUG - Fitting page to view
+2025-05-18 23:17:37,137 - DEBUG - js: Page dimensions for zoom calculation: 794x3620
+2025-05-18 23:17:37,137 - DEBUG - Updating zoom to value: 50

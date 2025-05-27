@@ -93,7 +93,7 @@ This content should appear on the third page.
     output_file = os.path.join(temp_dir, "test_export.epub")
     print(f"Exporting to: {output_file}")
 
-    result = window.export_to_epub(output_file)
+    result = window._export_to_epub(output_file)
 
     # Check if export was successful
     if result:

@@ -1,0 +1,861 @@
+Test Results for Category: all
+Timestamp: 2025-05-26 13:49:46
+Total Tests: 11
+
+Test 1/11: test_core_functionality.py
+Status: PASS
+Execution Time: 2.49s
+Standard Output:
+2025-05-26 13:49:47,018 - INFO - Logging to file: C:\Users\joshd\.markdown_pdf_logs\markdown_pdf_debug_20250526_134947.log
+2025-05-26 13:49:47,039 - INFO - Running in test mode - dialogs will be suppressed
+Found xelatex in PATH
+Found pdflatex in PATH
+Found lualatex in PATH
+Found wkhtmltopdf at: C:\Program Files\wkhtmltopdf\bin\wkhtmltopdf.exe
+Found weasyprint in PATH
+Pandoc found: pandoc.exe 3.1.12.1
+2025-05-26 13:49:48,692 - INFO - Loaded temporary style
+2025-05-26 13:49:48,692 - INFO - Loaded 3 recent files
+2025-05-26 13:49:48,693 - INFO - Settings loaded successfully
+Settings loaded successfully
+
+Standard Error:
+2025-05-26 13:49:47,039 - DEBUG - Available styles: ['Business Professional', 'Technical Document', 'Academic', 'Minimal', 'Custom']
+2025-05-26 13:49:47,039 - INFO - Running in test mode - dialogs will be suppressed
+2025-05-26 13:49:48,692 - DEBUG - Loaded temporary style
+2025-05-26 13:49:48,692 - INFO - Loaded temporary style
+2025-05-26 13:49:48,692 - INFO - Loaded 3 recent files
+2025-05-26 13:49:48,693 - INFO - Settings loaded successfully
+2025-05-26 13:49:49,106 - DEBUG - Initialized navigation controls for testing
+2025-05-26 13:49:49,107 - DEBUG - Setting up zoom controls
+2025-05-26 13:49:49,126 - DEBUG - Main update_preview call #1
+2025-05-26 13:49:49,126 - DEBUG - Updating document settings
+2025-05-26 13:49:49,126 - DEBUG - Setting document settings
+2025-05-26 13:49:49,126 - DEBUG - Updated document settings in page preview
+2025-05-26 13:49:49,126 - DEBUG - RenderUtils.update_preview call #1
+2025-05-26 13:49:49,126 - DEBUG - Got markdown text, length: 510
+2025-05-26 13:49:49,126 - DEBUG - Updating document settings in page_preview
+2025-05-26 13:49:49,127 - DEBUG - Updating document settings
+2025-05-26 13:49:49,127 - DEBUG - Setting document settings
+2025-05-26 13:49:49,127 - DEBUG - Using built-in zoom functionality in page_preview.py
+2025-05-26 13:49:49,129 - DEBUG - Finding page breaks in markdown
+2025-05-26 13:49:49,129 - DEBUG - Found 0 page breaks at lines: []
+2025-05-26 13:49:49,129 - DEBUG - Found 0 page breaks at lines: []
+2025-05-26 13:49:49,129 - DEBUG - Writing processed Markdown to temporary file (length: 510)
+2025-05-26 13:49:49,132 - DEBUG - Created temporary HTML file: C:\Users\joshd\AppData\Local\Temp\tmpp9kf7u_j.html
+2025-05-26 13:49:49,132 - DEBUG - Generating CSS from settings
+2025-05-26 13:49:49,132 - DEBUG - CSS generation completed
+2025-05-26 13:49:49,132 - DEBUG - Injecting page break styles into CSS
+2025-05-26 13:49:49,135 - DEBUG - Created temporary CSS file: C:\Users\joshd\AppData\Local\Temp\tmph5r_woeh.css
+2025-05-26 13:49:49,135 - DEBUG - Running command: C:\Users\joshd\AppData\Local\Pandoc\pandoc.exe C:\Users\joshd\AppData\Local\Temp\tmp2tu949j0.md -o C:\Users\joshd\AppData\Local\Temp\tmpp9kf7u_j.html --standalone --css=C:\Users\joshd\AppData\Local\Temp\tmph5r_woeh.css --mathjax -f markdown+fenced_divs+pipe_tables+backtick_code_blocks -t html5 --metadata title=Preview --variable secnumdepth=-2 --variable disable-numbering=true
+2025-05-26 13:49:49,215 - DEBUG - Processing page breaks for preview
+2025-05-26 13:49:49,215 - DEBUG - No page breaks found in content
+2025-05-26 13:49:49,215 - DEBUG - HTML content generated (length: 5659)
+2025-05-26 13:49:49,216 - DEBUG - Updating document settings
+2025-05-26 13:49:49,216 - DEBUG - Setting document settings
+2025-05-26 13:49:49,216 - DEBUG - Updating preview with new content
+2025-05-26 13:49:49,216 - DEBUG - HTML content length: 5659
+2025-05-26 13:49:49,216 - DEBUG - Has page breaks detected: False
+2025-05-26 13:49:49,216 - DEBUG - HTML content preview: <!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=de...30</td>
+<td>Developer</td>
+</tr>
+<tr class="even">
+<td>Jane</td>
+<td>25</td>
+<td>Designer</td>
+</tr>
+<tr class="odd">
+<td>Bob</td>
+<td>40</td>
+<td>Manager</td>
+</tr>
+</tbody>
+</table>
+</body>
+</html>
+
+2025-05-26 13:49:49,216 - DEBUG - Cleaned HTML content to remove title elements and blank lines
+2025-05-26 13:49:49,216 - DEBUG - Splitting content into pages
+2025-05-26 13:49:49,217 - DEBUG - Calculating automatic page breaks
+2025-05-26 13:49:49,217 - DEBUG - Page calculation: 754.0pt usable height, 29.9 theoretical lines, 30 actual lines per page, font: 14pt, line height: 1.8
+2025-05-26 13:49:49,217 - DEBUG - Font size: 14pt, Line height: 1.8, Lines per page: 30
+2025-05-26 13:49:49,217 - DEBUG - Calculated 2 automatic pages
+2025-05-26 13:49:49,217 - DEBUG - Split content into 2 pages
+2025-05-26 13:49:49,224 - DEBUG - Preview updated successfully
+2025-05-26 13:49:49,224 - DEBUG - Cleaning up temporary files
+2025-05-26 13:49:49,225 - DEBUG - Deleted temporary file: C:\Users\joshd\AppData\Local\Temp\tmp2tu949j0.md
+2025-05-26 13:49:49,225 - DEBUG - Deleted temporary file: C:\Users\joshd\AppData\Local\Temp\tmph5r_woeh.css
+2025-05-26 13:49:49,225 - DEBUG - Deleted temporary file: C:\Users\joshd\AppData\Local\Temp\tmpp9kf7u_j.html
+2025-05-26 13:49:49,225 - DEBUG - Exiting function: update_preview
+2025-05-26 13:49:49,225 - DEBUG - Preview updated successfully (call #1)
+2025-05-26 13:49:49,226 - DEBUG - Skipping duplicate preview update (debounce)
+2025-05-26 13:49:49,226 - INFO - Testing markdown rendering...
+2025-05-26 13:49:49,226 - INFO - Preview widget and web view created successfully
+2025-05-26 13:49:49,226 - INFO - All expected HTML elements found in the preview
+2025-05-26 13:49:49,226 - INFO - Testing document settings...
+2025-05-26 13:49:49,226 - INFO - All expected settings sections found
+2025-05-26 13:49:49,226 - INFO - Testing page preview...
+2025-05-26 13:49:49,226 - DEBUG - Skipping duplicate preview update (debounce)
+2025-05-26 13:49:49,226 - INFO - Page preview created successfully
+2025-05-26 13:49:49,227 - DEBUG - Closing in test environment - skipping style and settings save
+2025-05-26 13:49:49,227 - INFO - Core functionality tests completed successfully
+
+--------------------------------------------------------------------------------
+
+Test 2/11: test_page_preview_breaks.py
+Status: PASS
+Execution Time: 10.74s
+Standard Output:
+
+Standard Error:
+2025-05-26 13:49:49,871 - DEBUG - Initialized navigation controls for testing
+2025-05-26 13:49:49,871 - DEBUG - Updating document settings
+2025-05-26 13:49:49,871 - DEBUG - Setting document settings
+2025-05-26 13:49:49,871 - DEBUG - Updating preview with new content
+2025-05-26 13:49:49,871 - DEBUG - HTML content length: 729
+2025-05-26 13:49:49,871 - DEBUG - Has page breaks detected: False
+2025-05-26 13:49:49,871 - DEBUG - HTML content preview: 
+        <html>
+        <head>
+            <title>Page Break Test</title>
+        </head>
+        <body>
+            <h1>Page 1</h1>
+            <p>This is the content of page 1.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+            <div style="page-break-before: always;"></div>
+
+            <h1>Page 2</h1>
+            <p>This is the content of page 2.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+            <div style="p...
+2025-05-26 13:49:49,872 - DEBUG - Cleaned HTML content to remove title elements and blank lines
+2025-05-26 13:49:49,872 - DEBUG - Splitting content into pages
+2025-05-26 13:49:49,872 - DEBUG - Found 3 explicit page breaks
+2025-05-26 13:49:51,870 - DEBUG - Page layout debug: Current page 1, Total pages 3
+2025-05-26 13:49:51,870 - DEBUG - Zoom factor: 1.0
+2025-05-26 13:49:51,870 - DEBUG - Debugging page breaks...
+2025-05-26 13:49:51,874 - DEBUG - Page structure: {'pageBreaks': 0, 'pages': 3}
+2025-05-26 13:49:51,875 - INFO - Page break check: {'pageBreaks': 0, 'pages': 3}
+
+--------------------------------------------------------------------------------
+
+Test 3/11: test_page_preview_comprehensive.py
+Status: PASS
+Execution Time: 10.74s
+Standard Output:
+
+Standard Error:
+2025-05-26 13:50:00,637 - DEBUG - Initialized navigation controls for testing
+2025-05-26 13:50:00,637 - DEBUG - Updating document settings
+2025-05-26 13:50:00,637 - DEBUG - Setting document settings
+2025-05-26 13:50:00,637 - DEBUG - Updating preview with new content
+2025-05-26 13:50:00,637 - DEBUG - HTML content length: 4562
+2025-05-26 13:50:00,637 - DEBUG - Has page breaks detected: False
+2025-05-26 13:50:00,637 - DEBUG - HTML content preview: 
+        <html>
+        <head>
+            <title>Page Preview Comprehensive Test</title>
+            <style>
+                /* Add styles to help visualize page edges */
+                .edge-marker...           </div>
+
+            <h3>Math Formula</h3>
+            <div style="text-align: center;">
+                <p>E = mc<sup>2</sup></p>
+            </div>
+        </body>
+        </html>
+        
+2025-05-26 13:50:00,638 - DEBUG - Cleaned HTML content to remove title elements and blank lines
+2025-05-26 13:50:00,638 - DEBUG - Splitting content into pages
+2025-05-26 13:50:00,638 - DEBUG - Found 3 explicit page breaks
+2025-05-26 13:50:01,645 - INFO - Running comprehensive page preview tests...
+2025-05-26 13:50:01,645 - INFO - Testing page count...
+2025-05-26 13:50:01,645 - INFO - Testing navigation...
+2025-05-26 13:50:01,645 - DEBUG - Navigating to page 2
+2025-05-26 13:50:01,646 - DEBUG - Navigating to page 1
+2025-05-26 13:50:01,646 - DEBUG - Navigating to page 3
+2025-05-26 13:50:01,647 - INFO - Testing zoom...
+2025-05-26 13:50:01,647 - INFO - Original zoom factor: 1.0
+2025-05-26 13:50:01,647 - INFO - Zoom factor after zoom in: 1.1
+2025-05-26 13:50:01,647 - INFO - Zoom factor after zoom out: 1.0
+2025-05-26 13:50:01,647 - INFO - Zoom factor after reset: 1.0
+2025-05-26 13:50:01,647 - INFO - Testing margin changes...
+2025-05-26 13:50:01,647 - INFO - Original margins: {'top': 25, 'right': 25, 'bottom': 25, 'left': 25}
+2025-05-26 13:50:01,647 - DEBUG - Updating document settings
+2025-05-26 13:50:01,647 - DEBUG - Setting document settings
+2025-05-26 13:50:01,647 - DEBUG - Updating preview with new content
+2025-05-26 13:50:01,647 - DEBUG - HTML content length: 4562
+2025-05-26 13:50:01,647 - DEBUG - Has page breaks detected: False
+2025-05-26 13:50:01,647 - DEBUG - HTML content preview: 
+        <html>
+        <head>
+            <title>Page Preview Comprehensive Test</title>
+            <style>
+                /* Add styles to help visualize page edges */
+                .edge-marker...           </div>
+
+            <h3>Math Formula</h3>
+            <div style="text-align: center;">
+                <p>E = mc<sup>2</sup></p>
+            </div>
+        </body>
+        </html>
+        
+2025-05-26 13:50:01,647 - DEBUG - Cleaned HTML content to remove title elements and blank lines
+2025-05-26 13:50:01,647 - DEBUG - Splitting content into pages
+2025-05-26 13:50:01,647 - DEBUG - Found 3 explicit page breaks
+2025-05-26 13:50:01,648 - INFO - Changed margins to: {'top': 10, 'right': 10, 'bottom': 10, 'left': 10}
+2025-05-26 13:50:01,648 - DEBUG - Updating document settings
+2025-05-26 13:50:01,648 - DEBUG - Setting document settings
+2025-05-26 13:50:01,648 - DEBUG - Updating preview with new content
+2025-05-26 13:50:01,648 - DEBUG - HTML content length: 4562
+2025-05-26 13:50:01,648 - DEBUG - Has page breaks detected: False
+2025-05-26 13:50:01,648 - DEBUG - HTML content preview: 
+        <html>
+        <head>
+            <title>Page Preview Comprehensive Test</title>
+            <style>
+                /* Add styles to help visualize page edges */
+                .edge-marker...           </div>
+
+            <h3>Math Formula</h3>
+            <div style="text-align: center;">
+                <p>E = mc<sup>2</sup></p>
+            </div>
+        </body>
+        </html>
+        
+2025-05-26 13:50:01,648 - DEBUG - Cleaned HTML content to remove title elements and blank lines
+2025-05-26 13:50:01,648 - DEBUG - Splitting content into pages
+2025-05-26 13:50:01,648 - DEBUG - Found 3 explicit page breaks
+2025-05-26 13:50:01,649 - INFO - Restored margins to: {'top': 25, 'right': 25, 'bottom': 25, 'left': 25}
+2025-05-26 13:50:01,649 - INFO - Testing page size changes...
+2025-05-26 13:50:01,649 - INFO - Original page size: A4
+2025-05-26 13:50:01,649 - DEBUG - Updating document settings
+2025-05-26 13:50:01,649 - DEBUG - Setting document settings
+2025-05-26 13:50:01,649 - DEBUG - Updating preview with new content
+2025-05-26 13:50:01,649 - DEBUG - HTML content length: 4562
+2025-05-26 13:50:01,649 - DEBUG - Has page breaks detected: False
+2025-05-26 13:50:01,649 - DEBUG - HTML content preview: 
+        <html>
+        <head>
+            <title>Page Preview Comprehensive Test</title>
+            <style>
+                /* Add styles to help visualize page edges */
+                .edge-marker...           </div>
+
+            <h3>Math Formula</h3>
+            <div style="text-align: center;">
+                <p>E = mc<sup>2</sup></p>
+            </div>
+        </body>
+        </html>
+        
+2025-05-26 13:50:01,649 - DEBUG - Cleaned HTML content to remove title elements and blank lines
+2025-05-26 13:50:01,649 - DEBUG - Splitting content into pages
+2025-05-26 13:50:01,649 - DEBUG - Found 3 explicit page breaks
+2025-05-26 13:50:01,650 - INFO - Changed page size to: Letter
+2025-05-26 13:50:01,650 - DEBUG - Updating document settings
+2025-05-26 13:50:01,650 - DEBUG - Setting document settings
+2025-05-26 13:50:01,650 - DEBUG - Updating preview with new content
+2025-05-26 13:50:01,650 - DEBUG - HTML content length: 4562
+2025-05-26 13:50:01,650 - DEBUG - Has page breaks detected: False
+2025-05-26 13:50:01,650 - DEBUG - HTML content preview: 
+        <html>
+        <head>
+            <title>Page Preview Comprehensive Test</title>
+            <style>
+                /* Add styles to help visualize page edges */
+                .edge-marker...           </div>
+
+            <h3>Math Formula</h3>
+            <div style="text-align: center;">
+                <p>E = mc<sup>2</sup></p>
+            </div>
+        </body>
+        </html>
+        
+2025-05-26 13:50:01,650 - DEBUG - Cleaned HTML content to remove title elements and blank lines
+2025-05-26 13:50:01,650 - DEBUG - Splitting content into pages
+2025-05-26 13:50:01,650 - DEBUG - Found 3 explicit page breaks
+2025-05-26 13:50:01,650 - INFO - Restored page size to: A4
+2025-05-26 13:50:01,650 - INFO - Testing orientation changes...
+2025-05-26 13:50:01,650 - INFO - Original orientation: portrait
+2025-05-26 13:50:01,650 - DEBUG - Updating document settings
+2025-05-26 13:50:01,651 - DEBUG - Setting document settings
+2025-05-26 13:50:01,651 - DEBUG - Updating preview with new content
+2025-05-26 13:50:01,651 - DEBUG - HTML content length: 4562
+2025-05-26 13:50:01,651 - DEBUG - Has page breaks detected: False
+2025-05-26 13:50:01,651 - DEBUG - HTML content preview: 
+        <html>
+        <head>
+            <title>Page Preview Comprehensive Test</title>
+            <style>
+                /* Add styles to help visualize page edges */
+                .edge-marker...           </div>
+
+            <h3>Math Formula</h3>
+            <div style="text-align: center;">
+                <p>E = mc<sup>2</sup></p>
+            </div>
+        </body>
+        </html>
+        
+2025-05-26 13:50:01,651 - DEBUG - Cleaned HTML content to remove title elements and blank lines
+2025-05-26 13:50:01,651 - DEBUG - Splitting content into pages
+2025-05-26 13:50:01,652 - DEBUG - Found 3 explicit page breaks
+2025-05-26 13:50:01,652 - INFO - Changed orientation to: landscape
+2025-05-26 13:50:01,652 - DEBUG - Updating document settings
+2025-05-26 13:50:01,652 - DEBUG - Setting document settings
+2025-05-26 13:50:01,652 - DEBUG - Updating preview with new content
+2025-05-26 13:50:01,652 - DEBUG - HTML content length: 4562
+2025-05-26 13:50:01,652 - DEBUG - Has page breaks detected: False
+2025-05-26 13:50:01,652 - DEBUG - HTML content preview: 
+        <html>
+        <head>
+            <title>Page Preview Comprehensive Test</title>
+            <style>
+                /* Add styles to help visualize page edges */
+                .edge-marker...           </div>
+
+            <h3>Math Formula</h3>
+            <div style="text-align: center;">
+                <p>E = mc<sup>2</sup></p>
+            </div>
+        </body>
+        </html>
+        
+2025-05-26 13:50:01,652 - DEBUG - Cleaned HTML content to remove title elements and blank lines
+2025-05-26 13:50:01,652 - DEBUG - Splitting content into pages
+2025-05-26 13:50:01,652 - DEBUG - Found 3 explicit page breaks
+2025-05-26 13:50:01,653 - INFO - Restored orientation to: portrait
+2025-05-26 13:50:01,653 - DEBUG - Page layout debug: Current page 3, Total pages 3
+2025-05-26 13:50:01,653 - DEBUG - Zoom factor: 1.0
+2025-05-26 13:50:01,653 - INFO - Comprehensive page preview tests completed
+2025-05-26 13:50:01,654 - INFO - Page count: 3
+2025-05-26 13:50:01,654 - DEBUG - Navigation result: True
+2025-05-26 13:50:01,654 - INFO - Current page after next: 2
+2025-05-26 13:50:01,654 - DEBUG - Navigation result: True
+2025-05-26 13:50:01,655 - INFO - Current page after previous: 1
+2025-05-26 13:50:01,655 - DEBUG - Navigation result: True
+2025-05-26 13:50:01,655 - INFO - Current page after go_to_page(3): 3
+
+--------------------------------------------------------------------------------
+
+Test 4/11: test_js_syntax_and_page_numbers.py
+Status: PASS
+Execution Time: 11.13s
+Standard Output:
+2025-05-26 13:50:10,986 - INFO - Logging to file: C:\Users\joshd\.markdown_pdf_logs\markdown_pdf_debug_20250526_135010.log
+2025-05-26 13:50:11,006 - INFO - Running all tests
+2025-05-26 13:50:11,006 - INFO - Running all JavaScript and page number tests
+2025-05-26 13:50:11,006 - INFO - Testing for JavaScript syntax errors
+2025-05-26 13:50:14,410 - INFO - No JavaScript syntax errors found
+2025-05-26 13:50:14,410 - INFO - JavaScript syntax test result: PASS
+2025-05-26 13:50:14,410 - INFO - Testing page number functionality
+2025-05-26 13:50:17,408 - INFO - Actual page count: 0
+2025-05-26 13:50:18,408 - INFO - Using page count: 3
+2025-05-26 13:50:18,408 - INFO - Testing navigation to page 1
+2025-05-26 13:50:18,409 - INFO - Actual page count after delay: 0
+2025-05-26 13:50:18,909 - INFO - Page info: {'current': 1, 'total': 3}
+2025-05-26 13:50:18,909 - INFO - Testing navigation to page 2
+2025-05-26 13:50:19,410 - INFO - Page info: {'current': 2, 'total': 3}
+2025-05-26 13:50:19,410 - INFO - Testing navigation to page 3
+2025-05-26 13:50:19,911 - INFO - Page info: {'current': 3, 'total': 3}
+2025-05-26 13:50:19,911 - INFO - Testing previous/next navigation
+2025-05-26 13:50:20,912 - INFO - Current page after next: 2
+2025-05-26 13:50:21,412 - INFO - Current page after previous: 1
+2025-05-26 13:50:21,412 - INFO - Previous button enabled on page 1: False
+2025-05-26 13:50:21,913 - INFO - Next button enabled on last page: False
+2025-05-26 13:50:21,913 - INFO - Page number test result: PASS
+2025-05-26 13:50:21,913 - INFO - Overall test result: PASS
+2025-05-26 13:50:21,914 - INFO - 
+Test Summary:
+2025-05-26 13:50:21,914 - INFO - - JavaScript Syntax Errors: 0
+2025-05-26 13:50:21,914 - INFO - - Page Number Issues: 0
+2025-05-26 13:50:21,914 - INFO - - Overall Result: PASS
+
+Standard Error:
+js: Uncaught TypeError: window.navigateToPage is not a function
+js: Uncaught TypeError: window.navigateToPage is not a function
+js: Uncaught TypeError: window.navigateToPage is not a function
+js: Uncaught TypeError: window.navigateToPage is not a function
+js: Uncaught TypeError: window.navigateToPage is not a function
+js: Uncaught TypeError: window.navigateToPage is not a function
+js: Uncaught TypeError: window.navigateToPage is not a function
+
+--------------------------------------------------------------------------------
+
+Test 5/11: test_page_navigation_and_export.py
+Status: PASS
+Execution Time: 0.17s
+Standard Output:
+2025-05-26 13:50:22,106 - INFO - Logging to file: C:\Users\joshd\.markdown_pdf_logs\markdown_pdf_debug_20250526_135022.log
+
+Standard Error:
+2025-05-26 13:50:22,122 - INFO - Dialog handler initialized
+2025-05-26 13:50:22,122 - INFO - Dialog handler started (suppress=True, timeout=10000ms)
+2025-05-26 13:50:22,122 - INFO - Registered custom response for QMessageBox
+2025-05-26 13:50:22,123 - INFO - Running all page navigation and export dialog tests
+2025-05-26 13:50:22,123 - INFO - Testing page navigation
+2025-05-26 13:50:22,123 - INFO - Page navigation test passed
+2025-05-26 13:50:22,123 - INFO - Page navigation test result: PASS
+2025-05-26 13:50:22,123 - INFO - Testing export dialogs
+2025-05-26 13:50:22,123 - INFO - Export dialog test passed
+2025-05-26 13:50:22,123 - INFO - Export dialog test result: PASS
+2025-05-26 13:50:22,123 - INFO - Overall test result: PASS
+2025-05-26 13:50:22,123 - INFO - Dialog handler stopped
+2025-05-26 13:50:22,123 - INFO - Closing all active dialogs (0)
+
+--------------------------------------------------------------------------------
+
+Test 6/11: test_mdz_export_integration.py
+Status: PASS
+Execution Time: 12.99s
+Standard Output:
+2025-05-26 13:50:22,268 - INFO - Logging to file: C:\Users\joshd\.markdown_pdf_logs\markdown_pdf_debug_20250526_135022.log
+2025-05-26 13:50:22,288 - INFO - Running in test mode - dialogs will be suppressed
+Found xelatex in PATH
+Found pdflatex in PATH
+Found lualatex in PATH
+Found wkhtmltopdf at: C:\Program Files\wkhtmltopdf\bin\wkhtmltopdf.exe
+Found weasyprint in PATH
+Pandoc found: pandoc.exe 3.1.12.1
+2025-05-26 13:50:23,920 - INFO - Loaded temporary style
+2025-05-26 13:50:23,920 - INFO - Loaded 3 recent files
+2025-05-26 13:50:23,920 - INFO - Settings loaded successfully
+Settings loaded successfully
+2025-05-26 13:50:24,441 - INFO - Starting MDZ export process
+
+Standard Error:
+2025-05-26 13:50:22,288 - DEBUG - Available styles: ['Business Professional', 'Technical Document', 'Academic', 'Minimal', 'Custom']
+2025-05-26 13:50:22,288 - INFO - Running in test mode - dialogs will be suppressed
+2025-05-26 13:50:23,919 - DEBUG - Loaded temporary style
+2025-05-26 13:50:23,920 - INFO - Loaded temporary style
+2025-05-26 13:50:23,920 - INFO - Loaded 3 recent files
+2025-05-26 13:50:23,920 - INFO - Settings loaded successfully
+2025-05-26 13:50:24,330 - DEBUG - Initialized navigation controls for testing
+2025-05-26 13:50:24,330 - DEBUG - Setting up zoom controls
+2025-05-26 13:50:24,350 - DEBUG - Main update_preview call #1
+2025-05-26 13:50:24,350 - DEBUG - Updating document settings
+2025-05-26 13:50:24,350 - DEBUG - Setting document settings
+2025-05-26 13:50:24,350 - DEBUG - Updated document settings in page preview
+2025-05-26 13:50:24,350 - DEBUG - RenderUtils.update_preview call #1
+2025-05-26 13:50:24,351 - DEBUG - Got markdown text, length: 258
+2025-05-26 13:50:24,351 - DEBUG - Updating document settings in page_preview
+2025-05-26 13:50:24,351 - DEBUG - Updating document settings
+2025-05-26 13:50:24,351 - DEBUG - Setting document settings
+2025-05-26 13:50:24,351 - DEBUG - Using built-in zoom functionality in page_preview.py
+2025-05-26 13:50:24,352 - DEBUG - Finding page breaks in markdown
+2025-05-26 13:50:24,352 - DEBUG - Found 0 page breaks at lines: []
+2025-05-26 13:50:24,352 - DEBUG - Found 0 page breaks at lines: []
+2025-05-26 13:50:24,352 - DEBUG - Writing processed Markdown to temporary file (length: 258)
+2025-05-26 13:50:24,354 - DEBUG - Created temporary HTML file: C:\Users\joshd\AppData\Local\Temp\tmpo0rlq4vt.html
+2025-05-26 13:50:24,354 - DEBUG - Generating CSS from settings
+2025-05-26 13:50:24,354 - DEBUG - CSS generation completed
+2025-05-26 13:50:24,354 - DEBUG - Injecting page break styles into CSS
+2025-05-26 13:50:24,356 - DEBUG - Created temporary CSS file: C:\Users\joshd\AppData\Local\Temp\tmpbtdu4hi7.css
+2025-05-26 13:50:24,356 - DEBUG - Running command: C:\Users\joshd\AppData\Local\Pandoc\pandoc.exe C:\Users\joshd\AppData\Local\Temp\tmp3qkgno1o.md -o C:\Users\joshd\AppData\Local\Temp\tmpo0rlq4vt.html --standalone --css=C:\Users\joshd\AppData\Local\Temp\tmpbtdu4hi7.css --mathjax -f markdown+fenced_divs+pipe_tables+backtick_code_blocks -t html5 --metadata title=Preview --variable secnumdepth=-2 --variable disable-numbering=true
+2025-05-26 13:50:24,431 - DEBUG - Processing page breaks for preview
+2025-05-26 13:50:24,431 - DEBUG - No page breaks found in content
+2025-05-26 13:50:24,431 - DEBUG - HTML content generated (length: 5342)
+2025-05-26 13:50:24,431 - DEBUG - Updating document settings
+2025-05-26 13:50:24,431 - DEBUG - Setting document settings
+2025-05-26 13:50:24,431 - DEBUG - Updating preview with new content
+2025-05-26 13:50:24,431 - DEBUG - HTML content length: 5342
+2025-05-26 13:50:24,431 - DEBUG - Has page breaks detected: False
+2025-05-26 13:50:24,431 - DEBUG - HTML content preview: <!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=de...>print</span>(<span class="st">&quot;Hello, world!&quot;</span>)</span></code></pre></div>
+<h2 id="math-example">Math Example</h2>
+<p><span class="math inline">\(E = mc^2\)</span></p>
+</body>
+</html>
+
+2025-05-26 13:50:24,432 - DEBUG - Cleaned HTML content to remove title elements and blank lines
+2025-05-26 13:50:24,432 - DEBUG - Splitting content into pages
+2025-05-26 13:50:24,432 - DEBUG - Calculating automatic page breaks
+2025-05-26 13:50:24,432 - DEBUG - Page calculation: 754.0pt usable height, 29.9 theoretical lines, 30 actual lines per page, font: 14pt, line height: 1.8
+2025-05-26 13:50:24,432 - DEBUG - Font size: 14pt, Line height: 1.8, Lines per page: 30
+2025-05-26 13:50:24,433 - DEBUG - Calculated 1 automatic pages
+2025-05-26 13:50:24,433 - DEBUG - Split content into 1 pages
+2025-05-26 13:50:24,440 - DEBUG - Preview updated successfully
+2025-05-26 13:50:24,440 - DEBUG - Cleaning up temporary files
+2025-05-26 13:50:24,440 - DEBUG - Deleted temporary file: C:\Users\joshd\AppData\Local\Temp\tmp3qkgno1o.md
+2025-05-26 13:50:24,441 - DEBUG - Deleted temporary file: C:\Users\joshd\AppData\Local\Temp\tmpbtdu4hi7.css
+2025-05-26 13:50:24,441 - DEBUG - Deleted temporary file: C:\Users\joshd\AppData\Local\Temp\tmpo0rlq4vt.html
+2025-05-26 13:50:24,441 - DEBUG - Exiting function: update_preview
+2025-05-26 13:50:24,441 - DEBUG - Preview updated successfully (call #1)
+2025-05-26 13:50:24,441 - DEBUG - Skipping duplicate preview update (debounce)
+2025-05-26 13:50:24,441 - INFO - Testing MDZ export...
+2025-05-26 13:50:24,441 - INFO - Starting MDZ export process
+2025-05-26 13:50:24,537 - DEBUG - Created temporary directory: C:\Users\joshd\AppData\Local\Temp\mdz_export_9qi3a0e6
+2025-05-26 13:50:24,567 - INFO - Created MDZ bundle: C:\Users\joshd\AppData\Local\Temp\mdz_export_test_3v_j4f75\test_output.mdz
+2025-05-26 13:50:24,568 - DEBUG - Cleaned up temporary directory: C:\Users\joshd\AppData\Local\Temp\mdz_export_9qi3a0e6
+2025-05-26 13:50:35,001 - INFO - MDZ export successful: C:\Users\joshd\AppData\Local\Temp\mdz_export_test_3v_j4f75\test_output.mdz
+2025-05-26 13:50:35,001 - INFO - MDZ file exists: C:\Users\joshd\AppData\Local\Temp\mdz_export_test_3v_j4f75\test_output.mdz
+2025-05-26 13:50:35,001 - INFO - MDZ file size: 1289 bytes
+2025-05-26 13:50:35,001 - INFO - Extracting MDZ file to: C:\Users\joshd\AppData\Local\Temp\mdz_export_test_3v_j4f75\extracted
+2025-05-26 13:50:35,027 - INFO - MDZ extraction successful
+2025-05-26 13:50:35,027 - INFO - Extracted markdown content length: 258
+2025-05-26 13:50:35,027 - INFO - Extracted metadata: {'created': '2025-05-26T13:50:24.539296', 'format': 'mdz', 'settings': {'code': {'background': '#F8F8F8', 'border_color': '#EEEEEE', 'font_family': 'Papyrus', 'font_size': 10}, 'colors': {'background': '#f5f5f5', 'links': '#333333', 'text': '#5cff98'}, 'custom_css': '\nbody {\n    background-color: #f0f0f0;\n    color: #333333;\n}\n\nh1 {\n    color: #0066cc;\n    border-bottom: 2px solid #0066cc;\n}\n\ntable {\n    border-collapse: collapse;\n    width: 100%;\n}\n\nth, td {\n    border: 1px solid #dddddd;\n    padding: 8px;\n}\n\nth {\n    background-color: #f2f2f2;\n}\n', 'fonts': {'body': {'family': 'Papyrus', 'line_height': 1.8, 'size': 14}, 'headings': {'h1': {'color': '#333333', 'family': 'Papyrus', 'margin_bottom': 7, 'margin_top': 0, 'size': 16, 'spacing': 1.8000000000000005}, 'h2': {'color': '#333333', 'family': 'Papyrus', 'margin_bottom': 10, 'margin_top': 18, 'size': 14, 'spacing': 1.1}, 'h3': {'color': '#333333', 'family': 'Papyrus', 'margin_bottom': 8, 'margin_top': 14, 'size': 12, 'spacing': 1.1}, 'h4': {'color': '#333333', 'family': 'Papyrus', 'margin_bottom': 6, 'margin_top': 12, 'size': 11, 'spacing': 1.1}, 'h5': {'color': '#333333', 'family': 'Papyrus', 'margin_bottom': 5, 'margin_top': 10, 'size': 11, 'spacing': 1.1}, 'h6': {'color': '#333333', 'family': 'Papyrus', 'margin_bottom': 5, 'margin_top': 10, 'size': 11, 'spacing': 1.1}}}, 'format': {'master_font': {'family': 'Papyrus', 'size': 11}, 'numbering_start': 3, 'page_number_format': '{page}', 'page_numbering': True, 'preferred_engine': 'wkhtmltopdf', 'technical_numbering': False, 'use_master_font': True}, 'lists': {'bullet_indent': 20, 'bullet_style_l1': 'Disc', 'bullet_style_l2': 'Circle', 'bullet_style_l3': 'Square', 'item_spacing': 5, 'nested_indent': 20, 'number_indent': 20, 'number_style_l1': 'Decimal', 'number_style_l2': 'Lower Alpha', 'number_style_l3': 'Lower Roman'}, 'page': {'margins': {'bottom': 16.0, 'left': 16.0, 'right': 18.0, 'top': 15.0}, 'orientation': 'landscape', 'size': 'Executive'}, 'paragraphs': {'alignment': 'left', 'first_line_indent': 0, 'margin_bottom': 10, 'margin_top': 0, 'spacing': 2.1999999999999997}, 'table': {'border_color': '#DDDDDD', 'cell_padding': 5, 'header_bg': '#F5F5F5'}, 'toc': {'depth': 2, 'include': False, 'title': 'Contents'}}, 'version': '1.0'}
+2025-05-26 13:50:35,027 - INFO - Manifest file exists: C:\Users\joshd\AppData\Local\Temp\mdz_export_test_3v_j4f75\extracted\manifest.json
+2025-05-26 13:50:35,027 - INFO - Metadata file exists: C:\Users\joshd\AppData\Local\Temp\mdz_export_test_3v_j4f75\extracted\metadata.yaml
+2025-05-26 13:50:35,027 - INFO - Main markdown file exists: C:\Users\joshd\AppData\Local\Temp\mdz_export_test_3v_j4f75\extracted\main.md
+2025-05-26 13:50:35,028 - DEBUG - Closing in test environment - skipping style and settings save
+2025-05-26 13:50:35,029 - WARNING - Error cleaning up test files: [WinError 145] The directory is not empty: 'C:\\Users\\joshd\\AppData\\Local\\Temp\\mdz_export_test_3v_j4f75'
+2025-05-26 13:50:35,029 - INFO - MDZ export integration test completed
+
+--------------------------------------------------------------------------------
+
+Test 7/11: test_mdz_comprehensive.py
+Status: PASS
+Execution Time: 4.53s
+Standard Output:
+2025-05-26 13:50:35,319 - INFO - Logging to file: C:\Users\joshd\.markdown_pdf_logs\markdown_pdf_debug_20250526_135035.log
+2025-05-26 13:50:35,463 - INFO - Running in test mode - dialogs will be suppressed
+Found xelatex in PATH
+Found pdflatex in PATH
+Found lualatex in PATH
+Found wkhtmltopdf at: C:\Program Files\wkhtmltopdf\bin\wkhtmltopdf.exe
+Found weasyprint in PATH
+Pandoc found: pandoc.exe 3.1.12.1
+2025-05-26 13:50:37,136 - INFO - Loaded temporary style
+2025-05-26 13:50:37,137 - INFO - Loaded 3 recent files
+2025-05-26 13:50:37,137 - INFO - Settings loaded successfully
+Settings loaded successfully
+2025-05-26 13:50:37,675 - INFO - Starting MDZ export process
+
+Standard Error:
+2025-05-26 13:50:35,326 - INFO - Running all MDZ tests
+2025-05-26 13:50:35,326 - INFO - Running MDZ integration test: basic
+2025-05-26 13:50:35,328 - INFO - Testing MDZ creation: C:\Users\joshd\AppData\Local\Temp\mdz_test_scqy69k3\basic.mdz
+2025-05-26 13:50:35,328 - DEBUG - Created temporary directory: C:\Users\joshd\AppData\Local\Temp\mdz_export_p11mekku
+2025-05-26 13:50:35,349 - INFO - Created MDZ bundle: C:\Users\joshd\AppData\Local\Temp\mdz_test_scqy69k3\basic.mdz
+2025-05-26 13:50:35,349 - DEBUG - Cleaned up temporary directory: C:\Users\joshd\AppData\Local\Temp\mdz_export_p11mekku
+2025-05-26 13:50:35,350 - INFO - MDZ file created: C:\Users\joshd\AppData\Local\Temp\mdz_test_scqy69k3\basic.mdz
+2025-05-26 13:50:35,350 - INFO - MDZ file size: 457 bytes
+2025-05-26 13:50:35,350 - INFO - Original content checksum: feb49de41e1535bab326737d585f2f277cbacf4ab958fd414911df033a5cb8c7
+2025-05-26 13:50:35,350 - INFO - Testing MDZ extraction: C:\Users\joshd\AppData\Local\Temp\mdz_test_scqy69k3\basic.mdz
+2025-05-26 13:50:35,364 - INFO - MDZ extraction successful
+2025-05-26 13:50:35,364 - INFO - Extracted markdown content length: 57
+2025-05-26 13:50:35,364 - INFO - Extracted metadata: {'created': '2025-05-26T13:50:35.330467', 'format': 'mdz', 'settings': {'author': 'Test Author', 'date': '', 'page': {'margins': {'bottom': 25, 'left': 25, 'right': 25, 'top': 25}, 'orientation': 'portrait', 'size': 'A4'}, 'tags': [], 'title': 'Basic MDZ Test'}, 'version': '1.0'}
+2025-05-26 13:50:35,364 - INFO - Manifest file exists: C:\Users\joshd\AppData\Local\Temp\mdz_test_scqy69k3\basic_extracted\manifest.json
+2025-05-26 13:50:35,364 - INFO - Metadata file exists: C:\Users\joshd\AppData\Local\Temp\mdz_test_scqy69k3\basic_extracted\metadata.yaml
+2025-05-26 13:50:35,364 - INFO - Main markdown file exists: C:\Users\joshd\AppData\Local\Temp\mdz_test_scqy69k3\basic_extracted\main.md
+2025-05-26 13:50:35,364 - INFO - MDZ integration test passed: basic
+2025-05-26 13:50:35,364 - INFO - Running MDZ integration test: with_assets
+2025-05-26 13:50:35,369 - INFO - Testing MDZ creation: C:\Users\joshd\AppData\Local\Temp\mdz_test_scqy69k3\with_assets.mdz
+2025-05-26 13:50:35,370 - DEBUG - Created temporary directory: C:\Users\joshd\AppData\Local\Temp\mdz_export_l0n1tp6j
+2025-05-26 13:50:35,392 - INFO - Created MDZ bundle: C:\Users\joshd\AppData\Local\Temp\mdz_test_scqy69k3\with_assets.mdz
+2025-05-26 13:50:35,393 - DEBUG - Cleaned up temporary directory: C:\Users\joshd\AppData\Local\Temp\mdz_export_l0n1tp6j
+2025-05-26 13:50:35,394 - INFO - MDZ file created: C:\Users\joshd\AppData\Local\Temp\mdz_test_scqy69k3\with_assets.mdz
+2025-05-26 13:50:35,394 - INFO - MDZ file size: 651 bytes
+2025-05-26 13:50:35,394 - INFO - Original content checksum: 06863cedfa64c35aa0a86f69baa98396885b0e425a3e116a786d75df5cc10383
+2025-05-26 13:50:35,394 - INFO - Testing MDZ extraction: C:\Users\joshd\AppData\Local\Temp\mdz_test_scqy69k3\with_assets.mdz
+2025-05-26 13:50:35,414 - INFO - MDZ extraction successful
+2025-05-26 13:50:35,414 - INFO - Extracted markdown content length: 146
+2025-05-26 13:50:35,414 - INFO - Extracted metadata: {'created': '2025-05-26T13:50:35.372012', 'format': 'mdz', 'settings': {'author': 'Test Author', 'date': '', 'page': {'margins': {'bottom': 25, 'left': 25, 'right': 25, 'top': 25}, 'orientation': 'portrait', 'size': 'A4'}, 'tags': [], 'title': 'MDZ Test with Assets'}, 'version': '1.0'}
+2025-05-26 13:50:35,414 - INFO - Manifest file exists: C:\Users\joshd\AppData\Local\Temp\mdz_test_scqy69k3\with_assets_extracted\manifest.json
+2025-05-26 13:50:35,414 - INFO - Metadata file exists: C:\Users\joshd\AppData\Local\Temp\mdz_test_scqy69k3\with_assets_extracted\metadata.yaml
+2025-05-26 13:50:35,414 - INFO - Main markdown file exists: C:\Users\joshd\AppData\Local\Temp\mdz_test_scqy69k3\with_assets_extracted\main.md
+2025-05-26 13:50:35,414 - INFO - Assets directory exists: C:\Users\joshd\AppData\Local\Temp\mdz_test_scqy69k3\with_assets_extracted\assets
+2025-05-26 13:50:35,414 - INFO - Assets: ['test_data.json', 'test_image.png']
+2025-05-26 13:50:35,414 - INFO - MDZ integration test passed: with_assets
+2025-05-26 13:50:35,414 - INFO - Running MDZ integration test: complex
+2025-05-26 13:50:35,416 - INFO - Testing MDZ creation: C:\Users\joshd\AppData\Local\Temp\mdz_test_scqy69k3\complex.mdz
+2025-05-26 13:50:35,417 - DEBUG - Created temporary directory: C:\Users\joshd\AppData\Local\Temp\mdz_export_naws1doj
+2025-05-26 13:50:35,431 - INFO - Created MDZ bundle: C:\Users\joshd\AppData\Local\Temp\mdz_test_scqy69k3\complex.mdz
+2025-05-26 13:50:35,432 - DEBUG - Cleaned up temporary directory: C:\Users\joshd\AppData\Local\Temp\mdz_export_naws1doj
+2025-05-26 13:50:35,432 - INFO - MDZ file created: C:\Users\joshd\AppData\Local\Temp\mdz_test_scqy69k3\complex.mdz
+2025-05-26 13:50:35,432 - INFO - MDZ file size: 615 bytes
+2025-05-26 13:50:35,433 - INFO - Original content checksum: 169b95c32be6131d5deead438f0bef32f0f3a5368993b51ddafbaf8dee84ccb8
+2025-05-26 13:50:35,433 - INFO - Testing MDZ extraction: C:\Users\joshd\AppData\Local\Temp\mdz_test_scqy69k3\complex.mdz
+2025-05-26 13:50:35,446 - INFO - MDZ extraction successful
+2025-05-26 13:50:35,446 - INFO - Extracted markdown content length: 277
+2025-05-26 13:50:35,446 - INFO - Extracted metadata: {'created': '2025-05-26T13:50:35.418550', 'format': 'mdz', 'settings': {'author': 'Test Author', 'date': '', 'page': {'margins': {'bottom': 25, 'left': 25, 'right': 25, 'top': 25}, 'orientation': 'portrait', 'size': 'A4'}, 'tags': ['math', 'code', 'tables'], 'title': 'Complex MDZ Test'}, 'version': '1.0'}
+2025-05-26 13:50:35,446 - INFO - Manifest file exists: C:\Users\joshd\AppData\Local\Temp\mdz_test_scqy69k3\complex_extracted\manifest.json
+2025-05-26 13:50:35,446 - INFO - Metadata file exists: C:\Users\joshd\AppData\Local\Temp\mdz_test_scqy69k3\complex_extracted\metadata.yaml
+2025-05-26 13:50:35,446 - INFO - Main markdown file exists: C:\Users\joshd\AppData\Local\Temp\mdz_test_scqy69k3\complex_extracted\main.md
+2025-05-26 13:50:35,446 - INFO - MDZ integration test passed: complex
+2025-05-26 13:50:35,446 - INFO - Running MDZ app integration test: app_integration
+2025-05-26 13:50:35,462 - DEBUG - Available styles: ['Business Professional', 'Technical Document', 'Academic', 'Minimal', 'Custom']
+2025-05-26 13:50:35,463 - INFO - Running in test mode - dialogs will be suppressed
+2025-05-26 13:50:37,136 - DEBUG - Loaded temporary style
+2025-05-26 13:50:37,136 - INFO - Loaded temporary style
+2025-05-26 13:50:37,137 - INFO - Loaded 3 recent files
+2025-05-26 13:50:37,137 - INFO - Settings loaded successfully
+2025-05-26 13:50:37,556 - DEBUG - Initialized navigation controls for testing
+2025-05-26 13:50:37,556 - DEBUG - Setting up zoom controls
+2025-05-26 13:50:37,579 - DEBUG - Main update_preview call #1
+2025-05-26 13:50:37,580 - DEBUG - Updating document settings
+2025-05-26 13:50:37,580 - DEBUG - Setting document settings
+2025-05-26 13:50:37,580 - DEBUG - Updated document settings in page preview
+2025-05-26 13:50:37,580 - DEBUG - RenderUtils.update_preview call #1
+2025-05-26 13:50:37,580 - DEBUG - Got markdown text, length: 142
+2025-05-26 13:50:37,580 - DEBUG - Updating document settings in page_preview
+2025-05-26 13:50:37,580 - DEBUG - Updating document settings
+2025-05-26 13:50:37,580 - DEBUG - Setting document settings
+2025-05-26 13:50:37,580 - DEBUG - Using built-in zoom functionality in page_preview.py
+2025-05-26 13:50:37,580 - DEBUG - Finding page breaks in markdown
+2025-05-26 13:50:37,580 - DEBUG - Found 0 page breaks at lines: []
+2025-05-26 13:50:37,580 - DEBUG - Found 0 page breaks at lines: []
+2025-05-26 13:50:37,580 - DEBUG - Writing processed Markdown to temporary file (length: 142)
+2025-05-26 13:50:37,583 - DEBUG - Created temporary HTML file: C:\Users\joshd\AppData\Local\Temp\tmp7859d8cr.html
+2025-05-26 13:50:37,583 - DEBUG - Generating CSS from settings
+2025-05-26 13:50:37,583 - DEBUG - CSS generation completed
+2025-05-26 13:50:37,583 - DEBUG - Injecting page break styles into CSS
+2025-05-26 13:50:37,586 - DEBUG - Created temporary CSS file: C:\Users\joshd\AppData\Local\Temp\tmpm0i4xoxe.css
+2025-05-26 13:50:37,586 - DEBUG - Running command: C:\Users\joshd\AppData\Local\Pandoc\pandoc.exe C:\Users\joshd\AppData\Local\Temp\tmpomhljpnc.md -o C:\Users\joshd\AppData\Local\Temp\tmp7859d8cr.html --standalone --css=C:\Users\joshd\AppData\Local\Temp\tmpm0i4xoxe.css --mathjax -f markdown+fenced_divs+pipe_tables+backtick_code_blocks -t html5 --metadata title=Preview --variable secnumdepth=-2 --variable disable-numbering=true
+2025-05-26 13:50:37,665 - DEBUG - Processing page breaks for preview
+2025-05-26 13:50:37,665 - DEBUG - No page breaks found in content
+2025-05-26 13:50:37,665 - DEBUG - HTML content generated (length: 1299)
+2025-05-26 13:50:37,665 - DEBUG - Updating document settings
+2025-05-26 13:50:37,665 - DEBUG - Setting document settings
+2025-05-26 13:50:37,665 - DEBUG - Updating preview with new content
+2025-05-26 13:50:37,665 - DEBUG - HTML content length: 1299
+2025-05-26 13:50:37,665 - DEBUG - Has page breaks detected: False
+2025-05-26 13:50:37,665 - DEBUG - HTML content preview: <!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=de...">Preview</h1>
+<p class="author">Test Author</p>
+</header>
+<h1 id="mdz-app-integration-test">MDZ App Integration Test</h1>
+<p>This tests the integration with the main application.</p>
+</body>
+</html>
+
+2025-05-26 13:50:37,666 - DEBUG - Cleaned HTML content to remove title elements and blank lines
+2025-05-26 13:50:37,666 - DEBUG - Splitting content into pages
+2025-05-26 13:50:37,666 - DEBUG - Calculating automatic page breaks
+2025-05-26 13:50:37,666 - DEBUG - Page calculation: 754.0pt usable height, 29.9 theoretical lines, 30 actual lines per page, font: 14pt, line height: 1.8
+2025-05-26 13:50:37,666 - DEBUG - Font size: 14pt, Line height: 1.8, Lines per page: 30
+2025-05-26 13:50:37,666 - DEBUG - Calculated 1 automatic pages
+2025-05-26 13:50:37,666 - DEBUG - Split content into 1 pages
+2025-05-26 13:50:37,674 - DEBUG - Preview updated successfully
+2025-05-26 13:50:37,674 - DEBUG - Cleaning up temporary files
+2025-05-26 13:50:37,674 - DEBUG - Deleted temporary file: C:\Users\joshd\AppData\Local\Temp\tmpomhljpnc.md
+2025-05-26 13:50:37,675 - DEBUG - Deleted temporary file: C:\Users\joshd\AppData\Local\Temp\tmpm0i4xoxe.css
+2025-05-26 13:50:37,675 - DEBUG - Deleted temporary file: C:\Users\joshd\AppData\Local\Temp\tmp7859d8cr.html
+2025-05-26 13:50:37,675 - DEBUG - Exiting function: update_preview
+2025-05-26 13:50:37,675 - DEBUG - Preview updated successfully (call #1)
+2025-05-26 13:50:37,675 - DEBUG - Skipping duplicate preview update (debounce)
+2025-05-26 13:50:37,675 - INFO - Starting MDZ export process
+2025-05-26 13:50:37,750 - DEBUG - Created temporary directory: C:\Users\joshd\AppData\Local\Temp\mdz_export_2e4g7v0l
+2025-05-26 13:50:37,775 - INFO - Created MDZ bundle: C:\Users\joshd\AppData\Local\Temp\mdz_test_scqy69k3\app_integration.mdz
+2025-05-26 13:50:37,776 - DEBUG - Cleaned up temporary directory: C:\Users\joshd\AppData\Local\Temp\mdz_export_2e4g7v0l
+2025-05-26 13:50:39,553 - INFO - MDZ export successful: C:\Users\joshd\AppData\Local\Temp\mdz_test_scqy69k3\app_integration.mdz
+2025-05-26 13:50:39,553 - INFO - MDZ file size: 1177 bytes
+2025-05-26 13:50:39,578 - INFO - MDZ extraction successful
+2025-05-26 13:50:39,578 - INFO - MDZ app integration test passed: app_integration
+2025-05-26 13:50:39,619 - INFO - Test results written to: C:\Users\joshd\AppData\Local\Temp\mdz_test_scqy69k3\mdz_test_results.json
+2025-05-26 13:50:39,619 - INFO - Summary: Passed 4/4 tests (100.00%)
+
+--------------------------------------------------------------------------------
+
+Test 8/11: test_js_syntax_and_page_numbers.py
+Status: PASS
+Execution Time: 11.15s
+Standard Output:
+2025-05-26 13:50:39,811 - INFO - Logging to file: C:\Users\joshd\.markdown_pdf_logs\markdown_pdf_debug_20250526_135039.log
+2025-05-26 13:50:39,830 - INFO - Running all tests
+2025-05-26 13:50:39,830 - INFO - Running all JavaScript and page number tests
+2025-05-26 13:50:39,830 - INFO - Testing for JavaScript syntax errors
+2025-05-26 13:50:43,223 - INFO - No JavaScript syntax errors found
+2025-05-26 13:50:43,223 - INFO - JavaScript syntax test result: PASS
+2025-05-26 13:50:43,223 - INFO - Testing page number functionality
+2025-05-26 13:50:46,234 - INFO - Actual page count: 0
+2025-05-26 13:50:47,233 - INFO - Using page count: 3
+2025-05-26 13:50:47,233 - INFO - Testing navigation to page 1
+2025-05-26 13:50:47,234 - INFO - Actual page count after delay: 0
+2025-05-26 13:50:47,734 - INFO - Page info: {'current': 1, 'total': 3}
+2025-05-26 13:50:47,734 - INFO - Testing navigation to page 2
+2025-05-26 13:50:48,234 - INFO - Page info: {'current': 2, 'total': 3}
+2025-05-26 13:50:48,234 - INFO - Testing navigation to page 3
+2025-05-26 13:50:48,735 - INFO - Page info: {'current': 3, 'total': 3}
+2025-05-26 13:50:48,735 - INFO - Testing previous/next navigation
+2025-05-26 13:50:49,736 - INFO - Current page after next: 2
+2025-05-26 13:50:50,236 - INFO - Current page after previous: 1
+2025-05-26 13:50:50,236 - INFO - Previous button enabled on page 1: False
+2025-05-26 13:50:50,737 - INFO - Next button enabled on last page: False
+2025-05-26 13:50:50,737 - INFO - Page number test result: PASS
+2025-05-26 13:50:50,737 - INFO - Overall test result: PASS
+2025-05-26 13:50:50,738 - INFO - 
+Test Summary:
+2025-05-26 13:50:50,738 - INFO - - JavaScript Syntax Errors: 0
+2025-05-26 13:50:50,738 - INFO - - Page Number Issues: 0
+2025-05-26 13:50:50,738 - INFO - - Overall Result: PASS
+
+Standard Error:
+js: Uncaught TypeError: window.navigateToPage is not a function
+js: Uncaught TypeError: window.navigateToPage is not a function
+js: Uncaught TypeError: window.navigateToPage is not a function
+js: Uncaught TypeError: window.navigateToPage is not a function
+js: Uncaught TypeError: window.navigateToPage is not a function
+js: Uncaught TypeError: window.navigateToPage is not a function
+js: Uncaught TypeError: window.navigateToPage is not a function
+
+--------------------------------------------------------------------------------
+
+Test 9/11: test_page_navigation_and_export.py
+Status: PASS
+Execution Time: 0.17s
+Standard Output:
+2025-05-26 13:50:50,937 - INFO - Logging to file: C:\Users\joshd\.markdown_pdf_logs\markdown_pdf_debug_20250526_135050.log
+
+Standard Error:
+2025-05-26 13:50:50,954 - INFO - Dialog handler initialized
+2025-05-26 13:50:50,954 - INFO - Dialog handler started (suppress=True, timeout=10000ms)
+2025-05-26 13:50:50,954 - INFO - Registered custom response for QMessageBox
+2025-05-26 13:50:50,954 - INFO - Running all page navigation and export dialog tests
+2025-05-26 13:50:50,954 - INFO - Testing page navigation
+2025-05-26 13:50:50,954 - INFO - Page navigation test passed
+2025-05-26 13:50:50,954 - INFO - Page navigation test result: PASS
+2025-05-26 13:50:50,954 - INFO - Testing export dialogs
+2025-05-26 13:50:50,955 - INFO - Export dialog test passed
+2025-05-26 13:50:50,955 - INFO - Export dialog test result: PASS
+2025-05-26 13:50:50,955 - INFO - Overall test result: PASS
+2025-05-26 13:50:50,955 - INFO - Dialog handler stopped
+2025-05-26 13:50:50,955 - INFO - Closing all active dialogs (0)
+
+--------------------------------------------------------------------------------
+
+Test 10/11: test_page_navigation_and_export.py
+Status: PASS
+Execution Time: 0.16s
+Standard Output:
+2025-05-26 13:50:51,098 - INFO - Logging to file: C:\Users\joshd\.markdown_pdf_logs\markdown_pdf_debug_20250526_135051.log
+
+Standard Error:
+2025-05-26 13:50:51,114 - INFO - Dialog handler initialized
+2025-05-26 13:50:51,114 - INFO - Dialog handler started (suppress=True, timeout=10000ms)
+2025-05-26 13:50:51,114 - INFO - Registered custom response for QMessageBox
+2025-05-26 13:50:51,114 - INFO - Running all page navigation and export dialog tests
+2025-05-26 13:50:51,114 - INFO - Testing page navigation
+2025-05-26 13:50:51,114 - INFO - Page navigation test passed
+2025-05-26 13:50:51,114 - INFO - Page navigation test result: PASS
+2025-05-26 13:50:51,114 - INFO - Testing export dialogs
+2025-05-26 13:50:51,114 - INFO - Export dialog test passed
+2025-05-26 13:50:51,114 - INFO - Export dialog test result: PASS
+2025-05-26 13:50:51,114 - INFO - Overall test result: PASS
+2025-05-26 13:50:51,114 - INFO - Dialog handler stopped
+2025-05-26 13:50:51,114 - INFO - Closing all active dialogs (0)
+
+--------------------------------------------------------------------------------
+
+Test 11/11: test_test_mode.py
+Status: PASS
+Execution Time: 2.46s
+Standard Output:
+2025-05-26 13:50:51,262 - INFO - Logging to file: C:\Users\joshd\.markdown_pdf_logs\markdown_pdf_debug_20250526_135051.log
+2025-05-26 13:50:51,286 - INFO - Running in test mode - dialogs will be suppressed
+Found xelatex in PATH
+Found pdflatex in PATH
+Found lualatex in PATH
+Found wkhtmltopdf at: C:\Program Files\wkhtmltopdf\bin\wkhtmltopdf.exe
+Found weasyprint in PATH
+Pandoc found: pandoc.exe 3.1.12.1
+2025-05-26 13:50:52,910 - INFO - Loaded temporary style
+2025-05-26 13:50:52,910 - INFO - Loaded 3 recent files
+2025-05-26 13:50:52,910 - INFO - Settings loaded successfully
+Settings loaded successfully
+
+Standard Error:
+2025-05-26 13:50:51,282 - INFO - Dialog handler initialized
+2025-05-26 13:50:51,282 - INFO - Dialog handler started (suppress=True, timeout=10000ms)
+2025-05-26 13:50:51,282 - INFO - Registered custom response for QMessageBox
+2025-05-26 13:50:51,282 - INFO - Test mode: True
+2025-05-26 13:50:51,282 - INFO - Dialog timeout: 10 seconds
+2025-05-26 13:50:51,282 - INFO - Running all test mode tests
+2025-05-26 13:50:51,282 - INFO - Testing export dialogs with test mode
+2025-05-26 13:50:51,286 - DEBUG - Available styles: ['Business Professional', 'Technical Document', 'Academic', 'Minimal', 'Custom']
+2025-05-26 13:50:51,286 - INFO - Running in test mode - dialogs will be suppressed
+2025-05-26 13:50:52,910 - DEBUG - Loaded temporary style
+2025-05-26 13:50:52,910 - INFO - Loaded temporary style
+2025-05-26 13:50:52,910 - INFO - Loaded 3 recent files
+2025-05-26 13:50:52,910 - INFO - Settings loaded successfully
+2025-05-26 13:50:53,323 - DEBUG - Initialized navigation controls for testing
+2025-05-26 13:50:53,323 - DEBUG - Setting up zoom controls
+2025-05-26 13:50:53,357 - DEBUG - Main update_preview call #1
+2025-05-26 13:50:53,358 - DEBUG - Updating document settings
+2025-05-26 13:50:53,358 - DEBUG - Setting document settings
+2025-05-26 13:50:53,358 - DEBUG - Updated document settings in page preview
+2025-05-26 13:50:53,358 - DEBUG - RenderUtils.update_preview call #1
+2025-05-26 13:50:53,358 - DEBUG - Got markdown text, length: 62
+2025-05-26 13:50:53,358 - DEBUG - Updating document settings in page_preview
+2025-05-26 13:50:53,358 - DEBUG - Updating document settings
+2025-05-26 13:50:53,358 - DEBUG - Setting document settings
+2025-05-26 13:50:53,358 - DEBUG - Using built-in zoom functionality in page_preview.py
+2025-05-26 13:50:53,359 - DEBUG - Finding page breaks in markdown
+2025-05-26 13:50:53,359 - DEBUG - Found 0 page breaks at lines: []
+2025-05-26 13:50:53,359 - DEBUG - Found 0 page breaks at lines: []
+2025-05-26 13:50:53,359 - DEBUG - Writing processed Markdown to temporary file (length: 62)
+2025-05-26 13:50:53,360 - DEBUG - Created temporary HTML file: C:\Users\joshd\AppData\Local\Temp\tmpndb9uz6x.html
+2025-05-26 13:50:53,360 - DEBUG - Generating CSS from settings
+2025-05-26 13:50:53,361 - DEBUG - CSS generation completed
+2025-05-26 13:50:53,361 - DEBUG - Injecting page break styles into CSS
+2025-05-26 13:50:53,363 - DEBUG - Created temporary CSS file: C:\Users\joshd\AppData\Local\Temp\tmpmgi_omen.css
+2025-05-26 13:50:53,363 - DEBUG - Running command: C:\Users\joshd\AppData\Local\Pandoc\pandoc.exe C:\Users\joshd\AppData\Local\Temp\tmpcr86u_jn.md -o C:\Users\joshd\AppData\Local\Temp\tmpndb9uz6x.html --standalone --css=C:\Users\joshd\AppData\Local\Temp\tmpmgi_omen.css --mathjax -f markdown+fenced_divs+pipe_tables+backtick_code_blocks -t html5 --metadata title=Preview --variable secnumdepth=-2 --variable disable-numbering=true
+2025-05-26 13:50:53,442 - DEBUG - Processing page breaks for preview
+2025-05-26 13:50:53,442 - DEBUG - No page breaks found in content
+2025-05-26 13:50:53,442 - DEBUG - HTML content generated (length: 1188)
+2025-05-26 13:50:53,442 - DEBUG - Updating document settings
+2025-05-26 13:50:53,442 - DEBUG - Setting document settings
+2025-05-26 13:50:53,442 - DEBUG - Updating preview with new content
+2025-05-26 13:50:53,442 - DEBUG - HTML content length: 1188
+2025-05-26 13:50:53,442 - DEBUG - Has page breaks detected: False
+2025-05-26 13:50:53,442 - DEBUG - HTML content preview: <!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=de...or: #f5f5f5;">
+<header id="title-block-header">
+<h1 class="title">Preview</h1>
+</header>
+<h1 id="test-mode-test">Test Mode Test</h1>
+<p>This is a test for test mode functionality.</p>
+</body>
+</html>
+
+2025-05-26 13:50:53,443 - DEBUG - Cleaned HTML content to remove title elements and blank lines
+2025-05-26 13:50:53,443 - DEBUG - Splitting content into pages
+2025-05-26 13:50:53,443 - DEBUG - Calculating automatic page breaks
+2025-05-26 13:50:53,443 - DEBUG - Page calculation: 754.0pt usable height, 29.9 theoretical lines, 30 actual lines per page, font: 14pt, line height: 1.8
+2025-05-26 13:50:53,443 - DEBUG - Font size: 14pt, Line height: 1.8, Lines per page: 30
+2025-05-26 13:50:53,444 - DEBUG - Calculated 1 automatic pages
+2025-05-26 13:50:53,444 - DEBUG - Split content into 1 pages
+2025-05-26 13:50:53,451 - DEBUG - Preview updated successfully
+2025-05-26 13:50:53,451 - DEBUG - Cleaning up temporary files
+2025-05-26 13:50:53,452 - DEBUG - Deleted temporary file: C:\Users\joshd\AppData\Local\Temp\tmpcr86u_jn.md
+2025-05-26 13:50:53,452 - DEBUG - Deleted temporary file: C:\Users\joshd\AppData\Local\Temp\tmpmgi_omen.css
+2025-05-26 13:50:53,452 - DEBUG - Deleted temporary file: C:\Users\joshd\AppData\Local\Temp\tmpndb9uz6x.html
+2025-05-26 13:50:53,453 - DEBUG - Exiting function: update_preview
+2025-05-26 13:50:53,453 - DEBUG - Preview updated successfully (call #1)
+2025-05-26 13:50:53,453 - INFO - Test mode enabled: True
+2025-05-26 13:50:53,453 - INFO - Test mode verification completed successfully
+2025-05-26 13:50:53,453 - INFO - Export dialog test result: PASS
+2025-05-26 13:50:53,453 - INFO - Dialog handler stopped
+2025-05-26 13:50:53,453 - INFO - Closing all active dialogs (0)
+
+--------------------------------------------------------------------------------
+
+
+Summary:
+Passed: 11/11 (100.00%)
+Failed: 0/11 (0.00%)

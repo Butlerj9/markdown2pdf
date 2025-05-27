@@ -1,0 +1,146 @@
+2025-05-02 14:03:51,617 - DEBUG - Initializing PagePreview
+2025-05-02 14:03:52,052 - DEBUG - PagePreview initialized
+2025-05-02 14:03:52,054 - DEBUG - Updating document settings
+2025-05-02 14:03:52,054 - DEBUG - Page dimensions: A4 portrait, 210mm x 297mm
+2025-05-02 14:03:52,054 - DEBUG - Margins: T:0mm R:25mm B:25mm L:25mm
+2025-05-02 14:03:52,054 - DEBUG - Settings verification complete
+2025-05-02 14:03:52,556 - INFO - Loading test document
+2025-05-02 14:03:52,557 - DEBUG - Updating preview
+2025-05-02 14:03:52,557 - DEBUG - Cleaning up 0 temporary files
+2025-05-02 14:03:52,557 - DEBUG - Removing title elements from HTML content
+2025-05-02 14:03:52,557 - DEBUG - Title elements removed from HTML content
+2025-05-02 14:03:52,558 - DEBUG - JavaScript bridge created and registered
+2025-05-02 14:03:52,578 - DEBUG - Created temporary HTML file: C:\Users\joshd\AppData\Local\Temp\tmpwcvz2l5n.html
+2025-05-02 14:03:52,578 - DEBUG - Loading URL: file:///C:/Users/joshd/AppData/Local/Temp/tmpwcvz2l5n.html
+2025-05-02 14:03:52,584 - DEBUG - Web view: load started
+2025-05-02 14:03:52,590 - ERROR - JavaScript Error: Uncaught SyntaxError: missing ) after argument list
+2025-05-02 14:03:52,590 - ERROR -   Source: file:///C:/Users/joshd/AppData/Local/Temp/tmpwcvz2l5n.html
+2025-05-02 14:03:52,590 - ERROR -   Line: 348
+2025-05-02 14:03:52,590 - ERROR -   Error Type: Uncaught SyntaxError
+2025-05-02 14:03:52,590 - ERROR -   Error Detail: missing ) after argument list
+2025-05-02 14:03:52,591 - DEBUG - JS Console (INFO): DOM loaded, initializing page navigation... [file:///C:/Users/joshd/AppData/Local/Temp/tmpwcvz2l5n.html:493]
+2025-05-02 14:03:52,591 - DEBUG - JS Console (INFO): DOM loaded, initializing bridge directly... [file:///C:/Users/joshd/AppData/Local/Temp/tmpwcvz2l5n.html:643]
+2025-05-02 14:03:52,591 - DEBUG - JS Console (INFO): qt.webChannelTransport is available, connecting bridge... [file:///C:/Users/joshd/AppData/Local/Temp/tmpwcvz2l5n.html:734]
+2025-05-02 14:03:52,591 - DEBUG - JS Console (INFO): QWebChannel polyfill created [file:///C:/Users/joshd/AppData/Local/Temp/tmpwcvz2l5n.html:11]
+2025-05-02 14:03:52,603 - DEBUG - Web view: load finished successfully
+2025-05-02 14:03:52,604 - DEBUG - Page loaded, applying document settings
+2025-05-02 14:03:52,605 - DEBUG - JS Console (INFO): Bridge connected directly: true [file:///C:/Users/joshd/AppData/Local/Temp/tmpwcvz2l5n.html:738]
+2025-05-02 14:03:52,697 - DEBUG - JS Console (INFO): Initializing QWebChannel connection... [file:///C:/Users/joshd/AppData/Local/Temp/tmpwcvz2l5n.html:521]
+2025-05-02 14:03:52,697 - DEBUG - JS Console (INFO): QWebChannel polyfill created [file:///C:/Users/joshd/AppData/Local/Temp/tmpwcvz2l5n.html:11]
+2025-05-02 14:03:52,698 - DEBUG - JS Console (INFO): Bridge connected: true [file:///C:/Users/joshd/AppData/Local/Temp/tmpwcvz2l5n.html:524]
+2025-05-02 14:03:52,705 - DEBUG - Applying page layout styling
+2025-05-02 14:03:52,705 - DEBUG - Applied page layout styling
+2025-05-02 14:03:52,705 - DEBUG - Page layout debugging initiated
+2025-05-02 14:03:52,706 - DEBUG - JS Console (INFO): Applying page layout styling with document settings [:3]
+2025-05-02 14:03:52,707 - DEBUG - JS Console (INFO): Page dimensions (mm): 210x297 [:14]
+2025-05-02 14:03:52,707 - DEBUG - JS Console (INFO): Page dimensions (px): 793.7007874015749x1122.5196850393702 [:15]
+2025-05-02 14:03:52,707 - DEBUG - JS Console (INFO): Margins (mm): T:0 R:25 B:25 L:25 [:16]
+2025-05-02 14:03:52,707 - DEBUG - JS Console (INFO): Margins (px): T:0 R:94.48818897637796 B:94.48818897637796 L:94.48818897637796 [:17]
+2025-05-02 14:03:52,707 - DEBUG - JS Console (INFO): Creating pages container [:288]
+2025-05-02 14:03:52,707 - DEBUG - JS Console (INFO): Page dimensions (px): 793.7007874015749x1122.5196850393702 [:308]
+2025-05-02 14:03:52,708 - DEBUG - JS Console (INFO): Content dimensions (px): 604.724409448819x1028.0314960629921 [:309]
+2025-05-02 14:03:52,708 - DEBUG - JS Console (INFO): Found 1 explicit page breaks [:334]
+2025-05-02 14:03:52,714 - DEBUG - JS Console (INFO): Created 2 pages [:434]
+2025-05-02 14:03:52,714 - DEBUG - JS Console (INFO): Page count changed: 1 of 2 [file:///C:/Users/joshd/AppData/Local/Temp/tmpwcvz2l5n.html:399]
+2025-05-02 14:03:52,715 - DEBUG - JS Console (INFO): Bridge not yet available for pageCountChanged - will be handled by direct script [file:///C:/Users/joshd/AppData/Local/Temp/tmpwcvz2l5n.html:407]
+2025-05-02 14:03:52,715 - DEBUG - JS Console (INFO): Page layout styling applied successfully [:598]
+2025-05-02 14:03:52,717 - DEBUG - JS Console (INFO): Found 2 pages, updating counter... [file:///C:/Users/joshd/AppData/Local/Temp/tmpwcvz2l5n.html:744]
+2025-05-02 14:03:52,717 - DEBUG - JS Console (INFO): Page count changed: 1 of 2 [file:///C:/Users/joshd/AppData/Local/Temp/tmpwcvz2l5n.html:399]
+2025-05-02 14:03:52,718 - DEBUG - JS Console (INFO): Bridge not yet available for pageCountChanged - will be handled by direct script [file:///C:/Users/joshd/AppData/Local/Temp/tmpwcvz2l5n.html:407]
+2025-05-02 14:03:52,718 - DEBUG - JS Console (INFO): Debugging page layout... [:3]
+2025-05-02 14:03:52,718 - DEBUG - JS Console (INFO): Document dimensions: 1165px x 2350px [:14]
+2025-05-02 14:03:52,719 - DEBUG - JS Console (INFO): Body dimensions: 1165px x 496px [:19]
+2025-05-02 14:03:52,719 - DEBUG - JS Console (INFO): Pages container found: [:24]
+2025-05-02 14:03:52,719 - DEBUG - JS Console (INFO):   Width: 1165px [:25]
+2025-05-02 14:03:52,719 - DEBUG - JS Console (INFO):   Height: 2345px [:26]
+2025-05-02 14:03:52,719 - DEBUG - JS Console (INFO):   Style transform: matrix(1, 0, 0, 1, 0, 0) [:27]
+2025-05-02 14:03:52,719 - DEBUG - JS Console (INFO):   Style transform-origin: 582.667px 0px [:28]
+2025-05-02 14:03:52,719 - DEBUG - JS Console (INFO): Found 2 pages [:35]
+2025-05-02 14:03:52,719 - DEBUG - JS Console (INFO): Page 1: [:42]
+2025-05-02 14:03:52,720 - DEBUG - JS Console (INFO):   Width: 794px [:43]
+2025-05-02 14:03:52,720 - DEBUG - JS Console (INFO):   Height: 1123px [:44]
+2025-05-02 14:03:52,720 - DEBUG - JS Console (INFO):   Padding: 0px 94.4882px 94.4882px [:45]
+2025-05-02 14:03:52,720 - DEBUG - JS Console (INFO):   Margin: 0px 0px 40px [:46]
+2025-05-02 14:03:52,720 - DEBUG - JS Console (INFO):   Style transform: matrix(1, 0, 0, 1, 0, -2) [:47]
+2025-05-02 14:03:52,720 - DEBUG - JS Console (INFO):   Content elements: 5 [:51]
+2025-05-02 14:03:52,720 - DEBUG - JS Console (INFO):   Content height: 203px [:62]
+2025-05-02 14:03:52,720 - DEBUG - JS Console (INFO):   Available height: 1028.5118px [:69]
+2025-05-02 14:03:52,720 - DEBUG - JS Console (INFO): Page 2: [:42]
+2025-05-02 14:03:52,720 - DEBUG - JS Console (INFO):   Width: 794px [:43]
+2025-05-02 14:03:52,720 - DEBUG - JS Console (INFO):   Height: 1123px [:44]
+2025-05-02 14:03:52,720 - DEBUG - JS Console (INFO):   Padding: 0px 94.4882px 94.4882px [:45]
+2025-05-02 14:03:52,720 - DEBUG - JS Console (INFO):   Margin: 0px 0px 40px [:46]
+2025-05-02 14:03:52,720 - DEBUG - JS Console (INFO):   Style transform: none [:47]
+2025-05-02 14:03:52,721 - DEBUG - JS Console (INFO):   Content elements: 4 [:51]
+2025-05-02 14:03:52,721 - DEBUG - JS Console (INFO):   Content height: 51px [:62]
+2025-05-02 14:03:52,721 - DEBUG - JS Console (INFO):   Available height: 1028.5118px [:69]
+2025-05-02 14:03:52,722 - DEBUG - JS Console (INFO): Current zoom factor (CSS var): 1.0 [:81]
+2025-05-02 14:03:52,722 - DEBUG - Page layout debug results: {'documentHeight': 2350, 'documentWidth': 1165, 'pageCount': 2, 'zoomFactor': '1.0'}
+2025-05-02 14:03:52,804 - DEBUG - Applying page layout styling
+2025-05-02 14:03:52,804 - DEBUG - Applied page layout styling
+2025-05-02 14:03:52,804 - DEBUG - Page layout debugging initiated
+2025-05-02 14:03:52,805 - DEBUG - JS Console (INFO): Applying page layout styling with document settings [:3]
+2025-05-02 14:03:52,806 - DEBUG - JS Console (INFO): Page dimensions (mm): 210x297 [:14]
+2025-05-02 14:03:52,806 - DEBUG - JS Console (INFO): Page dimensions (px): 793.7007874015749x1122.5196850393702 [:15]
+2025-05-02 14:03:52,806 - DEBUG - JS Console (INFO): Margins (mm): T:0 R:25 B:25 L:25 [:16]
+2025-05-02 14:03:52,806 - DEBUG - JS Console (INFO): Margins (px): T:0 R:94.48818897637796 B:94.48818897637796 L:94.48818897637796 [:17]
+2025-05-02 14:03:52,806 - DEBUG - JS Console (INFO): Page count changed: 1 of 2 [file:///C:/Users/joshd/AppData/Local/Temp/tmpwcvz2l5n.html:399]
+2025-05-02 14:03:52,806 - DEBUG - JS Console (INFO): Bridge not yet available for pageCountChanged - will be handled by direct script [file:///C:/Users/joshd/AppData/Local/Temp/tmpwcvz2l5n.html:407]
+2025-05-02 14:03:52,807 - DEBUG - JS Console (INFO): Page layout styling applied successfully [:598]
+2025-05-02 14:03:52,807 - DEBUG - JS Console (INFO): Debugging page layout... [:3]
+2025-05-02 14:03:52,807 - DEBUG - JS Console (INFO): Document dimensions: 1165px x 2350px [:14]
+2025-05-02 14:03:52,807 - DEBUG - JS Console (INFO): Body dimensions: 1165px x 496px [:19]
+2025-05-02 14:03:52,807 - DEBUG - JS Console (INFO): Pages container found: [:24]
+2025-05-02 14:03:52,807 - DEBUG - JS Console (INFO):   Width: 1165px [:25]
+2025-05-02 14:03:52,807 - DEBUG - JS Console (INFO):   Height: 2345px [:26]
+2025-05-02 14:03:52,807 - DEBUG - JS Console (INFO):   Style transform: matrix(1, 0, 0, 1, 0, 0) [:27]
+2025-05-02 14:03:52,807 - DEBUG - JS Console (INFO):   Style transform-origin: 582.667px 0px [:28]
+2025-05-02 14:03:52,807 - DEBUG - JS Console (INFO): Found 2 pages [:35]
+2025-05-02 14:03:52,807 - DEBUG - JS Console (INFO): Page 1: [:42]
+2025-05-02 14:03:52,807 - DEBUG - JS Console (INFO):   Width: 794px [:43]
+2025-05-02 14:03:52,807 - DEBUG - JS Console (INFO):   Height: 1123px [:44]
+2025-05-02 14:03:52,807 - DEBUG - JS Console (INFO):   Padding: 0px 94.4882px 94.4882px [:45]
+2025-05-02 14:03:52,808 - DEBUG - JS Console (INFO):   Margin: 0px 0px 40px [:46]
+2025-05-02 14:03:52,808 - DEBUG - JS Console (INFO):   Style transform: matrix(1, 0, 0, 1, 0, -2) [:47]
+2025-05-02 14:03:52,808 - DEBUG - JS Console (INFO):   Content elements: 5 [:51]
+2025-05-02 14:03:52,808 - DEBUG - JS Console (INFO):   Content height: 203px [:62]
+2025-05-02 14:03:52,809 - DEBUG - JS Console (INFO):   Available height: 1028.5118px [:69]
+2025-05-02 14:03:52,809 - DEBUG - JS Console (INFO): Page 2: [:42]
+2025-05-02 14:03:52,809 - DEBUG - JS Console (INFO):   Width: 794px [:43]
+2025-05-02 14:03:52,809 - DEBUG - JS Console (INFO):   Height: 1123px [:44]
+2025-05-02 14:03:52,809 - DEBUG - JS Console (INFO):   Padding: 0px 94.4882px 94.4882px [:45]
+2025-05-02 14:03:52,809 - DEBUG - JS Console (INFO):   Margin: 0px 0px 40px [:46]
+2025-05-02 14:03:52,809 - DEBUG - JS Console (INFO):   Style transform: none [:47]
+2025-05-02 14:03:52,809 - DEBUG - JS Console (INFO):   Content elements: 4 [:51]
+2025-05-02 14:03:52,809 - DEBUG - JS Console (INFO):   Content height: 51px [:62]
+2025-05-02 14:03:52,809 - DEBUG - JS Console (INFO):   Available height: 1028.5118px [:69]
+2025-05-02 14:03:52,809 - DEBUG - JS Console (INFO): Current zoom factor (CSS var): 1.0 [:81]
+2025-05-02 14:03:52,810 - DEBUG - Page layout debug results: {'documentHeight': 2350, 'documentWidth': 1165, 'pageCount': 2, 'zoomFactor': '1.0'}
+2025-05-02 14:03:53,104 - DEBUG - Executing JavaScript: 
+                            (function() {
+                                // Update page counter to...
+2025-05-02 14:03:53,205 - DEBUG - JS Console (INFO): Page count changed: 1 of 2 [file:///C:/Users/joshd/AppData/Local/Temp/tmpwcvz2l5n.html:399]
+2025-05-02 14:03:53,205 - DEBUG - JS Console (INFO): Bridge not yet available for pageCountChanged - will be handled by direct script [file:///C:/Users/joshd/AppData/Local/Temp/tmpwcvz2l5n.html:407]
+2025-05-02 14:03:53,306 - DEBUG - JavaScript execution result: None
+2025-05-02 14:03:53,579 - INFO - Adding margin indicators
+2025-05-02 14:03:53,579 - DEBUG - Executing JavaScript: 
+        (function() {
+            // Get all pages
+            var pages = document.querySelectorAl...
+2025-05-02 14:03:53,685 - DEBUG - JS Console (INFO): Page 1 padding: T:0px R:94.4882px B:94.4882px L:94.4882px [:25]
+2025-05-02 14:03:53,685 - DEBUG - JS Console (INFO): Page 2 padding: T:0px R:94.4882px B:94.4882px L:94.4882px [:25]
+2025-05-02 14:03:53,786 - DEBUG - JavaScript execution result: Added indicators to 2 pages
+2025-05-02 14:03:53,786 - INFO - Margin indicators result: Added indicators to 2 pages
+2025-05-02 14:03:53,786 - INFO - Debugging margins
+2025-05-02 14:03:53,786 - DEBUG - Executing JavaScript: 
+        (function() {
+            // Get all pages
+            var pages = document.querySelectorAl...
+2025-05-02 14:03:53,994 - DEBUG - JavaScript execution result: {'boxSizing': 'border-box', 'computedPaddingBottom': 94.4882, 'computedPaddingLeft': 94.4882, 'computedPaddingRight': 94.4882, 'computedPaddingTop': 0, 'cssMarginBottom': '94.48818897637796px', 'cssMarginLeft': '94.48818897637796px', 'cssMarginRight': '94.48818897637796px', 'cssMarginTop': '0px', 'firstElementMarginLeft': '0px', 'firstElementMarginTop': '0px', 'firstElementType': 'H1', 'paddingBottom': '94.4882px', 'paddingLeft': '94.4882px', 'paddingRight': '94.4882px', 'paddingTop': '0px', 'pageHeight': 1123, 'pageWidth': 794}
+2025-05-02 14:03:53,994 - INFO - Detailed margin information: {'boxSizing': 'border-box', 'computedPaddingBottom': 94.4882, 'computedPaddingLeft': 94.4882, 'computedPaddingRight': 94.4882, 'computedPaddingTop': 0, 'cssMarginBottom': '94.48818897637796px', 'cssMarginLeft': '94.48818897637796px', 'cssMarginRight': '94.48818897637796px', 'cssMarginTop': '0px', 'firstElementMarginLeft': '0px', 'firstElementMarginTop': '0px', 'firstElementType': 'H1', 'paddingBottom': '94.4882px', 'paddingLeft': '94.4882px', 'paddingRight': '94.4882px', 'paddingTop': '0px', 'pageHeight': 1123, 'pageWidth': 794}
+2025-05-02 14:03:53,995 - DEBUG - Executing JavaScript: 
+        (function() {
+            var style = getComputedStyle(document.documentElement);
+         ...
+2025-05-02 14:03:54,200 - DEBUG - JavaScript execution result: {'marginBottom': '94.48818897637796px', 'marginLeft': '94.48818897637796px', 'marginRight': '94.48818897637796px', 'marginTop': '0px', 'pageHeight': '297mm', 'pageWidth': '210mm'}
+2025-05-02 14:03:54,200 - INFO - CSS variables: {'marginBottom': '94.48818897637796px', 'marginLeft': '94.48818897637796px', 'marginRight': '94.48818897637796px', 'marginTop': '0px', 'pageHeight': '297mm', 'pageWidth': '210mm'}

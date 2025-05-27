@@ -1,0 +1,26 @@
+Diagnostic started at 2025-05-02T09:25:33.935490
+Starting simple diagnostic script
+Launching application...
+Application launched with PID 21392
+Output being logged to logs/app_output_20250502_092533.log
+Waiting for application to initialize (10 seconds)...
+Application is still running
+
+Application is running. Please interact with it to trigger JavaScript errors.
+Press Enter when you're done to analyze the logs...
+Terminating application...
+Application terminated
+
+Analyzing log file for JavaScript errors...
+
+=== Diagnostic Results ===
+No JavaScript errors found
+No JavaScript syntax errors found
+
+Recommendations:
+- No specific JavaScript errors found. Try simplifying the JavaScript code.
+- Replace complex DOM manipulation with simpler approaches.
+
+Diagnostic completed. Check the log files for more details.
+Application log: logs/app_output_20250502_092533.log
+Diagnostic log: logs/diagnostic_20250502_092533.log

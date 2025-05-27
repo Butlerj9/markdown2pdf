@@ -1,0 +1,84 @@
+{
+  "launch_command": "python markdown_to_pdf_converter.py",
+  "run_tests": true,
+  "test_sequence": [
+    {
+      "type": "launch",
+      "description": "Launch the application",
+      "command": "python markdown_to_pdf_converter.py"
+    },
+    {
+      "type": "wait",
+      "description": "Wait for application to initialize",
+      "seconds": 5
+    },
+    {
+      "type": "screenshot",
+      "description": "Capture initial state",
+      "name": "initial_state"
+    },
+    {
+      "type": "click",
+      "description": "Click on editor area",
+      "x": 300,
+      "y": 200
+    },
+    {
+      "type": "type",
+      "description": "Type test markdown content",
+      "text": "# Test Heading\n\nThis is a test paragraph.\n\n## Second Level Heading\n\n- List item 1\n- List item 2\n\n### Third Level Heading\n\n1. Numbered item 1\n2. Numbered item 2\n\n```python\nprint('Hello, world!')\n```"
+    },
+    {
+      "type": "wait",
+      "description": "Wait for preview to update",
+      "seconds": 3
+    },
+    {
+      "type": "screenshot",
+      "description": "Capture preview with content",
+      "name": "preview_with_content"
+    },
+    {
+      "type": "click",
+      "description": "Click zoom in button",
+      "x": 650,
+      "y": 100
+    },
+    {
+      "type": "wait",
+      "description": "Wait for zoom to apply",
+      "seconds": 2
+    },
+    {
+      "type": "screenshot",
+      "description": "Capture after zoom in",
+      "name": "after_zoom_in"
+    },
+    {
+      "type": "click",
+      "description": "Click zoom out button",
+      "x": 550,
+      "y": 100
+    },
+    {
+      "type": "wait",
+      "description": "Wait for zoom to apply",
+      "seconds": 2
+    },
+    {
+      "type": "screenshot",
+      "description": "Capture after zoom out",
+      "name": "after_zoom_out"
+    },
+    {
+      "type": "wait",
+      "description": "Wait for final state",
+      "seconds": 5
+    },
+    {
+      "type": "screenshot",
+      "description": "Capture final state",
+      "name": "final_state"
+    }
+  ]
+}

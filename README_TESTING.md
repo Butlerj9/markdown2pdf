@@ -1,6 +1,6 @@
 # Testing Framework for Markdown to PDF Converter
 
-This document describes the testing framework for the Markdown to PDF Converter application. The framework includes unit tests, functional tests, and visual tests to ensure the application works correctly.
+This document describes the testing framework for the Markdown to PDF Converter application. The framework includes unit tests, functional tests, visual tests, and export verification tests to ensure the application works correctly.
 
 ## Test Types
 
@@ -16,11 +16,15 @@ Functional tests verify that the application works correctly as a whole. These t
 
 Visual tests verify that the application's user interface looks correct. These tests take screenshots of the application and compare them to reference screenshots.
 
+### Export Verification Tests
+
+Export verification tests verify that the exported files (PDF, HTML, EPUB, DOCX) match the expected settings. These tests export files with various settings combinations and verify that the settings are correctly applied.
+
 ## Running Tests
 
 ### Using the Test Dialog
 
-The easiest way to run tests is to use the built-in test dialog:
+The easiest way to run unit, functional, and visual tests is to use the built-in test dialog:
 
 1. Open the application
 2. Go to Tools > Run Tests
@@ -29,7 +33,9 @@ The easiest way to run tests is to use the built-in test dialog:
 
 ### Using the Command Line
 
-You can also run tests from the command line using the `run_tests.py` script:
+You can also run tests from the command line using various scripts:
+
+#### General Tests
 
 ```bash
 # Run all tests
@@ -54,7 +60,31 @@ python run_tests.py --verbose
 python run_tests.py --visual --create-reference
 ```
 
+#### Export Verification Tests
+
+```bash
+# Run comprehensive tests for all formats
+python run_comprehensive_tests.py --format=all
+
+# Run tests for a specific format
+python run_comprehensive_tests.py --format=pdf
+python run_comprehensive_tests.py --format=html
+python run_comprehensive_tests.py --format=epub
+python run_comprehensive_tests.py --format=docx
+
+# Run tests with a custom timeout
+python run_comprehensive_tests.py --timeout=900
+
+# Skip dependency checking
+python run_comprehensive_tests.py --skip-dependency-check
+
+# Run concise tests for a specific format
+python run_concise_tests.py --format=pdf
+```
+
 ## Test Files
+
+### General Test Files
 
 - `test_framework.py`: Main test framework implementation
 - `unit_tests.py`: Unit tests for the application
@@ -63,6 +93,13 @@ python run_tests.py --visual --create-reference
 - `visual_test.py`: Visual testing framework
 - `visual_test_runner.py`: Runner for visual tests
 - `run_tests.py`: Command-line interface for running tests
+
+### Export Verification Test Files
+
+- `check_dependencies.py`: Checks for required dependencies
+- `test_export_verification.py`: Verifies that exported files match expected settings
+- `run_concise_tests.py`: Runs export tests with minimal output
+- `run_comprehensive_tests.py`: Runs a complete test suite including dependency checks
 
 ## Adding New Tests
 
@@ -82,10 +119,10 @@ def test_new_feature(self):
     """Test a new feature"""
     # Set up test
     self.window.some_setting = "test value"
-    
+
     # Call the method being tested
     result = self.window.some_method()
-    
+
     # Verify the result
     self.assertTrue(result, "Method should return True")
     self.assertEqual(self.window.some_property, "expected value", "Property should be updated")
@@ -105,25 +142,25 @@ Example:
 def test_new_feature():
     """Test a new feature visually"""
     runner = VisualTestRunner()
-    
+
     def test_func():
         # Set up test content
         test_content = """# Test Content"""
         runner.main_window.markdown_editor.setPlainText(test_content)
-        
+
         # Update the preview
         runner.main_window.update_preview()
         QTest.qWait(1000)
-        
+
         # Take a screenshot
         runner.tester.take_screenshot("new_feature")
-        
+
         # Verify against reference if it exists
         runner.tester.verify_against_reference("new_feature")
-        
+
         # End the test
         runner.tester.end_test()
-    
+
     runner.add_test(test_func, "new_feature")
     runner.run_tests()
 ```
@@ -142,6 +179,36 @@ This error occurs when a visual test tries to compare a screenshot to a referenc
 
 If tests hang or crash, try running them with the `--verbose` flag to get more information about what's happening. You can also try running individual tests instead of all tests at once.
 
+## Export Verification Tests
+
+The export verification tests are designed to verify that the exported files match the expected settings. These tests export files with various settings combinations and verify that the settings are correctly applied.
+
+### Test Settings
+
+The tests cover various combinations of settings:
+
+- **Table of Contents**: On/Off
+- **Page Size**: A4, Letter
+- **Orientation**: Portrait, Landscape
+- **PDF Engines**: XeLaTeX, WeasyPrint, wkhtmltopdf
+
+### Output Files
+
+The test scripts generate output files in a temporary directory. The path to this directory is displayed in the test output.
+
+Each test generates:
+- The exported file (PDF, HTML, EPUB, or DOCX)
+- A settings record JSON file
+- A test results JSON file
+
+### Adding Export Verification Tests
+
+To add new export verification tests:
+
+1. Modify the `test_export_verification.py` file to include new settings combinations
+2. Update the analysis functions to verify the new settings
+3. Run the tests to ensure they pass with the new settings
+
 ## Best Practices
 
 1. **Write focused tests**: Each test should focus on a specific piece of functionality.
@@ -151,3 +218,5 @@ If tests hang or crash, try running them with the `--verbose` flag to get more i
 5. **Test edge cases**: Make sure to test edge cases and error conditions, not just the happy path.
 6. **Keep tests fast**: Tests should run quickly to encourage frequent testing.
 7. **Use assertions effectively**: Use the most specific assertion for each check.
+8. **Test with different settings**: Make sure to test with different combinations of settings.
+9. **Verify output files**: For export tests, verify that the output files match the expected settings.

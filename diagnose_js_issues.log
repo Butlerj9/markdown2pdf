@@ -1,0 +1,10 @@
+2025-05-02 09:14:07,783 - INFO - Starting JavaScript issue diagnosis
+2025-05-02 09:14:07,785 - INFO - Created diagnostic configuration file: ui_test_config.json
+2025-05-02 09:14:07,786 - INFO - Running UI tests...
+2025-05-02 09:14:07,874 - INFO - UI tests completed with return code: 1
+2025-05-02 09:14:07,874 - INFO - Output: 
+2025-05-02 09:14:07,875 - ERROR - Error output: Traceback (most recent call last):
+  File "C:\Projects\markdown2pdf\ui_test_framework.py", line 27, in <module>
+    import pyautogui
+ModuleNotFoundError: No module named 'pyautogui'
+

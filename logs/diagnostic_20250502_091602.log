@@ -1,0 +1,31 @@
+Diagnostic started at 2025-05-02T09:16:02.182153
+Starting simple diagnostic script
+Launching application...
+Application launched with PID 35460
+Output being logged to logs/app_output_20250502_091602.log
+Waiting for application to initialize (10 seconds)...
+Application is still running
+
+Application is running. Please interact with it to trigger JavaScript errors.
+Press Enter when you're done to analyze the logs...
+Terminating application...
+Application terminated
+
+Analyzing log file for JavaScript errors...
+
+=== Diagnostic Results ===
+
+Found 1 JavaScript errors:
+1. Uncaught SyntaxError: Unexpected token '.'
+
+Found 2 JavaScript syntax errors:
+1. Unexpected token '.'
+2. Unexpected token '.'
+
+Recommendations:
+- Check for syntax errors in JavaScript code (missing brackets, commas, etc.)
+- Check for syntax errors in JavaScript code (missing brackets, commas, etc.)
+
+Diagnostic completed. Check the log files for more details.
+Application log: logs/app_output_20250502_091602.log
+Diagnostic log: logs/diagnostic_20250502_091602.log

@@ -1,0 +1,16 @@
+2025-05-02 00:26:06,714 - MarkdownToPDF - INFO - Logging to file: C:\Users\joshd\.markdown_pdf_logs\markdown_pdf_debug_20250502_002606.log
+2025-05-02 00:26:06,714 - MarkdownToPDF - DEBUG - Rendering Mermaid diagram to SVG
+2025-05-02 00:26:06,715 - MarkdownToPDF - DEBUG - Searching for Mermaid CLI with enhanced detection...
+2025-05-02 00:26:07,050 - MarkdownToPDF - INFO - Mermaid CLI found via PATH: C:\Users\joshd\AppData\Roaming\npm\mmdc.CMD, version: 11.4.2
+2025-05-02 00:26:07,078 - MarkdownToPDF - DEBUG - Running command: "C:\Users\joshd\AppData\Roaming\npm\mmdc.CMD" -i "C:\Users\joshd\AppData\Local\Temp\tmp2qywfvn5.mmd" -o "C:\Users\joshd\AppData\Local\Temp\tmp2qywfvn5.mmd.svg" -b transparent -w 800 -H 600 -t default
+2025-05-02 00:26:08,324 - MarkdownToPDF - DEBUG - Successfully generated SVG with Mermaid CLI
+2025-05-02 00:26:08,325 - MarkdownToPDF - DEBUG - Deleted temporary file: C:\Users\joshd\AppData\Local\Temp\tmp2qywfvn5.mmd
+2025-05-02 00:26:08,325 - MarkdownToPDF - DEBUG - Deleted temporary file: C:\Users\joshd\AppData\Local\Temp\tmp2qywfvn5.mmd.svg
+2025-05-02 00:26:08,325 - MarkdownToPDF - DEBUG - Rendering Mermaid diagram to SVG
+2025-05-02 00:26:08,325 - MarkdownToPDF - DEBUG - Searching for Mermaid CLI with enhanced detection...
+2025-05-02 00:26:08,679 - MarkdownToPDF - INFO - Mermaid CLI found via PATH: C:\Users\joshd\AppData\Roaming\npm\mmdc.CMD, version: 11.4.2
+2025-05-02 00:26:08,681 - MarkdownToPDF - DEBUG - Running command: "C:\Users\joshd\AppData\Roaming\npm\mmdc.CMD" -i "C:\Users\joshd\AppData\Local\Temp\tmpu_0u_vwa.mmd" -o "C:\Users\joshd\AppData\Local\Temp\tmpu_0u_vwa.mmd.svg" -b transparent -w 800 -H 600 -t default
+2025-05-02 00:26:09,921 - MarkdownToPDF - DEBUG - Successfully generated SVG with Mermaid CLI
+2025-05-02 00:26:09,921 - MarkdownToPDF - DEBUG - Deleted temporary file: C:\Users\joshd\AppData\Local\Temp\tmpu_0u_vwa.mmd
+2025-05-02 00:26:09,921 - MarkdownToPDF - DEBUG - Deleted temporary file: C:\Users\joshd\AppData\Local\Temp\tmpu_0u_vwa.mmd.svg
+2025-05-02 00:26:10,074 - __main__ - INFO - Saved HTML output to mdz_integration_results\integration_results\comprehensive_test_html_40b4d1\output.html

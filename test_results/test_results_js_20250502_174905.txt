@@ -1,0 +1,197 @@
+Test Results for Category: js
+Timestamp: 2025-05-02 17:49:05
+Total Tests: 1
+
+Test 1/1: test_js_syntax_and_page_numbers.py
+Status: PASS
+Execution Time: 10.74s
+Standard Output:
+2025-05-02 17:49:05,638 - INFO - Logging to file: C:\Users\joshd\.markdown_pdf_logs\markdown_pdf_debug_20250502_174905.log
+
+Standard Error:
+2025-05-02 17:49:05,657 - INFO - Dialog handler initialized
+2025-05-02 17:49:05,657 - INFO - Dialog handler started (suppress=True, timeout=10000ms)
+2025-05-02 17:49:05,657 - INFO - Registered custom response for QMessageBox
+2025-05-02 17:49:05,657 - INFO - Running all JavaScript and page number tests
+2025-05-02 17:49:05,657 - INFO - Testing for JavaScript syntax errors
+2025-05-02 17:49:05,661 - DEBUG - Initializing PagePreview
+2025-05-02 17:49:06,049 - DEBUG - PagePreview initialized
+2025-05-02 17:49:06,062 - DEBUG - Web view: load started
+2025-05-02 17:49:06,224 - DEBUG - Web view: load finished successfully
+2025-05-02 17:49:06,324 - DEBUG - Applying page layout styling
+2025-05-02 17:49:06,324 - DEBUG - Applied page layout styling
+2025-05-02 17:49:06,324 - DEBUG - Page layout debugging initiated
+2025-05-02 17:49:06,336 - DEBUG - Page layout debug results: {'documentHeight': 3588, 'documentWidth': 253, 'originalPageBreaks': 0, 'pageBreaks': 0, 'pageCount': 3, 'zoomFactor': '0.9'}
+2025-05-02 17:49:08,069 - INFO - No JavaScript syntax errors found
+2025-05-02 17:49:08,072 - INFO - JavaScript syntax test result: PASS
+2025-05-02 17:49:08,072 - INFO - Testing page number functionality
+2025-05-02 17:49:08,074 - DEBUG - Initializing PagePreview
+2025-05-02 17:49:08,075 - DEBUG - PagePreview initialized
+2025-05-02 17:49:08,081 - DEBUG - Web view: load started
+2025-05-02 17:49:08,253 - DEBUG - Web view: load finished successfully
+2025-05-02 17:49:08,354 - DEBUG - Applying page layout styling
+2025-05-02 17:49:08,354 - DEBUG - Applied page layout styling
+2025-05-02 17:49:08,354 - DEBUG - Page layout debugging initiated
+2025-05-02 17:49:08,356 - DEBUG - JS Console (INFO): Applying page layout styling with document settings [:3]
+2025-05-02 17:49:08,356 - DEBUG - JS Console (INFO): Page dimensions (mm): 210x297 [:14]
+2025-05-02 17:49:08,356 - DEBUG - JS Console (INFO): Page dimensions (px): 793.7007874015749x1122.5196850393702 [:15]
+2025-05-02 17:49:08,356 - DEBUG - JS Console (INFO): Margins (mm): T:25 R:25 B:25 L:25 [:16]
+2025-05-02 17:49:08,356 - DEBUG - JS Console (INFO): Margins (px): T:94.48818897637796 R:94.48818897637796 B:94.48818897637796 L:94.48818897637796 [:17]
+2025-05-02 17:49:08,356 - DEBUG - JS Console (INFO): CSS Variables set: [:29]
+2025-05-02 17:49:08,356 - DEBUG - JS Console (INFO): --page-width: 210mm [:30]
+2025-05-02 17:49:08,356 - DEBUG - JS Console (INFO): --page-height: 297mm [:31]
+2025-05-02 17:49:08,356 - DEBUG - JS Console (INFO): --margin-top: 94.48818897637796px [:32]
+2025-05-02 17:49:08,356 - DEBUG - JS Console (INFO): --margin-right: 94.48818897637796px [:33]
+2025-05-02 17:49:08,356 - DEBUG - JS Console (INFO): --margin-bottom: 94.48818897637796px [:34]
+2025-05-02 17:49:08,357 - DEBUG - JS Console (INFO): --margin-left: 94.48818897637796px [:35]
+2025-05-02 17:49:08,357 - DEBUG - JS Console (INFO): Creating pages container [:322]
+2025-05-02 17:49:08,357 - DEBUG - JS Console (INFO): Page dimensions (px): 793.7007874015749x1122.5196850393702 [:342]
+2025-05-02 17:49:08,357 - DEBUG - JS Console (INFO): Content dimensions (px): 604.724409448819x933.5433070866143 [:343]
+2025-05-02 17:49:08,357 - DEBUG - JS Console (INFO): Found 2 explicit page breaks [:368]
+2025-05-02 17:49:08,357 - DEBUG - JS Console (INFO): Created 3 pages [:469]
+2025-05-02 17:49:08,361 - DEBUG - JS Console (INFO): Page layout styling applied successfully [:645]
+2025-05-02 17:49:08,361 - DEBUG - JS Console (INFO): Debugging page layout... [:3]
+2025-05-02 17:49:08,361 - DEBUG - JS Console (INFO): Document dimensions: 253px x 3588px [:14]
+2025-05-02 17:49:08,361 - DEBUG - JS Console (INFO): Body dimensions: 253px x 0px [:19]
+2025-05-02 17:49:08,361 - DEBUG - JS Console (INFO): Pages container found: [:24]
+2025-05-02 17:49:08,361 - DEBUG - JS Console (INFO):   Width: 794px [:25]
+2025-05-02 17:49:08,361 - DEBUG - JS Console (INFO):   Height: 3528px [:26]
+2025-05-02 17:49:08,361 - DEBUG - JS Console (INFO):   Style transform: matrix(0.9, 0, 0, 0.9, 0, 0) [:27]
+2025-05-02 17:49:08,361 - DEBUG - JS Console (INFO):   Style transform-origin: 396.849px 0px [:28]
+2025-05-02 17:49:08,361 - DEBUG - JS Console (INFO): Found 3 pages [:35]
+2025-05-02 17:49:08,361 - DEBUG - JS Console (INFO): Page 1: [:42]
+2025-05-02 17:49:08,361 - DEBUG - JS Console (INFO):   Width: 794px [:43]
+2025-05-02 17:49:08,362 - DEBUG - JS Console (INFO):   Height: 1123px [:44]
+2025-05-02 17:49:08,362 - DEBUG - JS Console (INFO):   Padding: 94.4882px [:45]
+2025-05-02 17:49:08,362 - DEBUG - JS Console (INFO):   Margin: 0px 0px 40px [:46]
+2025-05-02 17:49:08,362 - DEBUG - JS Console (INFO):   Style transform: matrix(1, 0, 0, 1, 0, -2) [:47]
+2025-05-02 17:49:08,362 - DEBUG - JS Console (INFO):   Content elements: 1 [:51]
+2025-05-02 17:49:08,362 - DEBUG - JS Console (INFO):   Content height: 0px [:62]
+2025-05-02 17:49:08,362 - DEBUG - JS Console (INFO):   Available height: 934.0236px [:69]
+2025-05-02 17:49:08,362 - DEBUG - JS Console (INFO): Page 2: [:42]
+2025-05-02 17:49:08,362 - DEBUG - JS Console (INFO):   Width: 794px [:43]
+2025-05-02 17:49:08,363 - DEBUG - JS Console (INFO):   Height: 1123px [:44]
+2025-05-02 17:49:08,363 - DEBUG - JS Console (INFO):   Padding: 94.4882px [:45]
+2025-05-02 17:49:08,363 - DEBUG - JS Console (INFO):   Margin: 0px 0px 40px [:46]
+2025-05-02 17:49:08,363 - DEBUG - JS Console (INFO):   Style transform: none [:47]
+2025-05-02 17:49:08,363 - DEBUG - JS Console (INFO):   Content elements: 1 [:51]
+2025-05-02 17:49:08,363 - DEBUG - JS Console (INFO):   Content height: 0px [:62]
+2025-05-02 17:49:08,363 - DEBUG - JS Console (INFO):   Available height: 934.0236px [:69]
+2025-05-02 17:49:08,363 - DEBUG - JS Console (INFO): Page 3: [:42]
+2025-05-02 17:49:08,363 - DEBUG - JS Console (INFO):   Width: 794px [:43]
+2025-05-02 17:49:08,363 - DEBUG - JS Console (INFO):   Height: 1123px [:44]
+2025-05-02 17:49:08,363 - DEBUG - JS Console (INFO):   Padding: 94.4882px [:45]
+2025-05-02 17:49:08,363 - DEBUG - JS Console (INFO):   Margin: 0px 0px 40px [:46]
+2025-05-02 17:49:08,363 - DEBUG - JS Console (INFO):   Style transform: none [:47]
+2025-05-02 17:49:08,363 - DEBUG - JS Console (INFO):   Content elements: 1 [:51]
+2025-05-02 17:49:08,363 - DEBUG - JS Console (INFO):   Content height: 0px [:62]
+2025-05-02 17:49:08,363 - DEBUG - JS Console (INFO):   Available height: 934.0236px [:69]
+2025-05-02 17:49:08,363 - DEBUG - JS Console (INFO): Found 0 page break elements [:80]
+2025-05-02 17:49:08,363 - DEBUG - JS Console (INFO): Current zoom factor (CSS var): 0.9 [:92]
+2025-05-02 17:49:08,363 - DEBUG - Page layout debug results: {'documentHeight': 3588, 'documentWidth': 253, 'originalPageBreaks': 0, 'pageBreaks': 0, 'pageCount': 3, 'zoomFactor': '0.9'}
+2025-05-02 17:49:10,069 - DEBUG - Executing JavaScript: 
+        (function() {
+            var pages = document.querySelectorAll('.page');
+            retur...
+2025-05-02 17:49:10,270 - DEBUG - JavaScript execution result: 3
+2025-05-02 17:49:10,270 - INFO - Page count: 3
+2025-05-02 17:49:10,270 - INFO - Testing navigation to page 1
+2025-05-02 17:49:10,270 - DEBUG - Executing JavaScript: 
+        (function() {
+            if (typeof window.fastNavigateToPage === 'function') {
+          ...
+2025-05-02 17:49:10,371 - DEBUG - JS Console (INFO): Successfully navigated to page 1 [:552]
+2025-05-02 17:49:10,472 - DEBUG - JavaScript execution result: 1
+2025-05-02 17:49:10,472 - DEBUG - Navigation to page 1 result: 1
+2025-05-02 17:49:10,472 - DEBUG - Updating page counter: 1 of 3
+2025-05-02 17:49:10,972 - DEBUG - Executing JavaScript: 
+            (function() {
+                var currentPage = document.querySelector('.page.current-p...
+2025-05-02 17:49:11,173 - DEBUG - JavaScript execution result: {'current': 1, 'total': 3}
+2025-05-02 17:49:11,173 - INFO - Page info: {'current': 1, 'total': 3}
+2025-05-02 17:49:11,173 - INFO - Testing navigation to page 2
+2025-05-02 17:49:11,173 - DEBUG - Executing JavaScript: 
+        (function() {
+            if (typeof window.fastNavigateToPage === 'function') {
+          ...
+2025-05-02 17:49:11,273 - DEBUG - JS Console (INFO): Successfully navigated to page 2 [:552]
+2025-05-02 17:49:11,374 - DEBUG - JavaScript execution result: 2
+2025-05-02 17:49:11,374 - DEBUG - Navigation to page 2 result: 2
+2025-05-02 17:49:11,374 - DEBUG - Updating page counter: 2 of 3
+2025-05-02 17:49:11,875 - DEBUG - Executing JavaScript: 
+            (function() {
+                var currentPage = document.querySelector('.page.current-p...
+2025-05-02 17:49:12,076 - DEBUG - JavaScript execution result: {'current': 2, 'total': 3}
+2025-05-02 17:49:12,076 - INFO - Page info: {'current': 2, 'total': 3}
+2025-05-02 17:49:12,076 - INFO - Testing navigation to page 3
+2025-05-02 17:49:12,076 - DEBUG - Executing JavaScript: 
+        (function() {
+            if (typeof window.fastNavigateToPage === 'function') {
+          ...
+2025-05-02 17:49:12,177 - DEBUG - JS Console (INFO): Successfully navigated to page 3 [:552]
+2025-05-02 17:49:12,278 - DEBUG - JavaScript execution result: 3
+2025-05-02 17:49:12,278 - DEBUG - Navigation to page 3 result: 3
+2025-05-02 17:49:12,278 - DEBUG - Updating page counter: 3 of 3
+2025-05-02 17:49:12,779 - DEBUG - Executing JavaScript: 
+            (function() {
+                var currentPage = document.querySelector('.page.current-p...
+2025-05-02 17:49:12,980 - DEBUG - JavaScript execution result: {'current': 3, 'total': 3}
+2025-05-02 17:49:12,980 - INFO - Page info: {'current': 3, 'total': 3}
+2025-05-02 17:49:12,980 - INFO - Testing previous/next navigation
+2025-05-02 17:49:12,980 - DEBUG - Executing JavaScript: 
+        (function() {
+            if (typeof window.fastNavigateToPage === 'function') {
+          ...
+2025-05-02 17:49:13,081 - DEBUG - JS Console (INFO): Successfully navigated to page 1 [:552]
+2025-05-02 17:49:13,181 - DEBUG - JavaScript execution result: 1
+2025-05-02 17:49:13,181 - DEBUG - Navigation to page 1 result: 1
+2025-05-02 17:49:13,181 - DEBUG - Updating page counter: 1 of 3
+2025-05-02 17:49:13,682 - DEBUG - Executing JavaScript: 
+        (function() {
+            if (typeof window.fastNavigateToPage === 'function') {
+          ...
+2025-05-02 17:49:13,783 - DEBUG - JS Console (INFO): Successfully navigated to page 2 [:552]
+2025-05-02 17:49:13,883 - DEBUG - JavaScript execution result: 2
+2025-05-02 17:49:13,883 - DEBUG - Navigation to page 2 result: 2
+2025-05-02 17:49:13,883 - DEBUG - Updating page counter: 2 of 3
+2025-05-02 17:49:14,384 - DEBUG - Executing JavaScript: 
+        (function() {
+            var currentPage = document.querySelector('.page.current-page');
+ ...
+2025-05-02 17:49:14,585 - DEBUG - JavaScript execution result: 2
+2025-05-02 17:49:14,585 - INFO - Current page after next: 2
+2025-05-02 17:49:14,585 - DEBUG - Executing JavaScript: 
+        (function() {
+            if (typeof window.fastNavigateToPage === 'function') {
+          ...
+2025-05-02 17:49:14,686 - DEBUG - JS Console (INFO): Successfully navigated to page 1 [:552]
+2025-05-02 17:49:14,786 - DEBUG - JavaScript execution result: 1
+2025-05-02 17:49:14,786 - DEBUG - Navigation to previous page result: 1
+2025-05-02 17:49:14,786 - DEBUG - Updating page counter: 1 of 3
+2025-05-02 17:49:15,287 - DEBUG - Executing JavaScript: 
+        (function() {
+            var currentPage = document.querySelector('.page.current-page');
+ ...
+2025-05-02 17:49:15,488 - DEBUG - JavaScript execution result: 1
+2025-05-02 17:49:15,488 - INFO - Current page after previous: 1
+2025-05-02 17:49:15,488 - INFO - Previous button enabled on page 1: False
+2025-05-02 17:49:15,488 - DEBUG - Executing JavaScript: 
+        (function() {
+            if (typeof window.fastNavigateToPage === 'function') {
+          ...
+2025-05-02 17:49:15,589 - DEBUG - JS Console (INFO): Successfully navigated to page 3 [:552]
+2025-05-02 17:49:15,689 - DEBUG - JavaScript execution result: 3
+2025-05-02 17:49:15,689 - DEBUG - Navigation to page 3 result: 3
+2025-05-02 17:49:15,689 - DEBUG - Updating page counter: 3 of 3
+2025-05-02 17:49:16,190 - INFO - Next button enabled on last page: False
+2025-05-02 17:49:16,192 - INFO - Page number test result: PASS
+2025-05-02 17:49:16,192 - INFO - Overall test result: PASS
+2025-05-02 17:49:16,192 - INFO - Dialog handler stopped
+2025-05-02 17:49:16,192 - INFO - Closing all active dialogs (0)
+
+--------------------------------------------------------------------------------
+
+
+Summary:
+Passed: 1/1 (100.00%)
+Failed: 0/1 (0.00%)
